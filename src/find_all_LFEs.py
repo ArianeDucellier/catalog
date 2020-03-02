@@ -395,18 +395,14 @@ if __name__ == '__main__':
     year = 2008
     month = 4
     for day in range(1, 31):
-        for hour in range(0, 24):
-            tbegin = (year, month, day, hour, 0, 0)
-            if (hour == 23):
-                if (day == 30):
-                    tend = (year, month + 1, 1, 0, 0, 0)
-                else:
-                    tend = (year, month, day + 1, 0, 0, 0)
-            else:
-                tend = (year, month, day, hour + 1, 0, 0)
-            find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
-                TDUR, duration, filt, freq0, dt, nattempts, waittime, type_threshold, \
-                threshold)
+        tbegin = (year, month, day, 0, 0, 0)
+        if (day == 30):
+            tend = (year, month + 1, 1, 0, 0, 0)
+        else:
+            tend = (year, month, day + 1, 0, 0, 0)
+        find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
+            TDUR, duration, filt, freq0, dt, nattempts, waittime, type_threshold, \
+            threshold)
 
     families = pd.read_csv(family_file, sep=r'\s{1,}', header=None, engine='python')
     families.columns = ['family', 'stations']
