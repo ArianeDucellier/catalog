@@ -5,6 +5,8 @@ from the IRIS DMC or the NCEDC website
 
 import obspy
 import obspy.clients.fdsn.client as fdsn
+
+import pandas as pd
 import urllib.request
 
 def get_from_IRIS(station, network):
