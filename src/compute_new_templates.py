@@ -101,9 +101,10 @@ def compute_new_templates(family, latitude, longitude, catalog, filename, \
     # Get the network, channels, and location of the stations
     stations_BK = filter_stations('BK')
     stations_NC = filter_stations('NC')
-#    stations_PB = filter_stations('PB')
-#    stations = pd.concat([stations_BK, stations_NC, stations_PB], ignore_index=True)
-    stations = pd.concat([stations_BK, stations_NC], ignore_index=True)
+    stations_PB = filter_stations('PB')
+    stations = pd.concat([stations_BK, stations_NC, stations_PB], ignore_index=True)
+#    stations = pd.concat([stations_BK, stations_NC], ignore_index=True)
+#    stations = stations_PB
 
     # Create directory to store the waveforms
     namedir = directory + '/' + family
@@ -125,6 +126,10 @@ def compute_new_templates(family, latitude, longitude, catalog, filename, \
     stations['distance'] = np.sqrt(np.power(x, 2.0) + np.power(y, 2.0))
     mask = stations['distance'] <= max_dist
     stations = stations.loc[mask]
+
+    mask = stations[stations['Lo'] == '2'].index
+    stations.drop(mask, inplace=True)
+    print(stations)
 
     # Loop over stations
     for ir in range(0, len(stations)):
@@ -211,7 +216,6 @@ def compute_new_templates(family, latitude, longitude, catalog, filename, \
             index = index + 1
             complete = True
             for (channel, stream) in zip(cha_list, streams):
-                print('channel {} : {} LFEs'.format(channel, len(stream)))
                 if len(stream) < max_LFEs:
                     complete = False
         # Stack
@@ -243,8 +247,9 @@ if __name__ == '__main__':
         np.float, np.float, np.int)}, \
         skiprows=1)
 
-    for ie in range(0, len(LFEloc)):
+    for ie in range(61, 62): #len(LFEloc)):
         family = LFEloc[ie][0].decode('utf-8')
+        print(family)
         latitude = LFEloc[ie][2]
         longitude = LFEloc[ie][3]
         compute_new_templates(family, latitude, longitude, catalog, filename, \

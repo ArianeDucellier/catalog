@@ -1,1 +1,4 @@
 data/response/*.xml
+src/tori.pkl
+src/templates_2007_2009/*
+
