@@ -75,84 +75,32 @@ def clean_LFEs(index, times, meancc, dt, freq0):
         time[i] = list_times[i][imax]
     return(time, cc)
 
-def fill_data(D, orientation, station, channels, reference):
+def rotate_data(EW, NS, dE, dN, tE, tN, result):
     """
-    Return the data that must be cross correlated with the template
-
-    Input:
-        type D = obspy Stream
-        D = Data downloaded
-        type orientation = list of dictionnaries
-        orientation = azimuth, dip for 3 channels (for data)
-        type station = string
-        station = Name of station
-        type channels = string
-        channels = Names of channels
-        type reference = list of dictionnaries
-        reference = azimuth, dip for 3 channels (for template)
-    Output:
-        type data = list of obspy Stream
-        data = Data to be analyzed with correct azimuth
     """
-    # East-West channel
-    EW = Stream()
-    if (channels == 'EH1,EH2,EHZ'):
-        if (len(D.select(channel='EH1')) > 0):
-            EW = D.select(channel='EH1')
-    else:
-        if (len(D.select(component='E')) > 0):
-            EW = D.select(component='E')
-    # North-South channel
-    NS = Stream()
-    if (channels == 'EH1,EH2,EHZ'):
-         if (len(D.select(channel='EH2')) > 0):
-            NS = D.select(channel='EH2')
-    else:
-         if (len(D.select(component='N')) > 0):
-            NS = D.select(component='N')
-    # Vertical channel
-    UD = Stream()
-    if (channels == 'EH1,EH2,EHZ'):
-        if (len(D.select(channel='EHZ')) > 0):
-             UD = D.select(channel='EHZ')
-    else:
-         if (len(D.select(component='Z')) > 0):
-            UD = D.select(component='Z')
-    # Rotation of the data
-    data = []
-    if ((len(EW) > 0) and (len(NS) > 0) and (len(EW) == len(NS))):
+    if len(EW) == len(NS):
         # Orientation of the data
-        dE = orientation[0]['azimuth'] * pi / 180.0
-        dN = orientation[1]['azimuth'] * pi / 180.0
+        dE = dE['azimuth'] * pi / 180.0
+        dN = dN['azimuth'] * pi / 180.0
         # Orientation of the template
-        tE = reference[0]['azimuth'] * pi / 180.0
-        tN = reference[1]['azimuth'] * pi / 180.0   
-        EWrot = Stream()
-        NSrot = Stream()
+        tE = tE['azimuth'] * pi / 180.0
+        tN = tN['azimuth'] * pi / 180.0
         for i in range(0, len(EW)):
             if (len(EW[i].data) == len(NS[i].data)):
-                EWrot0 = EW[i].copy()
-                NSrot0 = NS[i].copy()
-                EWrot0.data = cos(dE - tE) * EW[i].data + \
-                              cos(dN - tE) * NS[i].data
-                NSrot0.data = cos(dE - tN) * EW[i].data + \
-                              cos(dN - tN) * NS[i].data
-                EWrot0.stats.station = station
-                EWrot0.stats.channel = 'E'
-                NSrot0.stats.station = station
-                NSrot0.stats.channel = 'N'
-                EWrot.append(EWrot0)
-                NSrot.append(NSrot0)
-        data.append(EWrot)
-        data.append(NSrot)
-    if (len(UD) > 0):
-        for i in range(0, len(UD)):
-            UD[i].stats.station = station
-            UD[i].stats.channel = 'Z'
-        data.append(UD)
-    return(data)
+                dataE = EW[i].data
+                dataN = NS[i].data 
+                if result == 'E':
+                    EW[i].data = cos(dE - tE) * dataE + \
+                                 cos(dN - tE) * dataN
+                else:
+                    NS[i].data = cos(dE - tN) * dataE + \
+                                 cos(dN - tN) * dataN
+    if result == 'E':
+        return(EW)
+    else:
+        return(NS)
 
-def download_data(staloc, Tstart, Tend, filt, dt, nattempts, waittime, ncpu, icpu):
+def download_data(staloc, Tstart, Tend, filt, nattempts, waittime, ncpu, icpu):
     """
     """
     nstations = int(ceil(len(staloc) / ncpu))
@@ -167,6 +115,7 @@ def download_data(staloc, Tstart, Tend, filt, dt, nattempts, waittime, ncpu, icp
         server = staloc['server'][ir]
         time_on = staloc['time_on'][ir]
         time_off = staloc['time_off'][ir]
+        dt = staloc['dt'][ir]
 
         # File to write error messages
         namedir = 'error'
@@ -199,11 +148,16 @@ def download_data(staloc, Tstart, Tend, filt, dt, nattempts, waittime, ncpu, icp
 
             # Store the data into temporary files
             if (type(D) == obspy.core.stream.Stream):
-                D.write('tmp/' + station + '.mseed', format='MSEED')
-                namefile = 'tmp/' + station + '.pkl'
-                pickle.dump(orientation, open(namefile, 'wb'))
+                mychannels = channels.split(',')
+                for channel in mychannels:
+                    stream = D.select(channel=channel)
+                    stream.write('tmp/' + station + '_' + channel + \
+                        '.mseed', format='MSEED')
+                    namefile = 'tmp/' + station + '_' + channel + '.pkl'
+                    pickle.dump(orientation, open(namefile, 'wb'))
 
-def analyze_data(families, staloc, nhour, t1, duration, dt, ncpu, icpu):
+def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
+    freq0, type_threshold, threshold, ncpu, icpu):
     """
     """
     nfamilies = int(ceil(len(families) / ncpu))
@@ -225,93 +179,107 @@ def analyze_data(families, staloc, nhour, t1, duration, dt, ncpu, icpu):
 
         # Create dataframe to store LFE times
         df = pd.DataFrame(columns=['year', 'month', 'day', 'hour', \
-        'minute', 'second', 'cc', 'nchannel'])
-
+            'minute', 'second', 'cc', 'nchannel'])
+ 
         # Read the templates
         stations = families['stations'].iloc[i].split(',')
         templates = Stream()
+        orientations = []
+        names = []
         for station in stations:
-            data = pickle.load(open(template_dir + '/' + families['family'].iloc[i] + \
-            '/' + station + '.pkl', 'rb'))
-            if (len(data) == 3):
-                EW = data[0]
-                NS = data[1]
-                UD = data[2]
-                EW.stats.station = station
-                NS.stats.station = station
-                EW.stats.channel = 'E'
-                NS.stats.channel = 'N'
-                templates.append(EW)
-                templates.append(NS)
-            else:
-                UD = data[0]
-            UD.stats.station = station
-            UD.stats.channel = 'Z'
-            templates.append(UD)                       
+            subset = staloc.loc[staloc['station'] == station]
+            channels = subset['channels'].iloc[0]
+            mychannels = channels.split(',')
+            for channel in mychannels:
+                data = pickle.load(open(template_dir + '/' + families['family'].iloc[i] + \
+                    '/' + station + '_' + channel + '.pkl', 'rb'))
+                template = data[0]
+                angle = data[1]
+                templates.append(template)
+                orientations.append(angle)
+                names.append(station + '_' + channel)
+
+        # Check the time step of the stations
+        subset = staloc.loc[staloc['station'].isin(stations)]
+        if len(subset['dt'].value_counts()) == 1:
+            dt = subset['dt'].iloc[0]
+        else:
+            raise ValueError('All stations must have the same time step')
+
+        # Number of hours of data to analyze 
+        t1 = UTCDateTime(year=tbegin[0], month=tbegin[1], \
+            day=tbegin[2], hour=tbegin[3], minute=tbegin[4], \
+            second=tbegin[5])
+        t2 = UTCDateTime(year=tend[0], month=tend[1], \
+            day=tend[2], hour=tend[3], minute=tend[4], \
+            second=tend[5])  
+        nhour = int(ceil((t2 - t1) / 3600.0))
+        duration = families['duration'].iloc[i]
+
+        # To rotate components
+        swap = {'E':'N', 'N':'E', '1':'2', '2':'1'}
 
         # Loop on hours of data
         for hour in range(0, nhour):
-            nchannel = 0
             Tstart = t1 + hour * 3600.0
             Tend = t1 + (hour + 1) * 3600.0 + duration
             delta = Tend - Tstart
             ndata = int(delta / dt) + 1
-
+            
             # Get the data
             data = []
             for station in stations:
-                try:
-                    D = read('tmp/' + station + '.mseed')
-                    D = D.slice(Tstart, Tend)
-                    namefile = 'tmp/' + station + '.pkl'
-                    orientation = pickle.load(open(namefile, 'rb'))
+                subset = staloc.loc[staloc['station'] == station]
+                channels = subset['channels'].iloc[0]
+                mychannels = channels.split(',')
+                for channel in mychannels:
+                    try:
+                        D = read('tmp/' + station + '_' + channel + '.mseed')
+                        D = D.slice(Tstart, Tend)
 
-                    # Get station metadata for reading response file
-                    for ir in range(0, len(staloc)):
-                        if (station == staloc['station'][ir]):
-                            network = staloc['network'][ir]
-                            channels = staloc['channels'][ir]
-                            location = staloc['location'][ir]
-                            server = staloc['server'][ir]
+                        if (type(D) == obspy.core.stream.Stream):
+                            namefile = 'tmp/' + station + '_' + channel + '.pkl'
+                            orientation = pickle.load(open(namefile, 'rb'))
+                            index = names.index(station + '_' + channel)
+                            reference = orientations[index]
 
-                    # Orientation of template
-                    # Date chosen: April 1st 2008
-                    mychannels = channels.split(',')
-                    mylocation = location
-                    if (mylocation == '--'):
-                        mylocation = ''
-                    response = '../data/response/' + network + '_' + station + '.xml'
-                    inventory = read_inventory(response, format='STATIONXML')
-                    reference = []
-                    for channel in mychannels:
-                        angle = inventory.get_orientation(network + '.' + \
-                            station + '.' + mylocation + '.' + channel, \
-                            UTCDateTime(2008, 4, 1, 0, 0, 0))
-                        reference.append(angle)
+                            # Rotate components
+                            if len(mychannels) > 1:
+                                if orientation != reference:
+                                    channel_new = channel[0:2] + swap[channel[2]]
+                                    D_new = read('tmp/' + station + '_' + channel_new + '.mseed')
+                                    D_new = D_new.slice(Tstart, Tend)
+                                    namefile = 'tmp/' + station + '_' + channel_new + '.pkl'
+                                    orientation_new = pickle.load(open(namefile, 'rb'))
+                                    index = names.index(station + '_' + channel_new)
+                                    reference_new = orientations[index]
+                                    if channel[2] in ['E', '1']:
+                                        D = rotate_data(D, D_new, orientation, \
+                                            orientation_new, reference, reference_new, 'E')
+                                    else:
+                                        D = rotate_data(D_new, D, orientation_new, \
+                                            orientation, reference_new, reference, 'N')
 
-                    # Append data to stream
-                    if (type(D) == obspy.core.stream.Stream):
-                        stationdata = fill_data(D, orientation, station, channels, reference)
-                        if (len(stationdata) > 0):
-                            for stream in stationdata:
-                                data.append(stream)
-                except:
-                    message = 'No data available for station {} '.format( \
-                        station) + 'at time {}/{}/{} - {}:{}:{}\n'.format( \
-                        Tstart.year, Tstart.month, Tstart.day, Tstart.hour, \
-                        Tstart.minute, Tstart.second)
+                            # Append stream to data
+                            data.append(D)
+                    except:
+                        message = 'No data available for station {} and channel {}'.format( \
+                            station, channel) + 'at time {}/{}/{} - {}:{}:{}\n'.format( \
+                            Tstart.year, Tstart.month, Tstart.day, Tstart.hour, \
+                            Tstart.minute, Tstart.second)
 
             # Loop on channels
-            for channel in range(0, len(data)):
-                subdata = data[channel]
+            nchannel = 0
+            for j in range(0, len(data)):
+                subdata = data[j]
                 # Check whether we have a complete one-hour-long recording
                 if (len(subdata) == 1):
                     if (len(subdata[0].data) == ndata):
                         # Get the template
                         station = subdata[0].stats.station
-                        component = subdata[0].stats.channel
+                        channel = subdata[0].stats.channel
                         template = templates.select(station=station, \
-                            component=component)[0]
+                            channel=channel)[0]
                         # Cross correlation
                         cctemp = correlate.optimized(template, subdata[0])
                         if (nchannel > 0):
@@ -358,7 +326,7 @@ def analyze_data(families, staloc, nhour, t1, duration, dt, ncpu, icpu):
         pickle.dump(df_all, open(namefile, 'wb'))
 
 def find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
-    TDUR, duration, filt, freq0, dt, nattempts, waittime, type_threshold='MAD', \
+    TDUR, filt, freq0, nattempts, waittime, type_threshold='MAD', \
     threshold=0.0075):
     """    
     """
@@ -368,7 +336,11 @@ def find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
     # Get the network, channels, and location of the stations
     staloc = pd.read_csv(station_file, sep=r'\s{1,}', header=None, engine='python')
     staloc.columns = ['station', 'network', 'channels', 'location', \
-        'server', 'latitude', 'longitude', 'time_on', 'time_off']
+        'server', 'latitude', 'longitude', 'time_on', 'time_off', 'dt']
+
+    # Get the families, stations, and duration of the template
+    families = pd.read_csv(family_file, sep=r'\s{1,}', header=None, engine='python')
+    families.columns = ['family', 'stations', 'duration']
 
     # Begin and end time of analysis
     t1 = UTCDateTime(year=tbegin[0], month=tbegin[1], \
@@ -382,6 +354,7 @@ def find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
     nhour = int(ceil((t2 - t1) / 3600.0))
 
     # Begin and end time of downloading
+    duration = np.max(families['duration'])
     Tstart = t1 - TDUR
     Tend = t2 + duration + TDUR
 
@@ -391,31 +364,26 @@ def find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
         os.makedirs(namedir)
 
     # Download the data from the stations
-    map_func = partial(download_data, staloc, Tstart, Tend, filt, dt, \
+    map_func = partial(download_data, staloc, Tstart, Tend, filt, \
         nattempts, waittime, ncpu)
     with Pool(ncpu) as pool:
         pool.map(map_func, iter(range(0, ncpu)))
 
-    # Loop on families
-    families = pd.read_csv(family_file, sep=r'\s{1,}', header=None, engine='python')
-    families.columns = ['family', 'stations']
-
-    map_func = partial(analyze_data, families, staloc, nhour, t1, duration, \
-        dt, ncpu)
+    # Analyze seismic data
+    map_func = partial(analyze_data, families, staloc, Tstart, Tend, tbegin, tend, \
+        freq0, type_threshold, threshold, ncpu)
     with Pool(ncpu) as pool:
         pool.map(map_func, iter(range(0, ncpu)))
     
 if __name__ == '__main__':
 
     # Set the parameters
-    family_file = '../data/Ducellier/families_temporary.txt'
-    station_file = '../data/Ducellier/stations_temporary.txt'
-    template_dir = 'templates'
+    family_file = '../data/Ducellier/families_permanent.txt'
+    station_file = '../data/Ducellier/stations_permanent.txt'
+    template_dir = 'templates_2007_2009'
     TDUR = 10.0
-    duration = 60.0
     filt = (1.5, 9.0)
     freq0 = 1.0
-    dt = 0.05
     nattempts = 10
     waittime = 10.0
     type_threshold = 'MAD'
@@ -437,7 +405,7 @@ if __name__ == '__main__':
             else:
                 tend = (year, month, day, hour + 12, 0, 0)
             find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
-                TDUR, duration, filt, freq0, dt, nattempts, waittime, type_threshold, \
+                TDUR, filt, freq0, nattempts, waittime, type_threshold, \
                 threshold)
 
     families = pd.read_csv(family_file, sep=r'\s{1,}', header=None, engine='python')

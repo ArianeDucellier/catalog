@@ -79,12 +79,14 @@ def get_from_IRIS(station, network, channels, location, Tstart, Tend, \
             filename = '../data/response/' + network + '_' + station + '.xml'
             inventory = read_inventory(filename, format='STATIONXML')
             orientation = []
-            for channel in range(0, len(D)):
-                angle = inventory.get_orientation(D[channel].stats.network + \
-                    '.' + D[channel].stats.station + '.' + \
-                    D[channel].stats.location + '.' + \
-                    D[channel].stats.channel, Tstart + D[channel].stats.delta \
-                    * D[channel].stats.npts * 0.5)
+            mychannels = channels.split(',')
+            for channel in mychannels:
+                stream = D.select(channel=channel)
+                angle = inventory.get_orientation(stream[0].stats.network + \
+                    '.' + stream[0].stats.station + '.' + \
+                    stream[0].stats.location + '.' + \
+                    stream[0].stats.channel, Tstart + stream[0].stats.delta \
+                    * stream[0].stats.npts * 0.5)
                 orientation.append(angle)
             success = True
             return(D, orientation)
@@ -139,7 +141,8 @@ def get_from_NCEDC(station, network, channels, location, Tstart, Tend, \
         orientation = azimuth, dip for 3 channels
     """
     # Write waveform request
-    file = open('waveform.request', 'w')
+    request = 'waveform_' + station + '.request'
+    file = open(request, 'w')
     message = '{} {} {} {} '.format(network, station, location, channels) + \
         '{:04d}-{:02d}-{:02d}T{:02d}:{:02d}:{:02d} '.format(Tstart.year, \
         Tstart.month, Tstart.day, Tstart.hour, Tstart.minute, \
@@ -149,8 +152,10 @@ def get_from_NCEDC(station, network, channels, location, Tstart, Tend, \
     file.write(message)
     file.close()
     # Send waveform request
-    request = 'curl -s --data-binary @waveform.request -o station.miniseed ' + \
-         'http://service.ncedc.org/fdsnws/dataselect/1/query'
+    miniseed = 'station_' + station + '.miniseed'
+    request = 'curl -s --data-binary @waveform_' + station + '.request' + \
+         ' -o ' + miniseed + \
+         ' http://service.ncedc.org/fdsnws/dataselect/1/query'
     # Loop to try downloading several times
     success = False
     attempts = 0
@@ -158,7 +163,7 @@ def get_from_NCEDC(station, network, channels, location, Tstart, Tend, \
         try:
             # Get data from server
             os.system(request)
-            D = read('station.miniseed')
+            D = read(miniseed)
             # Detrend data
             D.detrend(type='linear')
             # Taper first and last 5 s of data

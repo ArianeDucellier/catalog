@@ -32,12 +32,12 @@ def get_from_NCEDC(station, network):
 
 if __name__ == '__main__':
 
-    station_file = '../data/Ducellier/stations_temporary.txt'
+    station_file = '../data/Ducellier/stations_permanent.txt'
 
     # Get the network, channels, and location of the stations
     staloc = pd.read_csv(station_file, sep=r'\s{1,}', header=None, engine='python')
     staloc.columns = ['station', 'network', 'channels', 'location', \
-        'server', 'latitude', 'longitude', 'time_on', 'time_off']
+        'server', 'latitude', 'longitude', 'time_on', 'time_off', 'dt']
 
     # Download the response of the stations
     for ir in range(0, len(staloc)):

@@ -9,7 +9,8 @@ import pickle
 
 from math import cos, pi, sin, sqrt
 
-def plot_new_templates(family, directory, timearrival, latitude, longitude, ie):
+def plot_new_templates(family, directory, timearrival, latitude, longitude, \
+    ie, tbegin, tend):
     """
     """
     if timearrival == True:
@@ -21,7 +22,7 @@ def plot_new_templates(family, directory, timearrival, latitude, longitude, ie):
         staloc = pd.read_csv('../data/Ducellier/stations_permanent.txt', \
             sep=r'\s{1,}', header=None, engine='python')
         staloc.columns = ['station', 'network', 'channels', 'location', \
-            'server', 'latitude', 'longitude', 'time_on', 'time_off']
+            'server', 'latitude', 'longitude', 'time_on', 'time_off', 'dt']
         a = 6378.136
         e = 0.006694470
 
@@ -29,8 +30,8 @@ def plot_new_templates(family, directory, timearrival, latitude, longitude, ie):
               'ytick.labelsize':20}
     pylab.rcParams.update(params)
     namedir = directory + '/' + family
-#    templates = os.listdir(namedir)
-    templates = ['WDC_BHN.pkl']
+    templates = os.listdir(namedir)
+#    templates = ['WDC_BHN.pkl']
     for template in templates:
         name = template.split('.')[0]
         station = name.split('_')[0]
@@ -53,17 +54,18 @@ def plot_new_templates(family, directory, timearrival, latitude, longitude, ie):
                 x = dx * (lon - longitude)
                 y = dy * (lat - latitude)
                 distance = sqrt(x ** 2.0 + y ** 2.0)
+                print(station, distance)
 #                tS = tori[ie] + distance * sS
 #                tP = tori[ie] + distance * sP
-#                tS = tori[ie] + distance * 0.25
-#                tP = tori[ie] + distance * 0.125
-                tS = 23.5 # for WDC and 16.5 for LRB
-                tP = 16.5 # for WDC and 13.0 for LRB 
+                tS = tori[ie] + distance * 0.25
+                tP = tori[ie] + distance * 0.125
+#                tS = 23.5 # for WDC and 16.5 for LRB
+#                tP = 16.5 # for WDC and 13.0 for LRB 
                 plot_time = True
             else:
                 plot_time = False
-#        plt.figure(1, figsize=(10, 5))
-        plt.figure(1, figsize=(6, 5))
+        plt.figure(1, figsize=(10, 5))
+#        plt.figure(1, figsize=(6, 5))
         dt = stack.stats.delta
         nt = stack.stats.npts
         t = dt * np.arange(0, nt)
@@ -71,13 +73,16 @@ def plot_new_templates(family, directory, timearrival, latitude, longitude, ie):
             if plot_time == True:
                 plt.axvline(tS, linewidth=4, color='grey')
                 plt.axvline(tP, linewidth=4, color='grey')
+        plt.axvline(tbegin, linewidth=4, color='red')
+        plt.axvline(tend, linewidth=4, color='red')
         plt.plot(t, stack.data, 'k')
-#        plt.xlim([np.min(t), np.max(t)])
-        plt.xlim([10.0, 30.0])
-        if timearrival == True:
-            plt.title('{} - {} - SNR = {:.2f} - distance = {:.2f} km'. \
-                format(station, channel, SNR, distance), fontsize=20)
+        plt.xlim([np.min(t), np.max(t)])
+#        plt.xlim([10.0, 30.0])
         plt.title('{} - {} - SNR = {:.2f}'.format(station, channel, SNR), fontsize=20)
+        if timearrival == True:
+            if (len(subdf) > 0):
+                plt.title('{} - {} - SNR = {:.2f} - distance = {:.2f} km'. \
+                    format(station, channel, SNR, distance), fontsize=20)
         plt.xlabel('Time (s)', fontsize=20)
         plt.tight_layout()
         plt.savefig(namedir + '/' + station + '_' + channel + '.eps', format='eps')
@@ -95,8 +100,13 @@ if __name__ == '__main__':
         np.float, np.float, np.int)}, \
         skiprows=1)
 
-    for ie in range(0, 1): #len(LFEloc)):
+    tbegin = 0.0
+    tend = 60.0
+
+    for ie in range(2, 3): #len(LFEloc)):
         family = LFEloc[ie][0].decode('utf-8')
         latitude = LFEloc[ie][2]
         longitude = LFEloc[ie][3]
-        plot_new_templates(family, directory, True, latitude, longitude, ie)
+        print(family)
+        plot_new_templates(family, directory, True, latitude, longitude, \
+            ie, tbegin, tend)

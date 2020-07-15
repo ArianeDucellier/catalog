@@ -16,7 +16,7 @@ import os
 import pandas as pd
 import pickle
 
-from datetime import timedelta
+from datetime import datetime, timedelta
 from math import ceil, cos, floor, pi
 
 import correlate
@@ -391,11 +391,13 @@ if __name__ == '__main__':
     type_threshold = 'MAD'
     threshold = 8.0
 
+    begin = datetime.now()
+
     # April 2008
     year = 2008
     month = 4
-    for day in range(1, 31):
-        for hour in range(0, 24, 12):
+    for day in range(1, 2):
+        for hour in range(0, 12, 12):
             tbegin = (year, month, day, hour, 0, 0)
             if (hour == 12):
                 if (day == 30):
@@ -413,3 +415,8 @@ if __name__ == '__main__':
     for i in range(0, len(families)):
         os.rename('LFEs/' + families['family'].iloc[i] + '/catalog.pkl', \
             'LFEs/' + families['family'].iloc[i] + '/catalog_{:04d}_{:02d}'.format(year, month) + '.pkl')
+
+    end = datetime.now()
+    duration = end - begin
+    duration.total_seconds()
+    print(duration)
