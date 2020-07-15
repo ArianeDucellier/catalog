@@ -30,7 +30,7 @@ def plot_new_templates(family, directory, timearrival, latitude, longitude, ie):
     pylab.rcParams.update(params)
     namedir = directory + '/' + family
 #    templates = os.listdir(namedir)
-    templates = ['LRB_SHZ.pkl']
+    templates = ['WDC_BHN.pkl']
     for template in templates:
         name = template.split('.')[0]
         station = name.split('_')[0]
@@ -42,6 +42,7 @@ def plot_new_templates(family, directory, timearrival, latitude, longitude, ie):
         SNR = maximum / RMS
         if timearrival == True:
             subdf = staloc.loc[staloc['station'] == station]
+            distance = 0.0
             if (len(subdf) > 0):
                 lat = subdf['latitude'].iloc[0]
                 lon = subdf['longitude'].iloc[0]
@@ -52,17 +53,17 @@ def plot_new_templates(family, directory, timearrival, latitude, longitude, ie):
                 x = dx * (lon - longitude)
                 y = dy * (lat - latitude)
                 distance = sqrt(x ** 2.0 + y ** 2.0)
-                print(distance, distance * 0.125)
 #                tS = tori[ie] + distance * sS
 #                tP = tori[ie] + distance * sP
 #                tS = tori[ie] + distance * 0.25
 #                tP = tori[ie] + distance * 0.125
-                tS = 16.5 #for LRB #24.0 for WDC
-                tP = 13.0 #for LRB #16.5 for WDC
+                tS = 23.5 # for WDC and 16.5 for LRB
+                tP = 16.5 # for WDC and 13.0 for LRB 
                 plot_time = True
             else:
                 plot_time = False
-        plt.figure(1, figsize=(10, 5))
+#        plt.figure(1, figsize=(10, 5))
+        plt.figure(1, figsize=(6, 5))
         dt = stack.stats.delta
         nt = stack.stats.npts
         t = dt * np.arange(0, nt)
@@ -71,7 +72,11 @@ def plot_new_templates(family, directory, timearrival, latitude, longitude, ie):
                 plt.axvline(tS, linewidth=4, color='grey')
                 plt.axvline(tP, linewidth=4, color='grey')
         plt.plot(t, stack.data, 'k')
-        plt.xlim([np.min(t), np.max(t)])
+#        plt.xlim([np.min(t), np.max(t)])
+        plt.xlim([10.0, 30.0])
+        if timearrival == True:
+            plt.title('{} - {} - SNR = {:.2f} - distance = {:.2f} km'. \
+                format(station, channel, SNR, distance), fontsize=20)
         plt.title('{} - {} - SNR = {:.2f}'.format(station, channel, SNR), fontsize=20)
         plt.xlabel('Time (s)', fontsize=20)
         plt.tight_layout()
