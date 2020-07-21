@@ -54,7 +54,6 @@ def plot_new_templates(family, directory, timearrival, latitude, longitude, \
                 x = dx * (lon - longitude)
                 y = dy * (lat - latitude)
                 distance = sqrt(x ** 2.0 + y ** 2.0)
-                print(station, distance)
 #                tS = tori[ie] + distance * sS
 #                tP = tori[ie] + distance * sP
                 tS = tori[ie] + distance * 0.25
@@ -100,13 +99,17 @@ if __name__ == '__main__':
         np.float, np.float, np.int)}, \
         skiprows=1)
 
-    tbegin = 0.0
-    tend = 60.0
+    families = pd.read_csv('../data/Ducellier/families_permanent.txt', \
+        sep=r'\s{1,}', header=None, engine='python')
+    families.columns = ['family', 'stations', 'tbegin', 'tend']
 
-    for ie in range(2, 3): #len(LFEloc)):
+    for ie in range(0, len(LFEloc)):
         family = LFEloc[ie][0].decode('utf-8')
+        for i in range(0, len(families)):
+            if families['family'][i] == family:
+                tbegin = families['tbegin'][i]
+                tend = families['tend'][i]
         latitude = LFEloc[ie][2]
         longitude = LFEloc[ie][3]
-        print(family)
         plot_new_templates(family, directory, True, latitude, longitude, \
             ie, tbegin, tend)
