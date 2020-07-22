@@ -1,66 +1,66 @@
- 080401.05.050 B935,GASB,GBB,GHM,GRO,KBN,KCS,KHBB,KIP,KKP,LBP,LDB,LPG,LRB,LSF,LTC,LVR,WDC 10.0 50.0
- 080405.11.042                          GASB,GRO,KBN,KHBB,KIP,KKP,KPP,LBP,LPG,LRB,LVR,WDC  5.0 35.0
- 080408.08.007     B935,GASB,GRO,KBN,KCS,KHBB,KKP,LBK,LBP,LPG,LRB,LRR,LSF,LSR,LTC,LVR,WDC  5.0 45.0
- 080408.15.023                             B935,GASB,KCS,KHBB,KKP,LBK,LBP,LGP,LPG,LSF,WDC  0.0 40.0
- 080408.08.029                     B935,GASB,KCS,KHBB,KKP,LBK,LBP,LGP,LPG,LRB,LSF,LVR,WDC  5.0 45.0
- 080408.16.026     B935,GASB,KBN,KCS,KHBB,KKP,LBK,LBP,LGP,LPG,LRB,LSF,LSR,LTC,LVR,LWH,WDC  0.0 45.0
- 080410.01.050                                           KBN,KCS,KHBB,KKP,LBP,LGP,LSF,WDC 15.0 45.0
- 080410.09.032                                          B935,KHBB,KKP,LBK,LRB,LSF,LWH,WDC  0.0 35.0
- 080410.12.039                                          B935,KBN,KCS,KHBB,KKP,LBK,LSF,WDC 15.0 50.0
- 080410.12.040                                                               KHBB,LSF,WDC  0.0 20.0
- 080411.04.013                                              B935,KCS,KHBB,KKP,LRB,LSF,WDC 25.0 60.0
- 080411.04.023                                          B935,KBN,KCS,KHBB,LBP,LRB,LSF,WDC 15.0 50.0
- 080410.13.055                                  B935,KCS,KHBB,KKP,LBK,LBP,LSF,LVR,LWH,WDC 10.0 50.0
- 080412.03.029                    B039,B935,KCS,KHBB,KHMB,KOM,LBK,LBP,LPG,LRB,LSF,LWH,WDC 25.0 60.0
- 080412.11.038                                 B039,B935,KHBB,KOM,LAM,LBK,LGP,LSF,LWH,WDC  0.0 60.0
- 080412.22.047                     B935,KCS,KHBB,KHMB,KOM,LAM,LBK,LBP,LGB,LGP,LPG,LSF,WDC  0.0 35.0
- 080413.13.026                             B935,KHBB,KHMB,KOM,LAM,LBK,LBP,LGP,LSF,WDC,YBH 10.0 50.0
- 080412.22.040                                             B935,KHBB,KHMB,KOM,LBP,LPG,WDC 25.0 55.0
- 080413.07.015                B040,B935,KCS,KHBB,KHMB,KOM,KPP,LBF,LBP,LGP,LSH,LSR,WDC,YBH 20.0 55.0
- 080413.07.023                         B935,KCS,KHBB,KHMB,KOM,KPP,LBF,LGP,LSH,LSR,WDC,YBH 20.0 55.0
- 080413.16.058                             B935,JCC,KBN,KHBB,KHMB,KKP,KOM,LBK,LRB,LSF,WDC  5.0 45.0
- 080413.18.013                                         B935,KCS,KHBB,KHMB,KOM,LBP,LRB,WDC 10.0 40.0
- 080413.20.036                                 B935,JCC,KCS,KHBB,KHMB,KKP,KOM,LBP,LRB,WDC  5.0 45.0
- 080414.12.016                             B935,JCC,KCS,KHBB,KHMB,KKP,KOM,LBK,LBP,LPG,WDC  5.0 45.0
- 080414.12.020                                          KCS,KHBB,KHMB,KOM,LBP,LPG,LRB,WDC 10.0 45.0
- 080414.10.058             B935,KCS,KHBB,KHMB,KKP,KOM,KPP,LBK,LBP,LGP,LSF,LSH,LSR,LWH,WDC 20.0 55.0
- 080414.18.003                                                                        WDC 17.0 33.0
- 080415.11.006                                                      B935,KHBB,KOM,LSH,WDC 20.0 50.0
- 080415.11.008                                         B935,KCS,KHBB,KHMB,KOM,LBP,LSF,WDC 15.0 50.0
- 080415.24.028                                    B039,B935,KCS,KHBB,KHMB,KOM,LBK,LSH,WDC 10.0 40.0
- 080416.15.003                                         B935,KCS,KHBB,KHMB,KOM,KPP,LBP,WDC 15.0 50.0
- 080418.03.001                                                      B935,KHBB,LSF,WDC,YBH 25.0 50.0
- 080415.19.030                             B935,KHBB,KHMB,KOM,LAM,LBK,LBP,LSF,LSH,WDC,YBH  5.0 35.0
- 080419.24.054                                 B935,KHBB,KHMB,KOM,LAM,LBK,LBP,LSF,WDC,YBH  0.0 30.0
- 080416.13.033                                                          B935,KCS,KHBB,WDC 15.0 40.0
- 080417.15.043                                            B039,B935,KCS,KHBB,KHMB,LBP,WDC 20.0 50.0
- 080418.02.049                                             B935,KHBB,KHMB,KOM,LBP,LPG,WDC 25.0 55.0
- 080419.04.046                                                      KCS,KHBB,KHMB,LBP,WDC 25.0 50.0
- 080420.01.019                                                B039,B040,KOM,KRMB,KSXB,YBH 25.0 50.0
- 080420.04.009                                                     B039,KOM,KRMB,KSXB,YBH 15.0 45.0
- 080420.05.032   B039,B040,B935,KHBB,KHMB,KOM,LAM,LBF,LBK,LBP,LGP,LSF,LSH,LSR,LWH,WDC,YBH 15.0 55.0
- 080420.08.042                            B935,JCC,KCS,KHBB,KHMB,KOM,KRMB,LBP,LGP,WDC,YBH 20.0 55.0
- 080421.14.048                                            B039,KHBB,KRMB,KSXB,LBK,WDC,YBH  5.0 35.0
- 080421.15.050                                            B039,KHBB,KOM,KRMB,KSXB,LGB,YBH 10.0 45.0
- 080421.16.053                                                               KHBB,WDC,YBH 10.0 40.0
- 080421.16.054                                                      KHBB,KHMB,KOM,WDC,YBH 15.0 45.0
- 080421.17.056                                             KHBB,KOM,KRMB,KSXB,LGP,WDC,YBH 15.0 55.0
- 080421.23.033                                              KHBB,KHMB,KOM,LBK,LGP,LSF,WDC  5.0 35.0
- 080422.13.003                                                    B039,KHBB,KRMB,KSXB,YBH 15.0 40.0
- 080422.12.039                            B039,KHBB,KOM,KRMB,KSXB,LAM,LBK,LGP,LSF,WDC,YBH 25.0 60.0
- 080422.13.043                                         B040,KOM,KRMB,KSXB,KTR,LAM,LBK,YBH  0.0 30.0
- 080422.15.030                                                  KOM,KRMB,KRP,KSXB,KTR,YBH  5.0 35.0
- 080424.04.058                                         KHBB,KHMB,KOM,KRMB,LBK,LGP,LSR,YBH  0.0 20.0
- 080424.05.060                          B039,B040,KHBB,KHMB,KOM,KRMB,KSXB,KTR,LAM,LBK,YBH  5.0 40.0
- 080426.05.008                                                      KOM,KRMB,KSXB,KTR,YBH 10.0 35.0
- 080426.06.027                                                          KOM,KRMB,KSXB,YBH 10.0 30.0
- 080426.20.030                                                    B039,B040,KRMB,KSXB,YBH  5.0 35.0
- 080427.04.052                                                     KHMB,KOM,KRMB,KSXB,YBH 10.0 35.0
- 080427.13.036                                                 B039,KOM,KRMB,KSXB,KTR,YBH 10.0 35.0
- 080427.20.043                                                          B039,KOM,KRMB,YBH 10.0 35.0
- 080429.15.005                                                              B039,KSXB,YBH 15.0 35.0
- 080326.07.004                                                            KBN,KFP,KIP,KRK  5.0 15.0
- 080326.07.048                                                       GTC,KCPB,KFP,KIP,KRK 10.0 25.0
- 080326.08.015                    B933,GASB,GHM,GSN,GTC,HOPS,KBN,KBS,KCPB,KFP,KIP,KRK,LVR  5.0 40.0
- 080326.09.007                     GASB,GHM,GSN,GTC,GVV,HOPS,KBN,KBS,KCPB,KFP,KIP,KRK,LVR  5.0 35.0
- 080328.09.029                                                                        KRK 20.0 25.0
+ 080401.05.050 B935,GASB,GBB,GHM,GRO,KBN,KCS,KHBB,KIP,KKP,LBP,LDB,LPG,LRB,LSF,LTC,LVR,WDC 40.0
+ 080405.11.042                          GASB,GRO,KBN,KHBB,KIP,KKP,KPP,LBP,LPG,LRB,LVR,WDC 30.0
+ 080408.08.007     B935,GASB,GRO,KBN,KCS,KHBB,KKP,LBK,LBP,LPG,LRB,LRR,LSF,LSR,LTC,LVR,WDC 40.0
+ 080408.15.023                             B935,GASB,KCS,KHBB,KKP,LBK,LBP,LGP,LPG,LSF,WDC 40.0
+ 080408.08.029                     B935,GASB,KCS,KHBB,KKP,LBK,LBP,LGP,LPG,LRB,LSF,LVR,WDC 40.0
+ 080408.16.026     B935,GASB,KBN,KCS,KHBB,KKP,LBK,LBP,LGP,LPG,LRB,LSF,LSR,LTC,LVR,LWH,WDC 45.0
+ 080410.01.050                                           KBN,KCS,KHBB,KKP,LBP,LGP,LSF,WDC 30.0
+ 080410.09.032                                          B935,KHBB,KKP,LBK,LRB,LSF,LWH,WDC 35.0
+ 080410.12.039                                          B935,KBN,KCS,KHBB,KKP,LBK,LSF,WDC 35.0
+ 080410.12.040                                                               KHBB,LSF,WDC 20.0
+ 080411.04.013                                              B935,KCS,KHBB,KKP,LRB,LSF,WDC 35.0
+ 080411.04.023                                          B935,KBN,KCS,KHBB,LBP,LRB,LSF,WDC 35.0
+ 080410.13.055                                  B935,KCS,KHBB,KKP,LBK,LBP,LSF,LVR,LWH,WDC 40.0
+ 080412.03.029                    B039,B935,KCS,KHBB,KHMB,KOM,LBK,LBP,LPG,LRB,LSF,LWH,WDC 35.0
+ 080412.11.038                                 B039,B935,KHBB,KOM,LAM,LBK,LGP,LSF,LWH,WDC 40.0
+ 080412.22.047                     B935,KCS,KHBB,KHMB,KOM,LAM,LBK,LBP,LGB,LGP,LPG,LSF,WDC 35.0
+ 080413.13.026                             B935,KHBB,KHMB,KOM,LAM,LBK,LBP,LGP,LSF,WDC,YBH 40.0
+ 080412.22.040                                             B935,KHBB,KHMB,KOM,LBP,LPG,WDC 30.0
+ 080413.07.015                B040,B935,KCS,KHBB,KHMB,KOM,KPP,LBF,LBP,LGP,LSH,LSR,WDC,YBH 35.0
+ 080413.07.023                         B935,KCS,KHBB,KHMB,KOM,KPP,LBF,LGP,LSH,LSR,WDC,YBH 35.0
+ 080413.16.058                             B935,JCC,KBN,KHBB,KHMB,KKP,KOM,LBK,LRB,LSF,WDC 40.0
+ 080413.18.013                                         B935,KCS,KHBB,KHMB,KOM,LBP,LRB,WDC 30.0
+ 080413.20.036                                 B935,JCC,KCS,KHBB,KHMB,KKP,KOM,LBP,LRB,WDC 40.0
+ 080414.12.016                             B935,JCC,KCS,KHBB,KHMB,KKP,KOM,LBK,LBP,LPG,WDC 40.0
+ 080414.12.020                                          KCS,KHBB,KHMB,KOM,LBP,LPG,LRB,WDC 35.0
+ 080414.10.058             B935,KCS,KHBB,KHMB,KKP,KOM,KPP,LBK,LBP,LGP,LSF,LSH,LSR,LWH,WDC 35.0
+ 080414.18.003                                                                        WDC 16.0
+ 080415.11.006                                                      B935,KHBB,KOM,LSH,WDC 30.0
+ 080415.11.008                                         B935,KCS,KHBB,KHMB,KOM,LBP,LSF,WDC 35.0
+ 080415.24.028                                    B039,B935,KCS,KHBB,KHMB,KOM,LBK,LSH,WDC 30.0
+ 080416.15.003                                         B935,KCS,KHBB,KHMB,KOM,KPP,LBP,WDC 35.0
+ 080418.03.001                                                      B935,KHBB,LSF,WDC,YBH 25.0
+ 080415.19.030                             B935,KHBB,KHMB,KOM,LAM,LBK,LBP,LSF,LSH,WDC,YBH 30.0
+ 080419.24.054                                 B935,KHBB,KHMB,KOM,LAM,LBK,LBP,LSF,WDC,YBH 30.0
+ 080416.13.033                                                          B935,KCS,KHBB,WDC 25.0
+ 080417.15.043                                            B039,B935,KCS,KHBB,KHMB,LBP,WDC 30.0
+ 080418.02.049                                             B935,KHBB,KHMB,KOM,LBP,LPG,WDC 30.0
+ 080419.04.046                                                      KCS,KHBB,KHMB,LBP,WDC 25.0
+ 080420.01.019                                                B039,B040,KOM,KRMB,KSXB,YBH 25.0
+ 080420.04.009                                                     B039,KOM,KRMB,KSXB,YBH 30.0
+ 080420.05.032   B039,B040,B935,KHBB,KHMB,KOM,LAM,LBF,LBK,LBP,LGP,LSF,LSH,LSR,LWH,WDC,YBH 40.0
+ 080420.08.042                            B935,JCC,KCS,KHBB,KHMB,KOM,KRMB,LBP,LGP,WDC,YBH 35.0
+ 080421.14.048                                            B039,KHBB,KRMB,KSXB,LBK,WDC,YBH 30.0
+ 080421.15.050                                            B039,KHBB,KOM,KRMB,KSXB,LGB,YBH 35.0
+ 080421.16.053                                                               KHBB,WDC,YBH 30.0
+ 080421.16.054                                                      KHBB,KHMB,KOM,WDC,YBH 30.0
+ 080421.17.056                                             KHBB,KOM,KRMB,KSXB,LGP,WDC,YBH 40.0
+ 080421.23.033                                              KHBB,KHMB,KOM,LBK,LGP,LSF,WDC 30.0
+ 080422.13.003                                                    B039,KHBB,KRMB,KSXB,YBH 25.0
+ 080422.12.039                            B039,KHBB,KOM,KRMB,KSXB,LAM,LBK,LGP,LSF,WDC,YBH 35.0
+ 080422.13.043                                         B040,KOM,KRMB,KSXB,KTR,LAM,LBK,YBH 30.0
+ 080422.15.030                                                  KOM,KRMB,KRP,KSXB,KTR,YBH 30.0
+ 080424.04.058                                         KHBB,KHMB,KOM,KRMB,LBK,LGP,LSR,YBH 20.0
+ 080424.05.060                          B039,B040,KHBB,KHMB,KOM,KRMB,KSXB,KTR,LAM,LBK,YBH 35.0
+ 080426.05.008                                                      KOM,KRMB,KSXB,KTR,YBH 25.0
+ 080426.06.027                                                          KOM,KRMB,KSXB,YBH 20.0
+ 080426.20.030                                                    B039,B040,KRMB,KSXB,YBH 30.0
+ 080427.04.052                                                     KHMB,KOM,KRMB,KSXB,YBH 25.0
+ 080427.13.036                                                 B039,KOM,KRMB,KSXB,KTR,YBH 25.0
+ 080427.20.043                                                          B039,KOM,KRMB,YBH 25.0
+ 080429.15.005                                                              B039,KSXB,YBH 20.0
+ 080326.07.004                                                            KBN,KFP,KIP,KRK 10.0
+ 080326.07.048                                                       GTC,KCPB,KFP,KIP,KRK 15.0
+ 080326.08.015                    B933,GASB,GHM,GSN,GTC,HOPS,KBN,KBS,KCPB,KFP,KIP,KRK,LVR 35.0
+ 080326.09.007                     GASB,GHM,GSN,GTC,GVV,HOPS,KBN,KBS,KCPB,KFP,KIP,KRK,LVR 30.0
+ 080328.09.029                                                                        KRK  5.0

@@ -11,6 +11,7 @@ src/LFEs_all_LFEs/*
 src/LFEs_known/*
 src/LFEs_LFEs_parallel/*
 src/templates_2007_2009/*
+src/templates_v1/*/*.eps
 src/timearrival/*
 src/tmp/*
 src/waveforms/*

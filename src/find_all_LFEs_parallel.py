@@ -168,6 +168,7 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
 
         # Create directory to store the LFEs times
         namedir = 'LFEs/' + families['family'].iloc[i]
+        print(families['family'].iloc[i])
         if not os.path.exists(namedir):
              os.makedirs(namedir)
 
@@ -221,6 +222,7 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
 
         # Loop on hours of data
         for hour in range(0, nhour):
+            print(hour)
             Tstart = t1 + hour * 3600.0
             Tend = t1 + (hour + 1) * 3600.0 + duration
             delta = Tend - Tstart
@@ -331,7 +333,8 @@ def find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
     """    
     """
     # Number of CPUs
-    ncpu = multiprocessing.cpu_count()
+    #ncpu = multiprocessing.cpu_count()
+    ncpu = 1
 
     # Get the network, channels, and location of the stations
     staloc = pd.read_csv(station_file, sep=r'\s{1,}', header=None, engine='python')
@@ -380,7 +383,7 @@ if __name__ == '__main__':
     # Set the parameters
     family_file = '../data/Ducellier/families_permanent.txt'
     station_file = '../data/Ducellier/stations_permanent.txt'
-    template_dir = 'templates_2007_2009'
+    template_dir = 'templates_v1'
     TDUR = 10.0
     filt = (1.5, 9.0)
     freq0 = 1.0
@@ -409,7 +412,7 @@ if __name__ == '__main__':
                 threshold)
 
     families = pd.read_csv(family_file, sep=r'\s{1,}', header=None, engine='python')
-    families.columns = ['family', 'stations']
+    families.columns = ['family', 'stations', 'duration']
     for i in range(0, len(families)):
         os.rename('LFEs/' + families['family'].iloc[i] + '/catalog.pkl', \
             'LFEs/' + families['family'].iloc[i] + \

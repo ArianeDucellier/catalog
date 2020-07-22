@@ -44,7 +44,7 @@ def refine_templates(directory, family, stations, tbegin, tend):
             filename = 'templates_2007_2009/' + family + '/' + station + '_' + channel + '.pkl'
             data = pickle.load(open(filename, 'rb'))
             stack = data[0]
-            stack = stack.slice(stack.stats.starttime + 10.0, stack.stats.starttime + 40.0)
+            stack = stack.slice(stack.stats.starttime + tbegin, stack.stats.starttime + tend)
             dt = stack.stats.delta
             nt = stack.stats.npts
             t = dt * np.arange(0, nt)
@@ -60,6 +60,8 @@ def refine_templates(directory, family, stations, tbegin, tend):
             plt.close(1)
 
             # Save
+            stack.stats.station = station
+            stack.stats.channel = channel
             data[0] = stack
             savename = namedir + '/' + station + '_' + channel + '.pkl'
             pickle.dump(data, open(savename, 'wb'))
