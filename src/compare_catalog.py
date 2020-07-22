@@ -214,14 +214,9 @@ def compare_catalog(filename):
     plt.savefig('LFEs_known/' + filename + '/timelag.eps', format='eps')
     plt.close(2)
 
-    if len(df_added) > 0:
-        maxcc = np.max(df_added['cc'])
-    else:
-        maxcc = np.nan
-    if len(df_both2) > 0:
-        maxcc2 = np.max(df_both2['cc'])
-    else:
-        maxcc2 = np.nan
+    cc_added = np.mean(df_added['cc'])
+    cc_both = np.mean(df_both2['cc'])
+    cc_missing = np.mean(df_missing['cc'])
 
     # Write number of LFEs
     tfile = open('LFEs_known/' + filename + '/comparison.txt', 'w')
@@ -232,7 +227,8 @@ def compare_catalog(filename):
     tfile.write('Number of LFEs present in both catalogs: {}\n'.format(len(df_both1)))
     tfile.close()
 
-    return (len(df1), len(df2), len(df_added), len(df_missing), len(df_both1), timediff)
+    return (len(df1), len(df2), len(df_added), len(df_missing), \
+        len(df_both1), nsta, cc_added, cc_both, cc_missing, timediff)
 
 if __name__ == '__main__':
 
@@ -242,14 +238,19 @@ if __name__ == '__main__':
              'formats': ('S13', 'S3', np.float, np.float, np.float, \
         np.float, np.float, np.int)}, \
         skiprows=1)
-    df = pd.DataFrame(columns=['our', 'plourde', 'added', 'missing', 'both'])
+    df = pd.DataFrame(columns=['our', 'plourde', 'added', 'missing', 'both', \
+        'nsta', 'cc_added', 'cc_both', 'cc_missing'])
     for ie in range(0, len(LFEloc)):
         filename = LFEloc[ie][0].decode('utf-8')
-        (our, plourde, added, missing, both, timediff) = compare_catalog(filename)
+        (our, plourde, added, missing, both, nsta, cc_added, cc_both, \
+            cc_missing, timediff) = compare_catalog(filename)
         i0 = len(df.index)
-        df.loc[i0] = [our, plourde, added, missing, both]
+        df.loc[i0] = [our, plourde, added, missing, both, nsta, cc_added, \
+            cc_both, cc_missing]
         if ie == 0:
             diff = timediff
         else:
-            diff = np.concatenate((diff, timediff))
+            if missing / plourde <= 0.05:
+                print(timediff)
+                diff = np.concatenate((diff, timediff))
     pickle.dump((df, diff), open('comparison.pkl', 'wb'))
