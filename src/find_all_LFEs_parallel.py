@@ -168,7 +168,6 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
 
         # Create directory to store the LFEs times
         namedir = 'LFEs/' + families['family'].iloc[i]
-        print(families['family'].iloc[i])
         if not os.path.exists(namedir):
              os.makedirs(namedir)
 
@@ -222,7 +221,6 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
 
         # Loop on hours of data
         for hour in range(0, nhour):
-            print(hour)
             Tstart = t1 + hour * 3600.0
             Tend = t1 + (hour + 1) * 3600.0 + duration
             delta = Tend - Tstart
@@ -234,25 +232,28 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
                 subset = staloc.loc[staloc['station'] == station]
                 channels = subset['channels'].iloc[0]
                 mychannels = channels.split(',')
-                for channel in mychannels:
+                for num, channel in enumerate(mychannels):
                     try:
                         D = read('tmp/' + station + '_' + channel + '.mseed')
                         D = D.slice(Tstart, Tend)
 
                         if (type(D) == obspy.core.stream.Stream):
                             namefile = 'tmp/' + station + '_' + channel + '.pkl'
-                            orientation = pickle.load(open(namefile, 'rb'))
+                            orientation = pickle.load(open(namefile, 'rb'))[num]
                             index = names.index(station + '_' + channel)
                             reference = orientations[index]
 
                             # Rotate components
-                            if len(mychannels) > 1:
+                            if (len(mychannels) > 1) and (num < 2):
                                 if orientation != reference:
                                     channel_new = channel[0:2] + swap[channel[2]]
                                     D_new = read('tmp/' + station + '_' + channel_new + '.mseed')
                                     D_new = D_new.slice(Tstart, Tend)
                                     namefile = 'tmp/' + station + '_' + channel_new + '.pkl'
-                                    orientation_new = pickle.load(open(namefile, 'rb'))
+                                    if num == 0:
+                                        orientation_new = pickle.load(open(namefile, 'rb'))[1]
+                                    else:
+                                        orientation_new = pickle.load(open(namefile, 'rb'))[0]
                                     index = names.index(station + '_' + channel_new)
                                     reference_new = orientations[index]
                                     if channel[2] in ['E', '1']:
@@ -292,7 +293,10 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
     
             if (nchannel > 0):   
                 # Compute average cross-correlation across channels
-                meancc = np.mean(cc, axis=0)
+                if len(np.shape(cc)) == 1:
+                    meancc = cc
+                else:
+                    meancc = np.mean(cc, axis=0)
                 if (type_threshold == 'MAD'):
                     MAD = np.median(np.abs(meancc - np.mean(meancc)))
                     index = np.where(meancc >= threshold * MAD)
@@ -333,8 +337,7 @@ def find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
     """    
     """
     # Number of CPUs
-    #ncpu = multiprocessing.cpu_count()
-    ncpu = 1
+    ncpu = multiprocessing.cpu_count()
 
     # Get the network, channels, and location of the stations
     staloc = pd.read_csv(station_file, sep=r'\s{1,}', header=None, engine='python')
@@ -398,7 +401,7 @@ if __name__ == '__main__':
     year = 2008
     month = 4
     for day in range(1, 2):
-        for hour in range(0, 12, 12):
+        for hour in range(0, 1, 1):
             tbegin = (year, month, day, hour, 0, 0)
             if (hour == 12):
                 if (day == 30):
@@ -406,7 +409,7 @@ if __name__ == '__main__':
                 else:
                     tend = (year, month, day + 1, 0, 0, 0)
             else:
-                tend = (year, month, day, hour + 12, 0, 0)
+                tend = (year, month, day, hour + 1, 0, 0)
             find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
                 TDUR, filt, freq0, nattempts, waittime, type_threshold, \
                 threshold)
