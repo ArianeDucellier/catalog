@@ -397,11 +397,11 @@ if __name__ == '__main__':
 
     begin = datetime.now()
 
-    # April 2008
+    # September 2008
     year = 2008
-    month = 4
-    for day in range(1, 2):
-        for hour in range(0, 1, 1):
+    month = 9
+    for day in range(1, 31):
+        for hour in range(0, 24, 12):
             tbegin = (year, month, day, hour, 0, 0)
             if (hour == 12):
                 if (day == 30):
@@ -409,7 +409,7 @@ if __name__ == '__main__':
                 else:
                     tend = (year, month, day + 1, 0, 0, 0)
             else:
-                tend = (year, month, day, hour + 1, 0, 0)
+                tend = (year, month, day, hour + 12, 0, 0)
             find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
                 TDUR, filt, freq0, nattempts, waittime, type_threshold, \
                 threshold)
