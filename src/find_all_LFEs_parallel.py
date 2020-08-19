@@ -151,13 +151,13 @@ def download_data(staloc, Tstart, Tend, filt, nattempts, waittime, ncpu, icpu):
                 mychannels = channels.split(',')
                 for channel in mychannels:
                     stream = D.select(channel=channel)
-                    if type(stream) == obspy.core.stream.Stream():
+                    if type(stream) == obspy.core.stream.Stream:
                         stream.write('tmp/' + station + '_' + channel + \
                             '.mseed', format='MSEED')
                         namefile = 'tmp/' + station + '_' + channel + '.pkl'
                         pickle.dump(orientation, open(namefile, 'wb'))
 
-def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
+def analyze_data(families, staloc, tbegin, tend, \
     freq0, type_threshold, threshold, ncpu, icpu):
     """
     """
@@ -165,6 +165,7 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
     ibegin = icpu * nfamilies
     iend = min((icpu + 1) * nfamilies, len(families))
     
+    # Loop on families
     for i in range(ibegin, iend):
 
         # Create directory to store the LFEs times
@@ -172,11 +173,11 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
         if not os.path.exists(namedir):
              os.makedirs(namedir)
 
-        # File to write error messages
-        namedir = 'error'
+        # File to write number of stations
+        namedir = 'nstations'
         if not os.path.exists(namedir):
             os.makedirs(namedir)
-            errorfile = 'error/' + families['family'].iloc[i] + '.txt'
+        stationfile = 'nstations/' + families['family'].iloc[i] + '.txt'
 
         # Create dataframe to store LFE times
         df = pd.DataFrame(columns=['year', 'month', 'day', 'hour', \
@@ -192,8 +193,9 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
             channels = subset['channels'].iloc[0]
             mychannels = channels.split(',')
             for channel in mychannels:
-                data = pickle.load(open(template_dir + '/' + families['family'].iloc[i] + \
-                    '/' + station + '_' + channel + '.pkl', 'rb'))
+                data = pickle.load(open(template_dir + '/' + \
+                    families['family'].iloc[i] + '/' + station + '_' + \
+                    channel + '.pkl', 'rb'))
                 template = data[0]
                 angle = data[1]
                 templates.append(template)
@@ -239,38 +241,49 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
                         D = D.slice(Tstart, Tend)
 
                         if (type(D) == obspy.core.stream.Stream):
-                            namefile = 'tmp/' + station + '_' + channel + '.pkl'
-                            orientation = pickle.load(open(namefile, 'rb'))[num]
+                            namefile = 'tmp/' + station + '_' + channel + \
+                                '.pkl'
+                            orientation = pickle.load(open(namefile, 'rb')) \
+                                [num]
                             index = names.index(station + '_' + channel)
                             reference = orientations[index]
 
                             # Rotate components
                             if (len(mychannels) > 1) and (num < 2):
                                 if orientation != reference:
-                                    channel_new = channel[0:2] + swap[channel[2]]
-                                    D_new = read('tmp/' + station + '_' + channel_new + '.mseed')
+                                    channel_new = channel[0:2] + \
+                                        swap[channel[2]]
+                                    D_new = read('tmp/' + station + '_' + \
+                                        channel_new + '.mseed')
                                     D_new = D_new.slice(Tstart, Tend)
-                                    namefile = 'tmp/' + station + '_' + channel_new + '.pkl'
+                                    namefile = 'tmp/' + station + '_' + \
+                                        channel_new + '.pkl'
                                     if num == 0:
-                                        orientation_new = pickle.load(open(namefile, 'rb'))[1]
+                                        orientation_new = pickle.load(open( \
+                                            namefile, 'rb'))[1]
                                     else:
-                                        orientation_new = pickle.load(open(namefile, 'rb'))[0]
-                                    index = names.index(station + '_' + channel_new)
+                                        orientation_new = pickle.load(open( \
+                                            namefile, 'rb'))[0]
+                                    index = names.index(station + '_' + \
+                                        channel_new)
                                     reference_new = orientations[index]
                                     if channel[2] in ['E', '1']:
-                                        D = rotate_data(D, D_new, orientation, \
-                                            orientation_new, reference, reference_new, 'E')
+                                        D = rotate_data(D, D_new, \
+                                            orientation, orientation_new, \
+                                            reference, reference_new, 'E')
                                     else:
-                                        D = rotate_data(D_new, D, orientation_new, \
-                                            orientation, reference_new, reference, 'N')
+                                        D = rotate_data(D_new, D, \
+                                            orientation_new, orientation, \
+                                            reference_new, reference, 'N')
 
                             # Append stream to data
                             data.append(D)
                     except:
-                        message = 'No data available for station {} and channel {}'.format( \
-                            station, channel) + 'at time {}/{}/{} - {}:{}:{}\n'.format( \
-                            Tstart.year, Tstart.month, Tstart.day, Tstart.hour, \
-                            Tstart.minute, Tstart.second)
+                        message = 'No data available for station {}'.format( \
+                            station) + ' and channel {}'.format(channel) + \
+                            ' at time {}/{}/{} - {}:{}:{}\n'.format( \
+                            Tstart.year, Tstart.month, Tstart.day, \
+                            Tstart.hour, Tstart.minute, Tstart.second)
 
             # Loop on channels
             nchannel = 0
@@ -291,7 +304,12 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
                         else:
                             cc = cctemp
                         nchannel = nchannel + 1
-    
+
+            # Write number of channels
+            with open(stationfile, 'a') as file:
+                file.write('{} {} {} {} {}\n'.format(Tstart.year, \
+                    Tstart.month, Tstart.day, Tstart.hour, nchannel))
+
             if (nchannel > 0):   
                 # Compute average cross-correlation across channels
                 if len(np.shape(cc)) == 1:
@@ -304,7 +322,8 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
                 elif (type_threshold == 'Threshold'):
                     index = np.where(meancc >= threshold)
                 else:
-                    raise ValueError('Type of threshold must be MAD or Threshold')
+                    raise ValueError( \
+                        'Type of threshold must be MAD or Threshold')
                 times = np.arange(0.0, np.shape(meancc)[0] * dt, dt)
 
                 # Get LFE times
@@ -315,10 +334,11 @@ def analyze_data(families, staloc, Tstart, Tend, tbegin, tend, \
                     i0 = len(df.index)
                     for j in range(0, len(time)):
                         timeLFE = Tstart + time[j]
-                        df.loc[i0 + j] = [int(timeLFE.year), int(timeLFE.month), \
-                            int(timeLFE.day), int(timeLFE.hour), \
-                            int(timeLFE.minute), timeLFE.second + \
-                            timeLFE.microsecond / 1000000.0, cc[j], nchannel]
+                        df.loc[i0 + j] = [int(timeLFE.year), \
+                            int(timeLFE.month), int(timeLFE.day), \
+                            int(timeLFE.hour), int(timeLFE.minute), \
+                            timeLFE.second + timeLFE.microsecond / 1000000.0, \
+                            cc[j], nchannel]
 
         # Add to pandas dataframe and save
         namefile = 'LFEs/' + families['family'].iloc[i] + '/catalog.pkl'
@@ -341,12 +361,14 @@ def find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
     ncpu = multiprocessing.cpu_count()
 
     # Get the network, channels, and location of the stations
-    staloc = pd.read_csv(station_file, sep=r'\s{1,}', header=None, engine='python')
+    staloc = pd.read_csv(station_file, sep=r'\s{1,}', header=None, \
+        engine='python')
     staloc.columns = ['station', 'network', 'channels', 'location', \
         'server', 'latitude', 'longitude', 'time_on', 'time_off', 'dt']
 
     # Get the families, stations, and duration of the template
-    families = pd.read_csv(family_file, sep=r'\s{1,}', header=None, engine='python')
+    families = pd.read_csv(family_file, sep=r'\s{1,}', header=None, \
+        engine='python')
     families.columns = ['family', 'stations', 'duration']
 
     # Begin and end time of analysis
@@ -377,7 +399,7 @@ def find_LFEs(family_file, station_file, template_dir, tbegin, tend, \
         pool.map(map_func, iter(range(0, ncpu)))
 
     # Analyze seismic data
-    map_func = partial(analyze_data, families, staloc, Tstart, Tend, tbegin, tend, \
+    map_func = partial(analyze_data, families, staloc, tbegin, tend, \
         freq0, type_threshold, threshold, ncpu)
     with Pool(ncpu) as pool:
         pool.map(map_func, iter(range(0, ncpu)))
@@ -401,11 +423,11 @@ if __name__ == '__main__':
     # August 2010
     year = 2010
     month = 8
-    for day in range(1, 32):
-        for hour in range(1, 24, 12):
+    for day in range(0, 32):
+        for hour in range(0, 24, 12):
             tbegin = (year, month, day, hour, 0, 0)
             if (hour == 12):
-                if (day == 30):
+                if (day == 31):
                     tend = (year, month + 1, 1, 0, 0, 0)
                 else:
                     tend = (year, month, day + 1, 0, 0, 0)
@@ -415,7 +437,8 @@ if __name__ == '__main__':
                 TDUR, filt, freq0, nattempts, waittime, type_threshold, \
                 threshold)
 
-    families = pd.read_csv(family_file, sep=r'\s{1,}', header=None, engine='python')
+    families = pd.read_csv(family_file, sep=r'\s{1,}', header=None, \
+         engine='python')
     families.columns = ['family', 'stations', 'duration']
     for i in range(0, len(families)):
         os.rename('LFEs/' + families['family'].iloc[i] + '/catalog.pkl', \
