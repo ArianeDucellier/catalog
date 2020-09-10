@@ -152,10 +152,11 @@ def download_data(staloc, Tstart, Tend, filt, nattempts, waittime, ncpu, icpu):
                 for channel in mychannels:
                     stream = D.select(channel=channel)
                     if type(stream) == obspy.core.stream.Stream:
-                        stream.write('tmp/' + station + '_' + channel + \
-                            '.mseed', format='MSEED')
-                        namefile = 'tmp/' + station + '_' + channel + '.pkl'
-                        pickle.dump(orientation, open(namefile, 'wb'))
+                        if len(stream) > 0:
+                            stream.write('tmp/' + station + '_' + channel + \
+                                '.mseed', format='MSEED')
+                            namefile = 'tmp/' + station + '_' + channel + '.pkl'
+                            pickle.dump(orientation, open(namefile, 'wb'))
 
 def analyze_data(families, staloc, tbegin, tend, \
     freq0, type_threshold, threshold, ncpu, icpu):
@@ -423,7 +424,7 @@ if __name__ == '__main__':
     # August 2010
     year = 2010
     month = 8
-    for day in range(0, 32):
+    for day in range(28, 32):
         for hour in range(0, 24, 12):
             tbegin = (year, month, day, hour, 0, 0)
             if (hour == 12):

@@ -62,7 +62,10 @@ def optimized(template, data):
     x2s = np.insert(np.cumsum(np.power(data, 2.0)), 0, 0)
     x2sum = x2s[I + M] - x2s[I]
     sd = np.sqrt(M * x2sum - xsum * xsum)
-    cc = (M * np.correlate(data, template) - np.sum(template) * xsum) / (st * sd)
+    if np.max(sd) == 0.0:
+        cc = np.zeros(N - M + 1)
+    else:
+        cc = (M * np.correlate(data, template) - np.sum(template) * xsum) / (st * sd)
     return cc
 
 if __name__ == '__main__':
