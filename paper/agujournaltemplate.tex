@@ -1,0 +1,623 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AGUJournalTemplate.tex: this template file is for articles formatted with LaTeX
+%
+% This file includes commands and instructions
+% given in the order necessary to produce a final output that will
+% satisfy AGU requirements, including customized APA reference formatting.
+%
+% You may copy this file and give it your
+% article name, and enter your text.
+%
+%
+% Step 1: Set the \documentclass
+%
+% There are two options for article format:
+%
+% PLEASE USE THE DRAFT OPTION TO SUBMIT YOUR PAPERS.
+% The draft option produces double spaced output.
+%
+
+%% To submit your paper:
+\documentclass[draft]{agujournal2019}
+\usepackage{url} %this package should fix any errors with URLs in refs.
+\usepackage{lineno}
+\linenumbers
+%%%%%%%
+% As of 2018 we recommend use of the TrackChanges package to mark revisions.
+% The trackchanges package adds five new LaTeX commands:
+%
+%  \note[editor]{The note}
+%  \annote[editor]{Text to annotate}{The note}
+%  \add[editor]{Text to add}
+%  \remove[editor]{Text to remove}
+%  \change[editor]{Text to remove}{Text to add}
+%
+% complete documentation is here: http://trackchanges.sourceforge.net/
+%%%%%%%
+
+\draftfalse
+
+%% Enter journal name below.
+%% Choose from this list of Journals:
+%
+% JGR: Atmospheres
+% JGR: Biogeosciences
+% JGR: Earth Surface
+% JGR: Oceans
+% JGR: Planets
+% JGR: Solid Earth
+% JGR: Space Physics
+% Global Biogeochemical Cycles
+% Geophysical Research Letters
+% Paleoceanography and Paleoclimatology
+% Radio Science
+% Reviews of Geophysics
+% Tectonics
+% Space Weather
+% Water Resources Research
+% Geochemistry, Geophysics, Geosystems
+% Journal of Advances in Modeling Earth Systems (JAMES)
+% Earth's Future
+% Earth and Space Science
+% Geohealth
+%
+% ie, \journalname{Water Resources Research}
+
+\journalname{Geophysical Research Letters}
+
+\begin{document}
+
+%% ------------------------------------------------------------------------ %%
+%  Title
+%
+% (A title should be specific, informative, and brief. Use
+% abbreviations only if they are defined in the abstract. Titles that
+% start with general keywords then specific terms are optimized in
+% searches)
+%
+%% ------------------------------------------------------------------------ %%
+
+% Example: \title{This is a test title}
+
+\title{A twelve-year-long low-frequency earthquake catalog for Northern California}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  AUTHORS AND AFFILIATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Authors are individuals who have significantly contributed to the
+% research and preparation of the article. Group authors are allowed, if
+% each author in the group is separately identified in an appendix.)
+
+% List authors by first name or initial followed by last name and
+% separated by commas. Use \affil{} to number affiliations, and
+% \thanks{} for author notes.
+% Additional author notes should be indicated with \thanks{} (for
+% example, for current addresses).
+
+% Example: \authors{A. B. Author\affil{1}\thanks{Current address, Antartica}, B. C. Author\affil{2,3}, and D. E.
+% Author\affil{3,4}\thanks{Also funded by Monsanto.}}
+
+\authors{Ariane Ducellier\affil{1}, Kenneth Creager\affil{1}}
+
+
+% \affiliation{1}{First Affiliation}
+% \affiliation{2}{Second Affiliation}
+% \affiliation{3}{Third Affiliation}
+% \affiliation{4}{Fourth Affiliation}
+
+\affiliation{1}{University of Washington}
+%(repeat as many times as is necessary)
+
+%% Corresponding Author:
+% Corresponding author mailing address and e-mail address:
+
+% (include name and email addresses of the corresponding author.  More
+% than one corresponding author is allowed in this LaTeX file and for
+% publication; but only one corresponding author is allowed in our
+% editorial system.)
+
+% Example: \correspondingauthor{First and Last Name}{email@address.edu}
+
+\correspondingauthor{Ariane Ducellier}{ducela@uw.edu}
+
+%% Keypoints, final entry on title page.
+
+%  List up to three key points (at least one is required)
+%  Key Points summarize the main points and conclusions of the article
+%  Each must be 100 characters or less with no special characters or punctuation and must be complete sentences
+
+% Example:
+% \begin{keypoints}
+% \item	List up to three key points (at least one is required)
+% \item	Key Points summarize the main points and conclusions of the article
+% \item	Each must be 100 characters or less with no special characters or punctuation and must be complete sentences
+% \end{keypoints}
+
+\begin{keypoints}
+\item enter point 1 here
+\item enter point 2 here
+\item enter point 3 here
+\end{keypoints}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  ABSTRACT
+%
+% A good abstract will begin with a short description of the problem
+% being addressed, briefly describe the new data or analyses, then
+% briefly states the main conclusion(s) and how they are supported and
+% uncertainties.
+%% ------------------------------------------------------------------------ %%
+
+%% \begin{abstract} starts the second page
+
+\begin{abstract}
+enter abstract here
+
+\end{abstract}
+
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TEXT
+%
+%% ------------------------------------------------------------------------ %%
+
+%%% Suggested section heads:
+% \section{Introduction}
+%
+% The main text should start with an introduction. Except for short
+% manuscripts (such as comments and replies), the text should be divided
+% into sections, each with its own heading.
+
+% Headings should be sentence fragments and do not begin with a
+% lowercase letter or number. Examples of good headings are:
+
+% \section{Materials and Methods}
+% Here is text on Materials and Methods.
+%
+% \subsection{A descriptive heading about methods}
+% More about Methods.
+%
+% \section{Data} (Or section title might be a descriptive heading about data)
+%
+% \section{Results} (Or section title might be a descriptive heading about the
+% results)
+%
+% \section{Conclusions}
+
+
+\section{Introduction}
+%Text here ===>>>
+
+Tectonic tremor is a weak but persistent shaking of the Earth that has been discovered in many subduction zones and some strike-slip faults throughout the world. Tremor is observed on seismograms as apparent noise whose amplitude is modulated in time in a similar manner at stations that are dozens of kilometers apart from each other. It is characterized by a long (several seconds to many minutes), low amplitude seismic signal, emergent onsets, and an absence of clear impulsive phases. Tremor can be explained as a swarm of low-frequency earthquakes (LFEs), that is small magnitude earthquakes (M $\sim$ 1) which dominant frequency is clearly low (1-10 Hz) compared with that of ordinary tiny earthquakes (up to 20 Hz). The source of the tremor and the LFEs is located on the plate boundary, and their focal mechanisms represent shear slip on a low-angle thrust fault dipping in the same direction as the plate interface ~\cite{IDE_2007_GRL}. LFEs are usually grouped into families of events, with all the earthquakes of a given family originating from the same small patch on the plate interface, and recurring more or less episodically in a bursty manner. In subduction zones such as Nankai and Cascadia, tectonic tremor and LFE observations are spatially and temporally correlated with slow slip observations ~\cite{OBA_2002, ROG_2003}. Due to this correlation, these paired phenomena have been called Episodic Tremor and Slip (ETS). \\
+
+The relatively short recurrence of slow slip and tremor events results in a rich history both in space and time and reveals potential patterns.  These event histories have allowed scientists to see complete event cycles, which is typically not possible to explore in traditional earthquake catalogs. However, most of the work on low-frequency earthquakes (LFEs) has been focused on detecting LFEs during periods of high tremor activity, grouping them into families of events, and locating the source of the LFE families. Longer catalogs (several years) have been established for LFE families in Mexico (two-year long catalog by ~\citeA{FRA_2014}), the San Andreas Fault (fifteen-year-long catalog by ~\citeA{SHE_2017}), Washington State (five-year-long catalog by ~\citeA{SWE_2019} and two-year-long catalog by ~\citeA{CHE_2017_JGR, CHE_2017_G3}), New Zealand (eight-year-long catalog by ~\citeA{BAR_2018}), and Japan (twelve-year-long catalog by ~\citeA{NAK_2017} and eight-year-long catalog by ~\citeA{OHT_2017}). These studies have shown that the recurrence behavior of LFE families varies a lot between seismic regions, and inside the same seismic region. In northern Washington, ~\citeA{SWE_2019} have identified and characterized four different LFE families that span the width of the transition zone in the Cascadia Subduction Zone beneath western Washington State. They found that the LFEs swarm duration, recurrence interval, and event size decrease systematically with increasing depth. On the San Andreas Fault, ~\citeA{SHE_2017}) observed a large diversity of recurrence behaviors among the LFE families, from semicontinuous to highly episodic. Particularly, two families exhibited bimodal recurrence patterns (about 3 and 6 days for the first one, and about 2 and 4 days for the second one). Moreover, he observed an increase in the LFE event rate after the 2004 Parkfield earthquake. \\
+
+~\citeA{PLO_2015}) have detected LFEs in southern Cascadia during the April 2008 ETS event using seismic data from the EarthScope Flexible Array Mendocino Experiment (FAME). They used a combination of autodetection methods and visual identification to obtain the initial templates. Then, they recovered higher signal-to-noise LFE signals using iterative network cross-correlation. They found that the LFE families on the southern Cascadia Subduction Zone were located above the plate boundary, with a large distribution of depths (28-47 km). Three additional LFE families were found on two strike-slip faults, the Maacama and Bucknell Creek faults, which are part of the San Andreas Fault zone. \\
+
+When the hard work of detecting LFEs and identifying LFE families has been carried out, and enough (a few hundred) LFEs have been identified for a given family, a template waveform can be obtained by stacking all the waveforms corresponding to all the LFEs identified. Once a template is available, additional LFEs can be found by cross-correlating seismic data with the template, and assuming that an LFE is occurring whenever the value of the cross-correlation is higher than a chosen threshold.  The signal-to-noise ratios are low, so LFEs can be best identified by stacking the cross-correlation functions of multiple stations. In this study, we first use the catalog established by ~\citeA{PLO_2015} for the months of March and April 2008 to create templates for the temporary seismic stations of the FAME experiment. We then use these templates to extend the catalog to the whole period when the FAME experiment was running, between July 2007 and June 2009. Next, we use the LFEs detections from the 2007-2009 periods to create templates for the permanent stations of three seismic network in northern California. These new templates allow us to extend the LFE catalog to the period XXX-XXX.
+
+\textcolor{red}{Add something about the conclusions}
+
+\section{Data}
+
+We used both seismic data from the temporary EarthScope Flexible Array Mendocino Experiment (FAME) distributed by Incorporated Research Institutions for Seismology (IRIS), and seismic data from three permanent seismic networks distributed by the Northern California Earthquake Data Center (NCEDC). The FAME network was installed in northern California between July 2007 and June 2009. The three permanent networks are Berkeley Digital Seismic Network (BK), Northern California Seismic Network (NC), and Plate Boundary Observatory Strain and Seismic Data (PB). We used both one-component and three-components seismic stations. Depending on availability, we used channels BHZ, EHZ, HHZ, or SHZ as we are mainly interested in the frequency band 1-10Hz. We restricted ourselves to seismic stations less than 100 kilometers away from the epicenter of an LFE family, as we do not expect to have good signal-to-noise ratio for stations located farther away. The complete list of seismic stations and channels used in this study is given in the Supplementary Material. Figure XXX shows a map of the locations of the LFE families, and of the locations of the seismic stations. We can see that we have a good coverage of the area, and most LFE families are surrounded by several seismic stations. \\
+
+\begin{figure}
+\noindent\includegraphics[width=\textwidth, trim={1.5cm 4cm 1cm 10cm},clip]{figures/map_LFEs.eps}
+\caption{Map showing the location of the LFE families (back dots) and the seismic stations used in this study. Red triangles are the stations from the FAME experiment, green triangles are one-component permanent stations, blue triangles are three components permanent stations. Red stars are moderate ($M > 5$) nearby earthquakes.}
+\label{pngfiguresample}
+\end{figure}
+
+\citeA{PLO_2015} have kindly accepted to share their LFE catalog with us. They have provided a list of 66 LFE families with, for each family, the location of the hypocenter of the family, the list of stations and channels used to detect LFEs for this family, and the timing of LFE detections. ~\citeA{PLO_2015} have later reduced the number of LFE families to 37, by grouping together families with many common detections, but we chose to use the initial detections to extend the catalog. Using this dataset, we have created LFE templates for each LFE family and each seismic station and channel. For a given LFE family, a given station and a given channel, we downloaded an 80-second-long seismic waveform starting 10 seconds before the LFE detection time, we detrended the data, tapered the first and last 5 seconds of the data with a Hann window, removed the instrument response, bandpassed filter between 1.5 and 9 Hz, resampled the data to 20 Hz, and cut the first and last 10 seconds of data to obtain a one-minute-long template. All these preprocessing operations are done with the Python package obspy. We then stacked linearly all the waveforms after normalizing each waveform with the root mean square (RMS) to obtain a waveform template for each station and each channel.
+
+\section{Method}
+
+We used a matched-filter algorithm to detect LFEs. For a given LFE family, we download one hour of seismic data. Then for each station and each channel, we cross-correlate the one-hour long signal with the one-minute-long template for the given station and channel. As the signal-to-noise ratio of the seismic data is low, we may not see obvious peaks in the cross-correlation signal. However, if we stack the cross-correlation signals for all the channels and all the stations, we can see peaks appearing. Whenever the value of the average cross-correlation is higher than a threshold (we chose a threshold equal to eight times the median absolute deviation of the stacked cross-correlation), we assumed that there is an LFE. As two peaks separated by a short period of time may actually correspond to the same LFE, we kept only LFEs that are separated by at least one second and, when two LFEs are separated by less than one second, we keep only the one with the higher value of the stacked cross-correlation. \\
+
+We first looked for LFEs during the months of March and April 2008, which correspond to the period covered by the catalog from ~\citeA{PLO_2015}, and compared our detections with the initial detections from the original catalog of 66 families. For 19 families, we recovered all the LFE detections initially present in the ~\citeA{PLO_2015}'s catalog. For 61 families, we recovered more than 90 \% of the initial LFE detections. We also added 74 \% more LFEs to the catalog, but most of added LFEs have a low cross-correlation value and may be false detections. Figure XXX shows the cross-correlation values for the LFEs in the original catalog, and for the LFEs that we added to the catalog for family \textcolor{red}{080413.07.023}.
+
+\begin{figure}
+\noindent\includegraphics[width=\textwidth, trim={7.5cm 1cm 28cm 2cm},clip]{figures/hist.eps}
+\caption{Cross-correlation values for LFEs added in the catalog for family \textcolor{red}{080413.07.023} (left) and cross-correlation values for LFEs in the original catalog from ~\citeA{PLO_2015} (right). There were no missing LFEs for this family.}
+\label{pngfiguresample}
+\end{figure}
+
+We then looked for LFEs during the period from July 2007 to June 2009, which correspond to the period when the FAME experiment was operating. Using a threshold equal to eight times the median absolute deviation of the stacked cross-correlation may produce false detections, therefore we filtered the LFE detection times before visualizing the two-year-long catalog. As the number of seismic stations recording may change with time as the stations were progressively installed during Summer and Fall 2007, and then progressively removed during May and June 2009, we kept only LFE detections for which the product of the cross-correlation value by the number of stations recording at that time is higher than a threshold (equal to 0.1 times the number of stations used to detect LFEs for the given LFE family). The threshold is thus different for each LFE family. The resulting LFE catalog for the period 2007-2009 is shown in Figure XXX. For comparison, we also plotted the tremor detection times from ~\citeA{BOY_2015}. \\
+
+\begin{figure}
+\noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/tremor_nb.eps}
+\caption{LFE and tremor detections as a function of time and latitude. Red dots represent tremor detections from the catalog of ~\citeA{BOY_2015}. Black dots represent days where LFEs are detected for a given LFE family. The size of the black dots are proportional to the number of LFEs detected during this day. The double-headed grey arrow represents the time period when the FAME experiment was operating at full capacity. LFE families south of 40° N latitude are on the San Andreas fault system.}
+\label{pngfiguresample}
+\end{figure}
+
+We note that there is a good spatial and temporal agreement between tremor and LFEs, with LFEs detected during the main tremor episodes. Additional small LFE episodes are also detected between bigger tremor episodes. The LFE families located south on the strike-slip fault from the San Andreas Fault system are much more active than the LFE families located on the subduction zone. Additionally, one LFE family located on the southern end of the subduction zone is also more active than families located farther north, and behaves more similarly to the strike-slip fault families. \\
+
+We then used the LFE detections from the 2007-2009 catalog to make new templates for the permanent stations of the three seismic networks: Berkeley Digital Seismic Network (BK), Northern California Seismic Network (NC), and Plate Boundary Observatory Strain and Seismic Data (PB). For a given LFE family, we took the 150 LFE detection times with the best cross-correlation value, we downloaded one minute of seismic data around each detection, and linearly stacked the waveforms to obtain the templates. We looked for templates for both one-component stations and three-component stations. \\
+
+For most families, we find that we can obtain good templates with signal-to-noise ratio for several stations. Only nine families have four or less seismic stations with good templates. Examples of templates are given in Figure XXX for station WDC and family \textcolor{red}{080401.05.050}. To obtain the above catalog, we used one-minute-long templates, which included noise before and after the seismic wave arrivals. To increase the cross-correlation values between the templates and the data, we thus reduced the length of the templates to 25 to 40 seconds, depending on the maximum distance from the source to the stations. We did not use stations more than 100 kilometers away from the epicenter of an LFE family, as the template would be unlikely to have a good signal-to-noise ratio.
+
+\begin{figure}
+\noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/templates.eps}
+\caption{Low-frequency earthquake template for station WDC and family \textcolor{red}{080401.05.050} for the three channels BHE, BHN and BHZ (left to right). We can clearly see a P-wave arrival and an S-wave arrival about 7 seconds later. The P-wave has a higher amplitude on the vertical component, and the S-wave has a higher amplitude on the horizontal components.}
+\label{pngfiguresample}
+\end{figure}
+
+First comparison with 2007-2009 catalog with FAME data
+
+\section{Results}
+
+Now extension of the catalog, we will try 1995-2011.
+
+New templates? New catalog? probably no time (or money)
+
+\section{Discussion}
+
+Section on effects of nearby earthquakes. Possible rapid tremor reversals
+
+\section{Conclusion}
+
+%%
+
+%  Numbered lines in equations:
+%  To add line numbers to lines in equations,
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+
+
+
+%% Enter Figures and Tables near as possible to where they are first mentioned:
+%
+% DO NOT USE \psfrag or \subfigure commands.
+%
+% Figure captions go below the figure.
+% Table titles go above tables;  other caption information
+%  should be placed in last line of the table, using
+% \multicolumn2l{$^a$ This is a table note.}
+%
+%----------------
+% EXAMPLE FIGURE
+%
+%
+% Giving latex a width will help it to scale the figure properly. A simple trick is to use \textwidth. Try this if large figures run off the side of the page.
+% \begin{figure}
+% \noindent\includegraphics[width=\textwidth]{anothersample.png}
+%\caption{caption}
+%\label{pngfiguresample}
+%\end{figure}
+%
+%
+%
+% If you get an error about an unknown bounding box, try specifying the width and height of the figure with the natwidth and natheight options.
+% \begin{figure}
+% \noindent\includegraphics[natwidth=800px,natheight=600px]{samplefigure.pdf}
+%\caption{caption}
+%\label{pdffiguresample}
+%\end{figure}
+%
+%
+% PDFLatex does not seem to be able to process EPS figures. You may want to try the epstopdf package.
+%
+%
+%
+% ---------------
+% EXAMPLE TABLE
+%
+% \begin{table}
+% \caption{Time of the Transition Between Phase 1 and Phase 2$^{a}$}
+% \centering
+% \begin{tabular}{l c}
+% \hline
+%  Run  & Time (min)  \\
+% \hline
+%   $l1$  & 260   \\
+%   $l2$  & 300   \\
+%   $l3$  & 340   \\
+%   $h1$  & 270   \\
+%   $h2$  & 250   \\
+%   $h3$  & 380   \\
+%   $r1$  & 370   \\
+%   $r2$  & 390   \\
+% \hline
+% \multicolumn{2}{l}{$^{a}$Footnote text here.}
+% \end{tabular}
+% \end{table}
+
+%% SIDEWAYS FIGURE and TABLE
+% AGU prefers the use of {sidewaystable} over {landscapetable} as it causes fewer problems.
+%
+% \begin{sidewaysfigure}
+% \includegraphics[width=20pc]{figsamp}
+% \caption{caption here}
+% \label{newfig}
+% \end{sidewaysfigure}
+%
+%  \begin{sidewaystable}
+%  \caption{Caption here}
+% \label{tab:signif_gap_clos}
+%  \begin{tabular}{ccc}
+% one&two&three\\
+% four&five&six
+%  \end{tabular}
+%  \end{sidewaystable}
+
+%% If using numbered lines, please surround equations with \begin{linenomath*}...\end{linenomath*}
+%\begin{linenomath*}
+%\begin{equation}
+%y|{f} \sim g(m, \sigma),
+%\end{equation}
+%\end{linenomath*}
+
+%%% End of body of article
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional Appendix goes here
+%
+% The \appendix command resets counters and redefines section heads
+%
+% After typing \appendix
+%
+%\section{Here Is Appendix Title}
+% will show
+% A: Here Is Appendix Title
+%
+%\appendix
+%\section{Here is a sample appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Optional Glossary, Notation or Acronym section goes here:
+%
+%%%%%%%%%%%%%%
+% Glossary is only allowed in Reviews of Geophysics
+%  \begin{glossary}
+%  \term{Term}
+%   Term Definition here
+%  \term{Term}
+%   Term Definition here
+%  \term{Term}
+%   Term Definition here
+%  \end{glossary}
+
+%
+%%%%%%%%%%%%%%
+% Acronyms
+%   \begin{acronyms}
+%   \acro{Acronym}
+%   Definition here
+%   \acro{EMOS}
+%   Ensemble model output statistics
+%   \acro{ECMWF}
+%   Centre for Medium-Range Weather Forecasts
+%   \end{acronyms}
+
+%
+%%%%%%%%%%%%%%
+% Notation
+%   \begin{notation}
+%   \notation{$a+b$} Notation Definition here
+%   \notation{$e=mc^2$}
+%   Equation in German-born physicist Albert Einstein's theory of special
+%  relativity that showed that the increased relativistic mass ($m$) of a
+%  body comes from the energy of motion of the body—that is, its kinetic
+%  energy ($E$)—divided by the speed of light squared ($c^2$).
+%   \end{notation}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  ACKNOWLEDGMENTS
+%
+% The acknowledgments must list:
+%
+% >>>>	A statement that indicates to the reader where the data
+% 	supporting the conclusions can be obtained (for example, in the
+% 	references, tables, supporting information, and other databases).
+%
+% 	All funding sources related to this work from all authors
+%
+% 	Any real or perceived financial conflicts of interests for any
+%	author
+%
+% 	Other affiliations for any author that may be perceived as
+% 	having a conflict of interest with respect to the results of this
+% 	paper.
+%
+%
+% It is also the appropriate place to thank colleagues and other contributors.
+% AGU does not normally allow dedications.
+
+
+\acknowledgments
+The authors would like to thank A. Plourde for sharing his low-frequency earthquake catalog. This project was funded by NSF grant XXX. A.D. would like to thank the Integral Environmental Big Data Research Fund from the College of the Environment of University of Washington, which funded cloud computing resources to carry out the data analyses. The seismic recordings used for this analysis can be downloaded from the IRIS and NCEDC websites.
+
+
+%% ------------------------------------------------------------------------ %%
+%% References and Citations
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \bibliography{<name of your .bib file>} don't specify the file extension
+%
+% don't specify bibliographystyle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{bibliography}
+
+
+
+%Reference citation instructions and examples:
+%
+% Please use ONLY \cite and \citeA for reference citations.
+% \cite for parenthetical references
+% ...as shown in recent studies (Simpson et al., 2019)
+% \citeA for in-text citations
+% ...Simpson et al. (2019) have shown...
+%
+%
+%...as shown by \citeA{jskilby}.
+%...as shown by \citeA{lewin76}, \citeA{carson86}, \citeA{bartoldy02}, and \citeA{rinaldi03}.
+%...has been shown \cite{jskilbye}.
+%...has been shown \cite{lewin76,carson86,bartoldy02,rinaldi03}.
+%...has been shown \cite [e.g.,][]{lewin76,carson86,bartoldy02,rinaldi03}.
+%
+% DO NOT use other cite commands (e.g., \citet, \citep, \citeyear, \nocite, \citealp, etc.).
+%
+
+
+
+\end{document}
+
+
+
+More Information and Advice:
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SECTION HEADS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Capitalize the first letter of each word (except for
+% prepositions, conjunctions, and articles that are
+% three or fewer letters).
+
+% AGU follows standard outline style; therefore, there cannot be a section 1 without
+% a section 2, or a section 2.3.1 without a section 2.3.2.
+% Please make sure your section numbers are balanced.
+% ---------------
+% Level 1 head
+%
+% Use the \section{} command to identify level 1 heads;
+% type the appropriate head wording between the curly
+% brackets, as shown below.
+%
+%An example:
+%\section{Level 1 Head: Introduction}
+%
+% ---------------
+% Level 2 head
+%
+% Use the \subsection{} command to identify level 2 heads.
+%An example:
+%\subsection{Level 2 Head}
+%
+% ---------------
+% Level 3 head
+%
+% Use the \subsubsection{} command to identify level 3 heads
+%An example:
+%\subsubsection{Level 3 Head}
+%
+%---------------
+% Level 4 head
+%
+% Use the \subsubsubsection{} command to identify level 3 heads
+% An example:
+%\subsubsubsection{Level 4 Head} An example.
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  IN-TEXT LISTS
+%
+%% ------------------------------------------------------------------------ %%
+%
+% Do not use bulleted lists; enumerated lists are okay.
+% \begin{enumerate}
+% \item
+% \item
+% \item
+% \end{enumerate}
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Single-line equations are centered.
+% Equation arrays will appear left-aligned.
+
+Math coded inside display math mode \[ ...\]
+ will not be numbered, e.g.,:
+ \[ x^2=y^2 + z^2\]
+
+ Math coded inside \begin{equation} and \end{equation} will
+ be automatically numbered, e.g.,:
+ \begin{equation}
+ x^2=y^2 + z^2
+ \end{equation}
+
+
+% To create multiline equations, use the
+% \begin{eqnarray} and \end{eqnarray} environment
+% as demonstrated below.
+\begin{eqnarray}
+  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
+        && + (y - y_{0}) \sin \Theta  \nonumber \\
+  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
+        && + (y - y_{0}) \cos \Theta.
+\end{eqnarray}
+
+%If you don't want an equation number, use the star form:
+%\begin{eqnarray*}...\end{eqnarray*}
+
+% Break each line at a sign of operation
+% (+, -, etc.) if possible, with the sign of operation
+% on the new line.
+
+% Indent second and subsequent lines to align with
+% the first character following the equal sign on the
+% first line.
+
+% Use an \hspace{} command to insert horizontal space
+% into your equation if necessary. Place an appropriate
+% unit of measure between the curly braces, e.g.
+% \hspace{1in}; you may have to experiment to achieve
+% the correct amount of space.
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATION NUMBERING: COUNTER
+%
+%% ------------------------------------------------------------------------ %%
+
+% You may change equation numbering by resetting
+% the equation counter or by explicitly numbering
+% an equation.
+
+% To explicitly number an equation, type \eqnum{}
+% (with the desired number between the brackets)
+% after the \begin{equation} or \begin{eqnarray}
+% command.  The \eqnum{} command will affect only
+% the equation it appears with; LaTeX will number
+% any equations appearing later in the manuscript
+% according to the equation counter.
+%
+
+% If you have a multiline equation that needs only
+% one equation number, use a \nonumber command in
+% front of the double backslashes (\\) as shown in
+% the multiline equation above.
+
+% If you are using line numbers, remember to surround
+% equations with \begin{linenomath*}...\end{linenomath*}
+
+%  To add line numbers to lines in equations:
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+
+
+

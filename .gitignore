@@ -1,3 +1,6 @@
+data/Ducellier/comparison/*
+data/Ducellier/histograms/*
+data/Ducellier/LFEdistribution/*
 data/Ducellier/timeline/*
 data/Plourde_2015/detections/*
 data/Plourde_2015/LFEdistribution/*
@@ -5,6 +8,7 @@ data/Plourde_2015/templates_list
 data/Plourde_2015/timeseries
 data/Plourde_2015/waveforms
 data/response/*.xml
+data/tremor/*
 src/*.pkl
 src/error*/*
 src/LFEs/*

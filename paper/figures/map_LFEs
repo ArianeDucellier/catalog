@@ -1,0 +1,80 @@
+#!/bin/csh -f
+
+set output = map_LFEs.eps
+
+# Small map
+set x1 = -127
+set x2 = -121
+set y1 = 38.1
+set y2 = 42.1
+set Rop = $x1/$x2/$y1/$y2
+set Jop = m-124/40.1/3.5
+
+gmt pscoast -R$Rop -J$Jop -Ba1f0.5::WESN -W0.1p -G255/255/224 -S224/255/255 -Df -Na -Y5 -P -K >! $output
+
+# Tremor
+#gmt psxy tremor.txt -R$Rop -J$Jop -Sc0.1 -Ggrey -O -K >> $output
+
+# FAME stations
+gmt psxy FAME.txt -R$Rop -J$Jop -St0.3 -Gred -O -K >> $output
+
+# Permanent stations
+gmt psxy permanent1.txt -R$Rop -J$Jop -St0.3 -Ggreen -O -K >> $output
+gmt psxy permanent3.txt -R$Rop -J$Jop -St0.3 -Gblue -O -K >> $output
+
+# LFEs families from Plourde et al. (2015)
+gmt psxy plourde.txt -R$Rop -J$Jop -Sc0.2 -Gblack -O -K >> $output
+
+# Earthquakes
+cat << END >> earthquakes.dat
+-124.300 40.273 0.56
+-122.841 38.822 0.50
+-122.802 39.329 0.51
+-123.790 41.143 0.56
+-123.497 40.836 0.54
+-124.433 40.281 0.50
+-122.312 38.215 0.60
+-125.134 40.829 0.68
+-124.692 40.652 0.65
+END
+
+gmt psxy earthquakes.dat -R$Rop -J$Jop -Sa -Gred -O -K >> $output
+
+cat << END >> time_mag.dat
+-124.000 40.273 M5.6
+-123.141 38.822 M5.0
+-122.502 39.329 M5.1
+-124.090 41.143 M5.6
+-123.797 40.836 M5.4
+-124.733 40.281 M5.0
+-122.612 38.215 M6.0
+-125.434 40.829 M6.8
+-124.992 40.652 M6.5
+END
+
+gmt pstext time_mag.dat -R$Rop -J$Jop -F+f12p,red -O -K >> $output
+
+# Large map
+set x1 = -130
+set x2 = -115
+set y1 = 35
+set y2 = 50
+set Rop = $x1/$x2/$y1/$y2
+set Jop = m-124/40.1/0.3
+
+gmt pscoast -R$Rop -J$Jop -Ba5f2.5::wEsN -W0.1p -G255/255/224 -S224/255/255 -Dl -Na -X0.5 -Y0.5 -O -K >> $output
+
+# Location of small map
+cat << END >> square.dat
+-127 42.1
+-127 38.1
+-121 38.1
+-121 42.1
+-127 42.1
+END
+
+gmt psxy square.dat -R$Rop -J$Jop -Wthicker,red -O >> $output
+
+rm square.dat
+rm earthquakes.dat
+rm time_mag.dat
