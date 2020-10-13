@@ -25,8 +25,12 @@ templates = np.loadtxt('../Plourde_2015/templates_list.txt', \
     np.float, np.float, np.int)}, \
     skiprows=1)
 
+# Threshold for filtering the catalog
+threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='python')
+threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
+
 # Beginning and end of the period we are looking at
-tbegin = datetime(2002, 1, 1, 0, 0, 0)
+tbegin = datetime(2004, 1, 1, 0, 0, 0)
 tend = datetime(2012, 1, 1, 0, 0, 0)
 
 # We construct the time series by counting the number of LFEs
@@ -52,13 +56,11 @@ for i in range(0, np.shape(templates)[0]):
 
     # Open LFE catalog
     namedir = 'catalogs/' + templates[i][0].astype(str)
-    namefile = namedir + '/catalog_2002_2011.pkl'
+    namefile = namedir + '/catalog_2004_2011.pkl'
     df = pickle.load(open(namefile, 'rb'))
 
     # Filter LFEs
-#    maxc = np.max(df['nchannel'])
-#    df = df.loc[df['cc'] * df['nchannel'] >= 0.1 * maxc]
-    df = df.loc[df['cc'] * df['nchannel'] >= 1.8]
+    df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
 
     # Get time series
     X = np.zeros(nw, dtype=int)
@@ -88,7 +90,7 @@ for i in range(0, np.shape(templates)[0]):
     plt.axhline(latitude, linewidth=1, color='k')
 
 plt.xlim([-0.5, len(X) - 0.5])
-plt.xlabel('Time (days) since 2002/01/01', fontsize=24)
+plt.xlabel('Time (days) since 2004/01/01', fontsize=24)
 plt.ylabel('Number of LFEs', fontsize=24)
 plt.title('Daily LFEs for all families', fontsize=24)
 plt.savefig('LFEdistribution/all_families.eps', format='eps')

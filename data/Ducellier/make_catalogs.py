@@ -23,14 +23,28 @@ for i in range(0, np.shape(templates)[0]):
         os.makedirs(namedir)
 
     # Read monthly catalogs
-    df_2002_01 = pickle.load(open('new/catalog_2002_01/' + templates[i][0].astype(str) + '/catalog_2002_01.pkl', 'rb'))
     df_2004_01 = pickle.load(open('new/catalog_2004_01/' + templates[i][0].astype(str) + '/catalog_2004_01.pkl', 'rb'))
     df_2004_02 = pickle.load(open('new/catalog_2004_02/' + templates[i][0].astype(str) + '/catalog_2004_02.pkl', 'rb'))
+    df_2004_03 = pickle.load(open('new/catalog_2004_03/' + templates[i][0].astype(str) + '/catalog_2004_03.pkl', 'rb'))
     df_2004_04 = pickle.load(open('new/catalog_2004_04/' + templates[i][0].astype(str) + '/catalog_2004_04.pkl', 'rb'))
     df_2004_05 = pickle.load(open('new/catalog_2004_05/' + templates[i][0].astype(str) + '/catalog_2004_05.pkl', 'rb'))
+    df_2004_06 = pickle.load(open('new/catalog_2004_06/' + templates[i][0].astype(str) + '/catalog_2004_06.pkl', 'rb'))
+    df_2004_07 = pickle.load(open('new/catalog_2004_07/' + templates[i][0].astype(str) + '/catalog_2004_07.pkl', 'rb'))
     df_2004_08 = pickle.load(open('new/catalog_2004_08/' + templates[i][0].astype(str) + '/catalog_2004_08.pkl', 'rb'))
     df_2004_09 = pickle.load(open('new/catalog_2004_09/' + templates[i][0].astype(str) + '/catalog_2004_09.pkl', 'rb'))
+    df_2004_10 = pickle.load(open('new/catalog_2004_10/' + templates[i][0].astype(str) + '/catalog_2004_10.pkl', 'rb'))
+    df_2004_11 = pickle.load(open('new/catalog_2004_11/' + templates[i][0].astype(str) + '/catalog_2004_11.pkl', 'rb'))
+    df_2004_12 = pickle.load(open('new/catalog_2004_12/' + templates[i][0].astype(str) + '/catalog_2004_12.pkl', 'rb'))
+    df_2005_01 = pickle.load(open('new/catalog_2005_01/' + templates[i][0].astype(str) + '/catalog_2005_01.pkl', 'rb'))
     df_2005_02 = pickle.load(open('new/catalog_2005_02/' + templates[i][0].astype(str) + '/catalog_2005_02.pkl', 'rb'))
+    df_2005_03 = pickle.load(open('new/catalog_2005_03/' + templates[i][0].astype(str) + '/catalog_2005_03.pkl', 'rb'))
+    df_2005_04 = pickle.load(open('new/catalog_2005_04/' + templates[i][0].astype(str) + '/catalog_2005_04.pkl', 'rb'))
+    df_2005_05 = pickle.load(open('new/catalog_2005_05/' + templates[i][0].astype(str) + '/catalog_2005_05.pkl', 'rb'))
+    df_2005_06 = pickle.load(open('new/catalog_2005_06/' + templates[i][0].astype(str) + '/catalog_2005_06.pkl', 'rb'))
+    df_2005_07 = pickle.load(open('new/catalog_2005_07/' + templates[i][0].astype(str) + '/catalog_2005_07.pkl', 'rb'))
+    df_2005_08 = pickle.load(open('new/catalog_2005_08/' + templates[i][0].astype(str) + '/catalog_2005_08.pkl', 'rb'))
+    df_2005_09 = pickle.load(open('new/catalog_2005_09/' + templates[i][0].astype(str) + '/catalog_2005_09.pkl', 'rb'))
+    df_2005_10 = pickle.load(open('new/catalog_2005_10/' + templates[i][0].astype(str) + '/catalog_2005_10.pkl', 'rb'))
     df_2005_11 = pickle.load(open('new/catalog_2005_11/' + templates[i][0].astype(str) + '/catalog_2005_11.pkl', 'rb'))
     df_2005_12 = pickle.load(open('new/catalog_2005_12/' + templates[i][0].astype(str) + '/catalog_2005_12.pkl', 'rb'))
     df_2006_01 = pickle.load(open('new/catalog_2006_01/' + templates[i][0].astype(str) + '/catalog_2006_01.pkl', 'rb'))
@@ -107,11 +121,11 @@ for i in range(0, np.shape(templates)[0]):
     df_2011_12 = pickle.load(open('new/catalog_2011_12/' + templates[i][0].astype(str) + '/catalog_2011_12.pkl', 'rb'))
 
     # Concatenate catalogs
-    df_2002_2011 = pd.concat([df_2002_01, \
-        df_2004_01, df_2004_02, df_2004_04, df_2004_05, \
-        df_2004_08, df_2004_09, \
-        df_2005_02, \
-        df_2005_11, df_2005_12, \
+    df_2004_2011 = pd.concat([ \
+        df_2004_01, df_2004_02, df_2004_03, df_2004_04, df_2004_05, df_2004_06, \
+        df_2004_07, df_2004_08, df_2004_09, df_2004_10, df_2004_11, df_2004_12, \
+        df_2005_01, df_2005_02, df_2005_03, df_2005_04, df_2005_05, df_2005_06, \
+        df_2005_07, df_2005_08, df_2005_09, df_2005_10, df_2005_11, df_2005_12, \
         df_2006_01, df_2006_02, df_2006_03, df_2006_04, df_2006_05, df_2006_06, \
         df_2006_07, df_2006_08, df_2006_09, df_2006_10, df_2006_11, df_2006_12, \
         df_2007_01, df_2007_02, df_2007_03, df_2007_04, df_2007_05, df_2007_06, \
@@ -123,14 +137,15 @@ for i in range(0, np.shape(templates)[0]):
         df_2010_01, df_2010_02, df_2010_03, df_2010_04, df_2010_05, df_2010_06, \
         df_2010_07, df_2010_08, df_2010_09, df_2010_10, df_2010_11, df_2010_12, \
         df_2011_01, df_2011_02, df_2011_03, df_2011_04, df_2011_05, df_2011_06, \
-        df_2011_07, df_2011_08, df_2011_09, df_2011_10, df_2011_11, df_2011_12], ignore_index=True)
+        df_2011_07, df_2011_08, df_2011_09, df_2011_10, df_2011_11, df_2011_12 \
+        ], ignore_index=True)
 
     # Drop duplicates
-    df_2002_2011.drop_duplicates(inplace=True, ignore_index=True)
+    df_2004_2011.drop_duplicates(inplace=True, ignore_index=True)
     
     # Write catalog into file
-    namefile = namedir + '/catalog_2002_2011.pkl'
-    pickle.dump(df_2002_2011, open(namefile, 'wb'))
+    namefile = namedir + '/catalog_2004_2011.pkl'
+    pickle.dump(df_2004_2011, open(namefile, 'wb'))
 #    tfile = open(namedir + '/catalog_2007_2011.txt', 'w')
 #    tfile.write(df_2007_2011.to_string())
 #    tfile.close()

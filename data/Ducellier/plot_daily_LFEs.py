@@ -30,10 +30,8 @@ threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Beginning and end of the period we are looking at
-#tbegin = datetime(2002, 1, 1, 0, 0, 0)
-#tend = datetime(2012, 1, 1, 0, 0, 0)
-tbegin = datetime(2010, 7, 1, 0, 0, 0)
-tend = datetime(2011, 1, 1, 0, 0, 0)
+tbegin = datetime(2004, 1, 1, 0, 0, 0)
+tend = datetime(2012, 1, 1, 0, 0, 0)
 
 # We construct the time series by counting the number of LFEs
 # per one-day-long time window
@@ -48,14 +46,12 @@ nw = int(duration / window)
 for i in range(0, np.shape(templates)[0]):
 
     # Open LFE catalog
-#    namedir = 'catalogs/' + templates[i][0].astype(str)
-#    namefile = namedir + '/catalog_2002_2011.pkl'
-    namedir = 'new/LFEs/' + templates[i][0].astype(str)
-    namefile = namedir + '/catalog.pkl'
+    namedir = 'catalogs/' + templates[i][0].astype(str)
+    namefile = namedir + '/catalog_2004_2011.pkl'
     df = pickle.load(open(namefile, 'rb'))
 
     # Filter LFEs
-#    df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
+    df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
 
     # Get time series
     X = np.zeros(nw, dtype=int)
@@ -82,9 +78,9 @@ for i in range(0, np.shape(templates)[0]):
     plt.figure(1, figsize=(20, 10))
     plt.stem(np.arange(0, len(X)), X, 'k-', markerfmt=' ', basefmt=' ')
     plt.xlim([-0.5, len(X) - 0.5])
-    plt.xlabel('Time (days) since 2010/08/01', fontsize=24)
+    plt.xlabel('Time (days) since 2004/01/01', fontsize=24)
     plt.ylabel('Number of LFEs', fontsize=24)
     plt.title('Family {} ({:d} LFEs)'.format(templates[i][0].astype(str), np.sum(X)), \
         fontsize=24)
-    plt.savefig('temp/' + templates[i][0].astype(str) + '.eps', format='eps')
+    plt.savefig('LFEdistribution/' + templates[i][0].astype(str) + '.eps', format='eps')
     plt.close(1)

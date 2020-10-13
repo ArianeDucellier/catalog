@@ -13,8 +13,8 @@ from math import floor
 from date import ymdhms2day
 
 # Time boundaries
-xmin = 2010.85
-xmax = 2010.95
+xmin = 2004.0
+xmax = 2012.0
 
 # Space boundaries
 latmin = 39.4
@@ -42,21 +42,24 @@ templates = np.loadtxt('../Plourde_2015/templates_list.txt', \
     np.float, np.float, np.int)}, \
     skiprows=1)
 
+# Threshold for filtering the catalog
+threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='python')
+threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
+
 # Loop on templates
 for i in range(0, np.shape(templates)[0]):
     # Get latitude
     latitude = templates[i][2]
 
     # Open LFE catalog
-#    namedir = 'catalogs/' + templates[i][0].astype(str)
-#    namefile = namedir + '/catalog_2002_2011.pkl'
-    namefile = 'new/LFEs/' + templates[i][0].astype(str) + '/catalog.pkl'
+    namedir = 'catalogs/' + templates[i][0].astype(str)
+    namefile = namedir + '/catalog_2004_2011.pkl'
     df = pickle.load(open(namefile, 'rb'))
 
     # Filter LFEs
-#    maxc = np.max(df['nchannel'])
-#    df = df.loc[df['cc'] * df['nchannel'] >= 0.1 * maxc]
-#    df = df.loc[df['cc'] >= 0.2]
+#    df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
+    maxc = np.max(df['nchannel'])
+    df = df.loc[df['cc'] * df['nchannel'] >= 0.15 * maxc]
 
     time = np.arange(xmin, xmax, 1.0/365.5)
     nbLFEs = np.zeros(np.shape(time)[0])
@@ -79,6 +82,15 @@ for i in range(0, np.shape(templates)[0]):
     nbLFEs = nbLFEs[nbLFEs > 0]
     plt.scatter(time, np.repeat(latitude, np.shape(time)[0]), s=25 + nbLFEs * 5, c='k')
 #    plt.scatter(time, np.repeat(latitude, np.shape(time)[0]), c=nbLFEs, cmap='autumn')
+
+    # Plot time line
+    tbegin = ymdhms2day(2007, 9, 25, 0, 0, 0)
+    tend = ymdhms2day(2009, 5, 14, 0, 0, 0)
+    plt.arrow(tbegin, 39.2, tend - tbegin, 0, head_width=0.05, \
+        head_length=0.03, linewidth=4, color='grey', length_includes_head=True)
+    plt.arrow(tend, 39.2, tbegin - tend, 0, head_width=0.05, \
+        head_length=0.03, linewidth=4, color='grey', length_includes_head=True)
+    plt.annotate('FAME operating', (2008.35, 39.25), fontsize=24, color='grey')
 
 # End figure
 plt.xlim([xmin, xmax])
