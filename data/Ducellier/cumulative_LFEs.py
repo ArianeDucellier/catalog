@@ -21,8 +21,12 @@ templates = np.loadtxt('../Plourde_2015/templates_list.txt', \
 tbegin = datetime(2007, 7, 1)
 nb_days = 731
 
+# Threshold for filtering the catalog
+threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='python')
+threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
+
 # Loop on templates
-for i in range(0, np.shape(templates)[0]):
+for i in range(0, 22): #np.shape(templates)[0]):
 
     # Open LFE catalog (FAME data)
     namedir = 'catalogs/' + templates[i][0].astype(str)
@@ -30,13 +34,12 @@ for i in range(0, np.shape(templates)[0]):
     df_FAME = pickle.load(open(namefile, 'rb'))
 
     # Open LFE catalog (permanent networks)
-    namefile = namedir + '/catalog_2006_2011.pkl'
+    namefile = namedir + '/catalog_2004_2011.pkl'
     df_perm = pickle.load(open(namefile, 'rb'))
 
     # Filter LFEs
-    maxc = np.max(df_FAME['nchannel'])
-    df_FAME = df_FAME.loc[df_FAME['cc'] * df_FAME['nchannel'] >= 0.07 * maxc]
-    df_perm = df_perm.loc[df_perm['cc'] * df_perm['nchannel'] >= 0.07 * maxc]
+    df_FAME = df_FAME.loc[df_FAME['cc'] * df_FAME['nchannel'] >= threshold['threshold_FAME'].iloc[i]]
+    df_perm = df_perm.loc[df_perm['cc'] * df_perm['nchannel'] >= threshold['threshold_perm'].iloc[i]]
 
     # Add date column
     df = pd.DataFrame({'year': df_FAME['year'], 'month': df_FAME['month'], 'day': df_FAME['day']})

@@ -29,6 +29,10 @@ templates = np.loadtxt('../Plourde_2015/templates_list.txt', \
 tbegin = datetime(2007, 7, 1, 0, 0, 0)
 tend = datetime(2009, 7, 1, 0, 0, 0)
 
+# Threshold for filtering the catalog
+threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='python')
+threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
+
 # We construct the time series by counting the number of LFEs
 # per one-day-long time window
 window = 86400.0
@@ -39,18 +43,18 @@ duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * 0.000001
 nw = int(duration / window)
 
 # Loop on templates
-for i in range(0, 1): #np.shape(templates)[0]):
+for i in range(0, 22): #np.shape(templates)[0]):
 
     # Open LFE catalog
     namedir = 'catalogs/' + templates[i][0].astype(str)
     namefile1 = namedir + '/catalog_2007_2009.pkl'
-    namefile2 = namedir + '/catalog_2002_2011.pkl'
+    namefile2 = namedir + '/catalog_2004_2011.pkl'
     df1 = pickle.load(open(namefile1, 'rb'))
     df2 = pickle.load(open(namefile2, 'rb'))
 
     # Filter LFE
-    df1 = df1.loc[df1['cc'] * df1['nchannel'] >= 1.1]
-    df2 = df2.loc[df2['cc'] * df2['nchannel'] >= 1.5]
+    df1 = df1.loc[df1['cc'] * df1['nchannel'] >= threshold['threshold_FAME'].iloc[i]]
+    df2 = df2.loc[df2['cc'] * df2['nchannel'] >= threshold['threshold_perm'].iloc[i]]
     # Get time series
     X1 = np.zeros(nw, dtype=int)
     # Loop on LFEs
@@ -71,7 +75,6 @@ for i in range(0, 1): #np.shape(templates)[0]):
                 0.000001
             index = int(duration / window)
             X1[index] = X1[index] + 1
-    print(np.sum(X1[X1 == 1]))
 
     X2 = np.zeros(nw, dtype=int)
     # Loop on LFEs
@@ -92,7 +95,6 @@ for i in range(0, 1): #np.shape(templates)[0]):
                 0.000001
             index = int(duration / window)
             X2[index] = X2[index] + 1
-    print(np.sum(X2[X2 == 1]))
 
     # Plot figure
     plt.figure(1, figsize=(16, 16))
