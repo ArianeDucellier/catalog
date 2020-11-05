@@ -1,6 +1,8 @@
 data/Ducellier/comparison/*
+data/Ducellier/cumulative/*
 data/Ducellier/histograms/*
-data/Ducellier/LFEdistribution/*
+data/Ducellier/LFEdistribution_FAME/*
+data/Ducellier/LFEdistribution_perm/*
 data/Ducellier/movie/*
 data/Ducellier/new/*
 data/Ducellier/nstations/*

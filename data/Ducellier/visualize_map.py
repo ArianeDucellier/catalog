@@ -21,7 +21,7 @@ threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Beginning and end of the period we are looking at
-tbegin = datetime(2008, 3, 1, 0, 0, 0)
+tbegin = datetime(2007, 7, 1, 0, 0, 0)
 
 # Name of catalog
 catalog = 'catalog_2007_2009'
@@ -34,7 +34,7 @@ dt = 10
 
 nmax = 0
 
-for image in range(0, 13):
+for image in range(0, 146):
     latitude = np.zeros(np.shape(templates)[0])
     longitude = np.zeros(np.shape(templates)[0])
     number_LFEs = np.zeros(np.shape(templates)[0])
@@ -101,5 +101,5 @@ for image in range(0, 13):
     cb.set_label(label='Number of LFEs', size=20)
     cb.ax.tick_params(labelsize=20)
 
-    plt.savefig('movie/LFE_' + str(image + 1) + '.png', format='png')
+    plt.savefig('movie/LFE_{:03d}.png'.format(image + 1), format='png')
     plt.close(1)

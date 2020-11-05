@@ -26,7 +26,7 @@ threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Loop on templates
-for i in range(0, 22): #np.shape(templates)[0]):
+for i in range(63, 64): #np.shape(templates)[0]):
 
     # Open LFE catalog (FAME data)
     namedir = 'catalogs/' + templates[i][0].astype(str)
@@ -78,5 +78,5 @@ for i in range(0, 22): #np.shape(templates)[0]):
     plt.ylabel('Normalized number of LFEs', fontsize=24)
     plt.title('Cumulative number of LFEs', fontsize=24)
     plt.legend(loc=4, fontsize=20)
-    plt.savefig('comparison/' + templates[i][0].astype(str) + '.eps', format='eps')
+    plt.savefig('cumulative/' + templates[i][0].astype(str) + '.eps', format='eps')
     plt.close(1)

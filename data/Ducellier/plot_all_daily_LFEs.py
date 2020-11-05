@@ -51,48 +51,51 @@ plt.figure(1, figsize=(20, 10))
 # Loop on templates
 for i in range(0, np.shape(templates)[0]):
 
-    # Get latitude
-    latitude = templates[i][2]
+    # Plot only good data
+    if threshold['threshold_perm'].iloc[i] > 0.0:
 
-    # Open LFE catalog
-    namedir = 'catalogs/' + templates[i][0].astype(str)
-    namefile = namedir + '/catalog_2004_2011.pkl'
-    df = pickle.load(open(namefile, 'rb'))
+        # Get latitude
+        latitude = templates[i][2]
 
-    # Filter LFEs
-    df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
+        # Open LFE catalog
+        namedir = 'catalogs/' + templates[i][0].astype(str)
+        namefile = namedir + '/catalog_2004_2011.pkl'
+        df = pickle.load(open(namefile, 'rb'))
 
-    # Get time series
-    X = np.zeros(nw, dtype=int)
-    # Loop on LFEs
-    for j in range(0, len(df)):
-        myYear = df['year'].iloc[j]
-        myMonth = df['month'].iloc[j]
-        myDay = df['day'].iloc[j]
-        myHour = df['hour'].iloc[j]
-        myMinute = df['minute'].iloc[j]
-        mySecond = int(floor(df['second'].iloc[j]))
-        myMicrosecond = int(1000000.0 * (df['second'].iloc[j] - mySecond))
-        t = datetime(myYear, myMonth, myDay, myHour, myMinute, mySecond, \
-            myMicrosecond)
-        # Add LFE to appropriate time window
-        if ((tbegin <= t) and (t < tbegin + timedelta(seconds=nw * window))):
-            dt = t - tbegin
-            duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * \
-                0.000001
-            index = int(duration / window)
-            X[index] = X[index] + 1
+        # Filter LFEs
+        df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
 
-    days = np.arange(0, len(X))[X >= 1]
-    Xpos = X[X >= 1]
-    if len(Xpos) > 0:
-        plt.stem(days, latitude + amp * Xpos, 'k-', markerfmt=' ', basefmt=' ', bottom=latitude)
-    plt.axhline(latitude, linewidth=1, color='k')
+        # Get time series
+        X = np.zeros(nw, dtype=int)
+        # Loop on LFEs
+        for j in range(0, len(df)):
+            myYear = df['year'].iloc[j]
+            myMonth = df['month'].iloc[j]
+            myDay = df['day'].iloc[j]
+            myHour = df['hour'].iloc[j]
+            myMinute = df['minute'].iloc[j]
+            mySecond = int(floor(df['second'].iloc[j]))
+            myMicrosecond = int(1000000.0 * (df['second'].iloc[j] - mySecond))
+            t = datetime(myYear, myMonth, myDay, myHour, myMinute, mySecond, \
+                myMicrosecond)
+            # Add LFE to appropriate time window
+            if ((tbegin <= t) and (t < tbegin + timedelta(seconds=nw * window))):
+                dt = t - tbegin
+                duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * \
+                    0.000001
+                index = int(duration / window)
+                X[index] = X[index] + 1
+
+        days = np.arange(0, len(X))[X >= 1]
+        Xpos = X[X >= 1]
+        if len(Xpos) > 0:
+            plt.stem(days, latitude + amp * Xpos, 'k-', markerfmt=' ', basefmt=' ', bottom=latitude)
+        plt.axhline(latitude, linewidth=1, color='k')
 
 plt.xlim([-0.5, len(X) - 0.5])
 plt.xlabel('Time (days) since 2004/01/01', fontsize=24)
 plt.ylabel('Number of LFEs', fontsize=24)
 plt.title('Daily LFEs for all families', fontsize=24)
-plt.savefig('LFEdistribution/all_families.eps', format='eps')
+plt.savefig('LFEdistribution_perm/all_families.eps', format='eps')
 plt.close(1)
     
