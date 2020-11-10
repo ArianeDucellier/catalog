@@ -79,7 +79,7 @@
 
 % Example: \title{This is a test title}
 
-\title{A twelve-year-long low-frequency earthquake catalog for Northern California}
+\title{An eight-year-long low-frequency earthquake catalog for Southern Cascadia}
 
 %% ------------------------------------------------------------------------ %%
 %
@@ -231,7 +231,7 @@ We first looked for LFEs during the months of March and April 2008, which corres
 We then looked for LFEs during the period from July 2007 to June 2009, which correspond to the period when the FAME experiment was operating. Using a threshold equal to eight times the median absolute deviation of the stacked cross-correlation may produce false detections, therefore we filtered the LFE detection times before visualizing the two-year-long catalog. As the number of seismic stations recording may change with time as the stations were progressively installed during Summer and Fall 2007, and then progressively removed during May and June 2009, we kept only LFE detections for which the product of the cross-correlation value by the number of stations recording at that time is higher than a threshold (equal to 0.1 times the number of stations used to detect LFEs for the given LFE family). The threshold is thus different for each LFE family. The resulting LFE catalog for the period 2007-2009 is shown in Figure XXX. For comparison, we also plotted the tremor detection times from ~\citeA{BOY_2015}. \\
 
 \begin{figure}
-\noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/tremor_nb.eps}
+\noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/tremor_nb_FAME.eps}
 \caption{LFE and tremor detections as a function of time and latitude. Red dots represent tremor detections from the catalog of ~\citeA{BOY_2015}. Black dots represent days where LFEs are detected for a given LFE family. The size of the black dots are proportional to the number of LFEs detected during this day. The double-headed grey arrow represents the time period when the FAME experiment was operating at full capacity. LFE families south of 40° N latitude are on the San Andreas fault system.}
 \label{pngfiguresample}
 \end{figure}
@@ -248,17 +248,52 @@ For most families, we find that we can obtain good templates with signal-to-nois
 \label{pngfiguresample}
 \end{figure}
 
-First comparison with 2007-2009 catalog with FAME data
-
 \section{Results}
 
-Now extension of the catalog, we will try 1995-2011.
+Once we have obtained a catalog for the period 2007-2009 using the data from the permanent seismic networks, we compare the LFE detections between the two catalogs: the FAME catalog (obtained with data from the FAME experiment) and the networks catalog (obtained from data from the permanent networks). As we may have many false detections, we try to eliminate some of them by assuming that LFEs present in both catalogs are always true detections. Then we define two thresholds: the first threshold is chosen such that at least half the LFE detections above the threshold in the FAME catalog are also in the network catalog, the second threshold is chosen such that at least half the LFE detections above the threshold in the network catalog are also in the FAME catalog. If we filter the catalogs and keep only detections above the thresholds, we are now confident that at least half of the LFE detections are true detections. As the number of stations recording may vary over time (especially for the network catalog), we keep only the LFE detections such that the associated cross correlation multiplied by the number of channels recording at that time is higher than the threshold. Thus, if there are few stations recordings at some time, the cross correlation must be higher for the LFE to be considered as a true detection. We then compared the normalized number of LFEs obtained with the two catalogs. Examples are given in Figures XXX and XXX for families \textcolor{red}{080413.07.023} and \textcolor{red}{080401.05.050}. Although the number of LFEs during each event may not be the same, we clearly see for family \textcolor{red}{080413.07.023} that the timing of the events are the same for both catalogs. Family \textcolor{red}{080401.05.050} is much more active but most events seem to be present in both catalogs as well.
 
-New templates? New catalog? probably no time (or money)
+\begin{figure}
+\noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/080413_07_023.eps}
+\caption{Normalize cumulative number of LFEs over the period July 2007-July 2009 for the FAME catalog (red) and the network catalog (blue) for family \textcolor{red}{080413.07.023}.}
+\label{pngfiguresample}
+\end{figure}
+
+\begin{figure}
+\noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/080401_05_050.eps}
+\caption{Normalize cumulative number of LFEs over the period July 2007-July 2009 for the FAME catalog (red) and the network catalog (blue) for family \textcolor{red}{080401.05.050}.}
+\label{pngfiguresample}
+\end{figure}
+
+For most of the families located on the subduction zone, we obtained a good agreement between both catalogs. We eliminate two families for which too few permanent stations have good templates, and it was not possible to detect LFEs with the available templates. However, we were able to detect most LFEs events even without the presence of the temporary stations from the FAME network. We are thus confident that we can detect LFEs before 2007 and after 2009. In the following, we focus on the period 2004-2011. In November 2011, several 1D stations stopped recording and the number of available stations started decreasing, each is why we did not look for LFEs event after that date. The resulting LFE catalog for the period 2004-2011 is shown in Figure XXX. For comparison, we also plotted the tremor detection times from ~\citeA{BOY_2015}.
+
+\begin{figure}
+\noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/tremor_nb_perm.eps}
+\caption{LFE and tremor detections as a function of time and latitude. Red dots represent tremor detections from the catalog of ~\citeA{BOY_2015}. Black dots represent days where LFEs are detected for a given LFE family. The size of the black dots are proportional to the number of LFEs detected during this day.}
+\label{pngfiguresample}
+\end{figure}
 
 \section{Discussion}
 
-Section on effects of nearby earthquakes. Possible rapid tremor reversals
+We were able to detect LFE events propagation \textcolor{red}{ from North to South or from South to North} whenever there is a tremor episode in the ~\citeA{BOY_2015} catalog. We were also able to detect several LFE episodes in 2004-2005 before the beginning of the ~\citeA{BOY_2015} catalog. It is known than tectonic tremor can be triggered by surface waves from distant and regional earthquakes, as has been observed in Cascadia ~\cite{RUB_2009}, the San Andreas ~\cite{PEN_2009, GUI_2010}, and Nankai ~\cite{HAN_2014}. Low-frequency earthquake activity on the San Andreas fault also increased during several months after the 2004 Parafield earthquake ~\cite{SHE_2017}. We looked for regional earthquakes with magnitude higher than 5 during the period covered by the catalog to verify whether this phenomenon is also verified in southern Cascadia. The characteristics of the earthquakes we looked at are given in Table 1.
+
+\begin{table}
+\caption{Nearby regional earthquakes between 2004 and 2011}
+\centering
+\begin{tabular}{c c c c c}
+\hline
+Magnitude & Time & Latitude & Longitude & Depth (km) \\
+\hline
+7.2 & 2005-06-15 02:50:54 & 41.292N & 125.953W & 16.0 \\
+6.6 & 2005-06-17 06:21:42 & 40.773N & 126.574W & 12.0 \\
+6.5 & 2010-01-10 00:27:39 & 40.652N & 124.693W & 28.7 \\
+5.9 & 2010-02-04 20:20:21 & 40.412N & 124.961W & 23.0 \\
+5.4 & 2008-04-30 03:03:06 & 40.836N & 123.497W & 27.8 \\
+5.0 & 2006-07-19 11:41:43 & 40.281N & 124.433W & 20.1 \\
+\hline
+\end{tabular}
+\end{table}
+
+Although, we observe an increase in LFE activity for some families several days after the earthquakes (except the 2008 one where no activity is observed after the earthquake), it does not seem that this activity is linked to the earthquake. Indeed, the LFE events occur a few days after the earthquake and not immediately after as is the case for the Parkfield earthquake, and they affect only a few families. The reason may be due to the distance between the LFE families and the epicenters of the regional earthquakes. Indeed, for the Parafield earthquake, an increase in LFE activity was observed for LFE families up to 45km away from the epicenter, but not farther away. For southern Cascadia, the closest epicenter (2008) is located 50 km away from the closest LFE families.
 
 \section{Conclusion}
 

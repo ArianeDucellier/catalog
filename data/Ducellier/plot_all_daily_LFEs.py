@@ -30,8 +30,8 @@ threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Beginning and end of the period we are looking at
-tbegin = datetime(2004, 1, 1, 0, 0, 0)
-tend = datetime(2012, 1, 1, 0, 0, 0)
+tbegin = datetime(2007, 7, 1, 0, 0, 0)
+tend = datetime(2009, 7, 1, 0, 0, 0)
 
 # We construct the time series by counting the number of LFEs
 # per one-day-long time window
@@ -52,18 +52,18 @@ plt.figure(1, figsize=(20, 10))
 for i in range(0, np.shape(templates)[0]):
 
     # Plot only good data
-    if threshold['threshold_perm'].iloc[i] > 0.0:
+    if threshold['threshold_FAME'].iloc[i] > 0.0:
 
         # Get latitude
         latitude = templates[i][2]
 
         # Open LFE catalog
         namedir = 'catalogs/' + templates[i][0].astype(str)
-        namefile = namedir + '/catalog_2004_2011.pkl'
+        namefile = namedir + '/catalog_2007_2009.pkl'
         df = pickle.load(open(namefile, 'rb'))
 
         # Filter LFEs
-        df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
+        df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_FAME'].iloc[i]]
 
         # Get time series
         X = np.zeros(nw, dtype=int)
@@ -93,9 +93,9 @@ for i in range(0, np.shape(templates)[0]):
         plt.axhline(latitude, linewidth=1, color='k')
 
 plt.xlim([-0.5, len(X) - 0.5])
-plt.xlabel('Time (days) since 2004/01/01', fontsize=24)
+plt.xlabel('Time (days) since 2007/07/01', fontsize=24)
 plt.ylabel('Number of LFEs', fontsize=24)
 plt.title('Daily LFEs for all families', fontsize=24)
-plt.savefig('LFEdistribution_perm/all_families.eps', format='eps')
+plt.savefig('LFEdistribution_FAME/all_families.eps', format='eps')
 plt.close(1)
     

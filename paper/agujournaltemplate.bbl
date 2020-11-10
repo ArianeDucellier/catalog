@@ -155,6 +155,67 @@ Frank, W.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Guilhem%
+, Peng%
+\BCBL {}\ \BBA {} Nadeau%
+}{%
+Guilhem%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+GUI_2010}
+\APACinsertmetastar {%
+GUI_2010}%
+\begin{APACrefauthors}%
+Guilhem, A.%
+, Peng, Z.%
+\BCBL {}\ \BBA {} Nadeau, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {High-frequency identification of non-volcanic tremor
+  triggered by regional earthquakes} {High-frequency identification of
+  non-volcanic tremor triggered by regional earthquakes}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Geophysical Research Letters}{37}{}{L16309}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Han%
+, Vidale%
+, Houston%
+, Chao%
+\BCBL {}\ \BBA {} Obara%
+}{%
+Han%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+HAN_2014}
+\APACinsertmetastar {%
+HAN_2014}%
+\begin{APACrefauthors}%
+Han, J.%
+, Vidale, J.%
+, Houston, H.%
+, Chao, K.%
+\BCBL {}\ \BBA {} Obara, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Triggering of tremor and inferred slow slip by small
+  earthquakes at the {Nankai} subduction zone in southwest {Japan}} {Triggering
+  of tremor and inferred slow slip by small earthquakes at the {Nankai}
+  subduction zone in southwest {Japan}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Geophysical Research Letters}{41}{}{8053-8060}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Ide%
 , Shelly%
 \BCBL {}\ \BBA {} Beroza%
@@ -262,6 +323,38 @@ Ohta, K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Peng%
+, Vidale%
+, Wech%
+, Nadeau%
+\BCBL {}\ \BBA {} Creager%
+}{%
+Peng%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+PEN_2009}
+\APACinsertmetastar {%
+PEN_2009}%
+\begin{APACrefauthors}%
+Peng, Z.%
+, Vidale, J.%
+, Wech, A.%
+, Nadeau, R.%
+\BCBL {}\ \BBA {} Creager, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Remote triggering of tremor along the {San} {Andreas}
+  {Fault} in central {California}} {Remote triggering of tremor along the {San}
+  {Andreas} {Fault} in central {California}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Geophysical Research}{114}{}{B00A06}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Plourde%
 , Bostock%
 , Audet%
@@ -315,6 +408,38 @@ Rogers, G.%
   The chatter of silent slip}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Science}{300}{5627}{1942-1943}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rubinstein%
+\ \protect \BOthers {.}}{%
+Rubinstein%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+RUB_2009}
+\APACinsertmetastar {%
+RUB_2009}%
+\begin{APACrefauthors}%
+Rubinstein, J.%
+, Gomberg, J.%
+, Vidale, J.%
+, Wech, A.%
+, Kao, H.%
+, Creager, K.%
+\BCBL {}\ \BBA {} Rogers, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Seismic wave triggering of nonvolcanic tremor, episodic
+  tremor and slip, and earthquakes on {Vancouver} {Island}} {Seismic wave
+  triggering of nonvolcanic tremor, episodic tremor and slip, and earthquakes
+  on {Vancouver} {Island}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Geophysical Research Solid
+  Earth}{114}{}{B00A01}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

@@ -7,6 +7,7 @@ data/Ducellier/movie/*
 data/Ducellier/new/*
 data/Ducellier/nstations/*
 data/Ducellier/timeline/*
+data/Ducellier/zoom_eq*
 data/Plourde_2015/detections/*
 data/Plourde_2015/LFEdistribution/*
 data/Plourde_2015/templates_list
@@ -14,6 +15,7 @@ data/Plourde_2015/timeseries
 data/Plourde_2015/waveforms
 data/response/*.xml
 data/tremor/*
+paper/figures/*-eps-converted-to.pdf
 src/*.pkl
 src/error*/*
 src/LFEs/*

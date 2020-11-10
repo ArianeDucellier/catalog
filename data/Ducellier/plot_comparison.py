@@ -43,7 +43,7 @@ duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * 0.000001
 nw = int(duration / window)
 
 # Loop on templates
-for i in range(63, 64): #np.shape(templates)[0]):
+for i in range(0, np.shape(templates)[0]):
 
     # Open LFE catalog
     namedir = 'catalogs/' + templates[i][0].astype(str)
