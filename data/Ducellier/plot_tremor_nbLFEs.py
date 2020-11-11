@@ -61,6 +61,8 @@ for i in range(0, np.shape(templates)[0]):
         df = pickle.load(open(namefile, 'rb'))
 
         # Filter LFEs
+#        maxc = np.max(df['nchannel'])
+#        df = df.loc[df['cc'] * df['nchannel'] >= 0.1 * maxc]
         df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
 
         time = np.arange(xmin, xmax, 1.0/365.5)
@@ -101,5 +103,5 @@ plt.xlabel('Time (years)', fontsize=24)
 plt.ylabel('Latitude', fontsize=24)
 plt.title('Tremor and LFEs', fontsize=24)
 plt.tight_layout()
-plt.savefig('LFEdistribution_perm/tremor_nb.eps', format='eps')
+plt.savefig('LFEdistribution_perm/tremor_nb.png', format='png')
 plt.close(1)

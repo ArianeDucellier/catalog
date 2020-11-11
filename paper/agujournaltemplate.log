@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  9 NOV 2020 19:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  11 NOV 2020 12:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -228,6 +228,12 @@ Package: apacite 2013/07/21 v6.03 APA citation
 \biblabelsep=\skip68
 ))
 (./agujournaltemplate.aux
+
+LaTeX Warning: Label `pngfiguresample' multiply defined.
+
+
+LaTeX Warning: Label `pngfiguresample' multiply defined.
+
 
 LaTeX Warning: Label `pngfiguresample' multiply defined.
 
@@ -685,341 +691,337 @@ e seis-mic net-work in north-ern
  []
 
 
-Overfull \hbox (16.32124pt too wide) in paragraph at lines 203--204
+Overfull \hbox (13.82126pt too wide) in paragraph at lines 203--204
 \OT1/cmr/m/n/10 Cal-i-for-nia. These new tem-plates al-low us to ex-tend the LF
-E cat-a-log to the pe-riod XXX- 
+E cat-a-log to the pe-riod 2004- 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Overfull \hbox (3.62679pt too wide) in paragraph at lines 209--209
+Overfull \hbox (3.62679pt too wide) in paragraph at lines 207--207
 []\OT1/cmr/m/n/10 We used both seis-mic data from the tem-po-rary Earth-Scope F
 lex-i-ble Ar-ray Men- 
  []
 
 
-Overfull \hbox (8.62683pt too wide) in paragraph at lines 209--209
+Overfull \hbox (8.62683pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 do-cino Ex-per-i-ment (FAME) dis-tributed by In-cor-po-rated Re
 -search In-sti-tu-tions for Seis- 
  []
 
 
-Overfull \hbox (8.5157pt too wide) in paragraph at lines 209--209
+Overfull \hbox (8.5157pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 mol-ogy (IRIS), and seis-mic data from three per-ma-nent seis-m
 ic net-works dis-tributed by 
  []
 
 
-Overfull \hbox (1.46008pt too wide) in paragraph at lines 209--209
+Overfull \hbox (1.46008pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 the North-ern Cal-i-for-nia Earth-quake Data Cen-ter (NCEDC). T
 he FAME net-work was 
  []
 
 
-Overfull \hbox (13.37686pt too wide) in paragraph at lines 209--209
+Overfull \hbox (13.37686pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 in-stalled in north-ern Cal-i-for-nia be-tween July 2007 and Ju
 ne 2009. The three per-ma-nent 
  []
 
 
-Overfull \hbox (7.849pt too wide) in paragraph at lines 209--209
+Overfull \hbox (7.849pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 net-works are Berke-ley Dig-i-tal Seis-mic Net-work (BK), North
 -ern Cal-i-for-nia Seis-mic Net- 
  []
 
 
-Overfull \hbox (2.79355pt too wide) in paragraph at lines 209--209
+Overfull \hbox (2.79355pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 work (NC), and Plate Bound-ary Ob-ser-va-tory Strain and Seis-m
 ic Data (PB). We used 
  []
 
 
-Overfull \hbox (8.62689pt too wide) in paragraph at lines 209--209
+Overfull \hbox (8.62689pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 both one-component and three-components seis-mic sta-tions. De-
 pend-ing on avail-abil-ity, 
  []
 
 
-Overfull \hbox (13.23776pt too wide) in paragraph at lines 209--209
+Overfull \hbox (13.23776pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 we used chan-nels BHZ, EHZ, HHZ, or SHZ as we are mainly in-ter
 -ested in the fre-quency 
  []
 
 
-Overfull \hbox (6.6267pt too wide) in paragraph at lines 209--209
+Overfull \hbox (6.6267pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 band 1-10Hz. We re-stricted our-selves to seis-mic sta-tions le
 ss than 100 kilo-me-ters away 
  []
 
 
-Overfull \hbox (2.98792pt too wide) in paragraph at lines 209--209
+Overfull \hbox (2.98792pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 from the epi-cen-ter of an LFE fam-ily, as we do not ex-pect to
  have good signal-to-noise 
  []
 
 
-Overfull \hbox (4.23787pt too wide) in paragraph at lines 209--209
+Overfull \hbox (4.23787pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 ra-tio for sta-tions lo-cated far-ther away. The com-plete list
  of seis-mic sta-tions and chan- 
  []
 
 
-Overfull \hbox (19.62682pt too wide) in paragraph at lines 209--209
+Overfull \hbox (2.12679pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 nels used in this study is given in the Sup-ple-men-tary Ma-te-
-rial. Fig-ure XXX shows a map 
+rial. Fig-ure 1 shows a map 
  []
 
 
-Overfull \hbox (13.98795pt too wide) in paragraph at lines 209--209
+Overfull \hbox (13.98795pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 of the lo-ca-tions of the LFE fam-i-lies, and of the lo-ca-tion
 s of the seis-mic sta-tions. We can 
  []
 
 
-Overfull \hbox (11.18233pt too wide) in paragraph at lines 209--209
+Overfull \hbox (11.18233pt too wide) in paragraph at lines 207--207
 \OT1/cmr/m/n/10 see that we have a good cov-er-age of the area, and most LFE fa
 m-i-lies are sur-rounded by 
  []
 
 Package epstopdf Info: Source file: <figures/map_LFEs.eps>
-(epstopdf)                    date: 2020-06-30 10:55:49
-(epstopdf)                    size: 111561 bytes
+(epstopdf)                    date: 2020-11-11 08:33:04
+(epstopdf)                    size: 111468 bytes
 (epstopdf)             Output file: <figures/map_LFEs-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-11-07 17:00:21
-(epstopdf)                    size: 29313 bytes
+(epstopdf)                    date: 2020-11-11 08:34:17
+(epstopdf)                    size: 29101 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/map_LFEs-eps-conve
 rted-to.pdf figures/map_LFEs.eps>
-(epstopdf)             \includegraphics on input line 212.
+(epstopdf)             \includegraphics on input line 210.
 Package epstopdf Info: Output file is already uptodate.
 <figures/map_LFEs-eps-converted-to.pdf, id=21, 597.23125pt x 845.1575pt>
 File: figures/map_LFEs-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/map_LFEs-eps-converted-to.pdf>
 Package pdftex.def Info: figures/map_LFEs-eps-converted-to.pdf used on input li
-ne 212.
+ne 210.
 (pdftex.def)             Requested size: 397.48499pt x 337.58829pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 213.
+(Font)              <9> on input line 211.
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\OT1/cmr/bx/n/9 Figure  1. \OT1/cmr/m/n/9 Map show-ing the lo-ca-tion of the 
 LFE fam-i-lies (back dots) and the seis-mic sta-tions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \OT1/cmr/m/n/9 used in this study. Red tri-an-gles are the sta-tions from the F
 AME ex-per-i-ment, green tri-an-gles are
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \OT1/cmr/m/n/9 one-component per-ma-nent sta-tions, blue tri-an-gles are three 
 com-po-nents per-ma-nent sta-tions. Red
  []
 
 
-Overfull \hbox (20.98792pt too wide) in paragraph at lines 217--218
+Overfull \hbox (20.98792pt too wide) in paragraph at lines 215--216
 [][]\OT1/cmr/m/n/10 Plourde et al.[] (2015) have kindly ac-cepted to share thei
 r LFE cat-a-log with us. They 
  []
 
 
-Overfull \hbox (19.04356pt too wide) in paragraph at lines 217--218
+Overfull \hbox (19.04356pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 have pro-vided a list of 66 LFE fam-i-lies with, for each fam-i
 ly, the lo-ca-tion of the hypocen- 
  []
 
 
-Overfull \hbox (1.54347pt too wide) in paragraph at lines 217--218
+Overfull \hbox (1.54347pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 ter of the fam-ily, the list of sta-tions and chan-nels used to
  de-tect LFEs for this fam-ily, 
  []
 
 
-Overfull \hbox (1.09901pt too wide) in paragraph at lines 217--218
+Overfull \hbox (1.09901pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 and the tim-ing of LFE de-tec-tions.  []Plourde et al.[] (2015)
  have later re-duced the num- 
  []
 
 
-Overfull \hbox (11.34914pt too wide) in paragraph at lines 217--218
+Overfull \hbox (11.34914pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 ber of LFE fam-i-lies to 37, by group-ing to-gether fam-i-lies 
 with many com-mon de-tec-tions, 
  []
 
 
-Overfull \hbox (6.0156pt too wide) in paragraph at lines 217--218
+Overfull \hbox (6.0156pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 but we chose to use the ini-tial de-tec-tions to ex-tend the ca
 t-a-log. Us-ing this dataset, we 
  []
 
 
-Overfull \hbox (9.01569pt too wide) in paragraph at lines 217--218
+Overfull \hbox (9.01569pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 have cre-ated LFE tem-plates for each LFE fam-ily and each seis
 -mic sta-tion and chan-nel. 
  []
 
 
-Overfull \hbox (24.15463pt too wide) in paragraph at lines 217--218
+Overfull \hbox (24.15463pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 For a given LFE fam-ily, a given sta-tion and a given chan-nel,
  we down-loaded an 80-second- 
  []
 
 
-Overfull \hbox (10.9323pt too wide) in paragraph at lines 217--218
+Overfull \hbox (10.9323pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 long seis-mic wave-form start-ing 10 sec-onds be-fore the LFE d
 e-tec-tion time, we de-trended 
  []
 
 
-Overfull \hbox (11.54346pt too wide) in paragraph at lines 217--218
+Overfull \hbox (11.54346pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 the data, ta-pered the first and last 5 sec-onds of the data wi
 th a Hann win-dow, re-moved 
  []
 
 
-Overfull \hbox (11.9601pt too wide) in paragraph at lines 217--218
+Overfull \hbox (11.9601pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 the in-stru-ment re-sponse, band-passed fil-ter be-tween 1.5 an
 d 9 Hz, re-sam-pled the data to 
  []
 
 
-Overfull \hbox (20.9324pt too wide) in paragraph at lines 217--218
+Overfull \hbox (20.9324pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 20 Hz, and cut the first and last 10 sec-onds of data to ob-tai
 n a one-minute-long tem-plate. 
  []
 
 
-Overfull \hbox (0.65454pt too wide) in paragraph at lines 217--218
+Overfull \hbox (0.65454pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 All these pre-pro-cess-ing op-er-a-tions are done with the Pyth
 on pack-age ob-spy. We then 
  []
 
 
-Overfull \hbox (7.6268pt too wide) in paragraph at lines 217--218
+Overfull \hbox (7.6268pt too wide) in paragraph at lines 215--216
 \OT1/cmr/m/n/10 stacked lin-early all the wave-forms af-ter nor-mal-iz-ing each
  wave-form with the root mean 
  []
 
 
-Overfull \hbox (0.84895pt too wide) in paragraph at lines 221--221
+Overfull \hbox (0.84895pt too wide) in paragraph at lines 219--219
 []\OT1/cmr/m/n/10 We used a matched-filter al-go-rithm to de-tect LFEs. For a g
 iven LFE fam-ily, we 
  []
 
 
-Overfull \hbox (2.71004pt too wide) in paragraph at lines 221--221
+Overfull \hbox (2.71004pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 down-load one hour of seis-mic data. Then for each sta-tion and
  each chan-nel, we cross- 
  []
 
 
-Overfull \hbox (6.7379pt too wide) in paragraph at lines 221--221
+Overfull \hbox (6.7379pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 correlate the one-hour long sig-nal with the one-minute-long te
 m-plate for the given sta- 
  []
 
 
-Overfull \hbox (11.6545pt too wide) in paragraph at lines 221--221
+Overfull \hbox (11.6545pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 tion and chan-nel. As the signal-to-noise ra-tio of the seis-mi
 c data is low, we may not see 
  []
 
 
-Overfull \hbox (7.43225pt too wide) in paragraph at lines 221--221
+Overfull \hbox (7.43225pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 ob-vi-ous peaks in the cross-correlation sig-nal. How-ever, if 
 we stack the cross-correlation 
  []
 
 
-Overfull \hbox (7.26564pt too wide) in paragraph at lines 221--221
+Overfull \hbox (7.26564pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 sig-nals for all the chan-nels and all the sta-tions, we can se
 e peaks ap-pear-ing. When-ever 
  []
 
 
-Overfull \hbox (8.9878pt too wide) in paragraph at lines 221--221
+Overfull \hbox (8.9878pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 the value of the av-er-age cross-correlation is higher than a t
 hresh-old (we chose a thresh- 
  []
 
 
-Overfull \hbox (10.48792pt too wide) in paragraph at lines 221--221
+Overfull \hbox (10.48792pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 old equal to eight times the me-dian ab-so-lute de-vi-a-tion of
  the stacked cross-correlation), 
  []
 
 
-Overfull \hbox (16.32121pt too wide) in paragraph at lines 221--221
+Overfull \hbox (16.32121pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 we as-sumed that there is an LFE. As two peaks sep-a-rated by a
  short pe-riod of time may 
  []
 
 
-Overfull \hbox (11.07124pt too wide) in paragraph at lines 221--221
+Overfull \hbox (11.07124pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 ac-tu-ally cor-re-spond to the same LFE, we kept only LFEs that
  are sep-a-rated by at least 
  []
 
 
-Overfull \hbox (15.37668pt too wide) in paragraph at lines 221--221
+Overfull \hbox (15.37668pt too wide) in paragraph at lines 219--219
 \OT1/cmr/m/n/10 one sec-ond and, when two LFEs are sep-a-rated by less than one
  sec-ond, we keep only the 
  []
 
-
-Underfull \vbox (badness 3417) has occurred while \output is active []
-
- [3]
-[4 <./figures/map_LFEs-eps-converted-to.pdf>]
-Overfull \hbox (5.43231pt too wide) in paragraph at lines 223--224
+[3] [4 <./figures/map_LFEs-eps-converted-to.pdf>]
+Overfull \hbox (5.43231pt too wide) in paragraph at lines 221--222
 []\OT1/cmr/m/n/10 We first looked for LFEs dur-ing the months of March and Apri
 l 2008, which cor- 
  []
 
 
-Overfull \hbox (11.59908pt too wide) in paragraph at lines 223--224
+Overfull \hbox (11.59908pt too wide) in paragraph at lines 221--222
 \OT1/cmr/m/n/10 re-spond to the pe-riod cov-ered by the cat-a-log from  []Plour
 de et al.[] (2015), and com-pared 
  []
 
 
-Overfull \hbox (12.2102pt too wide) in paragraph at lines 223--224
+Overfull \hbox (12.2102pt too wide) in paragraph at lines 221--222
 \OT1/cmr/m/n/10 our de-tec-tions with the ini-tial de-tec-tions from the orig-i
 -nal cat-a-log of 66 fam-i-lies. For 19 
  []
 
 
-Overfull \hbox (27.40456pt too wide) in paragraph at lines 223--224
+Overfull \hbox (27.40456pt too wide) in paragraph at lines 221--222
 \OT1/cmr/m/n/10 fam-i-lies, we re-cov-ered all the LFE de-tec-tions ini-tially 
 present in the  []Plourde et al.[] (2015)'s 
  []
 
 
-Overfull \hbox (13.12679pt too wide) in paragraph at lines 223--224
+Overfull \hbox (13.12679pt too wide) in paragraph at lines 221--222
 \OT1/cmr/m/n/10 cat-a-log. For 61 fam-i-lies, we re-cov-ered more than 90 % of 
 the ini-tial LFE de-tec-tions. We 
  []
 
 
-Overfull \hbox (4.12677pt too wide) in paragraph at lines 223--224
+Overfull \hbox (4.12677pt too wide) in paragraph at lines 221--222
 \OT1/cmr/m/n/10 also added 74 % more LFEs to the cat-a-log, but most of added L
 FEs have a low cross- 
  []
 
 
-Overfull \hbox (5.48787pt too wide) in paragraph at lines 223--224
-\OT1/cmr/m/n/10 correlation value and may be false de-tec-tions. Fig-ure XXX sh
-ows the cross-correlation 
+Overfull \hbox (7.15454pt too wide) in paragraph at lines 221--222
+\OT1/cmr/m/n/10 correlation value and may be false de-tec-tions. Fig-ure 2 show
+s the cross-correlation val- 
  []
 
 
-Overfull \hbox (8.71014pt too wide) in paragraph at lines 223--224
-\OT1/cmr/m/n/10 val-ues for the LFEs in the orig-i-nal cat-a-log, and for the L
-FEs that we added to the cat- 
+Overfull \hbox (1.21011pt too wide) in paragraph at lines 221--222
+\OT1/cmr/m/n/10 ues for the LFEs in the orig-i-nal cat-a-log, and for the LFEs 
+that we added to the cat-a- 
  []
 
 Package epstopdf Info: Source file: <figures/hist.eps>
@@ -1030,268 +1032,284 @@ Package epstopdf Info: Source file: <figures/hist.eps>
 (epstopdf)                    size: 20820 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/hist-eps-converted
 -to.pdf figures/hist.eps>
-(epstopdf)             \includegraphics on input line 226.
+(epstopdf)             \includegraphics on input line 224.
 Package epstopdf Info: Output file is already uptodate.
 <figures/hist-eps-converted-to.pdf, id=38, 2168.1pt x 722.7pt>
 File: figures/hist-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/hist-eps-converted-to.pdf>
 Package pdftex.def Info: figures/hist-eps-converted-to.pdf used on input line 2
-26.
+24.
 (pdftex.def)             Requested size: 397.48499pt x 218.76476pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
 []\OT1/cmr/bx/n/9 Figure  2. \OT1/cmr/m/n/9 Cross-correlation val-ues for LFEs 
 added in the cat-a-log for fam-ily []080413.07.023[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
 \OT1/cmr/m/n/9 (left) and cross-correlation val-ues for LFEs in the orig-i-nal 
 cat-a-log from  []Plourde et al.[] (2015)
  []
 
 
-Overfull \hbox (0.82127pt too wide) in paragraph at lines 231--231
+Overfull \hbox (0.82127pt too wide) in paragraph at lines 229--229
 []\OT1/cmr/m/n/10 We then looked for LFEs dur-ing the pe-riod from July 2007 to
  June 2009, which 
  []
 
 
-Overfull \hbox (0.51566pt too wide) in paragraph at lines 231--231
+Overfull \hbox (0.51566pt too wide) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 cor-re-spond to the pe-riod when the FAME ex-per-i-ment was op-
 er-at-ing. Us-ing a thresh- 
  []
 
 
-Overfull \hbox (3.82123pt too wide) in paragraph at lines 231--231
+Overfull \hbox (3.82123pt too wide) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 old equal to eight times the me-dian ab-so-lute de-vi-a-tion of
  the stacked cross-correlation 
  []
 
 
-Overfull \hbox (1.12672pt too wide) in paragraph at lines 231--231
+Overfull \hbox (1.12672pt too wide) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 may pro-duce false de-tec-tions, there-fore we fil-tered the LF
 E de-tec-tion times be-fore vi- 
  []
 
 
-Overfull \hbox (31.96014pt too wide) in paragraph at lines 231--231
+Overfull \hbox (31.96014pt too wide) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 su-al-iz-ing the two-year-long cat-a-log. As the num-ber of sei
 s-mic sta-tions record-ing may change 
  []
 
 
-Overfull \hbox (13.7935pt too wide) in paragraph at lines 231--231
+Overfull \hbox (13.7935pt too wide) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 with time as the sta-tions were pro-gres-sively in-stalled dur-
 ing Sum-mer and Fall 2007, and 
  []
 
 
-Overfull \hbox (13.21017pt too wide) in paragraph at lines 231--231
+Overfull \hbox (13.21017pt too wide) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 then pro-gres-sively re-moved dur-ing May and June 2009, we kep
 t only LFE de-tec-tions for 
  []
 
 
-Overfull \hbox (8.04346pt too wide) in paragraph at lines 231--231
+Overfull \hbox (8.04346pt too wide) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 which the prod-uct of the cross-correlation value by the num-be
 r of sta-tions record-ing at 
  []
 
 
-Overfull \hbox (6.65459pt too wide) in paragraph at lines 231--231
+Overfull \hbox (6.65459pt too wide) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 that time is higher than a thresh-old (equal to 0.1 times the n
 um-ber of sta-tions used to 
  []
 
 
-Overfull \hbox (19.76572pt too wide) in paragraph at lines 231--231
+Overfull \hbox (19.76572pt too wide) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 de-tect LFEs for the given LFE fam-ily). The thresh-old is thus
  dif-fer-ent for each LFE fam- 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (8.07127pt too wide) in paragraph at lines 229--229
+\OT1/cmr/m/n/10 ily. The re-sult-ing LFE cat-a-log for the pe-riod 2007-2009 is
+ shown in Fig-ure 3. For com- 
+ []
 
- [5 <./figures/hist-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/tremor_nb_FAME.eps>
-(epstopdf)                    date: 2020-11-07 16:52:08
-(epstopdf)                    size: 586070 bytes
+(epstopdf)                    date: 2020-11-11 08:59:55
+(epstopdf)                    size: 474769 bytes
 (epstopdf)             Output file: <figures/tremor_nb_FAME-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2020-11-07 17:32:59
-(epstopdf)                    size: 254637 bytes
+(epstopdf)                    date: 2020-11-11 09:01:29
+(epstopdf)                    size: 231937 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/tremor_nb_FAME-eps
 -converted-to.pdf figures/tremor_nb_FAME.eps>
-(epstopdf)             \includegraphics on input line 234.
+(epstopdf)             \includegraphics on input line 232.
 Package epstopdf Info: Output file is already uptodate.
-
-<figures/tremor_nb_FAME-eps-converted-to.pdf, id=85, 1445.4pt x 722.7pt>
+<figures/tremor_nb_FAME-eps-converted-to.pdf, id=40, 1445.4pt x 722.7pt>
 File: figures/tremor_nb_FAME-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/tremor_nb_FAME-eps-converted-to.pdf>
 Package pdftex.def Info: figures/tremor_nb_FAME-eps-converted-to.pdf used on in
-put line 234.
+put line 232.
 (pdftex.def)             Requested size: 397.48499pt x 198.7376pt.
 Missing character: There is no Â in font cmr9!
 Missing character: There is no ° in font cmr9!
 Missing character: There is no Â in font cmr9!
 Missing character: There is no ° in font cmr9!
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 []\OT1/cmr/bx/n/9 Figure  3. \OT1/cmr/m/n/9 LFE and tremor de-tec-tions as a fu
 nc-tion of time and lat-i-tude. Red dots rep-re-sent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 \OT1/cmr/m/n/9 tremor de-tec-tions from the cat-a-log of  []Boyarko et al.[] (2
 015). Black dots rep-re-sent days where
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 \OT1/cmr/m/n/9 LFEs are de-tected for a given LFE fam-ily. The size of the blac
 k dots are pro-por-tional to the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 \OT1/cmr/m/n/9 num-ber of LFEs de-tected dur-ing this day. The double-headed gr
 ey ar-row rep-re-sents the time
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 \OT1/cmr/m/n/9 pe-riod when the FAME ex-per-i-ment was op-er-at-ing at full ca-
 pac-ity. LFE fam-i-lies south of 40 N
  []
 
 
-Overfull \hbox (9.93231pt too wide) in paragraph at lines 239--239
+Overfull \hbox (9.93231pt too wide) in paragraph at lines 237--237
 []\OT1/cmr/m/n/10 We note that there is a good spa-tial and tem-po-ral agree-me
 nt be-tween tremor and 
  []
 
 
-Overfull \hbox (30.46022pt too wide) in paragraph at lines 239--239
+Overfull \hbox (30.46022pt too wide) in paragraph at lines 237--237
 \OT1/cmr/m/n/10 LFEs, with LFEs de-tected dur-ing the main tremor episodes. Ad-
 di-tional small LFE episodes 
  []
 
 
-Overfull \hbox (0.37672pt too wide) in paragraph at lines 239--239
+Overfull \hbox (0.37672pt too wide) in paragraph at lines 237--237
 \OT1/cmr/m/n/10 are also de-tected be-tween big-ger tremor episodes. The LFE fa
 m-i-lies lo-cated south on 
  []
 
 
-Overfull \hbox (6.51567pt too wide) in paragraph at lines 239--239
+Overfull \hbox (6.51567pt too wide) in paragraph at lines 237--237
 \OT1/cmr/m/n/10 the strike-slip fault from the San An-dreas Fault sys-tem are m
 uch more ac-tive than the 
  []
 
 
-Overfull \hbox (6.62695pt too wide) in paragraph at lines 239--239
+Overfull \hbox (6.62695pt too wide) in paragraph at lines 237--237
 \OT1/cmr/m/n/10 LFE fam-i-lies lo-cated on the sub-duc-tion zone. Ad-di-tion-al
 ly, one LFE fam-ily lo-cated on 
  []
 
 
-Overfull \hbox (0.4879pt too wide) in paragraph at lines 239--239
+Overfull \hbox (0.4879pt too wide) in paragraph at lines 237--237
 \OT1/cmr/m/n/10 the south-ern end of the sub-duc-tion zone is also more ac-tive
  than fam-i-lies lo-cated far- 
  []
 
 
-Overfull \hbox (1.62672pt too wide) in paragraph at lines 241--241
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./figures/hist-eps-converted-to.pdf>]
+Overfull \hbox (1.62672pt too wide) in paragraph at lines 239--239
 []\OT1/cmr/m/n/10 We then used the LFE de-tec-tions from the 2007-2009 cat-a-lo
 g to make new tem- 
  []
 
 
-Overfull \hbox (3.43228pt too wide) in paragraph at lines 241--241
+Overfull \hbox (3.43228pt too wide) in paragraph at lines 239--239
 \OT1/cmr/m/n/10 plates for the per-ma-nent sta-tions of the three seis-mic net-
 works: Berke-ley Dig-i-tal Seis- 
  []
 
 
-Overfull \hbox (16.5991pt too wide) in paragraph at lines 241--241
+Overfull \hbox (16.5991pt too wide) in paragraph at lines 239--239
 \OT1/cmr/m/n/10 mic Net-work (BK), North-ern Cal-i-for-nia Seis-mic Net-work (N
 C), and Plate Bound-ary Ob- 
  []
 
 
-Overfull \hbox (8.1269pt too wide) in paragraph at lines 241--241
+Overfull \hbox (8.1269pt too wide) in paragraph at lines 239--239
 \OT1/cmr/m/n/10 ser-va-tory Strain and Seis-mic Data (PB). For a given LFE fam-
 ily, we took the 150 LFE 
  []
 
 
-Overfull \hbox (12.48782pt too wide) in paragraph at lines 241--241
+Overfull \hbox (12.48782pt too wide) in paragraph at lines 239--239
 \OT1/cmr/m/n/10 de-tec-tion times with the best cross-correlation value, we dow
 n-loaded one minute of seis- 
  []
 
 
-Overfull \hbox (7.82124pt too wide) in paragraph at lines 241--241
+Overfull \hbox (7.82124pt too wide) in paragraph at lines 239--239
 \OT1/cmr/m/n/10 mic data around each de-tec-tion, and lin-early stacked the wav
 e-forms to ob-tain the tem- 
  []
 
 
-Overfull \hbox (7.37686pt too wide) in paragraph at lines 241--241
+Overfull \hbox (7.37686pt too wide) in paragraph at lines 239--239
 \OT1/cmr/m/n/10 plates. We looked for tem-plates for both one-component sta-tio
 ns and three-component 
  []
 
 
-Overfull \hbox (7.90456pt too wide) in paragraph at lines 243--244
+Overfull \hbox (7.90456pt too wide) in paragraph at lines 241--242
 []\OT1/cmr/m/n/10 For most fam-i-lies, we find that we can ob-tain good tem-pla
 tes with signal-to-noise 
  []
 
 
-Overfull \hbox (12.48793pt too wide) in paragraph at lines 243--244
+Overfull \hbox (12.48793pt too wide) in paragraph at lines 241--242
 \OT1/cmr/m/n/10 ra-tio for sev-eral sta-tions. Only nine fam-i-lies have four o
 r less seis-mic sta-tions with good 
  []
 
 
-Overfull \hbox (6.6824pt too wide) in paragraph at lines 243--244
-\OT1/cmr/m/n/10 tem-plates. Ex-am-ples of tem-plates are given in Fig-ure XXX f
-or sta-tion WDC and fam- 
+Overfull \hbox (63.34927pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/10 tem-plates. Ex-am-ples of tem-plates are given in Fig-ure 4 for
+ sta-tion WDC and fam-ily []080401.05.050[]. 
  []
 
 
-Overfull \hbox (21.90466pt too wide) in paragraph at lines 243--244
-\OT1/cmr/m/n/10 ily []080401.05.050[]. To ob-tain the above cat-a-log, we used 
-one-minute-long tem-plates, which 
+Overfull \hbox (5.01566pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/10 To ob-tain the above cat-a-log, we used one-minute-long tem-pla
+tes, which in-cluded noise 
  []
 
 
-Overfull \hbox (20.73781pt too wide) in paragraph at lines 243--244
-\OT1/cmr/m/n/10 in-cluded noise be-fore and af-ter the seis-mic wave ar-rivals.
- To in-crease the cross-correlation 
+Overfull \hbox (2.40443pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/10 be-fore and af-ter the seis-mic wave ar-rivals. To in-crease th
+e cross-correlation val-ues be- 
  []
 
 
-Overfull \hbox (12.59895pt too wide) in paragraph at lines 243--244
-\OT1/cmr/m/n/10 val-ues be-tween the tem-plates and the data, we thus re-duced 
-the length of the tem-plates 
+Overfull \hbox (10.32117pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/10 tween the tem-plates and the data, we thus re-duced the length 
+of the tem-plates to 25 to 
  []
 
 
-Overfull \hbox (19.12685pt too wide) in paragraph at lines 243--244
-\OT1/cmr/m/n/10 to 25 to 40 sec-onds, de-pend-ing on the max-i-mum dis-tance fr
-om the source to the sta-tions. 
+Overfull \hbox (16.9046pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/10 40 sec-onds, de-pend-ing on the max-i-mum dis-tance from the so
+urce to the sta-tions. We did 
  []
 
 
-Overfull \hbox (1.43233pt too wide) in paragraph at lines 243--244
-\OT1/cmr/m/n/10 We did not use sta-tions more than 100 kilo-me-ters away from t
-he epi-cen-ter of an LFE 
+Overfull \hbox (11.76572pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/10 not use sta-tions more than 100 kilo-me-ters away from the epi-
+cen-ter of an LFE fam-ily, as 
+ []
+
+
+Overfull \hbox (6.21014pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/10 the tem-plate would be un-likely to have a good signal-to-noise
+ ra-tio. We then used this 
+ []
+
+
+Overfull \hbox (5.07124pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/10 new, shorter tem-plates for the per-ma-nent sta-tions to make a
+n LFE cat-a-log for the pe- 
  []
 
 Package epstopdf Info: Source file: <figures/templates.eps>
@@ -1302,29 +1320,29 @@ Package epstopdf Info: Source file: <figures/templates.eps>
 (epstopdf)                    size: 23187 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/templates-eps-conv
 erted-to.pdf figures/templates.eps>
-(epstopdf)             \includegraphics on input line 246.
+(epstopdf)             \includegraphics on input line 244.
 Package epstopdf Info: Output file is already uptodate.
 <figures/templates-eps-converted-to.pdf, id=87, 1734.48pt x 433.62pt>
 File: figures/templates-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/templates-eps-converted-to.pdf>
 Package pdftex.def Info: figures/templates-eps-converted-to.pdf used on input l
-ine 246.
+ine 244.
 (pdftex.def)             Requested size: 397.48499pt x 99.3666pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--247
+Underfull \hbox (badness 10000) in paragraph at lines 245--245
 []\OT1/cmr/bx/n/9 Figure  4. \OT1/cmr/m/n/9 Low-frequency earth-quake tem-plate
  for sta-tion WDC and fam-ily []080401.05.050[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--247
+Underfull \hbox (badness 10000) in paragraph at lines 245--245
 \OT1/cmr/m/n/9 for the three chan-nels BHE, BHN and BHZ (left to right). We can
  clearly see a P-wave ar-rival
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--247
+Underfull \hbox (badness 10000) in paragraph at lines 245--245
 \OT1/cmr/m/n/9 and an S-wave ar-rival about 7 sec-onds later. The P-wave has a 
 higher am-pli-tude on the ver-ti-cal
  []
@@ -1333,123 +1351,123 @@ higher am-pli-tude on the ver-ti-cal
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./figures/tremor_nb_FAME-eps-converted-to.pdf>]
-Overfull \hbox (11.7657pt too wide) in paragraph at lines 253--254
+Overfull \hbox (11.7657pt too wide) in paragraph at lines 251--252
 []\OT1/cmr/m/n/10 Once we have ob-tained a cat-a-log for the pe-riod 2007-2009 
 us-ing the data from the 
  []
 
 
-Overfull \hbox (10.07112pt too wide) in paragraph at lines 253--254
+Overfull \hbox (10.07112pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 per-ma-nent seis-mic net-works, we com-pare the LFE de-tec-tion
 s be-tween the two cat-a-logs: 
  []
 
 
-Overfull \hbox (5.26573pt too wide) in paragraph at lines 253--254
+Overfull \hbox (5.26573pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 the FAME cat-a-log (ob-tained with data from the FAME ex-per-i-
 ment) and the net-works 
  []
 
 
-Overfull \hbox (13.73798pt too wide) in paragraph at lines 253--254
+Overfull \hbox (13.73798pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 cat-a-log (ob-tained from data from the per-ma-nent net-works).
  As we may have many false 
  []
 
 
-Overfull \hbox (17.8768pt too wide) in paragraph at lines 253--254
+Overfull \hbox (17.8768pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 de-tec-tions, we try to elim-i-nate some of them by as-sum-ing 
 that LFEs present in both cat- 
  []
 
 
-Overfull \hbox (1.54332pt too wide) in paragraph at lines 253--254
+Overfull \hbox (1.54332pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 a-logs are al-ways true de-tec-tions. Then we de-fine two thres
 h-olds: the first thresh-old is 
  []
 
 
-Overfull \hbox (12.79341pt too wide) in paragraph at lines 253--254
+Overfull \hbox (12.79341pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 cho-sen such that at least half the LFE de-tec-tions above the 
 thresh-old in the FAME cat- 
  []
 
 
-Overfull \hbox (0.59892pt too wide) in paragraph at lines 253--254
+Overfull \hbox (0.59892pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 a-log are also in the net-work cat-a-log, the sec-ond thresh-ol
 d is cho-sen such that at least 
  []
 
 
-Overfull \hbox (19.1268pt too wide) in paragraph at lines 253--254
+Overfull \hbox (19.1268pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 half the LFE de-tec-tions above the thresh-old in the net-work 
 cat-a-log are also in the FAME 
  []
 
 
-Overfull \hbox (4.87672pt too wide) in paragraph at lines 253--254
+Overfull \hbox (4.87672pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 cat-a-log. If we fil-ter the cat-a-logs and keep only de-tec-ti
 ons above the thresh-olds, we are 
  []
 
 
-Overfull \hbox (9.71008pt too wide) in paragraph at lines 253--254
+Overfull \hbox (9.71008pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 now con-fi-dent that at least half of the LFE de-tec-tions are 
 true de-tec-tions. As the num- 
  []
 
 
-Overfull \hbox (19.65459pt too wide) in paragraph at lines 253--254
+Overfull \hbox (19.65459pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 ber of sta-tions record-ing may vary over time (es-pe-cially fo
 r the net-work cat-a-log), we keep 
  []
 
 
-Overfull \hbox (20.68236pt too wide) in paragraph at lines 253--254
+Overfull \hbox (20.68236pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 only the LFE de-tec-tions such that the as-so-ci-ated cross cor
 -re-la-tion mul-ti-plied by the num- 
  []
 
 
-Overfull \hbox (1.65453pt too wide) in paragraph at lines 253--254
+Overfull \hbox (1.65453pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 ber of chan-nels record-ing at that time is higher than the thr
 esh-old. Thus, if there are 
  []
 
 
-Overfull \hbox (5.57118pt too wide) in paragraph at lines 253--254
+Overfull \hbox (5.57118pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 few sta-tions record-ings at some time, the cross cor-re-la-tio
 n must be higher for the LFE 
  []
 
 
-Overfull \hbox (15.57121pt too wide) in paragraph at lines 253--254
+Overfull \hbox (15.57121pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 to be con-sid-ered as a true de-tec-tion. We then com-pared the
  nor-mal-ized num-ber of LFEs 
  []
 
 
-Overfull \hbox (10.37683pt too wide) in paragraph at lines 253--254
+Overfull \hbox (52.65475pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10 ob-tained with the two cat-a-logs. Ex-am-ples are given in Fig-
-ures XXX and XXX for fam- 
+ures 5 and 6 for fam-i-lies []080413.07.023[] 
  []
 
 
-Overfull \hbox (10.98807pt too wide) in paragraph at lines 253--254
-\OT1/cmr/m/n/10 i-lies []080413.07.023[] and []080401.05.050[]. Al-though the n
-um-ber of LFEs dur-ing each event 
+Overfull \hbox (25.15471pt too wide) in paragraph at lines 251--252
+\OT1/cmr/m/n/10 and []080401.05.050[]. Al-though the num-ber of LFEs dur-ing ea
+ch event may not be the same, 
  []
 
 
-Overfull \hbox (23.40465pt too wide) in paragraph at lines 253--254
-\OT1/cmr/m/n/10 may not be the same, we clearly see for fam-ily []080413.07.023
-[] that the tim-ing of the events 
+Overfull \hbox (23.18242pt too wide) in paragraph at lines 251--252
+\OT1/cmr/m/n/10 we clearly see for fam-ily []080413.07.023[] that the tim-ing o
+f the events are the same for both 
  []
 
 
-Overfull \hbox (24.23799pt too wide) in paragraph at lines 253--254
-\OT1/cmr/m/n/10 are the same for both cat-a-logs. Fam-ily []080401.05.050[] is 
-much more ac-tive but most events 
+Overfull \hbox (11.48792pt too wide) in paragraph at lines 251--252
+\OT1/cmr/m/n/10 cat-a-logs. Fam-ily []080401.05.050[] is much more ac-tive but 
+most events seem to be present 
  []
 
 Package epstopdf Info: Source file: <figures/080413_07_023.eps>
@@ -1461,17 +1479,17 @@ Package epstopdf Info: Source file: <figures/080413_07_023.eps>
 (epstopdf)                    size: 20969 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/080413_07_023-eps-
 converted-to.pdf figures/080413_07_023.eps>
-(epstopdf)             \includegraphics on input line 256.
+(epstopdf)             \includegraphics on input line 254.
 Package epstopdf Info: Output file is already uptodate.
 <figures/080413_07_023-eps-converted-to.pdf, id=130, 722.7pt x 722.7pt>
 File: figures/080413_07_023-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/080413_07_023-eps-converted-to.pdf>
 Package pdftex.def Info: figures/080413_07_023-eps-converted-to.pdf used on inp
-ut line 256.
+ut line 254.
 (pdftex.def)             Requested size: 397.48499pt x 397.48622pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--257
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 []\OT1/cmr/bx/n/9 Figure  5. \OT1/cmr/m/n/9 Nor-mal-ize cu-mu-la-tive num-ber o
 f LFEs over the pe-riod July 2007-July 2009 for the
  []
@@ -1485,73 +1503,79 @@ Package epstopdf Info: Source file: <figures/080401_05_050.eps>
 (epstopdf)                    size: 19373 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/080401_05_050-eps-
 converted-to.pdf figures/080401_05_050.eps>
-(epstopdf)             \includegraphics on input line 262.
+(epstopdf)             \includegraphics on input line 260.
 Package epstopdf Info: Output file is already uptodate.
 <figures/080401_05_050-eps-converted-to.pdf, id=132, 722.7pt x 722.7pt>
 File: figures/080401_05_050-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/080401_05_050-eps-converted-to.pdf>
 Package pdftex.def Info: figures/080401_05_050-eps-converted-to.pdf used on inp
-ut line 262.
+ut line 260.
 (pdftex.def)             Requested size: 397.48499pt x 397.48622pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
 []\OT1/cmr/bx/n/9 Figure  6. \OT1/cmr/m/n/9 Nor-mal-ize cu-mu-la-tive num-ber o
 f LFEs over the pe-riod July 2007-July 2009 for the
  []
 
 
-Overfull \hbox (15.59901pt too wide) in paragraph at lines 267--268
+Overfull \hbox (15.59901pt too wide) in paragraph at lines 265--266
 []\OT1/cmr/m/n/10 For most of the fam-i-lies lo-cated on the sub-duc-tion zone,
  we ob-tained a good agree- 
  []
 
 
-Overfull \hbox (17.849pt too wide) in paragraph at lines 267--268
+Overfull \hbox (17.849pt too wide) in paragraph at lines 265--266
 \OT1/cmr/m/n/10 ment be-tween both cat-a-logs. We elim-i-nate two fam-i-lies fo
 r which too few per-ma-nent sta- 
  []
 
 
-Overfull \hbox (21.1546pt too wide) in paragraph at lines 267--268
+Overfull \hbox (21.1546pt too wide) in paragraph at lines 265--266
 \OT1/cmr/m/n/10 tions have good tem-plates, and it was not pos-si-ble to de-tec
 t LFEs with the avail-able tem- 
  []
 
 
-Overfull \hbox (10.6266pt too wide) in paragraph at lines 267--268
+Overfull \hbox (10.6266pt too wide) in paragraph at lines 265--266
 \OT1/cmr/m/n/10 plates. How-ever, we were able to de-tect most LFEs events even
  with-out the pres-ence of 
  []
 
 
-Overfull \hbox (12.09897pt too wide) in paragraph at lines 267--268
+Overfull \hbox (12.09897pt too wide) in paragraph at lines 265--266
 \OT1/cmr/m/n/10 the tem-po-rary sta-tions from the FAME net-work. We are thus c
 on-fi-dent that we can de- 
  []
 
 
-Overfull \hbox (20.46022pt too wide) in paragraph at lines 267--268
+Overfull \hbox (20.46022pt too wide) in paragraph at lines 265--266
 \OT1/cmr/m/n/10 tect LFEs be-fore 2007 and af-ter 2009. In the fol-low-ing, we 
 fo-cus on the pe-riod 2004-2011. 
  []
 
 
-Overfull \hbox (2.29349pt too wide) in paragraph at lines 267--268
-\OT1/cmr/m/n/10 In Novem-ber 2011, sev-eral 1D sta-tions stopped record-ing and
- the num-ber of avail-able 
+Overfull \hbox (3.2657pt too wide) in paragraph at lines 265--266
+\OT1/cmr/m/n/10 In Novem-ber 2011, sev-eral one-component sta-tions stopped rec
+ord-ing and the num-ber 
  []
 
 
-Overfull \hbox (9.59898pt too wide) in paragraph at lines 267--268
-\OT1/cmr/m/n/10 sta-tions started de-creas-ing, each is why we did not look for
- LFEs event af-ter that date. 
+Overfull \hbox (6.51566pt too wide) in paragraph at lines 265--266
+\OT1/cmr/m/n/10 of avail-able sta-tions started de-creas-ing, each is why we di
+d not look for LFEs event af- 
  []
 
 
-Overfull \hbox (7.23793pt too wide) in paragraph at lines 267--268
-\OT1/cmr/m/n/10 The re-sult-ing LFE cat-a-log for the pe-riod 2004-2011 is show
-n in Fig-ure XXX. For com- 
+Overfull \hbox (10.71017pt too wide) in paragraph at lines 265--266
+\OT1/cmr/m/n/10 ter that date. The re-sult-ing LFE cat-a-log for the pe-riod 20
+04-2011 is shown in Fig-ure 7. 
+ []
+
+
+Overfull \hbox (11.57127pt too wide) in paragraph at lines 265--266
+\OT1/cmr/m/n/10 For com-par-i-son, we also plot-ted the tremor de-tec-tion time
+s from  []Boyarko et al.[] (2015).  
  []
 
 Package epstopdf Info: Source file: <figures/tremor_nb_perm.eps>
@@ -1563,171 +1587,347 @@ f>
 (epstopdf)                    size: 2033105 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/tremor_nb_perm-eps
 -converted-to.pdf figures/tremor_nb_perm.eps>
-(epstopdf)             \includegraphics on input line 270.
+(epstopdf)             \includegraphics on input line 268.
 Package epstopdf Info: Output file is already uptodate.
 <figures/tremor_nb_perm-eps-converted-to.pdf, id=134, 1445.4pt x 722.7pt>
 File: figures/tremor_nb_perm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/tremor_nb_perm-eps-converted-to.pdf>
 Package pdftex.def Info: figures/tremor_nb_perm-eps-converted-to.pdf used on in
-put line 270.
+put line 268.
 (pdftex.def)             Requested size: 397.48499pt x 198.7376pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 []\OT1/cmr/bx/n/9 Figure  7. \OT1/cmr/m/n/9 LFE and tremor de-tec-tions as a fu
 nc-tion of time and lat-i-tude. Red dots rep-re-sent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 \OT1/cmr/m/n/9 tremor de-tec-tions from the cat-a-log of  []Boyarko et al.[] (2
 015). Black dots rep-re-sent days where
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 \OT1/cmr/m/n/9 LFEs are de-tected for a given LFE fam-ily. The size of the blac
 k dots are pro-por-tional to the
  []
 
 
-Overfull \hbox (18.3768pt too wide) in paragraph at lines 277--278
-[]\OT1/cmr/m/n/10 We were able to de-tect LFE events prop-a-ga-tion []from Nort
-h to South or from South 
+Overfull \hbox (18.3768pt too wide) in paragraph at lines 275--276
+[]\OT1/cmr/m/n/10 We were able to de-tect LFE events prop-a-gat-ing from North 
+to South or from South 
  []
 
 
-Overfull \hbox (4.15453pt too wide) in paragraph at lines 277--278
-\OT1/cmr/m/n/10 to North[] when-ever there is a tremor episode in the  []Boyark
-o et al.[] (2015) cat-a-log. We 
+Overfull \hbox (4.15453pt too wide) in paragraph at lines 275--276
+\OT1/cmr/m/n/10 to North when-ever there is a tremor episode in the  []Boyarko 
+et al.[] (2015) cat-a-log. We 
  []
 
 
-Overfull \hbox (4.73787pt too wide) in paragraph at lines 277--278
+Overfull \hbox (4.73787pt too wide) in paragraph at lines 275--276
 \OT1/cmr/m/n/10 were also able to de-tect sev-eral LFE episodes in 2004-2005 be
 -fore the be-gin-ning of the 
  []
 
 
-Overfull \hbox (11.93237pt too wide) in paragraph at lines 277--278
+Overfull \hbox (11.93237pt too wide) in paragraph at lines 275--276
 []\OT1/cmr/m/n/10 Boyarko et al.[] (2015) cat-a-log. It is known than tec-tonic
  tremor can be trig-gered by sur- 
  []
 
 
-Overfull \hbox (51.37683pt too wide) in paragraph at lines 277--278
+Overfull \hbox (51.37683pt too wide) in paragraph at lines 275--276
 \OT1/cmr/m/n/10 face waves from dis-tant and re-gional earth-quakes, as has bee
 n ob-served in Cas-ca-dia  []Rubinstein 
  []
 
 
-Overfull \hbox (24.863pt too wide) in paragraph at lines 277--278
+Overfull \hbox (24.863pt too wide) in paragraph at lines 275--276
 \OT1/cmr/m/n/10 et al.[], 2009), the San An-dreas  []Peng et al.[], 2009; Guil-
 hem et al.[], 2010), and Nankai  []Han 
  []
 
 
-Overfull \hbox (14.15462pt too wide) in paragraph at lines 277--278
+Overfull \hbox (14.15462pt too wide) in paragraph at lines 275--276
 \OT1/cmr/m/n/10 et al.[], 2014). Low-frequency earth-quake ac-tiv-ity on the Sa
 n An-dreas fault also in-creased 
  []
 
 
-Overfull \hbox (0.23796pt too wide) in paragraph at lines 277--278
+Overfull \hbox (0.23796pt too wide) in paragraph at lines 275--276
 \OT1/cmr/m/n/10 dur-ing sev-eral months af-ter the 2004 Parafield earth-quake  
 []Shelly, 2017). We looked 
  []
 
 
-Overfull \hbox (13.15465pt too wide) in paragraph at lines 277--278
+Overfull \hbox (13.15465pt too wide) in paragraph at lines 275--276
 \OT1/cmr/m/n/10 for re-gional earth-quakes with mag-ni-tude higher than 5 dur-i
 ng the pe-riod cov-ered by the 
  []
 
 
-Overfull \hbox (23.8768pt too wide) in paragraph at lines 277--278
+Overfull \hbox (23.8768pt too wide) in paragraph at lines 275--276
 \OT1/cmr/m/n/10 cat-a-log to ver-ify whether this phe-nomenon is also ver-i-fie
 d in south-ern Cas-ca-dia. The char- 
  []
 
 [7 <./figures/templates-eps-converted-to.pdf>] [8 <./figures/080413_07_023-eps-
 converted-to.pdf>] [9 <./figures/080401_05_050-eps-converted-to.pdf>]
-Overfull \hbox (14.4323pt too wide) in paragraph at lines 296--297
-[]\OT1/cmr/m/n/10 Although, we ob-serve an in-crease in LFE ac-tiv-ity for some
- fam-i-lies sev-eral days af- 
+Overfull \hbox (11.65451pt too wide) in paragraph at lines 294--294
+[]\OT1/cmr/m/n/10 Although we ob-serve an in-crease in LFE ac-tiv-ity for some 
+fam-i-lies sev-eral days af- 
  []
 
 
-Overfull \hbox (6.29338pt too wide) in paragraph at lines 296--297
+Overfull \hbox (6.29338pt too wide) in paragraph at lines 294--294
 \OT1/cmr/m/n/10 ter the earth-quakes (ex-cept the 2008 one where no ac-tiv-ity 
 is ob-served af-ter the earth- 
  []
 
 
-Overfull \hbox (10.5157pt too wide) in paragraph at lines 296--297
+Overfull \hbox (10.5157pt too wide) in paragraph at lines 294--294
 \OT1/cmr/m/n/10 quake), it does not seem that this ac-tiv-ity is linked to the 
 earth-quake. In-deed, the LFE 
  []
 
 
-Overfull \hbox (0.51561pt too wide) in paragraph at lines 296--297
+Overfull \hbox (0.51561pt too wide) in paragraph at lines 294--294
 \OT1/cmr/m/n/10 events oc-cur a few days af-ter the earth-quake and not im-me-d
 i-ately af-ter as is the case 
  []
 
 
-Overfull \hbox (15.76573pt too wide) in paragraph at lines 296--297
+Overfull \hbox (15.76573pt too wide) in paragraph at lines 294--294
 \OT1/cmr/m/n/10 for the Park-field earth-quake, and they af-fect only a few fam
 -i-lies. The rea-son may be due 
  []
 
 
-Overfull \hbox (14.46008pt too wide) in paragraph at lines 296--297
+Overfull \hbox (14.46008pt too wide) in paragraph at lines 294--294
 \OT1/cmr/m/n/10 to the dis-tance be-tween the LFE fam-i-lies and the epi-cen-te
 rs of the re-gional earth-quakes. 
  []
 
 
-Overfull \hbox (8.65457pt too wide) in paragraph at lines 296--297
-\OT1/cmr/m/n/10 In-deed, for the Parafield earth-quake, an in-crease in LFE ac-
-tiv-ity was ob-served for LFE 
+Overfull \hbox (8.93236pt too wide) in paragraph at lines 294--294
+\OT1/cmr/m/n/10 In-deed, for the Park-field earth-quake, an in-crease in LFE ac
+-tiv-ity was ob-served for LFE 
  []
 
 
-Overfull \hbox (3.65456pt too wide) in paragraph at lines 296--297
+Overfull \hbox (3.65456pt too wide) in paragraph at lines 294--294
 \OT1/cmr/m/n/10 fam-i-lies up to 45km away from the epi-cen-ter, but not far-th
 er away. For south-ern Cas- 
  []
 
 
-Overfull \hbox (9.54343pt too wide) in paragraph at lines 296--297
+Overfull \hbox (9.54343pt too wide) in paragraph at lines 294--294
 \OT1/cmr/m/n/10 ca-dia, the clos-est epi-cen-ter (2008) is lo-cated 50 km away 
 from the clos-est LFE fam-i-lies.  
+ []
+
+
+Overfull \hbox (25.54343pt too wide) in paragraph at lines 296--297
+[]\OT1/cmr/m/n/10 Finally, we want to ver-ify whether we can an in-crease of lF
+E ac-tiv-ity for the downdip 
+ []
+
+
+Overfull \hbox (0.71022pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 LFE fam-i-lies com-pared to the up-dip LFE fam-i-lies. Most fam
+-i-lies in the north-ern and 
+ []
+
+
+Overfull \hbox (4.32118pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 cen-tral part of the study area are well aligned along the stri
+ke di-rec-tion, how-ever fam- 
+ []
+
+
+Overfull \hbox (6.62675pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 i-lies in the south-ern part of the sub-duc-tion zone are more 
+dis-tant from each other. We 
+ []
+
+
+Overfull \hbox (9.71024pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 first look at five fam-i-lies aligned at lat-i-tude about 40.7N
+ and show the num-ber of LFEs 
+ []
+
+
+Overfull \hbox (11.5158pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 per day in Fig-ure 8. We then look at three fam-i-lies aligned 
+at lat-i-tude about 40.4N and 
+ []
+
+
+Overfull \hbox (13.37679pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 show the num-ber of LFEs per day in Fig-ure 9. For both sets of
+ fam-i-lies, LFE events are 
+ []
+
+
+Overfull \hbox (3.7379pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 more fre-quent for the east-ern-most fam-ily than for the west-
+ern-most fam-ily, as was also 
+ []
+
+
+Overfull \hbox (9.84892pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 the case in north-ern Cas-cade  []Sweet et al.[], 2019). It is 
+more dif-fi-cult to com-pare event 
+ []
+
+
+Overfull \hbox (9.46013pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 size and swarm du-ra-tion as the num-ber of sta-tions and the q
+ual-ity of the tem-plates are 
+ []
+
+
+Overfull \hbox (8.54349pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 dif-fer-ent from each fam-ily, and may have a strong in-flu-enc
+e on the num-ber of LFEs de- 
  []
 
 
 Underfull \vbox (badness 1472) has occurred while \output is active []
 
  [10 <./figures/tremor_nb_perm-eps-converted-to.pdf>]
-Overfull \hbox (8.07124pt too wide) in paragraph at lines 475--477
+Package epstopdf Info: Source file: <figures/set1_daily_LFEs.eps>
+(epstopdf)                    date: 2020-11-11 11:26:43
+(epstopdf)                    size: 1511408 bytes
+(epstopdf)             Output file: <figures/set1_daily_LFEs-eps-converted-to.p
+df>
+(epstopdf)                    date: 2020-11-11 11:53:52
+(epstopdf)                    size: 104346 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/set1_daily_LFEs-ep
+s-converted-to.pdf figures/set1_daily_LFEs.eps>
+(epstopdf)             \includegraphics on input line 299.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/set1_daily_LFEs-eps-converted-to.pdf, id=305, 1156.32pt x 1445.4pt>
+File: figures/set1_daily_LFEs-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/set1_daily_LFEs-eps-converted-to.pdf>
+Package pdftex.def Info: figures/set1_daily_LFEs-eps-converted-to.pdf used on i
+nput line 299.
+(pdftex.def)             Requested size: 397.48499pt x 496.85504pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+[]\OT1/cmr/bx/n/9 Figure  8. \OT1/cmr/m/n/9 Daily num-ber of LFEs over the pe-r
+iod 2004-2011 for five LFE fam-i-lies aligned at
+ []
+
+Package epstopdf Info: Source file: <figures/set2_daily_LFEs.eps>
+(epstopdf)                    date: 2020-11-11 11:31:05
+(epstopdf)                    size: 911780 bytes
+(epstopdf)             Output file: <figures/set2_daily_LFEs-eps-converted-to.p
+df>
+(epstopdf)                    date: 2020-11-11 11:53:54
+(epstopdf)                    size: 67662 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/set2_daily_LFEs-ep
+s-converted-to.pdf figures/set2_daily_LFEs.eps>
+(epstopdf)             \includegraphics on input line 305.
+Package epstopdf Info: Output file is already uptodate.
+<figures/set2_daily_LFEs-eps-converted-to.pdf, id=307, 1156.32pt x 867.24pt>
+File: figures/set2_daily_LFEs-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/set2_daily_LFEs-eps-converted-to.pdf>
+Package pdftex.def Info: figures/set2_daily_LFEs-eps-converted-to.pdf used on i
+nput line 305.
+(pdftex.def)             Requested size: 397.48499pt x 298.11302pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
+[]\OT1/cmr/bx/n/9 Figure  9. \OT1/cmr/m/n/9 Daily num-ber of LFEs over the pe-r
+iod 2004-2011 for three LFE fam-i-lies aligned at
+ []
+
+
+Overfull \hbox (8.18233pt too wide) in paragraph at lines 312--313
+[]\OT1/cmr/m/n/10 In this study, we used the tem-plates ob-tained by Plourde et
+ al. (2015) us-ing data 
+ []
+
+
+Overfull \hbox (13.76573pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 recorded by the FAME net-work in North-ern Cal-i-for-nia dur-in
+g an episode of high tremor 
+ []
+
+
+Overfull \hbox (14.98795pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 ac-tiv-ity in April 2008, and we ex-tended their cat-a-log to t
+he whole two years (2007-2009) 
+ []
+
+
+Overfull \hbox (1.37665pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 dur-ing which the seis-mic sta-tions were in-stalled. We then u
+sed the two-year-long cat- 
+ []
+
+
+Overfull \hbox (13.43233pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 a-log to cre-ate tem-plates for sta-tions from the per-ma-nent 
+seis-mic net-works, and used the 
+ []
+
+
+Overfull \hbox (16.349pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 seis-mic data recorded by these sta-tions to ex-tend the cat-a-
+log be-fore and af-ter the FAME 
+ []
+
+
+Overfull \hbox (19.82117pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 ex-per-i-ment. We ob-serve LFEs ev-ery time that there is tec-t
+onic tremor on the tremor cat- 
+ []
+
+
+Overfull \hbox (8.5991pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 a-log from Bo-yarko et al. (2015), and sev-eral ad-di-tional sm
+aller LFE episodes. Whereas 
+ []
+
+
+Overfull \hbox (34.8769pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 the LFE fam-i-lies from the sub-duc-tion zone are mainly ac-tiv
+e dur-ing the big Episodic Tremor 
+ []
+
+
+Overfull \hbox (21.32129pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 and Slip events, the south-ern-most fam-ily is more ac-tive, wi
+th re-peat-ing events about once 
+ []
+
+
+Overfull \hbox (8.07124pt too wide) in paragraph at lines 489--491
 \OT1/cmr/m/n/10 cat-a-log. This project was funded by NSF grant XXX. A.D. would
  like to thank the In- 
  []
 
 
-Overfull \hbox (5.87685pt too wide) in paragraph at lines 475--477
+Overfull \hbox (5.87685pt too wide) in paragraph at lines 489--491
 \OT1/cmr/m/n/10 te-gral En-vi-ron-men-tal Big Data Re-search Fund from the Col-
 lege of the En-vi-ron-ment of 
  []
 
 
-Overfull \hbox (17.15465pt too wide) in paragraph at lines 475--477
+Overfull \hbox (17.15465pt too wide) in paragraph at lines 489--491
 \OT1/cmr/m/n/10 Uni-ver-sity of Wash-ing-ton, which funded cloud com-put-ing re
 -sources to carry out the data 
  []
 
 
-Overfull \hbox (15.04343pt too wide) in paragraph at lines 475--477
+Overfull \hbox (15.04343pt too wide) in paragraph at lines 489--491
 \OT1/cmr/m/n/10 anal-y-ses. The seis-mic record-ings used for this anal-y-sis c
 an be down-loaded from the IRIS 
  []
@@ -1780,7 +1980,8 @@ Underfull \hbox (badness 3375) in paragraph at lines 170--184
 /m/it/10 Geo-phys-i-cal Re-search Let- 
  []
 
-
+[11] [12 <./figures/set1_daily_LFEs-eps-converted-to.pdf>] [13 <./figures/set2_
+daily_LFEs-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 200--217
 \OT1/cmr/m/n/10 and in-ferred slow slip by small earth-quakes at the Nankai sub
 -duc-tion zone in 
@@ -1829,7 +2030,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 424--444
 0 Jour-nal of Geo-phys-i-cal Re-search 
  []
 
-[11]
+
 Underfull \hbox (badness 3108) in paragraph at lines 456--470
 []\OT1/cmr/m/n/10 Shelly, D.  (2017).  A 15 year cat-a-log of more than 1 mil-l
 ion low-frequency earth- 
@@ -1841,7 +2042,7 @@ Underfull \hbox (badness 3386) in paragraph at lines 456--470
 ault.  \OT1/cmr/m/it/10 Jour-nal 
  []
 
-) [12] (./agujournaltemplate.aux)
+) [14] (./agujournaltemplate.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
@@ -1851,13 +2052,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3480 strings out of 493117
- 48421 string characters out of 6135433
+ 3490 strings out of 493117
+ 48849 string characters out of 6135433
  123811 words of memory out of 5000000
- 6873 multiletter control sequences out of 15000+600000
+ 6881 multiletter control sequences out of 15000+600000
  9781 words of font info for 35 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
- 50i,8n,37p,1943b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,8n,37p,1943b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -1873,10 +2074,10 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/
 4/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on agujournaltemplate.pdf (12 pages, 2575068 bytes).
+Output written on agujournaltemplate.pdf (14 pages, 2721759 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 455 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 

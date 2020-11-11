@@ -26,5 +26,5 @@ for (i, channel) in enumerate(channels):
     plt.title('{} - {}'.format(station, channel), fontsize=20)
     plt.xlabel('Time (s)', fontsize=20)
 plt.tight_layout()
-plt.savefig('templates.eps', format='eps')
+plt.savefig('templates.png', format='png')
 plt.close(1)
