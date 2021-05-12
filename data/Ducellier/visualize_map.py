@@ -21,10 +21,10 @@ threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Beginning and end of the period we are looking at
-tbegin = datetime(2007, 7, 1, 0, 0, 0)
+tbegin = datetime(2004, 1, 1, 0, 0, 0)
 
 # Name of catalog
-catalog = 'catalog_2007_2009'
+catalog = 'catalog_2004_2011'
 
 # Time step between two images (in days)
 tstep = 5
@@ -34,7 +34,7 @@ dt = 10
 
 nmax = 0
 
-for image in range(0, 146):
+for image in range(200, 230):
     latitude = np.zeros(np.shape(templates)[0])
     longitude = np.zeros(np.shape(templates)[0])
     number_LFEs = np.zeros(np.shape(templates)[0])
@@ -44,25 +44,29 @@ for image in range(0, 146):
 
     # Loop on templates
     for i in range(0, np.shape(templates)[0]):
-        # Get the time of LFE detections
-        filename = 'catalogs/' + templates[i][0].astype(str)
-        latitude[i] = templates[i][2]
-        longitude[i] = templates[i][3]
+
+        # Plot only good data
+        if threshold['threshold_perm'].iloc[i] > 0.0:
+
+            # Get the time of LFE detections
+            filename = 'catalogs/' + templates[i][0].astype(str)
+            latitude[i] = templates[i][2]
+            longitude[i] = templates[i][3]
         
-        # Open LFE catalog
-        namedir = 'catalogs/' + templates[i][0].astype(str)
-        namefile = namedir + '/' + catalog + '.pkl'
-        df = pickle.load(open(namefile, 'rb'))
+            # Open LFE catalog
+            namedir = 'catalogs/' + templates[i][0].astype(str)
+            namefile = namedir + '/' + catalog + '.pkl'
+            df = pickle.load(open(namefile, 'rb'))
 
-        # Filter LFEs
-        df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
+            # Filter LFEs
+            df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
 
-        # Keep only time interval
-        df_date = pd.DataFrame({'year':df['year'], 'month':df['month'], 'day':df['day']})
-        df_date = pd.to_datetime(df_date)
-        df['date'] = df_date
-        df_subset = df.loc[(df['date'] >= t1) & (df['date'] <= t2)]
-        number_LFEs[i] = len(df_subset)
+            # Keep only time interval
+            df_date = pd.DataFrame({'year':df['year'], 'month':df['month'], 'day':df['day']})
+            df_date = pd.to_datetime(df_date)
+            df['date'] = df_date
+            df_subset = df.loc[(df['date'] >= t1) & (df['date'] <= t2)]
+            number_LFEs[i] = len(df_subset)
 
     df = pd.DataFrame(data={'longitude':longitude, 'latitude':latitude, 'number_LFEs':number_LFEs})
 
@@ -96,7 +100,7 @@ for image in range(0, 146):
 
     cm = plt.cm.get_cmap('winter')
     sc = plt.scatter(df['longitude'], df['latitude'], c=df['number_LFEs'], \
-        vmin=0, vmax=400, cmap=cm, s=20.0 * df['number_LFEs'], transform=ccrs.PlateCarree())
+        vmin=0, vmax=150, cmap=cm, s=20.0 * df['number_LFEs'], transform=ccrs.PlateCarree())
     cb = plt.colorbar(sc, orientation='horizontal', shrink=0.6, aspect=40)
     cb.set_label(label='Number of LFEs', size=20)
     cb.ax.tick_params(labelsize=20)
