@@ -14,8 +14,6 @@ params = {'legend.fontsize': 24, \
           'ytick.labelsize':24}
 pylab.rcParams.update(params)
 
-i = 0
-
 # Number of boxes for plotting
 nbox = 20
 
@@ -36,7 +34,7 @@ threshold = pd.read_csv('../data/Ducellier/threshold_cc.txt', sep=r'\s{1,}', \
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Loop on templates
-for i in range(0, np.shape(templates)[0]):
+for i in range(4, 5): #np.shape(templates)[0]):
 
     # Look only at good data
     if threshold['threshold_perm'].iloc[i] > 0.0:
@@ -44,10 +42,12 @@ for i in range(0, np.shape(templates)[0]):
         # Look for corresponding location of tidal stress
         latitude = templates[i][2]
         longitude = templates[i][3]
-        for j in range(0, len(data['LFE']['TempLabel'][0][0])):
-            if ((data['LFE']['lat'][0][0][j] == latitude) & \
-                (data['LFE']['lon'][0][0][j] == longitude)):
-                namefile = data['LFE']['TempLabel'][0][0][j][0][0]
+        for k in range(0, len(data['LFE']['TempLabel'][0][0])):
+            if ((data['LFE']['lat'][0][0][k] == latitude) & \
+                (data['LFE']['lon'][0][0][k] == longitude)):
+                namefile = data['LFE']['TempLabel'][0][0][k][0][0]
+                j = k
+        print(templates[i][0].astype(str), namefile, i, j)
 
         # Open LFE catalog
         namedir = '../data/Ducellier/catalogs/' + templates[i][0].astype(str)
@@ -96,6 +96,8 @@ for i in range(0, np.shape(templates)[0]):
         for k in range(0, nbox):
             count[k] = len(df.loc[(df.shear >= boxes[k]) & (df.shear <= boxes[k + 1])])
             count_shear[k] = np.sum((data['LFE']['shear'][0][0][0, j] >= boxes[k]) & (data['LFE']['shear'][0][0][0, j] <= boxes[k + 1]))
+        print(count)
+        print(count_shear)
         norm = np.sum(count) / np.sum(count / count_shear)
 
         ax1 = plt.subplot(311)
