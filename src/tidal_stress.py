@@ -34,7 +34,7 @@ threshold = pd.read_csv('../data/Ducellier/threshold_cc.txt', sep=r'\s{1,}', \
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Loop on templates
-for i in range(4, 5): #np.shape(templates)[0]):
+for i in range(0, np.shape(templates)[0]):
 
     # Look only at good data
     if threshold['threshold_perm'].iloc[i] > 0.0:

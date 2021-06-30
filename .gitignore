@@ -8,6 +8,7 @@ data/Ducellier/new/*
 data/Ducellier/nstations/*
 data/Ducellier/timeline/*
 data/Ducellier/zoom_eq*
+data/For_Ken_California_LFE/*
 data/Plourde_2015/detections/*
 data/Plourde_2015/LFEdistribution/*
 data/Plourde_2015/templates_list
@@ -25,6 +26,7 @@ src/LFEs_LFEs_parallel/*
 src/nstations/*
 src/templates_2007_2009/*
 src/templates_v1/*/*.eps
+src/tidal_stress/*.eps
 src/timearrival/*
 src/tmp/*
 src/waveforms/*
