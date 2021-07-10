@@ -25,6 +25,33 @@ gmt psxy permanent3.txt -R$Rop -J$Jop -St0.3 -Gblue -O -K >> $output
 # LFEs families from Plourde et al. (2015)
 gmt psxy plourde.txt -R$Rop -J$Jop -Sc0.2 -Gblack -O -K >> $output
 
+# First group of LFE families
+cat << END >> updown1.dat
+-122.43000 40.38000
+-122.52000 40.31000
+-122.80000 40.48000
+END
+
+gmt psxy updown1.dat -R$Rop -J$Jop -St0.5 -Wthick,black -O -K >> $output
+
+# Second group of LFE families
+cat << END >> updown2.dat
+-122.53000 40.65000
+-122.75000 40.75000
+-122.85000 40.73000
+-122.88000 40.67000
+-123.02000 40.69000
+END
+
+gmt psxy updown2.dat -R$Rop -J$Jop -Sd0.5 -Wthick,black -O -K >> $output
+
+# Family whose template is shown
+cat << END >> templates.dat
+-122.87000 40.09000
+END
+
+gmt psxy templates.dat -R$Rop -J$Jop -Ss0.5 -Wthick,black -O -K >> $output
+
 # Earthquakes
 cat << END >> earthquakes.dat
 -125.953 41.292 0.72
@@ -71,4 +98,7 @@ gmt psxy square.dat -R$Rop -J$Jop -Wthicker,red -O >> $output
 
 rm square.dat
 rm earthquakes.dat
+rm templates.dat
 rm time_mag.dat
+rm updown1.dat
+rm updown2.dat
