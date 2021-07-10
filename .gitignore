@@ -15,6 +15,7 @@ data/Plourde_2015/templates_list
 data/Plourde_2015/timeseries
 data/Plourde_2015/waveforms
 data/response/*.xml
+data/tidal_stress/*
 data/tremor/*
 paper/figures/*-eps-converted-to.pdf
 src/*.pkl

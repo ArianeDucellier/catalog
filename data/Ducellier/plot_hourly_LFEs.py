@@ -18,16 +18,16 @@ params = {'legend.fontsize': 24, \
 pylab.rcParams.update(params)
 
 # Earth's radius and ellipticity
-a = 6378.136
-e = 0.006694470
+#a = 6378.136
+#e = 0.006694470
 
 # Conversion lat-lon into kilometers
-lat0 = 40.281
-lon0 = -124.433
-dx = (pi / 180.0) * a * cos(lat0 * pi / 180.0) / sqrt(1.0 - e * e * \
-    sin(lat0 * pi / 180.0) * sin(lat0 * pi / 180.0))
-dy = (3.6 * pi / 648.0) * a * (1.0 - e * e) / ((1.0 - e * e * sin(lat0 * \
-    pi / 180.0) * sin(lat0 * pi / 180.0)) ** 1.5)
+#lat0 = 40.281
+#lon0 = -124.433
+#dx = (pi / 180.0) * a * cos(lat0 * pi / 180.0) / sqrt(1.0 - e * e * \
+#    sin(lat0 * pi / 180.0) * sin(lat0 * pi / 180.0))
+#dy = (3.6 * pi / 648.0) * a * (1.0 - e * e) / ((1.0 - e * e * sin(lat0 * \
+#    pi / 180.0) * sin(lat0 * pi / 180.0)) ** 1.5)
 
 # List of LFE families
 templates = np.loadtxt('../Plourde_2015/templates_list.txt', \
@@ -42,8 +42,8 @@ threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Beginning and end of the period we are looking at
-tbegin = datetime(2006, 7, 4, 11, 41, 43)
-tend = datetime(2006, 8, 3, 11, 41, 43)
+tbegin = datetime(2008, 4, 27, 6, 28, 1)
+tend = datetime(2008, 5, 27, 6, 28, 1)
 
 # We construct the time series by counting the number of LFEs
 # per one-day-long time window
@@ -58,11 +58,11 @@ nw = int(duration / window)
 for i in range(0, np.shape(templates)[0]):
 
     # Distance to epicenter
-    latitude = templates[i][2]
-    longitude = templates[i][3]
-    x = (longitude - lon0) * dx
-    y = (latitude - lat0 ) * dy
-    dist = sqrt(x**2.0 + y**2.0)
+#    latitude = templates[i][2]
+#    longitude = templates[i][3]
+#    x = (longitude - lon0) * dx
+#    y = (latitude - lat0 ) * dy
+#    dist = sqrt(x**2.0 + y**2.0)
 
     # Open LFE catalog
     namedir = 'catalogs/' + templates[i][0].astype(str)
@@ -94,7 +94,7 @@ for i in range(0, np.shape(templates)[0]):
             X[index] = X[index] + 1
 
     # Earthquake looked at
-    t = datetime(2006, 7, 19, 11, 41, 43)
+    t = datetime(2008, 5, 12, 6, 28, 1)
     dt = t - tbegin
     duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * 0.000001
     index = int(duration / window)
@@ -104,9 +104,10 @@ for i in range(0, np.shape(templates)[0]):
     plt.axvline(index, linewidth=2, color='red')
     plt.stem(np.arange(0, len(X)), X, 'k-', markerfmt=' ', basefmt=' ')
     plt.xlim([-0.5, len(X) - 0.5])
-    plt.xlabel('Time (hours) since 2006/07/04', fontsize=24)
+    plt.xlabel('Time (hours) since 2008/04/27', fontsize=24)
     plt.ylabel('Number of LFEs', fontsize=24)
-    plt.title('Family {} ({:4.2f} km from epicenter)'.format(templates[i][0].astype(str), dist), \
-        fontsize=24)
-    plt.savefig('zoom_eq6/' + templates[i][0].astype(str) + '.eps', format='eps')
+    plt.title('Family {}'.format(templates[i][0].astype(str)), fontsize=24)
+#    plt.title('Family {} ({:4.2f} km from epicenter)'.format(templates[i][0].astype(str), dist), \
+#        fontsize=24)
+    plt.savefig('zoom_teq5/' + templates[i][0].astype(str) + '.eps', format='eps')
     plt.close(1)
