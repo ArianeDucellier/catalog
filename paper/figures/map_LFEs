@@ -1,6 +1,6 @@
 #!/bin/csh -f
 
-set output = map_LFEs.jpg
+set output = map_LFEs.eps
 
 # Small map
 set x1 = -127
@@ -45,12 +45,29 @@ END
 
 gmt psxy updown2.dat -R$Rop -J$Jop -Sd0.5 -Wthick,black -O -K >> $output
 
-# Family whose template is shown
-cat << END >> templates.dat
+# Families highlighted in the text
+# 080401.05.050
+cat << END >> family1.dat
 -122.87000 40.09000
 END
 
-gmt psxy templates.dat -R$Rop -J$Jop -Ss0.5 -Wthick,black -O -K >> $output
+gmt psxy family1.dat -R$Rop -J$Jop -Ss0.5 -Wthick,black -O -K >> $output
+
+# 080413.07.023
+cat << END >> family2.dat
+-122.77000 40.97000
+END
+
+gmt psxy family2.dat -R$Rop -J$Jop -Si0.5 -Wthick,black -O -K >> $output
+
+cat << END >> indices.dat
+-122.67000 40.09000 A
+-122.57000 40.97000 B
+-122.23000 40.38000 C
+-122.33000 40.65000 D
+END
+
+gmt pstext indices.dat -R$Rop -J$Jop -F+f12p,black -O -K >> $output
 
 # Earthquakes
 cat << END >> earthquakes.dat
@@ -98,7 +115,9 @@ gmt psxy square.dat -R$Rop -J$Jop -Wthicker,red -O >> $output
 
 rm square.dat
 rm earthquakes.dat
-rm templates.dat
+rm family1.dat
+rm family2.dat
 rm time_mag.dat
 rm updown1.dat
 rm updown2.dat
+rm indices.dat

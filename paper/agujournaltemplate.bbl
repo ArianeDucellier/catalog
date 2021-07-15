@@ -498,4 +498,57 @@ Sweet, J.%
 \APACjournalVolNumPages{Geochemistry, Geophysics, Geosystems}{20}{}{1202-1217}.
 \PrintBackRefs{\CurrentBib}
 
+\bibitem [\protect \citeauthoryear {%
+Wech%
+\ \BBA {} Creager%
+}{%
+Wech%
+\ \BBA {} Creager%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+WEC_2011}
+\APACinsertmetastar {%
+WEC_2011}%
+\begin{APACrefauthors}%
+Wech, A.%
+\BCBT {}\ \BBA {} Creager, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A continuum of stress, strength and slip in the
+  {Cascadia} subduction zone} {A continuum of stress, strength and slip in the
+  {Cascadia} subduction zone}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature Geoscience}{4}{}{624-628}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wessel%
+\ \BBA {} Smith%
+}{%
+Wessel%
+\ \BBA {} Smith%
+}{%
+{\protect \APACyear {1991}}%
+}]{%
+WES_1991}
+\APACinsertmetastar {%
+WES_1991}%
+\begin{APACrefauthors}%
+Wessel, P.%
+\BCBT {}\ \BBA {} Smith, W\BPBI H\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1991}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Free software helps map and display data} {Free software
+  helps map and display data}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{EOS Trans. AGU}{72}{}{441}.
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}
