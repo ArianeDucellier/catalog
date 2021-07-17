@@ -216,6 +216,30 @@ Han, J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Houston%
+}{%
+Houston%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+HOU_2015}
+\APACinsertmetastar {%
+HOU_2015}%
+\begin{APACrefauthors}%
+Houston, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Low friction and fault weakening revealed by rising
+  sensitivity of tremor to tidal stress} {Low friction and fault weakening
+  revealed by rising sensitivity of tremor to tidal stress}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature Geoscience}{8}{5}{409-415}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Ide%
 , Shelly%
 \BCBL {}\ \BBA {} Beroza%
@@ -411,6 +435,35 @@ Rogers, G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Royer%
+, Thomas%
+\BCBL {}\ \BBA {} Bostock%
+}{%
+Royer%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+ROY_2015}
+\APACinsertmetastar {%
+ROY_2015}%
+\begin{APACrefauthors}%
+Royer, A.%
+, Thomas, A.%
+\BCBL {}\ \BBA {} Bostock, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Tidal modulation and triggering of low-frequency
+  earthquakes in northern {Cascadia}} {Tidal modulation and triggering of
+  low-frequency earthquakes in northern {Cascadia}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Geophysical Research Solid
+  Earth}{120}{}{384-405}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Rubinstein%
 \ \protect \BOthers {.}}{%
 Rubinstein%
@@ -496,6 +549,40 @@ Sweet, J.%
   earthquake behavior with downdip distance}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Geochemistry, Geophysics, Geosystems}{20}{}{1202-1217}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Thomas%
+, B\"urgmann%
+, Shelly%
+, Beeler%
+\BCBL {}\ \BBA {} Rudolph%
+}{%
+Thomas%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+THO_2012}
+\APACinsertmetastar {%
+THO_2012}%
+\begin{APACrefauthors}%
+Thomas, A.%
+, B\"urgmann, R.%
+, Shelly, D.%
+, Beeler, N.%
+\BCBL {}\ \BBA {} Rudolph, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Tidal triggering of low frequency earthquakes near
+  {Parkfield}, {California}: Implications for fault mechanics within the
+  brittle-ductile transition} {Tidal triggering of low frequency earthquakes
+  near {Parkfield}, {California}: Implications for fault mechanics within the
+  brittle-ductile transition}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Geophysical Research}{117}{}{B05301}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
