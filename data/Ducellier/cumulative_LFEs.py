@@ -26,7 +26,7 @@ threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Loop on templates
-for i in range(19, 20): #np.shape(templates)[0]):
+for i in range(0, np.shape(templates)[0]):
 
     # Open LFE catalog (FAME data)
     namedir = 'catalogs/' + templates[i][0].astype(str)
@@ -54,14 +54,16 @@ for i in range(19, 20): #np.shape(templates)[0]):
     cum_FAME = np.zeros(nb_days)
     cum_perm = np.zeros(nb_days)
     for j in range(0, nb_days):
-        df_sub = df_FAME[df_FAME['date'] < tbegin + timedelta(j + 1)]
+        df_sub = df_FAME[(df_FAME['date'] >= tbegin) & (df_FAME['date'] < tbegin + timedelta(j + 1))]
         cum_FAME[j] = len(df_sub)
-        df_sub = df_perm[df_perm['date'] < tbegin + timedelta(j + 1)]
+        df_sub = df_perm[(df_perm['date'] >= tbegin) & (df_perm['date'] < tbegin + timedelta(j + 1))]
         cum_perm[j] = len(df_sub)
 
     # Normalize
-    cum_FAME = cum_FAME / np.max(cum_FAME)
-    cum_perm = cum_perm / np.max(cum_perm)
+    nb_FAME = int(np.max(cum_FAME))
+    nb_perm = int(np.max(cum_perm))
+    cum_FAME = cum_FAME / nb_FAME
+    cum_perm = cum_perm / nb_perm
 
     # Plot
     params = {'legend.fontsize': 24, \
@@ -69,14 +71,13 @@ for i in range(19, 20): #np.shape(templates)[0]):
               'ytick.labelsize':24}
     pylab.rcParams.update(params)
     plt.figure(1, figsize=(10, 10))
-    plt.plot(np.arange(0, nb_days), cum_FAME, 'r-', label='FAME ({:d} LFEs)'.format(len(df_FAME)))
-    plt.plot(np.arange(0, nb_days), cum_perm + 0.1, 'b-', label='networks ({:d} LFEs)'.format(len(df_perm)))
+    plt.plot(np.arange(0, nb_days), cum_FAME, 'r-', label='FAME ({:d} LFEs)'.format(nb_FAME))
+    plt.plot(np.arange(0, nb_days), cum_perm, 'b-', label='networks ({:d} LFEs)'.format(nb_perm))
     plt.yticks([], [])
-    plt.ylim([-0.05, 1.25])
     plt.xlabel('Time (days) since {:02d}/{:02d}/{:04d}'. \
         format(tbegin.month, tbegin.day, tbegin.year), fontsize=24)
     plt.ylabel('Normalized number of LFEs', fontsize=24)
     plt.title('Cumulative number of LFEs', fontsize=24)
     plt.legend(loc=4, fontsize=20)
-    plt.savefig('cumulative/' + templates[i][0].astype(str) + '.png', format='png')
+    plt.savefig('cumulative/' + templates[i][0].astype(str) + '.eps', format='eps')
     plt.close(1)

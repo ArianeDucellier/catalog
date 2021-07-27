@@ -45,6 +45,17 @@ END
 
 gmt psxy updown2.dat -R$Rop -J$Jop -Sd0.5 -Wthick,black -O -K >> $output
 
+# Third group of LFE families
+cat << END >> updown3.dat
+-122.84000 41.02000
+-122.85000 41.06000
+-122.88000 41.00000
+-122.80000 41.05000
+-123.17000 41.05000
+END
+
+gmt psxy updown3.dat -R$Rop -J$Jop -Sn0.5 -Wthick,black -O -K >> $output
+
 # Families highlighted in the text
 # 080401.05.050
 cat << END >> family1.dat
@@ -65,6 +76,7 @@ cat << END >> indices.dat
 -122.57000 40.97000 B
 -122.23000 40.38000 C
 -122.33000 40.65000 D
+-122.60000 41.10000 E
 END
 
 gmt pstext indices.dat -R$Rop -J$Jop -F+f12p,black -O -K >> $output

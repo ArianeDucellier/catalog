@@ -43,12 +43,16 @@ duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * 0.000001
 nw = int(duration / window)
 
 # Indices of LFE families
+#indices = [2, 5, 6]
 #indices = [12, 13, 25, 20, 23]
-indices = [2, 5, 6]
+#indices = [40, 29, 33, 36, 41]
+indices = [0, 2, 12, 40]
 
 # Names of LFE families
+#names = ['C1', 'C2', 'C3']
 #names = ['D1', 'D2', 'D3', 'D4', 'D5']
-names = ['C1', 'C2', 'C3']
+#names = ['E1', 'E2', 'E3', 'E4', 'E5']
+names = ['A', 'C1', 'D1', 'E1']
 
 plt.figure(1, figsize=(16, 4 * len(indices)))
 
@@ -88,13 +92,13 @@ for (count, i) in enumerate(indices):
     # Plot figure
     plt.subplot2grid((len(indices), 1), (count, 0))
     plt.plot((1, 1))
-    plt.stem(np.arange(0, len(X)), X, 'k-', markerfmt=' ', basefmt=' ')
-    plt.xlim([-0.5, len(X) - 0.5])
-    plt.xlabel('Time (days) since 2004/01/01', fontsize=24)
+    plt.stem(2004 + np.arange(0, len(X)) / 365.25, X, 'k-', markerfmt=' ', basefmt=' ')
+    plt.xlim([2004, 2012])
+    plt.xlabel('Time (years)', fontsize=24)
     plt.ylabel('Number of LFEs', fontsize=24)
     plt.title('Family {} at {}'.format(names[count], longitude), \
         fontsize=24)
 
 plt.tight_layout()
-plt.savefig('LFEdistribution_perm/set2_daily_LFEs.eps', format='eps')
+plt.savefig('LFEdistribution_perm/set4_daily_LFEs.eps', format='eps')
 plt.close(1)
