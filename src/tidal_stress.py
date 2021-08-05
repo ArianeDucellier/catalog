@@ -17,6 +17,9 @@ pylab.rcParams.update(params)
 # Number of boxes for plotting
 nbox = 20
 
+# Friction
+mu = 0.1
+
 # List of LFE families
 templates = np.loadtxt('../data/Plourde_2015/templates_list.txt', \
     dtype={'names': ('name', 'family', 'lat', 'lon', 'depth', 'eH', \
@@ -77,6 +80,7 @@ for i in range(0, np.shape(templates)[0]):
         df['shear'] = shear_LFE
         df['norm'] = norm_LFE
         df['vol'] = vol_LFE
+        df['coulomb'] = shear_LFE + mu * (norm_LFE + vol_LFE)
 
         # Plot
         plt.figure(1, figsize=(20, 18))
@@ -167,4 +171,40 @@ for i in range(0, np.shape(templates)[0]):
         ax4.clear()
         ax5.clear()
         ax6.clear()
+        plt.close(1)
+
+        # Plot Coulomb stress
+        plt.figure(1, figsize=(20, 6))
+
+        coulomb = shear + mu * (norm + vol)
+        min_stress = np.min(coulomb)
+        max_stress = np.max(coulomb)
+        boxes = np.linspace(min_stress, max_stress, nbox + 1)
+        size_box = (max_stress - min_stress) / (4 * nbox)
+
+        count = np.zeros(nbox)
+        count_coulomb = np.zeros(nbox)
+        for k in range(0, nbox):
+            count[k] = len(df.loc[(df.coulomb >= boxes[k]) & (df.coulomb <= boxes[k + 1])])
+            count_coulomb[k] = np.sum((coulomb >= boxes[k]) & (coulomb <= boxes[k + 1]))
+        normalize = np.sum(count) / np.sum(count / count_coulomb)
+
+        ax1 = plt.subplot(121)
+        expected = len(df) * count_coulomb/ np.sum(count_coulomb)
+        plt.plot(0.5 * (boxes[1:] + boxes[:-1]), expected, color='black')
+        plt.bar(0.5 * (boxes[1:] + boxes[:-1]), count, size_box)
+        plt.xlabel('Coulomb stress (kPa)', fontsize=24)
+        plt.ylabel('Number of LFEs', fontsize=24)
+
+        ax2 = plt.subplot(122)
+        plt.plot(0.5 * (boxes[1:] + boxes[:-1]), normalize * expected / count_coulomb, color='black')
+        plt.bar(0.5 * (boxes[1:] + boxes[:-1]), normalize * count / count_coulomb, size_box)
+        plt.xlabel('Coulomb stress (kPa)', fontsize=24)
+        plt.ylabel('Number of LFEs', fontsize=24)
+
+        plt.suptitle('Influence of tidal stress on LFE occurrence', fontsize=30)
+        plt.tight_layout()
+        plt.savefig('tidal_stress/' + templates[i][0].astype(str) + '_coulomb.eps', format='eps')
+        ax1.clear()
+        ax2.clear()
         plt.close(1)

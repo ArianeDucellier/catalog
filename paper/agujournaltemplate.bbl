@@ -66,6 +66,33 @@ Boyarko, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Brudzinski%
+\ \BBA {} Allen%
+}{%
+Brudzinski%
+\ \BBA {} Allen%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+BRU_2007}
+\APACinsertmetastar {%
+BRU_2007}%
+\begin{APACrefauthors}%
+Brudzinski, M.%
+\BCBT {}\ \BBA {} Allen, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Segmentation in episodic tremor and slip all along
+  {Cascadia}} {Segmentation in episodic tremor and slip all along
+  {Cascadia}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Geology}{35}{10}{907-910}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Chestler%
 \ \BBA {} Creager%
 }{%
@@ -91,8 +118,6 @@ Chestler, S.%
 \newblock
 \APACjournalVolNumPages{Journal of Geophysical Research: Solid
   Earth}{122}{}{3099-3114}.
-\newblock
-\APACrefnote{doi:10.1002/2016jb013717}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -119,8 +144,6 @@ Chestler, S.%
   low-frequency earthquake slip}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Geochemistry, Geophysics, Geosystems}{18}{}{4690-4708}.
-\newblock
-\APACrefnote{doi:10.1002/2017gc007253}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

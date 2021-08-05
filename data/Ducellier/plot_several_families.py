@@ -43,62 +43,63 @@ duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * 0.000001
 nw = int(duration / window)
 
 # Indices of LFE families
-#indices = [2, 5, 6]
-#indices = [12, 13, 25, 20, 23]
-#indices = [40, 29, 33, 36, 41]
-indices = [0, 2, 12, 40]
+indices = [[2, 5, 6], \
+           [12, 13, 25, 20, 23], \
+           [40, 29, 33, 36, 41]]
 
 # Names of LFE families
-#names = ['C1', 'C2', 'C3']
-#names = ['D1', 'D2', 'D3', 'D4', 'D5']
-#names = ['E1', 'E2', 'E3', 'E4', 'E5']
-names = ['A', 'C1', 'D1', 'E1']
+names = [['B1', 'B2', 'B3'], \
+         ['C1', 'C2', 'C3', 'C4', 'C5'], \
+         ['G1', 'G2', 'G3', 'G4', 'G5']]
 
-plt.figure(1, figsize=(16, 4 * len(indices)))
+plt.figure(1, figsize=(24, 15))
 
 # Loop on templates
-for (count, i) in enumerate(indices):
-    longitude = templates[i][3]
+for column in range(0, len(indices)):
+    for (count, i) in enumerate(indices[column]):
+        longitude = templates[i][3]
 
-    # Open LFE catalog
-    namedir = 'catalogs/' + templates[i][0].astype(str)
-    namefile = namedir + '/catalog_2004_2011.pkl'
-    df = pickle.load(open(namefile, 'rb'))
+        # Open LFE catalog
+        namedir = 'catalogs/' + templates[i][0].astype(str)
+        namefile = namedir + '/catalog_2004_2011.pkl'
+        df = pickle.load(open(namefile, 'rb'))
 
-    # Filter LFE
-    df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
+        # Filter LFE
+        df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
 
-    # Get time series
-    X = np.zeros(nw, dtype=int)
-    # Loop on LFEs
-    for j in range(0, len(df)):
-        myYear = df['year'].iloc[j]
-        myMonth = df['month'].iloc[j]
-        myDay = df['day'].iloc[j]
-        myHour = df['hour'].iloc[j]
-        myMinute = df['minute'].iloc[j]
-        mySecond = int(floor(df['second'].iloc[j]))
-        myMicrosecond = int(1000000.0 * (df['second'].iloc[j] - mySecond))
-        t = datetime(myYear, myMonth, myDay, myHour, myMinute, mySecond, \
-            myMicrosecond)
-        # Add LFE to appropriate time window
-        if ((tbegin <= t) and (t < tbegin + timedelta(seconds=nw * window))):
-            dt = t - tbegin
-            duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * \
-                0.000001
-            index = int(duration / window)
-            X[index] = X[index] + 1
+        # Get time series
+        X = np.zeros(nw, dtype=int)
+        # Loop on LFEs
+        for j in range(0, len(df)):
+            myYear = df['year'].iloc[j]
+            myMonth = df['month'].iloc[j]
+            myDay = df['day'].iloc[j]
+            myHour = df['hour'].iloc[j]
+            myMinute = df['minute'].iloc[j]
+            mySecond = int(floor(df['second'].iloc[j]))
+            myMicrosecond = int(1000000.0 * (df['second'].iloc[j] - mySecond))
+            t = datetime(myYear, myMonth, myDay, myHour, myMinute, mySecond, \
+                myMicrosecond)
+            # Add LFE to appropriate time window
+            if ((tbegin <= t) and (t < tbegin + timedelta(seconds=nw * window))):
+                dt = t - tbegin
+                duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * \
+                    0.000001
+                index = int(duration / window)
+                X[index] = X[index] + 1
 
-    # Plot figure
-    plt.subplot2grid((len(indices), 1), (count, 0))
-    plt.plot((1, 1))
-    plt.stem(2004 + np.arange(0, len(X)) / 365.25, X, 'k-', markerfmt=' ', basefmt=' ')
-    plt.xlim([2004, 2012])
-    plt.xlabel('Time (years)', fontsize=24)
-    plt.ylabel('Number of LFEs', fontsize=24)
-    plt.title('Family {} at {}'.format(names[count], longitude), \
-        fontsize=24)
+        # Plot figure
+        plt.subplot2grid((5, len(indices)), (4 - count, column))
+        plt.plot((1, 1))
+        plt.stem(2004 + np.arange(0, len(X)) / 365.25, X, 'k-', markerfmt=' ', basefmt=' ')
+        plt.xlim([2004, 2012])
+        if count == 0:
+            plt.xlabel('Time (years)', fontsize=24)
+        if column == 0:
+            plt.ylabel('Number of LFEs', fontsize=24)
+        plt.title('Family {} at {}'.format(names[column][count], longitude), \
+            fontsize=24)
 
 plt.tight_layout()
-plt.savefig('LFEdistribution_perm/set4_daily_LFEs.eps', format='eps')
+plt.savefig('LFEdistribution_perm/set_daily_LFEs.eps', format='eps')
 plt.close(1)

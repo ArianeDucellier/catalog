@@ -27,7 +27,6 @@ src/LFEs_LFEs_parallel/*
 src/nstations/*
 src/templates_2007_2009/*
 src/templates_v1/*/*.eps
-src/tidal_stress/*.eps
 src/timearrival/*
 src/tmp/*
 src/waveforms/*
