@@ -13,8 +13,8 @@ from math import floor
 from date import ymdhms2day
 
 # Time boundaries
-xmin = 2004.0
-xmax = 2006.0
+xmin = 2005.0
+xmax = 2005.1
 
 # Space boundaries
 latmin = 39.4

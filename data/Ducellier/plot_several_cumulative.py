@@ -84,9 +84,11 @@ for i in range(0, len(families)):
         format(tbegin.month, tbegin.day, tbegin.year), fontsize=16)
     if i == 0:
         plt.ylabel('Normalized number of LFEs', fontsize=16)
-    plt.title('Cumulative number of LFEs (family ' + names[i] + ')', fontsize=16)
+    plt.title('Cumulative number of LFEs' \
+        # (family ' + names[i] + ')'
+        , fontsize=16)
     plt.legend(loc=4, fontsize=12)
 
 plt.tight_layout()
-plt.savefig('cumulative.eps', format='eps')
+plt.savefig('Figure5.eps', format='eps')
 plt.close(1)

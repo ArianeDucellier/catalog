@@ -13,9 +13,9 @@ from math import floor
 from date import ymdhms2day
 
 # Time boundaries
-xmin = [2005.66, 2006.36, 2007.48, 2008.25]
-xmax = [2005.73, 2006.43, 2007.59, 2008.35]
-years = [2005, 2006, 2007, 2008]
+xmin = [2004.39, 2004.81, 2005.66, 2006.36, 2007.48, 2008.25]
+xmax = [2004.45, 2004.88, 2005.73, 2006.43, 2007.59, 2008.35]
+years = [2004, 2004, 2005, 2006, 2007, 2008]
 
 # Space boundaries
 latmin = 39.4
@@ -44,10 +44,10 @@ params = {'legend.fontsize': 24, \
           'xtick.labelsize':24, \
           'ytick.labelsize':24}
 pylab.rcParams.update(params)
-plt.figure(1, figsize=(20, 10))
+plt.figure(1, figsize=(30, 10))
 
-for event in range(0, 4):
-    ax = plt.subplot2grid((1, 4), (0, event))
+for event in range(0, 6):
+    ax = plt.subplot2grid((1, 6), (0, event))
     plt.scatter(year_tremor - years[event], lat_tremor, c='r')
 
     # Loop on templates
