@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  7 AUG 2021 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  7 AUG 2021 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2492,45 +2492,45 @@ Overfull \hbox (5.37685pt too wide) in paragraph at lines 537--539
  []
 
 
-Overfull \hbox (24.15462pt too wide) in paragraph at lines 537--539
+Overfull \hbox (23.87682pt too wide) in paragraph at lines 537--539
 \OT1/cmr/m/n/10 cal-cu-la-tion in the Cas-ca-dia sub-duc-tion zone. This projec
-t was funded by NSF grant XXX. 
+t was funded by NSF grant EAR- 
  []
 
 
-Overfull \hbox (9.46017pt too wide) in paragraph at lines 537--539
-\OT1/cmr/m/n/10 A.D. would like to thank the In-te-gral En-vi-ron-men-tal Big D
-ata Re-search Fund from the 
+Overfull \hbox (10.82132pt too wide) in paragraph at lines 537--539
+\OT1/cmr/m/n/10 1358512. A.D. would like to thank the In-te-gral En-vi-ron-men-
+tal Big Data Re-search Fund 
  []
 
 
-Overfull \hbox (3.2102pt too wide) in paragraph at lines 537--539
-\OT1/cmr/m/n/10 Col-lege of the En-vi-ron-ment of Uni-ver-sity of Wash-ing-ton,
- which funded cloud com-put- 
+Overfull \hbox (4.62688pt too wide) in paragraph at lines 537--539
+\OT1/cmr/m/n/10 from the Col-lege of the En-vi-ron-ment of Uni-ver-sity of Wash
+-ing-ton, which funded cloud 
  []
 
 
-Overfull \hbox (6.93227pt too wide) in paragraph at lines 537--539
-\OT1/cmr/m/n/10 ing re-sources to carry out the data anal-y-ses. The seis-mic r
-ecord-ings used for this anal- 
+Overfull \hbox (14.71008pt too wide) in paragraph at lines 537--539
+\OT1/cmr/m/n/10 com-put-ing re-sources to carry out the data anal-y-ses. The se
+is-mic record-ings used for this 
  []
 
 
-Overfull \hbox (7.90446pt too wide) in paragraph at lines 537--539
-\OT1/cmr/m/n/10 y-sis can be down-loaded from the IRIS and NCEDC web-sites. The
- first fig-ure was done 
+Overfull \hbox (2.34892pt too wide) in paragraph at lines 537--539
+\OT1/cmr/m/n/10 anal-y-sis can be down-loaded from the IRIS and NCEDC web-sites
+. The first fig-ure was 
  []
 
 
-Overfull \hbox (9.02957pt too wide) in paragraph at lines 537--539
-\OT1/cmr/m/n/10 us-ing GMT  []Wessel & Smith, 1991). The Python scripts used to
- an-a-lyze the data and 
+Overfull \hbox (13.47401pt too wide) in paragraph at lines 537--539
+\OT1/cmr/m/n/10 done us-ing GMT  []Wessel & Smith, 1991). The Python scripts us
+ed to an-a-lyze the data 
  []
 
 
-Overfull \hbox (23.25078pt too wide) in paragraph at lines 537--539
-\OT1/cmr/m/n/10 make the fig-ures can be found on the first au-thor's Github ac
--count $\OT1/cmtt/m/n/10 https :// github [] .com / 
+Overfull \hbox (16.4455pt too wide) in paragraph at lines 537--539
+\OT1/cmr/m/n/10 and make the fig-ures can be found on the first au-thor's Githu
+b ac-count $\OT1/cmtt/m/n/10 https :// github [] 
  []
 
 (./agujournaltemplate.bbl
@@ -2704,7 +2704,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on agujournaltemplate.pdf (15 pages, 1961601 bytes).
+Output written on agujournaltemplate.pdf (15 pages, 1961244 bytes).
 PDF statistics:
  509 PDF objects out of 1000 (max. 8388607)
  140 compressed objects within 2 object streams
