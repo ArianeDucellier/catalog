@@ -1,5 +1,7 @@
 # catalog
 
+[![DOI](https://zenodo.org/badge/244437521.svg)](https://zenodo.org/badge/latestdoi/244437521)
+
 This repository contains the Python scripts associated to the paper:
 
 Ducellier A., Creager K.C. An eight-year-long low-frequency earthquake catalog for Southern Cascadia, *to be submitted*.
