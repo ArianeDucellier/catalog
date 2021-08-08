@@ -7,4 +7,5 @@ data/Plourde_2015/LFEdistribution/*
 data/Plourde_2015/timeseries
 data/Plourde_2015/waveforms
 data/response/*.xml
+src/waveforms/*/*.eps
 
