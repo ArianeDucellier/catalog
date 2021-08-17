@@ -1,6 +1,36 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+{Alan Levander}%
+}{%
+{Alan Levander}%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+https://doi.org/10.7914/sn/xq_2007}
+\APACinsertmetastar {%
+https://doi.org/10.7914/sn/xq_2007}%
+\begin{APACrefauthors}%
+{Alan Levander}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+\APACrefbtitle {Seismic and Geodetic Investigations of Mendocino Triple
+  Junction Dynamics.} {Seismic and geodetic investigations of mendocino triple
+  junction dynamics.}
+\newblock
+\APACaddressPublisher{}{International Federation of Digital Seismograph
+  Networks}.
+\newblock
+\begin{APACrefURL} \url{https://www.fdsn.org/networks/detail/XQ_2007/}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.7914/SN/XQ_2007} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Baratin%
 , Chamberlain%
 , Townend%
@@ -144,6 +174,34 @@ Chestler, S.%
   low-frequency earthquake slip}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Geochemistry, Geophysics, Geosystems}{18}{}{4690-4708}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ducellier%
+}{%
+Ducellier%
+}{%
+{\protect \APACyear {2021}}%
+}]{%
+ariane_ducellier_2021_5168867}
+\APACinsertmetastar {%
+ariane_ducellier_2021_5168867}%
+\begin{APACrefauthors}%
+Ducellier, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{{\APACmonth{08}}}{}.
+\newblock
+\APACrefbtitle {ArianeDucellier/catalog: Paper submission.}
+  {Arianeducellier/catalog: Paper submission.}
+\newblock
+\APACaddressPublisher{}{Zenodo}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.5168867}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.5281/zenodo.5168867} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
