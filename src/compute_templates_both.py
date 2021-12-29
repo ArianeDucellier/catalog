@@ -18,6 +18,7 @@ import os
 import pandas as pd
 import pickle
 
+from datetime import datetime, timedelta
 from math import cos, floor, pi, sin, sqrt
 
 import get_data
@@ -65,8 +66,8 @@ def rotate_stream(D, orientation, reference):
         Drot.append(trace_rot)
     return Drot
 
-def compute_new_templates(family, latitude, longitude, catalog1, catalog2, \
-    filename, directory, max_dist, max_LFEs, TDUR, filt, dt, nattempts, \
+def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff, \
+    directory, max_dist, max_LFEs, TDUR, filt, dt, nattempts, \
     waittime, method='RMS'):
     """
     This function take only the best LFEs that are present
@@ -75,12 +76,12 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, \
     and stacks the signal over all the LFEs to get the template
 
     Input:
-        type filename = string
-        filename = Name of the template
+        type family = string
+        family = Name of the LFE family
         type catalog1 = string
-        catalog1 = Name of the first catalog containing the LFEs
+        catalog1 = Name of the first catalog containing the LFEs (FAME)
         type catalog2 = string
-        catalog2 = Name of the second catalog containing the LFEs
+        catalog2 = Name of the second catalog containing the LFEs (networks)
         type threshold = float
         threshold = Minimun value of cross correlation to keep LFE
         type stations = list of strings
@@ -100,15 +101,37 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, \
     Output:
         None
     """
-    # Get the time of LFE detections (first catalog)
+    # Get the time of LFE detections (FAME)
     namefile1 = '../data/Ducellier/catalogs/' + family + '/' + catalog1 + '.pkl'
-    LFEtime1 = pickle.load(open(namefile1, 'rb'))
+    df1 = pickle.load(open(namefile1, 'rb'))
+    df1 = df1[['year', 'month', 'day', 'hour', 'minute', 'second', \
+        'cc', 'nchannel']]
+    df1 = df1.astype({'year': int, 'month': int, 'day': int, \
+        'hour': int, 'minute': int, 'second': float, \
+        'cc': float, 'nchannel': int})
+    date = pd.to_datetime(df1.drop(columns=['cc', 'nchannel']))
+    df1['date'] = date
 
-    # Get the time of LFE detections (second catalog)
+    # Get the time of LFE detections (networks)
     namefile2 = '../data/Ducellier/catalogs/' + family + '/' + catalog2 + '.pkl'
-    LFEtime2 = pickle.load(open(namefile1, 'rb'))
+    df2 = pickle.load(open(namefile2, 'rb'))
+    df2 = df2[['year', 'month', 'day', 'hour', 'minute', 'second', \
+        'cc', 'nchannel']]
+    df2 = df2.astype({'year': int, 'month': int, 'day': int, \
+        'hour': int, 'minute': int, 'second': float, \
+        'cc': float, 'nchannel': int})
+    date = pd.to_datetime(df2.drop(columns=['cc', 'nchannel']))
+    df2['date'] = date
+    df2['date'] = df2['date'] - timedelta(seconds=diff)
 
-    LFEsort = LFEtime.sort_values(by=['cc'], ascending=False)
+    # Merge catalogs
+    # Sort using cross-correlation from FAME catalog
+    df = pd.merge(df1, df2, on=['date'])
+    df.drop(columns=['date', 'year_y', 'month_y', 'day_y', 'hour_y', \
+        'minute_y', 'second_y', 'nchannel_x', 'nchannel_y', 'cc_y'], inplace=True)
+    df.columns = ['year', 'month', 'day', 'hour', 'minute', 'second', 'cc']
+    df.sort_values(by=['cc'], ascending=False, inplace=True)
+    df.reset_index(inplace=True, drop=True)
 
     # Get the network, channels, and location of the stations
     stations_BK = filter_stations('BK')
@@ -240,9 +263,9 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, \
 if __name__ == '__main__':
 
     # Set the parameters
-    catalog = 'Ducellier'
-    filename = 'catalog_2007_2009.pkl'
-    directory = 'templates_2007_2009'
+    catalog1 = 'catalog_2007_2009'
+    catalog2 = 'catalog_2004_2011'
+    directory = 'templates_both'
     max_dist = 100.0
     max_LFEs = 150
     TDUR = 10.0
@@ -252,18 +275,24 @@ if __name__ == '__main__':
     waittime = 10.0    
     method = 'RMS'
 
-    LFEloc = np.loadtxt('../data/Plourde_2015/templates_list.txt', \
-        dtype={'names': ('name', 'family', 'lat', 'lon', 'depth', 'eH', \
-        'eZ', 'nb'), \
-             'formats': ('S13', 'S3', np.float, np.float, np.float, \
-        np.float, np.float, np.int)}, \
-        skiprows=1)
+    # Locations of families
+    locations = pd.read_csv('../data/Plourde_2015/templates_list.txt', \
+        sep=r'\s{1,}', header=None, skiprows=1, engine='python')
+    locations.columns = ['family', 'index', 'lat', 'lon', 'depth', 'eH', 'eZ', 'nb']
 
-    for ie in range(61, 62): #len(LFEloc)):
-        family = LFEloc[ie][0].decode('utf-8')
-        print(family)
-        latitude = LFEloc[ie][2]
-        longitude = LFEloc[ie][3]
-        compute_new_templates(family, latitude, longitude, catalog, filename, \
+    # Time differences between two catalogs
+    differences = pd.read_csv('../data/Ducellier/families_permanent_timeinterval.txt', \
+        sep=r'\s{1,}', header=None, engine='python')
+    differences.columns = ['family', 'stations', 'diff', 'unused']
+
+    # Merge dataframes
+    families = pd.merge(locations, differences, on=['family'])
+
+    for i in range(0, len(families)):
+        family = families['family'].iloc[i]
+        latitude = families['lat'].iloc[i]
+        longitude = families['lon'].iloc[i]
+        diff = families['diff'].iloc[i]
+        compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff, \
             directory, max_dist, max_LFEs, \
             TDUR, filt, dt, nattempts, waittime, method='RMS')
