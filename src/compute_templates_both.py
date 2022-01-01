@@ -67,8 +67,7 @@ def rotate_stream(D, orientation, reference):
     return Drot
 
 def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff, \
-    directory, max_dist, max_LFEs, TDUR, filt, dt, nattempts, \
-    waittime, method='RMS'):
+    directory, max_dist, max_LFEs, TDUR, filt, dt, nattempts, waittime, method='RMS'):
     """
     This function take only the best LFEs that are present
     in both LFE catalogs (FAME and networks),
@@ -175,16 +174,16 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff,
         location = stations['Lo'].iloc[ir]
         starttime = stations['Start time'].iloc[ir]
         endtime = stations['End time'].iloc[ir]
-        if (network == 'PB'):
+        if (network in ['PB', 'XQ']):
             server = 'IRIS'
         else:
             server = 'NCEDC'
 
         # Filter LFEs for the period where the station was recording
-        df = pd.DataFrame({'year': LFEsort['year'], 'month': LFEsort['month'], 'day': LFEsort['day']})
-        date = pd.to_datetime(df)
+        df_sub = pd.DataFrame({'year': df['year'], 'month': df['month'], 'day': df['day']})
+        date = pd.to_datetime(df_sub)
         mask = (date >= starttime) & (date <= endtime)
-        LFEsub = LFEsort.loc[mask]
+        df_sub = df.loc[mask]
 
         # Download instrument response
         if (server == 'IRIS'):
@@ -204,13 +203,13 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff,
         complete = False
         index = 0
         # Loop on LFEs
-        while ((index < len(LFEsub)) and (complete == False)):
-            mySecond = int(floor(LFEsub['second'].iloc[index]))
+        while ((index < len(df_sub)) and (complete == False)):
+            mySecond = int(floor(df_sub['second'].iloc[index]))
             myMicrosecond = int(1000000.0 * \
-                (LFEsub['second'].iloc[index] - floor(LFEsub['second'].iloc[index])))
-            Tori = UTCDateTime(year=LFEsub['year'].iloc[index], \
-                month=LFEsub['month'].iloc[index], day=LFEsub['day'].iloc[index], \
-                hour=LFEsub['hour'].iloc[index], minute=LFEsub['minute'].iloc[index], \
+                (df_sub['second'].iloc[index] - floor(df_sub['second'].iloc[index])))
+            Tori = UTCDateTime(year=df_sub['year'].iloc[index], \
+                month=df_sub['month'].iloc[index], day=df_sub['day'].iloc[index], \
+                hour=df_sub['hour'].iloc[index], minute=df_sub['minute'].iloc[index], \
                 second=mySecond, microsecond=myMicrosecond)
             Tstart = Tori - TDUR
             Tend = Tori + 60.0 + TDUR
