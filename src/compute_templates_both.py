@@ -136,9 +136,9 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff,
     stations_BK = filter_stations('BK')
     stations_NC = filter_stations('NC')
     stations_PB = filter_stations('PB')
-    stations = pd.concat([stations_BK, stations_NC, stations_PB], ignore_index=True)
-#    stations = pd.concat([stations_BK, stations_NC], ignore_index=True)
-#    stations = stations_PB
+    stations_XQ = filter_stations('FAME')
+    stations = pd.concat([stations_BK, stations_NC, stations_PB, \
+        stations_FAME], ignore_index=True)
 
     # Create directory to store the waveforms
     namedir = directory + '/' + family
@@ -186,12 +186,14 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff,
         df_sub = df.loc[mask]
 
         # Download instrument response
-        if (server == 'IRIS'):
-            get_responses.get_from_IRIS(station, network)
-        elif (server == 'NCEDC'):
-            get_responses.get_from_NCEDC(station, network)
-        else:
-            raise ValueError('You can only download data from IRIS and NCEDC')
+        path = '../data/response/' + network + '_' + station + '.xml'
+        if !os.path.isfile(path):
+            if (server == 'IRIS'):
+                get_responses.get_from_IRIS(station, network)
+            elif (server == 'NCEDC'):
+                get_responses.get_from_NCEDC(station, network)
+            else:
+                raise ValueError('You can only download data from IRIS and NCEDC')
         # Create streams
         cha_list = channels.split(',')
         streams = []
