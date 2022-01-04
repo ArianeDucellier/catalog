@@ -69,7 +69,7 @@ def rotate_stream(D, orientation, reference):
 def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff, \
     directory, max_dist, max_LFEs, TDUR, filt, dt, nattempts, waittime, method='RMS'):
     """
-    This function take only the best LFEs that are present
+    This function take only the LFEs that are present
     in both LFE catalogs (FAME and networks),
     downloads every one-minute time window where there is an LFE recorded,
     and stacks the signal over all the LFEs to get the template
@@ -77,14 +77,22 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff,
     Input:
         type family = string
         family = Name of the LFE family
+        type latitude = float
+        latitude = Latitude of the epicenter of the family
+        type longitude = float
+        longitude = Longitude of the epicenter of the family
         type catalog1 = string
         catalog1 = Name of the first catalog containing the LFEs (FAME)
         type catalog2 = string
         catalog2 = Name of the second catalog containing the LFEs (networks)
-        type threshold = float
-        threshold = Minimun value of cross correlation to keep LFE
-        type stations = list of strings
-        stations = Name of the stations where we want a template
+        type diff = float
+        diff = Time difference between two catalogs
+        type directory = string
+        directory = Directory where to store the templates
+        type max_dist = float
+        max_dist = Maximum distance from station to epicenter
+        type max_LFEs = integer
+        max_LFEs = Number of LFEs used to make template
         type TDUR = float
         TDUR = Time to add before and after the time window for tapering
         type filt = tuple of floats
@@ -138,7 +146,7 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff,
     stations_PB = filter_stations('PB')
     stations_XQ = filter_stations('FAME')
     stations = pd.concat([stations_BK, stations_NC, stations_PB, \
-        stations_FAME], ignore_index=True)
+        stations_XQ], ignore_index=True)
 
     # Create directory to store the waveforms
     namedir = directory + '/' + family
@@ -180,27 +188,37 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff,
             server = 'NCEDC'
 
         # Filter LFEs for the period where the station was recording
-        df_sub = pd.DataFrame({'year': df['year'], 'month': df['month'], 'day': df['day']})
-        date = pd.to_datetime(df_sub)
+        date = pd.DataFrame({'year': df['year'], 'month': df['month'], 'day': df['day']})
+        date = pd.to_datetime(date)
         mask = (date >= starttime) & (date <= endtime)
         df_sub = df.loc[mask]
 
         # Download instrument response
         path = '../data/response/' + network + '_' + station + '.xml'
-        if !os.path.isfile(path):
+        if not os.path.isfile(path):
             if (server == 'IRIS'):
                 get_responses.get_from_IRIS(station, network)
             elif (server == 'NCEDC'):
                 get_responses.get_from_NCEDC(station, network)
             else:
                 raise ValueError('You can only download data from IRIS and NCEDC')
-        # Create streams
+        # Create dictionary of channel orientations
         cha_list = channels.split(',')
+        reference = dict.fromkeys(cha_list)
+        # Fill dictionary of channel orientations
+        for channel in cha_list:
+            mylocation = location
+            if (mylocation == '--'):
+                mylocation = ''
+            response = '../data/response/' + network + '_' + station + '.xml'
+            inventory = read_inventory(response, format='STATIONXML')
+            angle = inventory.get_orientation(network + '.' + \
+                station + '.' + mylocation + '.' + channel, starttime + timedelta(days=1))
+            reference[channel] = angle
+        # Create streams
         streams = []
         for channel in cha_list:
             streams.append(Stream())
-        # Create dictionary of channel orientations
-        reference = dict.fromkeys(cha_list)
         # Initialization
         complete = False
         index = 0
@@ -226,17 +244,6 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff,
             else:
                 raise ValueError('You can only download data from IRIS and NCEDC')
             if (type(D) == obspy.core.stream.Stream):
-                # Fill dictionary of channel orientations
-                for channel in cha_list:
-                    if reference[channel] == None:
-                        mylocation = location
-                        if (mylocation == '--'):
-                            mylocation = ''
-                        response = '../data/response/' + network + '_' + station + '.xml'
-                        inventory = read_inventory(response, format='STATIONXML')
-                        angle = inventory.get_orientation(network + '.' + \
-                            station + '.' + mylocation + '.' + channel, Tori)
-                        reference[channel] = angle
                 # Rotation of components
                 D = rotate_stream(D, orientation, reference)
                 # Add to stream
@@ -250,6 +257,7 @@ def compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff,
                 print('Failed at downloading data')
             # Update
             index = index + 1
+            print(family, station, channel, index)
             complete = True
             for (channel, stream) in zip(cha_list, streams):
                 if len(stream) < max_LFEs:
@@ -289,11 +297,10 @@ if __name__ == '__main__':
     # Merge dataframes
     families = pd.merge(locations, differences, on=['family'])
 
-    for i in range(0, len(families)):
+    for i in range(0, 1): #len(families)):
         family = families['family'].iloc[i]
         latitude = families['lat'].iloc[i]
         longitude = families['lon'].iloc[i]
         diff = families['diff'].iloc[i]
         compute_new_templates(family, latitude, longitude, catalog1, catalog2, diff, \
-            directory, max_dist, max_LFEs, \
-            TDUR, filt, dt, nattempts, waittime, method='RMS')
+            directory, max_dist, max_LFEs, TDUR, filt, dt, nattempts, waittime, method='RMS')
