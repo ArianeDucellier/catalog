@@ -17,6 +17,11 @@ def filter_stations(network):
     """
     df = pd.read_csv('../data/networks/' + network + '.txt', sep='\t')
 
+    # Make sure location column is a string and fill with 0 if not empty
+    data_types_dict = {'Lo': str}
+    df = df.astype(data_types_dict)
+    df['Lo'] = df['Lo'].apply(lambda x: x.zfill(2) if (x != '') else x)
+    
     # Filter channels
     channels = ['BHE', 'BHN', 'BHZ', 'BH1', 'BH2', \
                 'EHE', 'EHN', 'EHZ', 'EH1', 'EH2', \
@@ -34,9 +39,14 @@ def filter_stations(network):
     df = df.loc[mask]
 
     # Group channels
-    df = df.groupby(['Stat', 'Net', 'Lo', 'Lat', 'Lon', 'Elev', 'Depth']).agg({ \
-        'Cha':f, \
-        'Start time':lambda x: min(x), \
-        'End time':lambda x: max(x)}).reset_index()
-
+    if 'Depth' in df.columns:
+        df = df.groupby(['Stat', 'Net', 'Lo', 'Lat', 'Lon', 'Elev', 'Depth']).agg({ \
+            'Cha':f, \
+            'Start time':lambda x: min(x), \
+            'End time':lambda x: max(x)}).reset_index()
+    else:
+        df = df.groupby(['Stat', 'Net', 'Lo', 'Lat', 'Lon', 'Elev']).agg({ \
+            'Cha':f, \
+            'Start time':lambda x: min(x), \
+            'End time':lambda x: max(x)}).reset_index()
     return df
