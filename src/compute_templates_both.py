@@ -297,7 +297,7 @@ if __name__ == '__main__':
     # Merge dataframes
     families = pd.merge(locations, differences, on=['family'])
 
-    for i in range(0, 1): #len(families)):
+    for i in range(1, len(families)):
         family = families['family'].iloc[i]
         latitude = families['lat'].iloc[i]
         longitude = families['lon'].iloc[i]
