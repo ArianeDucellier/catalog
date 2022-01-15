@@ -188,7 +188,7 @@ def find_LFEs(filename, stations, tbegin, tend, TDUR, filt, \
     """
 
     # Get the network, channels, and location of the stations
-    staloc = pd.read_csv('../data/Ducellier/stations_permanent.txt', \
+    staloc = pd.read_csv('../data/Ducellier/stations_temporary.txt', \
         sep=r'\s{1,}', header=None, engine='python')
     staloc.columns = ['station', 'network', 'channels', 'location', \
         'server', 'latitude', 'longitude', 'time_on', 'time_off']
@@ -207,7 +207,7 @@ def find_LFEs(filename, stations, tbegin, tend, TDUR, filt, \
     # Read the templates
     templates = Stream()
     for station in stations:
-        data = pickle.load(open('templates_new/' + filename + \
+        data = pickle.load(open('templates/' + filename + \
             '/' + station + '.pkl', 'rb'))
         if (len(data) == 3):
             EW = data[0]
@@ -266,7 +266,7 @@ def find_LFEs(filename, stations, tbegin, tend, TDUR, filt, \
         for channel in mychannels:
             angle = inventory.get_orientation(network + '.' + \
                 station + '.' + mylocation + '.' + channel, \
-                UTCDateTime(2012, 1, 1, 0, 0, 0))
+                UTCDateTime(2008, 4, 1, 0, 0, 0))
             reference.append(angle)
 
         # First case: we can get the data from IRIS
@@ -353,8 +353,9 @@ def find_LFEs(filename, stations, tbegin, tend, TDUR, filt, \
 
             # Draw figure
             if (draw == True):
-                params = {'xtick.labelsize':16,
-                          'ytick.labelsize':16}
+                params = {'legend.fontsize':30, \
+                          'xtick.labelsize':30,
+                          'ytick.labelsize':30}
                 pylab.rcParams.update(params) 
                 plt.figure(1, figsize=(20, 8))
                 if np.shape(index)[1] > 0:
@@ -372,11 +373,12 @@ def find_LFEs(filename, stations, tbegin, tend, TDUR, filt, \
                     raise ValueError( \
                         'Type of threshold must be MAD or Threshold')
                 plt.xlim(0.0, (np.shape(meancc)[0] - 1) * dt)
-                plt.xlabel('Time (s)', fontsize=24)
-                plt.ylabel('Cross-correlation', fontsize=24)
+                plt.xlabel('Time (s)', fontsize=30)
+                plt.ylabel('Cross-correlation', fontsize=30)
                 plt.title('Average cross-correlation across stations', \
                     fontsize=30)
                 plt.legend(loc=2, fontsize=24)
+                plt.tight_layout()
                 plt.savefig('LFEs/' + filename + '/' + \
                     '{:04d}{:02d}{:02d}_{:02d}{:02d}{:02d}'.format( \
                     Tstart.year, Tstart.month, Tstart.day, Tstart.hour, \
@@ -398,44 +400,18 @@ def find_LFEs(filename, stations, tbegin, tend, TDUR, filt, \
 if __name__ == '__main__':
 
     # Set the parameters
-    filename = '080326.08.015'
-    stations = ['GCK', 'GFC', 'GHL', 'GSN', 'GWR', 'KCPB', 'HOPS']
+    filename = '080421.14.048'
+    stations = ['KSXB', 'ME01', 'YBH', 'ME03', 'ME02', 'KRMB', 'B039', 'ME09', 'ME10', 'KHBB', 'WDC']
     TDUR = 10.0
     filt = (1.5, 9.0)
     freq0 = 1.0
     nattempts = 10
     waittime = 10.0
-    draw = False
+    draw = True
     type_threshold = 'MAD'
     threshold = 8.0
    
-    # July to December 2012 
-    year = 2012
-    for month in range(7, 13):
-        if month in [1, 3, 5, 7, 8, 10, 12]:
-            endday = 31
-        elif month in [4, 6, 9, 11]:
-            endday = 30
-        else:
-            if (year % 4 == 0):
-                endday = 29
-            else:
-                endday = 28
-        for day in range(1, endday + 1):
-            for hour in range(0, 24, 12):
-                tbegin = (year, month, day, hour, 0, 0)
-                if (hour == 12):
-                    if (day == endday):
-                        if (month == 12):
-                            tend = (year + 1, 1, 1, 0, 0, 0)
-                        else:
-                            tend = (year, month + 1, 1, 0, 0, 0)
-                    else:
-                        tend = (year, month, day + 1, 0, 0, 0)
-                else:
-                    tend = (year, month, day, hour + 12, 0, 0)
-                find_LFEs(filename, stations, tbegin, tend, TDUR, filt, \
-                    freq0, nattempts, waittime, draw, type_threshold, threshold)
-
-        os.rename('LFEs/' + filename + '/catalog.pkl', \
-            'LFEs/' + filename + '/catalog_{:04d}_{:02d}'.format(year, month) + '.pkl')
+    tbegin = (2008, 4, 21, 13, 0, 0)
+    tend = (2008, 4, 21, 14, 0, 0)
+    find_LFEs(filename, stations, tbegin, tend, TDUR, filt, \
+        freq0, nattempts, waittime, draw, type_threshold, threshold)
