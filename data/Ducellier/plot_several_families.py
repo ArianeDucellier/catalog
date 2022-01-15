@@ -43,16 +43,19 @@ duration = dt.days * 86400.0 + dt.seconds + dt.microseconds * 0.000001
 nw = int(duration / window)
 
 # Indices of LFE families
-indices = [[2, 5, 6], \
-           [12, 13, 25, 20, 23], \
-           [40, 29, 33, 36, 41]]
+#indices = [[2, 5, 6], \
+#           [12, 13, 25, 20, 23], \
+#           [40, 29, 33, 36, 41]]
+indices = [[40, 29, 33, 36, 41]]
 
 # Names of LFE families
-names = [['B1', 'B2', 'B3'], \
-         ['C1', 'C2', 'C3', 'C4', 'C5'], \
-         ['G1', 'G2', 'G3', 'G4', 'G5']]
+#names = [['B1', 'B2', 'B3'], \
+#         ['C1', 'C2', 'C3', 'C4', 'C5'], \
+#         ['G1', 'G2', 'G3', 'G4', 'G5']]
+names = [['G1', 'G2', 'G3', 'G4', 'G5']]
 
-plt.figure(1, figsize=(24, 15))
+#plt.figure(1, figsize=(24, 15))
+plt.figure(1, figsize=(8, 15))
 
 # Loop on templates
 for column in range(0, len(indices)):
@@ -101,5 +104,6 @@ for column in range(0, len(indices)):
             fontsize=24)
 
 plt.tight_layout()
-plt.savefig('LFEdistribution_perm/set_daily_LFEs.eps', format='eps')
+#plt.savefig('LFEdistribution_perm/set_daily_LFEs.eps', format='eps')
+plt.savefig('LFEdistribution_perm/set_daily_LFEs_seriesG.eps', format='eps')
 plt.close(1)

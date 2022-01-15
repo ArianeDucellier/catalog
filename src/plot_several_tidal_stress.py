@@ -22,8 +22,12 @@ mu = 0.1
 B = 0.5
 
 # LFE families
-families = [0, 0, 5, 14, 20, 28, 40]
-names = ['A (all LFEs)', 'A', 'B2', 'D', 'C4', 'F', 'G1']
+#families = [0, 0, 5, 14, 20, 28, 40]
+#names = ['A (all LFEs)', 'A', 'B2', 'D', 'C4', 'F', 'G1']
+#families = [0, 5, 14, 20, 28, 40]
+#names = ['A', 'B2', 'D', 'C4', 'F', 'G1']
+families = [0, 0]
+names = ['A (2008 ETS event)', 'A (all LFEs)']
 
 # List of LFE families
 templates = np.loadtxt('../data/Plourde_2015/templates_list.txt', \
@@ -42,7 +46,9 @@ threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 begin_time = pd.read_csv('../data/For_Ken_California_LFE/begin_time.txt', sep=' ', header=None)
 begin_time.columns = ['latitude', 'longitude', 'begin_time']
 
-plt.figure(1, figsize=(28, 10))
+#plt.figure(1, figsize=(28, 10))
+#plt.figure(1, figsize=(14, 15))
+plt.figure(1, figsize=(14, 5))
 
 # Loop on templates
 for i in range(0, len(families)):
@@ -83,7 +89,8 @@ for i in range(0, len(families)):
     df['date'] = date
 
     # Divide catalog between first and last part of ETS event
-    if i == 0:
+#    if i == 0:
+    if i == 1:
         df2 = df.copy(deep=True)
     else:
         t2 = ymdhms2matlab(2008, 4, 1, 0, 0, 0) + time_ETS
@@ -120,29 +127,52 @@ for i in range(0, len(families)):
                 count[k] = len(df2.loc[(df2.coulomb >= boxes[k]) & (df2.coulomb <= boxes[k + 1])])
             count_coulomb[k] = np.sum((coulomb >= boxes[k]) & (coulomb <= boxes[k + 1]))
 
+#        if i == 0:
+#            plt.subplot2grid((2, 4), (0, 3))
+#        elif i == 1:
+#            plt.subplot2grid((2, 4), (0, 0))
+#        elif i == 2:
+#            plt.subplot2grid((2, 4), (0, 1))
+#        elif i == 3:
+#            plt.subplot2grid((2, 4), (0, 2))
+#        elif i == 4:
+#            plt.subplot2grid((2, 4), (1, 0))
+#        elif i == 5:
+#            plt.subplot2grid((2, 4), (1, 1))
+#        else:
+#            plt.subplot2grid((2, 4), (1, 2))
+
+#        if i == 0:
+#            plt.subplot2grid((3, 2), (0, 0))
+#        elif i == 1:
+#            plt.subplot2grid((3, 2), (0, 1))
+#        elif i == 2:
+#            plt.subplot2grid((3, 2), (1, 0))
+#        elif i == 3:
+#            plt.subplot2grid((3, 2), (1, 1))
+#        elif i == 4:
+#            plt.subplot2grid((3, 2), (2, 0))
+#        else:
+#            plt.subplot2grid((3, 2), (2, 1))
+
         if i == 0:
-            plt.subplot2grid((2, 4), (0, 3))
-        elif i == 1:
-            plt.subplot2grid((2, 4), (0, 0))
-        elif i == 2:
-            plt.subplot2grid((2, 4), (0, 1))
-        elif i == 3:
-            plt.subplot2grid((2, 4), (0, 2))
-        elif i == 4:
-            plt.subplot2grid((2, 4), (1, 0))
-        elif i == 5:
-            plt.subplot2grid((2, 4), (1, 1))
+            plt.subplot2grid((1, 2), (0, 0))
         else:
-            plt.subplot2grid((2, 4), (1, 2))
+            plt.subplot2grid((1, 2), (0, 1))
 
         expected = len(df2) * count_coulomb / np.sum(count_coulomb)
         plt.plot(0.5 * (boxes[1:] + boxes[:-1]), expected, color='black')
         plt.bar(0.5 * (boxes[1:] + boxes[:-1]), count, size_box)
-        if (i == 0) or (i >= 4):
-            plt.xlabel('Coulomb stress (kPa)', fontsize=24)
-        if (i == 1) or (i == 4):
+#        if (i == 0) or (i >= 4):
+#            plt.xlabel('Coulomb stress (kPa)', fontsize=24)
+#        if (i == 1) or (i == 4):
+#            plt.ylabel('Number of LFEs', fontsize=24)
+#        if (i == 4) or (i == 5):
+        plt.xlabel('Coulomb stress (kPa)', fontsize=24)
+        if (i == 0) or (i == 2) or (i == 4):
             plt.ylabel('Number of LFEs', fontsize=24)
         plt.title('Family ' + names[i], fontsize=24)
 
-plt.savefig('tidal_stress_ETS/coulomb.eps', format='eps')
+plt.tight_layout()
+plt.savefig('tidal_stress_ETS/coulomb_A.eps', format='eps')
 plt.close(1)

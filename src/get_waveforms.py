@@ -8,6 +8,7 @@ import obspy
 from obspy import UTCDateTime
 from obspy.core.stream import Stream
 
+import matplotlib.pylab as pylab
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -72,10 +73,14 @@ def get_waveform(filename, TDUR, filt, nattempts, waittime, method='RMS'):
         os.makedirs(namedir)
 
     # File to write error messages
-    errorfile = 'error/' + filename + '.txt'
+    errorfile = 'error_waveform/' + filename + '.txt'
+
+    params = {'xtick.labelsize':30, \
+              'ytick.labelsize':30}
+    pylab.rcParams.update(params)
 
     # Loop over stations
-    for station in staNames:
+    for station in ['ME57']: #staNames:
         # Create streams
         EW = Stream()
         NS = Stream()
@@ -154,47 +159,48 @@ def get_waveform(filename, TDUR, filt, nattempts, waittime, method='RMS'):
             nt = EWstack[0].stats.npts
             t = dt * np.arange(0, nt)
             norm = np.max(np.abs(EWstack[0].data))
-            plt.plot(t, EWstack[0].data / norm, 'r', label='Stack')
+            plt.plot(t, EWstack[0].data / norm, 'k', label='Stack')
             t0 = ndt * np.arange(0, np.shape(uk)[1])
             norm = np.max(np.abs(uk[ns + index, :]))
-            plt.plot(t0, uk[ns + index, :] / norm, 'k', label='Waveform')
+#            plt.plot(t0, uk[ns + index, :] / norm, 'k', label='Waveform')
             plt.xlim(0.0, 60.0)
-            plt.title('East component', fontsize=16)
-            plt.xlabel('Time (s)', fontsize=16)
-            plt.ylabel('Velocity (m/s)', fontsize=16)
-            plt.legend(loc=1)
+            plt.title('East component', fontsize=30)
+#            plt.xlabel('Time (s)', fontsize=30)
+            plt.ylabel('Velocity (m/s)', fontsize=30)
+#            plt.legend(loc=1)
             # NS component
             ax2 = plt.subplot(312)
             dt = NSstack[0].stats.delta
             nt = NSstack[0].stats.npts
             t = dt * np.arange(0, nt)
             norm = np.max(np.abs(NSstack[0].data))
-            plt.plot(t, NSstack[0].data / norm, 'r', label='Stack')
+            plt.plot(t, NSstack[0].data / norm, 'k', label='Stack')
             t0 = ndt * np.arange(0, np.shape(uk)[1])
             norm = np.max(np.abs(uk[index, :]))
-            plt.plot(t0, uk[index, :] / norm, 'k', label='Waveform')
+#            plt.plot(t0, uk[index, :] / norm, 'k', label='Waveform')
             plt.xlim(0.0, 60.0)
-            plt.title('North component', fontsize=16)
-            plt.xlabel('Time (s)', fontsize=16)
-            plt.ylabel('Velocity (m/s)', fontsize=16)
-            plt.legend(loc=1)
+            plt.title('North component', fontsize=30)
+#            plt.xlabel('Time (s)', fontsize=30)
+            plt.ylabel('Velocity (m/s)', fontsize=30)
+#            plt.legend(loc=1)
             # UD component
             ax3 = plt.subplot(313)
             dt = UDstack[0].stats.delta
             nt = UDstack[0].stats.npts
             t = dt * np.arange(0, nt)
             norm = np.max(np.abs(UDstack[0].data))
-            plt.plot(t, UDstack[0].data / norm, 'r', label='Stack')
+            plt.plot(t, UDstack[0].data / norm, 'k', label='Stack')
             t0 = ndt * np.arange(0, np.shape(uk)[1])
             norm = np.max(np.abs(uk[2 * ns + index, :]))
-            plt.plot(t0, uk[2 * ns + index, :] / norm, 'k', label='Waveform')
+#            plt.plot(t0, uk[2 * ns + index, :] / norm, 'k', label='Waveform')
             plt.xlim(0.0, 60.0)
-            plt.title('Vertical component', fontsize=16)
-            plt.xlabel('Time (s)', fontsize=16)
-            plt.ylabel('Velocity (m/s)', fontsize=16)
-            plt.legend(loc=1)
+            plt.title('Vertical component', fontsize=30)
+            plt.xlabel('Time (s)', fontsize=30)
+            plt.ylabel('Velocity (m/s)', fontsize=30)
+#            plt.legend(loc=1)
             # End and save figure
-            plt.suptitle(station, fontsize=24)
+#            plt.suptitle(station, fontsize=24)
+            plt.tight_layout()
             plt.savefig(namedir + '/' + station + '_compare.eps', format='eps')
             ax1.clear()
             ax2.clear()
@@ -277,6 +283,6 @@ if __name__ == '__main__':
              'formats': ('S13', 'S3', np.float, np.float, np.float, \
         np.float, np.float, np.int)}, \
         skiprows=1)
-    for ie in range(0, len(LFEloc)):
+    for ie in range(0, 1): #len(LFEloc)):
         filename = LFEloc[ie][0].decode('utf-8')
         get_waveform(filename, TDUR, filt, nattempts, waittime, method)
