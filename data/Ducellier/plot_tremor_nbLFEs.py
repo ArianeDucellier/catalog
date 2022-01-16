@@ -13,8 +13,8 @@ from math import floor
 from date import ymdhms2day
 
 # Time boundaries
-xmin = 2005.0
-xmax = 2005.1
+xmin = 2007.5
+xmax = 2009.5
 
 # Space boundaries
 latmin = 39.4
@@ -46,24 +46,29 @@ templates = np.loadtxt('../Plourde_2015/templates_list.txt', \
 threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='python')
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
+all_LFEs = 0
+kept_LFEs = 0
+
 # Loop on templates
 for i in range(0, np.shape(templates)[0]):
 
     # Plot only good data
-    if threshold['threshold_perm'].iloc[i] > 0.0:
+    if threshold['threshold_FAME'].iloc[i] > 0.0:
 
         # Get latitude
         latitude = templates[i][2]
 
         # Open LFE catalog
         namedir = 'catalogs/' + templates[i][0].astype(str)
-        namefile = namedir + '/catalog_2004_2011.pkl'
+        namefile = namedir + '/catalog_2007_2009.pkl'
         df = pickle.load(open(namefile, 'rb'))
 
+        all_LFEs = all_LFEs + len(df)
+
         # Filter LFEs
-#        maxc = np.max(df['nchannel'])
-#        df = df.loc[df['cc'] * df['nchannel'] >= 0.1 * maxc]
-        df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
+#        df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_FAME'].iloc[i]]
+
+        kept_LFEs = kept_LFEs + len(df)
 
         time = np.arange(xmin, xmax, 1.0/365.5)
         nbLFEs = np.zeros(np.shape(time)[0])
@@ -88,13 +93,13 @@ for i in range(0, np.shape(templates)[0]):
 #        plt.scatter(time, np.repeat(latitude, np.shape(time)[0]), c=nbLFEs, cmap='autumn')
 
 # Plot time line
-#tbegin = ymdhms2day(2007, 9, 25, 0, 0, 0)
-#tend = ymdhms2day(2009, 5, 14, 0, 0, 0)
-#plt.arrow(tbegin, 39.2, tend - tbegin, 0, head_width=0.05, \
-#    head_length=0.03, linewidth=4, color='grey', length_includes_head=True)
-#plt.arrow(tend, 39.2, tbegin - tend, 0, head_width=0.05, \
-#    head_length=0.03, linewidth=4, color='grey', length_includes_head=True)
-#plt.annotate('FAME operating', (2008.35, 39.25), fontsize=24, color='grey')
+tbegin = ymdhms2day(2007, 9, 25, 0, 0, 0)
+tend = ymdhms2day(2009, 5, 14, 0, 0, 0)
+plt.arrow(tbegin, 39.2, tend - tbegin, 0, head_width=0.05, \
+    head_length=0.03, linewidth=4, color='grey', length_includes_head=True)
+plt.arrow(tend, 39.2, tbegin - tend, 0, head_width=0.05, \
+    head_length=0.03, linewidth=4, color='grey', length_includes_head=True)
+plt.annotate('FAME operating', (2008.35, 39.25), fontsize=24, color='grey')
 
 # Families
 plt.annotate('A', (xmax + 0.06 * (xmax - xmin), 40.09000), fontsize=24, color='grey')
@@ -112,5 +117,7 @@ plt.xlabel('Time (years)', fontsize=24)
 plt.ylabel('Latitude', fontsize=24)
 plt.title('Tremor and LFEs', fontsize=24)
 plt.tight_layout()
-plt.savefig('LFEdistribution_perm/zoom.eps', format='eps')
+plt.savefig('LFEdistribution_FAME/unfiltered.eps', format='eps')
 plt.close(1)
+
+print(all_LFEs, kept_LFEs)

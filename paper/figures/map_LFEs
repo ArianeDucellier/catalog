@@ -12,14 +12,14 @@ set Jop = m-124/40.5/3.5
 
 gmt pscoast -R$Rop -J$Jop -Ba1f0.5::WESN -W0.1p -G255/255/224 -S224/255/255 -Df -Na -Y12 -P -K >! $output
 
-#gmt xyz2grd plate_boundary.txt -Gplate_boundary.grd -I0.1 -R$Rop
-#gmt grdcontour plate_boundary.grd -A10+f10p -J$Jop -R$Rop -O -K >> $output
+gmt xyz2grd plate_boundary.txt -Gplate_boundary.grd -I0.1 -R$Rop
+gmt grdcontour plate_boundary.grd -A10 -J$Jop -R$Rop -O -K >> $output
 
 # Faults
-#gmt psxy fault.xy -R$Rop -J$Jop -Wthin,grey -O -K >> $output
+gmt psxy fault.xy -R$Rop -J$Jop -Wthin,grey -O -K >> $output
 
 # Tremor
-#gmt psxy tremor.txt -R$Rop -J$Jop -Sc0.1 -Ggrey -O -K >> $output
+gmt psxy tremor.txt -R$Rop -J$Jop -Sc0.1 -Ggrey -O -K >> $output
 
 # FAME stations
 gmt psxy FAME.txt -R$Rop -J$Jop -St0.3 -Gred -O -K >> $output
@@ -153,7 +153,7 @@ set x2 = -121.0
 set y1 = -55.0
 set y2 = 5.0
 set Rop = $x1/$x2/$y1/$y2
-set Jop = x2.72/0.08
+set Jop = x2.72/0.04
 
 # Horizontal line
 cat << END >> ground.dat
@@ -161,9 +161,12 @@ cat << END >> ground.dat
 -121.0 0.0
 END
 
-gmt psxy ground.dat -R$Rop -J$Jop -Ba1f0.5:"Longitude":/a20f5:"Depth (km)":WeSn -Wthicker -X-0.6 -Y-7 -O -K >> $output
+gmt psxy ground.dat -R$Rop -J$Jop -Ba1f0.5:"Longitude":/a20f5:"Depth (km)":WeSn -Wthicker -X-0.6 -Y-4 -O -K >> $output
 
-# Cross-section
+# Plate boundary
+gmt psxy crossection.txt -R$Rop -J$Jop -Wthicker -O -K >> $output
+
+# Plourde families
 gmt psxy plourde_depth.txt -R$Rop -J$Jop -Sc0.2 -Gblack -O >> $output
 
 rm *.dat

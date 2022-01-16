@@ -65,10 +65,10 @@ if __name__ == '__main__':
     tend = datetime(2009, 5, 14, 0, 0, 0)
 
     # Thresholds
-    thresh1 = 2.7
-    thresh2 = 1.0
+    thresh1 = 1.4
+    thresh2 = 1.9
 
-    for i in range(63, 64): #len(families)):
+    for i in range(0, 1): #len(families)):
         family = families['family'].iloc[i]
         dt = families['dt'].iloc[i]
         compare_catalog(family, tbegin, tend, dt, thresh1, thresh2)

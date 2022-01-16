@@ -38,6 +38,10 @@ We added these references in the text.
 
 \bigskip
 
+We added the depth contours of the plate boundary model from McCrory et al. (2006) and fault lines. We added a cross section with the depth of the LFE families.
+
+\bigskip
+
 \textit{Lines 73 - 74: Bostock (2015, https://doi.org/10.1002/2015JB012195) provides 10-year catalog of LFES at the Vancouver Island.}
 
 \bigskip
@@ -66,7 +70,17 @@ The templates from Plourde et al. (2015) have a low signal-to-noise ratio and ge
 
 \bigskip
 
+We analyzed the seismic data one hour a time. For each hour of data, we assumed that there was an LFE each time the average cross-correlation over all stations and channels is higher than 8 times the median absolute deviation. The threshold is thus different for each hour of data and it is difficult to show its values in the figure.
+
+\bigskip
+
 \textit{Lines 165 - 175: How second thresholds (CC values vs stations numbers) were chosen for each seismic station? If it is done manually, please provide a list of the threshold as the supplementary table. In addition, how many events did this selection step remove from the catalog? (A figure comparing before and after the selection step will be useful.)}
+
+\bigskip
+
+The choice of the threshold is explained in more detail later in the text, when we explain how we cleaned the longer catalog (2004-2011). The main idea is that if an LFE is present both in the 2007-2009 FAME catalog and in the 2004-2011 permanent networks catalog, then it is unlikely to be a false detection. We assumed that all LFEs present in both catalogs are true detections. The LFEs recorded during the period 2007-2009 that are present in only one catalog are then assumed to be false detections. We then chose a threshold such that at least 50 \% of the LFE detections are true detections. There is thus one threshold per family. The thresholds are also different for the two catalogs 2007-2009 and 2004-2011 because the stations and the quality of the templates are different for both catalogs. We added in a supplement a table with the values of the thresholds. \\
+
+Our filtering method kept 37 \% of the LFEs for the 2004-2011 catalog and 16 \% of the LFEs for the 2007-2009 catalog. We have added in the supplements figures of the catalogs without filtering the LFEs.
 
 \bigskip
 
@@ -74,11 +88,23 @@ The templates from Plourde et al. (2015) have a low signal-to-noise ratio and ge
 
 \bigskip
 
+We have computed the catalog with only the FAME stations and the catalog with only the permanent stations. We have not computed a catalog using both FAME and permanent stations. We agree that it would be interesting to compute this third catalog and study how many LFEs are missed when removing the FAME stations, but this is beyond the scope of this paper.
+
+\bigskip
+
 \textit{Line 209: "two thresholds" for what?}
 
 \bigskip
 
+One threshold to filter the 2007-2009 catalog computed with the FAME stations and one threshold to filter the 2004-2011 catalog computed with the permanent stations. We use two different thresholds because the quality of the templates is not the same for the two catalogs.
+
+\bigskip
+
 \textit{Line 215: It will be helpful to visually show temporal changes of the number of available seismic stations.}
+
+\bigskip
+
+We have added two figures in the supplement with number of channels available as a function of time.
 
 \bigskip
 
@@ -94,7 +120,15 @@ We added the reference in the text.
 
 \bigskip
 
+We did not see any burst of LFEs coincident with the arrival of seismic waves from regional or distant earthquakes.
+
+\bigskip
+
 \textit{Lines 290 - 294: I think the vertical axis of Figure 9 should be average recurrence interval rather than the number of events.}
+
+\bigskip
+
+We changed the figure and plotted recurrence time instead of number of events.
 
 \bigskip
 
@@ -107,6 +141,10 @@ We added these references.
 \bigskip
 
 \textit{Line 306: Which fault plane did authors assume to calculate tidal stress?}
+
+\bigskip
+
+The fault plane is the plate boundary model of McCrory et al. (2006).
 
 \bigskip
 
@@ -126,6 +164,10 @@ We added these references.
 
 \bigskip
 
+To define the number of events, we assume that there is an event each time that there are at least five LFEs during a single day. If two events are separated by less than five days, we assume that this is a single event. We remade the figure to plot average recurrence time instead of number of events.
+
+\bigskip
+
 \textit{Line 22: what does "other" refer to? Not associated with tremor detections?}
 
 \bigskip
@@ -135,6 +177,10 @@ We meant other smaller episodes of LFE activity in between the big tremor episod
 \bigskip
 
 \textit{I think the plain-language summary could be more "plain". Even words/phrases like "episodically", "recurrence intervals", "tidal stress sensitivity" could be expressed in  simpler/more-common words. Things like "tectonic tremor", "slow slip" are certainly not familiar to most people, so that's not plain language.}
+
+\bigskip
+
+We modified the plain language summary.
 
 \bigskip
 
@@ -166,6 +212,10 @@ We modified the sentence.
 
 \bigskip
 
+We added plate contours and faults to the map.
+
+\bigskip
+
 \textit{Line 139: "All these preprocessing operations are done with the Python package obspy". I think it is fine to leave this to the acknowledgements if you prefer to shorten here.}
 
 \bigskip
@@ -194,7 +244,15 @@ It applies to the total number of LFEs for all the 66 families. We modified the 
 
 \bigskip
 
+To keep an LFE in the filtered catalog, we require that the product of the cross-correlation by the number of channels recording at that time is higher than a threshold. We thus require a higher cross-correlation value to keep the LFE in the catalog if some stations are inactive. The threshold is different for each LFE family and applied to the stacked cross-correlation over all channels.
+
+\bigskip
+
 \textit{Line 180: "Additionally, one LFE family located on the southern end of the subduction zone has also shorter recurrence intervals than families located farther north, and behaves more similarly to the strike-slip fault families." What locations are you using here? Also, maybe for clarity you can put (40.1N), or whatever the precise latitude is after "...on the southern end". It may be good to specify the depth here too, since it may not be surprising to see frequent bursts if the family is at 45 km depth.}
+
+\bigskip
+
+We use the same locations as Pourde et al. (2015). We have not tried to relocate the families using the new templates. We specified the latitude and depth of the family in the text.
 
 \bigskip
 
@@ -231,6 +289,10 @@ We took the same values as Houston (2015) for the friction and the Skempton's co
 \bigskip
 
 \textit{Line 312: "We also computed what would be the expected number of LFEs occurring if the tidal stress changes have no influence on LFE activity." It's not clear to me why this (the black lines in Figure 10) varies so dramatically between families, could you explain a bit further?}
+
+\bigskip
+
+We divided possible values of the Coulomb stress changes into bins and computed the number of hours for which the Coulomb stress change takes values in each bins. As Coulomb stress change often takes small values and rarely takes high values, the expected number of LFEs is higher around 0 and smaller for big negative or positive values. We did not normalize the results, so the expected number of LFEs is proportional to the total number of LFEs occurring for each family.
 
 \bigskip
 

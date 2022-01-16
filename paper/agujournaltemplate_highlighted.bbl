@@ -44,7 +44,7 @@ AUD_2016}
 AUD_2016}%
 \begin{APACrefauthors}%
 Audet, P.%
-\BCBT {}\ \BBA {} Kim, Y.%
+\BCBT {}\ \BBA {} Kim, Y\BPBI H.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -72,10 +72,10 @@ BAR_2018}
 \APACinsertmetastar {%
 BAR_2018}%
 \begin{APACrefauthors}%
-Baratin, L.%
+Baratin, L\BPBI M.%
 , Chamberlain, C.%
 , Townend, J.%
-\BCBL {}\ \BBA {} Savage, M.%
+\BCBL {}\ \BBA {} Savage, M\BPBI K.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -103,7 +103,7 @@ BER_2011}
 \APACinsertmetastar {%
 BER_2011}%
 \begin{APACrefauthors}%
-Beroza, G.%
+Beroza, G\BPBI C.%
 \BCBT {}\ \BBA {} Ide, S.%
 \end{APACrefauthors}%
 \unskip\
@@ -130,10 +130,10 @@ BOS_2012}
 \APACinsertmetastar {%
 BOS_2012}%
 \begin{APACrefauthors}%
-Bostock, M.%
-, Royer, A.%
-, Hearn, E.%
-\BCBL {}\ \BBA {} Peacock, S.%
+Bostock, M\BPBI G.%
+, Royer, A\BPBI A.%
+, Hearn, E\BPBI H.%
+\BCBL {}\ \BBA {} Peacock, S\BPBI M.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -161,11 +161,11 @@ BOS_2015}
 \APACinsertmetastar {%
 BOS_2015}%
 \begin{APACrefauthors}%
-Bostock, M.%
-, Thomas, A.%
+Bostock, M\BPBI G.%
+, Thomas, A\BPBI M.%
 , Savard, G.%
 , Chuang, L.%
-\BCBL {}\ \BBA {} Rubin, A.%
+\BCBL {}\ \BBA {} Rubin, A\BPBI M.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -195,11 +195,11 @@ BOY_2015}
 \APACinsertmetastar {%
 BOY_2015}%
 \begin{APACrefauthors}%
-Boyarko, D.%
-, Brudzinski, M.%
-, Porritt, R.%
-, Allen, R.%
-\BCBL {}\ \BBA {} Tr\'ehu, A.%
+Boyarko, D\BPBI C.%
+, Brudzinski, M\BPBI R.%
+, Porritt, R\BPBI W.%
+, Allen, R\BPBI M.%
+\BCBL {}\ \BBA {} Tr\'ehu, A\BPBI M.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -226,8 +226,8 @@ BRU_2007}
 \APACinsertmetastar {%
 BRU_2007}%
 \begin{APACrefauthors}%
-Brudzinski, M.%
-\BCBT {}\ \BBA {} Allen, R.%
+Brudzinski, M\BPBI R.%
+\BCBT {}\ \BBA {} Allen, R\BPBI M.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -253,8 +253,8 @@ CHE_2017_JGR}
 \APACinsertmetastar {%
 CHE_2017_JGR}%
 \begin{APACrefauthors}%
-Chestler, S.%
-\BCBT {}\ \BBA {} Creager, K.%
+Chestler, S\BPBI R.%
+\BCBT {}\ \BBA {} Creager, K\BPBI C.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -281,8 +281,8 @@ CHE_2017_G3}
 \APACinsertmetastar {%
 CHE_2017_G3}%
 \begin{APACrefauthors}%
-Chestler, S.%
-\BCBT {}\ \BBA {} Creager, K.%
+Chestler, S\BPBI R.%
+\BCBT {}\ \BBA {} Creager, K\BPBI C.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -333,9 +333,9 @@ FRA_2014}
 \APACinsertmetastar {%
 FRA_2014}%
 \begin{APACrefauthors}%
-Frank, W.%
-, Shapiro, N.%
-, Husker, A.%
+Frank, W\BPBI B.%
+, Shapiro, N\BPBI M.%
+, Husker, A\BPBI L.%
 , Kostoglodov, V.%
 , Romanenko, A.%
 \BCBL {}\ \BBA {} Campillo, M.%
@@ -368,7 +368,7 @@ GUI_2010}%
 \begin{APACrefauthors}%
 Guilhem, A.%
 , Peng, Z.%
-\BCBL {}\ \BBA {} Nadeau, R.%
+\BCBL {}\ \BBA {} Nadeau, R\BPBI M.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -397,7 +397,7 @@ HAN_2014}
 HAN_2014}%
 \begin{APACrefauthors}%
 Han, J.%
-, Vidale, J.%
+, Vidale, J\BPBI E.%
 , Houston, H.%
 , Chao, K.%
 \BCBL {}\ \BBA {} Obara, K.%
@@ -453,9 +453,9 @@ HOU_2011}
 HOU_2011}%
 \begin{APACrefauthors}%
 Houston, H.%
-, Delbridge, B.%
-, Wech, A.%
-\BCBL {}\ \BBA {} Creager, K.%
+, Delbridge, B\BPBI G.%
+, Wech, A\BPBI G.%
+\BCBL {}\ \BBA {} Creager, K\BPBI C.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -482,8 +482,8 @@ IDE_2007_GRL}
 IDE_2007_GRL}%
 \begin{APACrefauthors}%
 Ide, S.%
-, Shelly, D.%
-\BCBL {}\ \BBA {} Beroza, G.%
+, Shelly, D\BPBI R.%
+\BCBL {}\ \BBA {} Beroza, G\BPBI C.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -496,6 +496,121 @@ Ide, S.%
   plate interface}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Geophysical Research Letters}{34}{}{L03308}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kato%
+\ \BBA {} Nakagawa%
+}{%
+Kato%
+\ \BBA {} Nakagawa%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+KAT_2020}
+\APACinsertmetastar {%
+KAT_2020}%
+\begin{APACrefauthors}%
+Kato, A.%
+\BCBT {}\ \BBA {} Nakagawa, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Detection of deep low-frequency earthquakes in the
+  {Nankai} subduction zone over 11 years using a matched filter technique}
+  {Detection of deep low-frequency earthquakes in the {Nankai} subduction zone
+  over 11 years using a matched filter technique}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Earth, Planets and Space}{72}{}{128}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Katsumata%
+\ \BBA {} Kamaya%
+}{%
+Katsumata%
+\ \BBA {} Kamaya%
+}{%
+{\protect \APACyear {2003}}%
+}]{%
+KAT_2003}
+\APACinsertmetastar {%
+KAT_2003}%
+\begin{APACrefauthors}%
+Katsumata, A.%
+\BCBT {}\ \BBA {} Kamaya, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Low-frequency continuous tremor around the {Moho}
+  discontinuity away from volcanoes in the southwest {Japan}} {Low-frequency
+  continuous tremor around the {Moho} discontinuity away from volcanoes in the
+  southwest {Japan}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Geophysical Research Letters}{30}{1}{1020}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+McCrory%
+, Blair%
+, Oppenheimer%
+\BCBL {}\ \BBA {} Walter%
+}{%
+McCrory%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+MCC_2006}
+\APACinsertmetastar {%
+MCC_2006}%
+\begin{APACrefauthors}%
+McCrory, P\BPBI A.%
+, Blair, J\BPBI L.%
+, Oppenheimer, D\BPBI H.%
+\BCBL {}\ \BBA {} Walter, S\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+\APACrefbtitle {Depth to the {Juan} de {Fuca} slab beneath the {Cascadia}
+  subduction margin - A {3-D} model sorting earthquakes} {Depth to the {Juan}
+  de {Fuca} slab beneath the {Cascadia} subduction margin - a {3-D} model
+  sorting earthquakes}\ \APACbVolEdTR{}{\BTR{}\ \BNUM\ Data Series 91}.
+\newblock
+\APACaddressInstitution{}{U.S. Geological Survey}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Miyazawa%
+, Brodsky%
+\BCBL {}\ \BBA {} Mori%
+}{%
+Miyazawa%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+MIY_2008}
+\APACinsertmetastar {%
+MIY_2008}%
+\begin{APACrefauthors}%
+Miyazawa, M.%
+, Brodsky, E\BPBI E.%
+\BCBL {}\ \BBA {} Mori, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning from dynamic triggering of low-frequency tremor
+  in subduction zones} {Learning from dynamic triggering of low-frequency
+  tremor in subduction zones}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Earth, Planets and Space}{60}{}{e17-e20}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -622,10 +737,10 @@ PEN_2009}
 PEN_2009}%
 \begin{APACrefauthors}%
 Peng, Z.%
-, Vidale, J.%
-, Wech, A.%
-, Nadeau, R.%
-\BCBL {}\ \BBA {} Creager, K.%
+, Vidale, J\BPBI E.%
+, Wech, A\BPBI G.%
+, Nadeau, R\BPBI M.%
+\BCBL {}\ \BBA {} Creager, K\BPBI C.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -652,10 +767,10 @@ PLO_2015}
 \APACinsertmetastar {%
 PLO_2015}%
 \begin{APACrefauthors}%
-Plourde, A.%
-, Bostock, M.%
+Plourde, A\BPBI P.%
+, Bostock, M\BPBI G.%
 , Audet, P.%
-\BCBL {}\ \BBA {} Thomas, A.%
+\BCBL {}\ \BBA {} Thomas, A\BPBI M.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -707,8 +822,8 @@ ROY_2014}
 \APACinsertmetastar {%
 ROY_2014}%
 \begin{APACrefauthors}%
-Royer, A.%
-\BCBT {}\ \BBA {} Bostock, M.%
+Royer, A\BPBI A.%
+\BCBT {}\ \BBA {} Bostock, M\BPBI G.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -734,9 +849,9 @@ ROY_2015}
 \APACinsertmetastar {%
 ROY_2015}%
 \begin{APACrefauthors}%
-Royer, A.%
-, Thomas, A.%
-\BCBL {}\ \BBA {} Bostock, M.%
+Royer, A\BPBI A.%
+, Thomas, A\BPBI M.%
+\BCBL {}\ \BBA {} Bostock, M\BPBI G.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -761,12 +876,12 @@ RUB_2009}
 \APACinsertmetastar {%
 RUB_2009}%
 \begin{APACrefauthors}%
-Rubinstein, J.%
+Rubinstein, J\BPBI L.%
 , Gomberg, J.%
-, Vidale, J.%
-, Wech, A.%
+, Vidale, J\BPBI E.%
+, Wech, A\BPBI G.%
 , Kao, H.%
-, Creager, K.%
+, Creager, K\BPBI C.%
 \BCBL {}\ \BBA {} Rogers, G.%
 \end{APACrefauthors}%
 \unskip\
@@ -793,7 +908,7 @@ SHE_2017}
 \APACinsertmetastar {%
 SHE_2017}%
 \begin{APACrefauthors}%
-Shelly, D.%
+Shelly, D\BPBI R.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -821,8 +936,8 @@ SHE_2007_nature}
 \APACinsertmetastar {%
 SHE_2007_nature}%
 \begin{APACrefauthors}%
-Shelly, D.%
-, Beroza, G.%
+Shelly, D\BPBI R.%
+, Beroza, G\BPBI C.%
 \BCBL {}\ \BBA {} Ide, S.%
 \end{APACrefauthors}%
 \unskip\
@@ -848,8 +963,8 @@ SHE_2007_G3}
 \APACinsertmetastar {%
 SHE_2007_G3}%
 \begin{APACrefauthors}%
-Shelly, D.%
-, Beroza, G.%
+Shelly, D\BPBI R.%
+, Beroza, G\BPBI C.%
 \BCBL {}\ \BBA {} Ide, S.%
 \end{APACrefauthors}%
 \unskip\
@@ -878,8 +993,8 @@ SHE_2006}
 \APACinsertmetastar {%
 SHE_2006}%
 \begin{APACrefauthors}%
-Shelly, D.%
-, Beroza, G.%
+Shelly, D\BPBI R.%
+, Beroza, G\BPBI C.%
 , Ide, S.%
 \BCBL {}\ \BBA {} Nakamula, S.%
 \end{APACrefauthors}%
@@ -909,10 +1024,10 @@ SWE_2019}
 \APACinsertmetastar {%
 SWE_2019}%
 \begin{APACrefauthors}%
-Sweet, J.%
-, Creager, K.%
+Sweet, J\BPBI R.%
+, Creager, K\BPBI C.%
 , Houston, H.%
-\BCBL {}\ \BBA {} Chestler, S.%
+\BCBL {}\ \BBA {} Chestler, S\BPBI R.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -940,11 +1055,11 @@ THO_2012}
 \APACinsertmetastar {%
 THO_2012}%
 \begin{APACrefauthors}%
-Thomas, A.%
+Thomas, A\BPBI M.%
 , B\"urgmann, R.%
-, Shelly, D.%
-, Beeler, N.%
-\BCBL {}\ \BBA {} Rudolph, M.%
+, Shelly, D\BPBI R.%
+, Beeler, N\BPBI M.%
+\BCBL {}\ \BBA {} Rudolph, M\BPBI L.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -972,8 +1087,8 @@ WEC_2011}
 \APACinsertmetastar {%
 WEC_2011}%
 \begin{APACrefauthors}%
-Wech, A.%
-\BCBT {}\ \BBA {} Creager, K.%
+Wech, A\BPBI G.%
+\BCBT {}\ \BBA {} Creager, K\BPBI C.%
 \end{APACrefauthors}%
 \unskip\
 \newblock

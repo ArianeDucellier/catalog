@@ -13,47 +13,48 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
 Warning--entry type for "ariane_ducellier_2021_5168867" isn't style-file defined
---line 319 of file bibliography.bib
+--line 354 of file bibliography.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 35 entries,
+Warning--No address in MCC_2006
+You've used 39 entries,
             6951 wiz_defined-function locations,
-            1506 strings with 16880 characters,
-and the built_in function-call counts, 74439 in all, are:
-= -- 8859
-> -- 646
-< -- 4081
-+ -- 4044
-- -- 73
-* -- 5167
-:= -- 14601
-add.period$ -- 142
-call.type$ -- 35
-change.case$ -- 613
+            1532 strings with 17677 characters,
+and the built_in function-call counts, 87492 in all, are:
+= -- 10714
+> -- 730
+< -- 4741
++ -- 5105
+- -- 81
+* -- 5934
+:= -- 16944
+add.period$ -- 159
+call.type$ -- 39
+change.case$ -- 681
 chr.to.int$ -- 0
-cite$ -- 70
-duplicate$ -- 1892
-empty$ -- 2691
-format.name$ -- 1133
-if$ -- 13496
+cite$ -- 79
+duplicate$ -- 2308
+empty$ -- 2993
+format.name$ -- 1254
+if$ -- 15903
 int.to.chr$ -- 0
-int.to.str$ -- 109
+int.to.str$ -- 121
 missing$ -- 0
-newline$ -- 924
-num.names$ -- 280
-pop$ -- 927
+newline$ -- 1028
+num.names$ -- 312
+pop$ -- 1117
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 158
 quote$ -- 0
-skip$ -- 4590
+skip$ -- 5256
 stack$ -- 0
-substring$ -- 4248
-swap$ -- 1150
-text.length$ -- 73
+substring$ -- 5511
+swap$ -- 1277
+text.length$ -- 96
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2872
-warning$ -- 0
-while$ -- 376
+type$ -- 3192
+warning$ -- 1
+while$ -- 417
 width$ -- 0
-write$ -- 1203
-(There was 1 warning)
+write$ -- 1339
+(There were 2 warnings)
