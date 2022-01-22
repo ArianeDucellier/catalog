@@ -95,30 +95,31 @@ def compute_traveltimes(family, stations, channels, latitudes, longitudes, \
             index_H = index_H + 1
             #
     # Compute the P-P travel times
-    df_P = pd.DataFrame(columns=['station1', 'station2', 't_PP'])
-    for (index1, station1) in enumerate(sta_V):
-        for (index2, station2) in enumerate(sta_V):
-            if index1 < index2:
-                cc = np.correlate(vertical[:, index1], vertical[:, index2], mode='full')
-                time = dt * (np.argmax(np.abs(cc)) - nt)
-                df_P.loc[len(df_P.index)] = [station1, station2, time]
+#    df_P = pd.DataFrame(columns=['station1', 'station2', 't_PP'])
+#    for (index1, station1) in enumerate(sta_V):
+#        for (index2, station2) in enumerate(sta_V):
+#            if index1 < index2:
+#                cc = np.correlate(vertical[:, index1], vertical[:, index2], mode='full')
+#                time = dt * (np.argmax(np.abs(cc)) - nt)
+#                df_P.loc[len(df_P.index)] = [station1, station2, time]
     # Compute the S-S travel times
-    df_S = pd.DataFrame(columns=['station1', 'station2', 't_SS_R', 't_SS_T'])
-    for (index1, station1) in enumerate(sta_H):
-        for (index2, station2) in enumerate(sta_H):
-            if index1 < index2:
-                cc_R = np.correlate(radial[:, index1], radial[:, index2], mode='full')
-                cc_T = np.correlate(transverse[:, index1], transverse[:, index2], mode='full')
-                time_R = dt * (np.argmax(np.abs(cc_R)) - nt)
-                time_S = dt * (np.argmax(np.abs(cc_T)) - nt)
-                df_S.loc[len(df_S.index)] = [station1, station2, time_R, time_S]
+#    df_S = pd.DataFrame(columns=['station1', 'station2', 't_SS_R', 't_SS_T'])
+#    for (index1, station1) in enumerate(sta_H):
+#        for (index2, station2) in enumerate(sta_H):
+#            if index1 < index2:
+#                cc_R = np.correlate(radial[:, index1], radial[:, index2], mode='full')
+#                cc_T = np.correlate(transverse[:, index1], transverse[:, index2], mode='full')
+#                time_R = dt * (np.argmax(np.abs(cc_R)) - nt)
+#                time_S = dt * (np.argmax(np.abs(cc_T)) - nt)
+#                df_S.loc[len(df_S.index)] = [station1, station2, time_R, time_S]
     # Save output files
-    namedir = 'traveltimes/' + family
-    if not os.path.exists(namedir):
-        os.makedirs(namedir)
-    pickle.dump(df_P, open(namedir + '/t_PP.pkl', 'wb'))
-    pickle.dump(df_S, open(namedir + '/t_SS.pkl', 'wb'))
-    pickle.dump(df_SP, open(namedir + '/t_SP.pkl', 'wb'))
+#    namedir = 'traveltimes/' + family
+#    if not os.path.exists(namedir):
+#        os.makedirs(namedir)
+#    pickle.dump(df_P, open(namedir + '/t_PP.pkl', 'wb'))
+#    pickle.dump(df_S, open(namedir + '/t_SS.pkl', 'wb'))
+#    pickle.dump(df_SP, open(namedir + '/t_SP.pkl', 'wb'))
+    return(cc_R, cc_T)
 
 if __name__ == '__main__':
 
