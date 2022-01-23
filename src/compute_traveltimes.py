@@ -87,8 +87,8 @@ def compute_traveltimes(family, stations, channels, latitudes, longitudes, \
             # Compute the S-P travel times
             cc_R = np.correlate(trace_UD.data, radial[:, index_H], mode='full')
             cc_T = np.correlate(trace_UD.data, transverse[:, index_H], mode='full')
-            time_R = dt * (np.argmax(np.abs(cc_R)) - nt)
-            time_T = dt * (np.argmax(np.abs(cc_T)) - nt)
+            time_R = dt * (nt - np.argmax(np.abs(cc_R)) - 1)
+            time_T = dt * (nt - np.argmax(np.abs(cc_T)) - 1)
             df_SP.loc[len(df_SP.index)] = [station, time_R, time_T]
             # Increment index
             sta_H.append(station)
