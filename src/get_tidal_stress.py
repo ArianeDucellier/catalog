@@ -27,10 +27,12 @@ xmnr = data['xmnr']
 ymnr = data['ymnr']
 
 # Loop on templates
-for i in range(0, np.shape(templates)[0]):
+for i in range(0, 1): #np.shape(templates)[0]):
 
-    lat0 = templates[i][2]
-    lon0 = templates[i][3]
+#    lat0 = templates[i][2]
+#    lon0 = templates[i][3]
+    lat0 = 40.22
+    lon0 = -122.89
     dx = (pi / 180.0) * a * cos(lat0 * pi / 180.0) / sqrt(1.0 - e * e * \
         sin(lat0 * pi / 180.0) * sin(lat0 * pi / 180.0))
     dy = (3.6 * pi / 648.0) * a * (1.0 - e * e) / ((1.0 - e * e * sin(lat0 * \

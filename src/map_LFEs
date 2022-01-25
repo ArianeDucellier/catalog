@@ -48,10 +48,18 @@ END
 
 gmt pstext names.dat -R$Rop -J$Jop -F+f12p,black -O -K >> $output
 
+# Depth = 34.9
 cat << END >> epicenter.dat
 -122.87 40.09
 END
 
-gmt psxy epicenter.dat -R$Rop -J$Jop -Sa0.5 -Gred -O >> $output
+gmt psxy epicenter.dat -R$Rop -J$Jop -Sa0.5 -Gred -O -K >> $output
+
+# Depth = 26
+cat << END >> corrected.dat
+-122.89 40.22
+END
+
+gmt psxy corrected.dat -R$Rop -J$Jop -Sa0.5 -Ggreen -O >> $output
 
 rm *.dat

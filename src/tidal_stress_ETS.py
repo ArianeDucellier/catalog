@@ -38,7 +38,7 @@ begin_time = pd.read_csv('../data/For_Ken_California_LFE/begin_time.txt', sep=' 
 begin_time.columns = ['latitude', 'longitude', 'begin_time']
 
 # Loop on templates
-for i in range(0, np.shape(templates)[0] - 5):
+for i in range(0, 1): #np.shape(templates)[0] - 5):
 
     # Look only at good data
     if threshold['threshold_perm'].iloc[i] > 0.0:
