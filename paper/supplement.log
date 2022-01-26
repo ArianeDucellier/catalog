@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  15 JAN 2022 21:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  25 JAN 2022 23:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -249,6 +249,12 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 
 LaTeX Warning: Label `pngfiguresample' multiply defined.
 
+
+LaTeX Warning: Label `pngfiguresample' multiply defined.
+
+
+LaTeX Warning: Label `pngfiguresample' multiply defined.
+
 )
 \openout1 = `supplement.aux'.
 
@@ -384,16 +390,12 @@ Package epstopdf Info: Source file: <figures/timeline_FAME.eps>
 (epstopdf)                    size: 21189 bytes
 (epstopdf)             Output file: <figures/timeline_FAME-eps-converted-to.pdf
 >
+(epstopdf)                    date: 2022-01-15 21:12:39
+(epstopdf)                    size: 15813 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/timeline_FAME-eps-
 converted-to.pdf figures/timeline_FAME.eps>
 (epstopdf)             \includegraphics on input line 38.
-runsystem(repstopdf --outfile=figures/timeline_FAME-eps-converted-to.pdf figure
-s/timeline_FAME.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figures/timeline_FAME-eps-converted-to.pdf
->
-(epstopdf)                    date: 2022-01-15 21:12:39
-(epstopdf)                    size: 15813 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figures/timeline_FAME-eps-converted-to.pdf, id=5, 722.7pt x 433.62pt>
 File: figures/timeline_FAME-eps-converted-to.pdf Graphic file (type pdf)
@@ -413,16 +415,12 @@ Package epstopdf Info: Source file: <figures/timeline_perm.eps>
 (epstopdf)                    size: 21459 bytes
 (epstopdf)             Output file: <figures/timeline_perm-eps-converted-to.pdf
 >
+(epstopdf)                    date: 2022-01-15 21:12:40
+(epstopdf)                    size: 16227 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/timeline_perm-eps-
 converted-to.pdf figures/timeline_perm.eps>
 (epstopdf)             \includegraphics on input line 44.
-runsystem(repstopdf --outfile=figures/timeline_perm-eps-converted-to.pdf figure
-s/timeline_perm.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figures/timeline_perm-eps-converted-to.pdf
->
-(epstopdf)                    date: 2022-01-15 21:12:40
-(epstopdf)                    size: 16227 bytes.
+Package epstopdf Info: Output file is already uptodate.
 <figures/timeline_perm-eps-converted-to.pdf, id=7, 722.7pt x 433.62pt>
 File: figures/timeline_perm-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -436,80 +434,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--45
 -nels avail-able for the com-pu-ta-tion of the 2004-
  []
 
+[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./fig
+ures/unfiltered_FAME-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[]\OT1/cmr/bx/n/9 Table S1. \OT1/cmr/m/n/9 Tem-po-rary sta-tions used for the 2
+007-2009 cat-a-log. The data cen-ters pro-vid-
+ []
 
-Overfull \hbox (42.21997pt too wide) in paragraph at lines 53--92
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+\OT1/cmr/m/n/9 ing the seis-mic wave-forms are the In-cor-po-rated Re-search In
+-sti-tu-tions for Seis-mol-ogy (IRIS)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+\OT1/cmr/m/n/9 (Alan Levan-der, 2007), and the North-ern Cal-i-for-nia Earth-qu
+ake Data Cen-ter (NCEDC),
+ []
+
+
+Overfull \hbox (42.21997pt too wide) in paragraph at lines 55--94
  [][] 
  []
 
 
-Overfull \hbox (44.35333pt too wide) in paragraph at lines 99--157
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]\OT1/cmr/bx/n/9 Table S2. \OT1/cmr/m/n/9 Per-ma-nent sta-tions used for the 2
+004-2011 cat-a-log. The data cen-ters pro-vid-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/9 ing the seis-mic wave-forms are the In-cor-po-rated Re-search In
+-sti-tu-tions for Seis-mol-ogy (IRIS)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/cmr/m/n/9 (Alan Levan-der, 2007), and the North-ern Cal-i-for-nia Earth-qu
+ake Data Cen-ter (NCEDC),
+ []
+
+
+Overfull \hbox (44.35333pt too wide) in paragraph at lines 102--160
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 5.7025pt on input line 157.
+LaTeX Warning: Float too large for page by 48.20248pt on input line 160.
 
 
-Overfull \hbox (2.11601pt too wide) in paragraph at lines 160--161
-[]\OT1/cmr/m/n/9 The data cen-ters pro-vid-ing the seis-mic wave-forms are the 
-In-cor-po-rated Re-search In-sti- 
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]\OT1/cmr/bx/n/9 Table S3. \OT1/cmr/m/n/9 Thresh-olds used to clean the cat-a-
+logs. An LFE is kept in the cat-a-log if its cross-
  []
 
 
-Overfull \hbox (8.18732pt too wide) in paragraph at lines 160--161
-\OT1/cmr/m/n/9 tu-tions for Seis-mol-ogy (IRIS) (Alan Levan-der, 2007), and the
- North-ern Cal-i-for-nia Earth-quake 
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+\OT1/cmr/m/n/9 correlation value mul-ti-plied by the num-ber of chan-nels recor
+d-ing when it was de-tected is higher
  []
 
 
-Underfull \vbox (badness 7722) has occurred while \output is active []
-
- [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./fi
-gures/unfiltered_FAME-eps-converted-to.pdf> <./figures/unfiltered_perm-eps-conv
-erted-to.pdf>] [2 <./figures/timeline_FAME-eps-converted-to.pdf> <./figures/tim
-eline_perm-eps-converted-to.pdf>] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-[]\OT1/cmr/m/n/9 Table S3: Thresh-olds used to clean the cat-a-logs. An LFE is 
-kept in
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+\OT1/cmr/m/n/9 than the thresh-old. The thresh-old is miss-ing for the fam-i-li
+es for which there were not enough
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-\OT1/cmr/m/n/9 the cat-a-log if its cross-correlation value mul-ti-plied by the
- num-ber of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-\OT1/cmr/m/n/9 chan-nels record-ing when it was de-tected is higher than the th
-resh-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-\OT1/cmr/m/n/9 old. The thresh-old is miss-ing for the fam-i-lies for which the
-re were not
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-\OT1/cmr/m/n/9 enough per-ma-nent sta-tions with good tem-plates to ob-tain re-
-li-able
- []
-
-[5] [6] (./supplement.aux)
+[2 <./figures/unfiltered_perm-eps-converted-to.pdf> <./figures/timeline_FAME-ep
+s-converted-to.pdf>] [3 <./figures/timeline_perm-eps-converted-to.pdf>]
+[4] [5] [6] (./supplement.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3471 strings out of 493117
- 47756 string characters out of 6135433
- 148598 words of memory out of 5000000
- 6870 multiletter control sequences out of 15000+600000
+ 3469 strings out of 493117
+ 47746 string characters out of 6135433
+ 158548 words of memory out of 5000000
+ 6868 multiletter control sequences out of 15000+600000
  8214 words of font info for 30 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
- 50i,8n,37p,446b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,8n,37p,387b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -520,7 +527,7 @@ cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on supplement.pdf (6 pages, 1993097 bytes).
+Output written on supplement.pdf (6 pages, 1997501 bytes).
 PDF statistics:
  222 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream

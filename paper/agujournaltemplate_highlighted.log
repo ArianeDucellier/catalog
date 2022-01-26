@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  16 JAN 2022 00:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  25 JAN 2022 21:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1024,11 +1024,11 @@ m-i-lies are sur-rounded by
  []
 
 Package epstopdf Info: Source file: <figures/map_LFEs.eps>
-(epstopdf)                    date: 2022-01-15 19:05:47
-(epstopdf)                    size: 267071 bytes
+(epstopdf)                    date: 2022-01-25 21:11:08
+(epstopdf)                    size: 267728 bytes
 (epstopdf)             Output file: <figures/map_LFEs-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-15 19:06:37
-(epstopdf)                    size: 283051 bytes
+(epstopdf)                    date: 2022-01-25 21:12:06
+(epstopdf)                    size: 283126 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/map_LFEs-eps-conve
 rted-to.pdf figures/map_LFEs.eps>
 (epstopdf)             \includegraphics on input line 211.
@@ -1068,14 +1068,14 @@ arby earth-quakes. \OT1/cmr/bx/n/9 Con-tour lines are the depth con-tours of
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 212--212
-\OT1/cmr/bx/n/9 the plate bound-ary model from  []McCrory et al.[] (2006). The 
-cross sec-tion shows the
+\OT1/cmr/bx/n/9 the plate bound-ary model from  []McCrory et al.[] (2006). MF i
+n-di-cates the Maa-cama
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 212--212
-\OT1/cmr/bx/n/9 depth of the LFE fam-i-lies. The line cor-re-sponds to the plat
-e bound-ary model from
+\OT1/cmr/bx/n/9 Fault. The cross sec-tion shows the depth of the LFE fam-i-lies
+. The line cor-re-sponds
  []
 
 
@@ -1961,12 +1961,12 @@ not show the LFEs for the days
  []
 
 Package epstopdf Info: Source file: <figures/zoom_ETS_events.eps>
-(epstopdf)                    date: 2021-08-07 14:28:59
-(epstopdf)                    size: 575926 bytes
+(epstopdf)                    date: 2022-01-25 21:25:45
+(epstopdf)                    size: 565647 bytes
 (epstopdf)             Output file: <figures/zoom_ETS_events-eps-converted-to.p
 df>
-(epstopdf)                    date: 2021-08-07 15:11:19
-(epstopdf)                    size: 340052 bytes
+(epstopdf)                    date: 2022-01-25 21:26:44
+(epstopdf)                    size: 339450 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/zoom_ETS_events-ep
 s-converted-to.pdf figures/zoom_ETS_events.eps>
 (epstopdf)             \includegraphics on input line 269.
@@ -2330,21 +2330,30 @@ LFE events as a func-tion of the dis-tance in the east-ern
  []
 
 
-Overfull \hbox (8.5302pt too wide) in paragraph at lines 332--332
+Overfull \hbox (23.19186pt too wide) in paragraph at lines 332--332
 \OT1/cmr/m/n/10 di-rec-tion from the \OT1/cmr/bx/n/10 west-ern \OT1/cmr/m/n/10 
-limit of the tremor. We clearly see that the \OT1/cmr/bx/n/10 av-er-age time 
+limit of the tremor. \OT1/cmr/bx/n/10 We de-fined an LFE event as at least 
  []
 
 
-Overfull \hbox (21.34178pt too wide) in paragraph at lines 332--332
-\OT1/cmr/bx/n/10 be-tween \OT1/cmr/m/n/10 de-creases with the down dip dis-tanc
-e. The south-ern-most fam-ily A is also added 
+Overfull \hbox (0.33936pt too wide) in paragraph at lines 332--332
+\OT1/cmr/bx/n/10 five LFEs recorded dur-ing a given day. If two events are sep-
+a-rated by less 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (14.78569pt too wide) in paragraph at lines 332--332
+\OT1/cmr/bx/n/10 than five days, we as-sume that this is a sin-gle event. \OT1/
+cmr/m/n/10 We clearly see that the \OT1/cmr/bx/n/10 av- 
+ []
 
- [11]
+
+Overfull \hbox (0.25801pt too wide) in paragraph at lines 332--332
+\OT1/cmr/bx/n/10 er-age time be-tween \OT1/cmr/m/n/10 de-creases with the down 
+dip dis-tance. The south-ern-most fam- 
+ []
+
+[11]
 Package epstopdf Info: Source file: <figures/set_daily_LFEs.eps>
 (epstopdf)                    date: 2021-08-02 20:11:37
 (epstopdf)                    size: 3858879 bytes
@@ -3079,7 +3088,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on agujournaltemplate_highlighted.pdf (17 pages, 2240150 bytes).
+Output written on agujournaltemplate_highlighted.pdf (17 pages, 2239886 bytes).
 
 PDF statistics:
  509 PDF objects out of 1000 (max. 8388607)

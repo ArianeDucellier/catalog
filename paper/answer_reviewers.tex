@@ -62,7 +62,7 @@ We added the references in the text.
 
 \bigskip
 
-The templates from Plourde et al. (2015) have a low signal-to-noise ratio and generally do not show clear P- and S-wave arrivals. Moreover, the wave arrivals can be located close to the beginning or close to the end of the time window, depending on the LFE family considered. We have chosen to keep the whole one-minute time window to be sure to include both the P- and the S-wave arrivals. The templates obtained using LFE detections from the 2-year-long catalog show clearer P- and S-wave arrivals and we have reduced the length of the time window to 30 seconds on average, depending on the LFE family considered. We have remade the templates using only LFEs that were present in both catalogs (FAME and permanent networks). The wave arrivals are now clearer and, to extend farther in time our catalog, we could reduce the size of the time window by using a different starting time for each station, depending on whether it is close or farther away from the LFE source location. 
+The templates from Plourde et al. (2015) have a low signal-to-noise ratio and generally do not show clear P- and S-wave arrivals, so the 60 seconds window helps be sure it contains the P and S waves. Moreover, the wave arrivals can be located close to the beginning or close to the end of the time window, depending on the LFE family considered. We have chosen to keep the whole one-minute time window to be sure to include both the P- and the S-wave arrivals. The templates obtained using LFE detections from the 2-year-long catalog show clearer P- and S-wave arrivals and we have reduced the length of the time window to 30 seconds on average, depending on the LFE family considered. We have remade the templates using only LFEs that were present in both catalogs (FAME and permanent networks). The wave arrivals are now clearer and, to extend farther in time our catalog, we could reduce the size of the time window by using a different starting time for each station, depending on whether it is close or farther away from the LFE source location. 
 
 \bigskip
 
@@ -78,9 +78,9 @@ We analyzed the seismic data one hour a time. For each hour of data, we assumed 
 
 \bigskip
 
-The choice of the threshold is explained in more detail later in the text, when we explain how we cleaned the longer catalog (2004-2011). The main idea is that if an LFE is present both in the 2007-2009 FAME catalog and in the 2004-2011 permanent networks catalog, then it is unlikely to be a false detection. We assumed that all LFEs present in both catalogs are true detections. The LFEs recorded during the period 2007-2009 that are present in only one catalog are then assumed to be false detections. We then chose a threshold such that at least 50 \% of the LFE detections are true detections. There is thus one threshold per family. The thresholds are also different for the two catalogs 2007-2009 and 2004-2011 because the stations and the quality of the templates are different for both catalogs. We added in a supplement a table with the values of the thresholds. \\
+The choice of the threshold is explained in more detail later in the text, when we explain how we cleaned the longer catalog (2004-2011). The main idea is that if an LFE is present both in the 2007-2009 FAME catalog and in the 2004-2011 permanent networks catalog, then it is unlikely to be a false detection. We assumed that all LFEs present in both catalogs are true detections. The LFEs recorded during the period 2007-2009 that are present in only one catalog are then assumed to be false detections. Our goal is to maximize the number of true detections in the filtered catalogs. For the FAME catalog, we then chose a threshold such that at least 50 \% of the LFE detections kept in the FAME catalog after filtering with the threshold, are true detections, that is they are also in the networks catalog. For the networks catalog, we chose a threshold such that at least 50 \% of the LFE detections kept in the networks catalog after filtering with the threshold (and occurring between 2007 and 2009), are true detections, that i that are also in the FAME catalog. There are thus two thresholds per family. The filtering is done such that the product of the cross-correlation for a given LFE by the number of channels recording at the time when the LFE occurred is higher than the threshold. The thresholds chosen for the FAME and the networks catalog are then different because the stations and the quality of the templates are different for both catalogs. For the period 2004-2007 and 2009-2011, we used the same threshold as determined for the period 2007-2009 for the networks catalog. We added in a supplement a table with the values of the thresholds. \\
 
-Our filtering method kept 37 \% of the LFEs for the 2004-2011 catalog and 16 \% of the LFEs for the 2007-2009 catalog. We have added in the supplements figures of the catalogs without filtering the LFEs.
+Our filtering method kept 37 \% of the LFEs for the networks catalog and 16 \% of the LFEs for the FAME catalog. We have added in the supplements figures of the catalogs without filtering the LFEs.
 
 \bigskip
 
@@ -144,7 +144,8 @@ We added these references.
 
 \bigskip
 
-The fault plane is the plate boundary model of McCrory et al. (2006).
+The fault plane is the plate boundary model of McCrory et al. (2012): McCrory, P. A., Blair, J. L., Waldhauser, F., Oppenheimer, D. H. (2012) Juan de Fuca slab geometry and its relation to Wadati-Benioff zone seismicity. 
+Journal of Geophysical Research: Solid Earth, 2012-09, Vol.117 (B9).
 
 \bigskip
 

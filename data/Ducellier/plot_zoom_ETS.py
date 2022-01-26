@@ -40,9 +40,9 @@ threshold = pd.read_csv('threshold_cc.txt', sep=r'\s{1,}', header=None, engine='
 threshold.columns = ['family', 'threshold_FAME', 'threshold_perm']
 
 # Start figure and plot tremor
-params = {'legend.fontsize': 24, \
-          'xtick.labelsize':24, \
-          'ytick.labelsize':24}
+params = {'legend.fontsize': 36, \
+          'xtick.labelsize':36, \
+          'ytick.labelsize':36}
 pylab.rcParams.update(params)
 plt.figure(1, figsize=(30, 10))
 
@@ -100,10 +100,12 @@ for event in range(0, 6):
     # End figure
     plt.xlim([xmin[event] - years[event], xmax[event] - years[event]]) # + 0.1 * (xmax - xmin)])
     plt.ylim([39.1, latmax])
-    plt.xlabel('Time (years)', fontsize=24)
+    plt.xlabel('Time (years)', fontsize=36)
     if event == 0:
-        plt.ylabel('Latitude', fontsize=24)
-    plt.title('Year {:d}'.format(years[event]), fontsize=24)
+        plt.ylabel('Latitude', fontsize=36)
+    else:
+        ax.axes.yaxis.set_ticklabels([])
+    plt.title('Year {:d}'.format(years[event]), fontsize=36)
 
 plt.tight_layout()
 plt.savefig('LFEdistribution_perm/zoom_ETS_events.eps', format='eps')

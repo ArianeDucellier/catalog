@@ -22,32 +22,34 @@
 
 \correspondingauthor{Ariane Ducellier}{ducela@uw.edu}
 
-\begin{figure}
+\begin{figure}[hbt!]
 \noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/unfiltered_FAME.eps}
 \caption{Same as Figure 3 from the main text, but without filtering the LFEs. They are many false detections at the beginning and the end of the catalog because the FAME stations were not yet installed / already removed.}
 \label{pngfiguresample}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[hbt!]
 \noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/unfiltered_perm.eps}
 \caption{Same as Figure 6 from the main text, but without filtering the LFEs.}
 \label{pngfiguresample}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[hbt!]
 \noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/timeline_FAME.eps}
 \caption{Evolution of the number of channels available for the computation of the 2007-2009 catalog using the temporary FAME stations.}
 \label{pngfiguresample}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[hbt!]
 \noindent\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 0cm},clip]{figures/timeline_perm.eps}
 \caption{Evolution of the number of channels available for the computation of the 2004-2011 catalog using the permanent stations.}
 \label{pngfiguresample}
 \end{figure}
 
-\begin{table}
-\caption{Temporary stations used for the 2007-2009 catalog.}
+\newpage
+
+\begin{table}[hbt!]
+\caption{Temporary stations used for the 2007-2009 catalog. The data centers providing the seismic waveforms are the Incorporated Research Institutions for Seismology (IRIS) (Alan Levander, 2007), and the Northern California Earthquake Data Center (NCEDC), doi:10.7932/NCEDC.}
 \centering
 \footnotesize
 \begin{tabular}{c c c c c c c c c}
@@ -91,9 +93,10 @@ YBH &  BK & BHE,BHN,BHZ & -- & NCEDC & 41.7320 & -122.7104 & 1993-07-24 & 2011-0
 \end{tabular}
 \end{table}
 
-\small{
-\begin{table}
-\caption{Permanent stations used for the 2004-2011 catalog.}
+\newpage
+
+\begin{table}[hbt!]
+\caption{Permanent stations used for the 2004-2011 catalog. The data centers providing the seismic waveforms are the Incorporated Research Institutions for Seismology (IRIS) (Alan Levander, 2007), and the Northern California Earthquake Data Center (NCEDC), doi:10.7932/NCEDC.}
 \centering
 \footnotesize
 \begin{tabular}{c c c c c c c c c}
@@ -155,24 +158,17 @@ YBH & BK & BHE,BHN,BHZ & 0 & NCEDC & 41.73204 & -122.71039 & 2011-06-03 & 3000-0
 \hline
 \end{tabular}
 \end{table}
-}
 
-The data centers providing the seismic waveforms are the Incorporated Research Institutions for Seismology (IRIS) (Alan Levander, 2007), and the Northern California Earthquake Data Center (NCEDC), doi:10.7932/NCEDC.
+\newpage
 
-\begin{center}
-\begin{longtable}{c c c}
-\caption{Thresholds used to clean the catalogs. An LFE is kept in the catalog if its cross-correlation value multiplied by the number of channels recording when it was detected is higher than the threshold. The threshold is missing for the families for which there were not enough permanent stations with good templates to obtain reliable LFE detections.} \\
+\begin{table}[hbt!]
+\caption{Thresholds used to clean the catalogs. An LFE is kept in the catalog if its cross-correlation value multiplied by the number of channels recording when it was detected is higher than the threshold. The threshold is missing for the families for which there were not enough permanent stations with good templates to obtain reliable LFE detections.}
+\centering
+\scriptsize
+\begin{tabular}{c c c}
 \hline
 Family & Threshold 2007-2009 & Threshold 2004-2011 \\
 \hline
-\endfirsthead
-\hline
-Family & Threshold 2007-2009 & Threshold 2004-2011 \\
-\hline
-\endhead
-\endfoot
-\hline
-\endlastfoot\
 080401.05.050 & 1.4 & 1.9 \\
 080405.11.042 & 2.0 & 1.6 \\
 080408.08.007 & 1.7 & 1.5 \\
@@ -240,7 +236,7 @@ Family & Threshold 2007-2009 & Threshold 2004-2011 \\
 080326.09.007 & NA & NA \\
 080328.09.029 & NA & NA \\
 \hline
-\end{longtable}
-\end{center}
+\end{tabular}
+\end{table}
 
 \end{document}

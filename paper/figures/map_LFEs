@@ -18,6 +18,13 @@ gmt grdcontour plate_boundary.grd -A10 -J$Jop -R$Rop -O -K >> $output
 # Faults
 gmt psxy fault.xy -R$Rop -J$Jop -Wthin,grey -O -K >> $output
 
+# Name of faults
+cat << END >> fault_names.dat
+-123.55 39.55 MF
+END
+
+gmt pstext fault_names.dat -R$Rop -J$Jop -F+f12p,black -O -K >> $output
+
 # Tremor
 gmt psxy tremor.txt -R$Rop -J$Jop -Sc0.1 -Ggrey -O -K >> $output
 
