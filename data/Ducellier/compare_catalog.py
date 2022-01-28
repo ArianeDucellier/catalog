@@ -16,8 +16,6 @@ def compare_catalog(family, tbegin, tend, dt, thresh1, thresh2):
         'cc': float, 'nchannel': int})
     date = pd.to_datetime(df1.drop(columns=['cc', 'nchannel']))
     df1['date'] = date
-    df1 = df1[(df1['date'] >= tbegin) & (df1['date'] <= tend)]
-    df1_filter = df1.loc[df1['cc'] * df1['nchannel'] >= thresh1]
 
     # Read network catalog
     namefile = 'catalogs/' + family + '/catalog_2004_2011.pkl'
@@ -30,6 +28,14 @@ def compare_catalog(family, tbegin, tend, dt, thresh1, thresh2):
     date = pd.to_datetime(df2.drop(columns=['cc', 'nchannel']))
     df2['date'] = date
     df2['date'] = df2['date'] - timedelta(seconds=dt)
+
+    # LFEs in both catalog
+    df = pd.merge(df1, df2, on=['date'])
+
+    # Filter catalogs with data and thresholds
+    df1 = df1[(df1['date'] >= tbegin) & (df1['date'] <= tend)]
+    df1_filter = df1.loc[df1['cc'] * df1['nchannel'] >= thresh1]
+
     df2 = df2[(df2['date'] >= tbegin) & (df2['date'] <= tend)]
     df2_filter = df2.loc[df2['cc'] * df2['nchannel'] >= thresh2]
 
@@ -48,6 +54,7 @@ def compare_catalog(family, tbegin, tend, dt, thresh1, thresh2):
     df_added_network = df_merge[df_merge['_merge'] == 'left_only']
     
     print(family)
+    print('LFEs in both catalogs: {}'.format(len(df)))
     print('FAME: false detections = {}, total = {}, ratio = {}'.format( \
          len(df_added_FAME), len(df1_filter), len(df_added_FAME) / len(df1_filter)))
     print('Network: false detections = {}, total = {}, ratio = {}'.format( \
@@ -65,10 +72,10 @@ if __name__ == '__main__':
     tend = datetime(2009, 5, 14, 0, 0, 0)
 
     # Thresholds
-    thresh1 = 1.4
-    thresh2 = 1.9
+    thresh1 = 1.8
+    thresh2 = 1.4
 
-    for i in range(0, 1): #len(families)):
+    for i in range(19, 20): #len(families)):
         family = families['family'].iloc[i]
         dt = families['dt'].iloc[i]
         compare_catalog(family, tbegin, tend, dt, thresh1, thresh2)

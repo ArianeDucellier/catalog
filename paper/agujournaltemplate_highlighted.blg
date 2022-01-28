@@ -19,35 +19,35 @@ Warning--No address in MCC_2006
 You've used 39 entries,
             6951 wiz_defined-function locations,
             1532 strings with 17677 characters,
-and the built_in function-call counts, 87492 in all, are:
-= -- 10714
+and the built_in function-call counts, 87549 in all, are:
+= -- 10725
 > -- 730
-< -- 4741
-+ -- 5105
+< -- 4743
++ -- 5113
 - -- 81
-* -- 5934
-:= -- 16944
+* -- 5936
+:= -- 16951
 add.period$ -- 159
 call.type$ -- 39
 change.case$ -- 681
 chr.to.int$ -- 0
 cite$ -- 79
-duplicate$ -- 2308
+duplicate$ -- 2311
 empty$ -- 2993
 format.name$ -- 1254
-if$ -- 15903
+if$ -- 15914
 int.to.chr$ -- 0
 int.to.str$ -- 121
 missing$ -- 0
 newline$ -- 1028
 num.names$ -- 312
-pop$ -- 1117
+pop$ -- 1118
 preamble$ -- 1
 purify$ -- 158
 quote$ -- 0
-skip$ -- 5256
+skip$ -- 5258
 stack$ -- 0
-substring$ -- 5511
+substring$ -- 5521
 swap$ -- 1277
 text.length$ -- 96
 text.prefix$ -- 0

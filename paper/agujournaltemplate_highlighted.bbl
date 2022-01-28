@@ -1,36 +1,6 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
-{Alan Levander}%
-}{%
-{Alan Levander}%
-}{%
-{\protect \APACyear {2007}}%
-}]{%
-https://doi.org/10.7914/sn/xq_2007}
-\APACinsertmetastar {%
-https://doi.org/10.7914/sn/xq_2007}%
-\begin{APACrefauthors}%
-{Alan Levander}.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2007}{}{}.
-\newblock
-\APACrefbtitle {Seismic and Geodetic Investigations of Mendocino Triple
-  Junction Dynamics.} {Seismic and geodetic investigations of mendocino triple
-  junction dynamics.}
-\newblock
-\APACaddressPublisher{}{International Federation of Digital Seismograph
-  Networks}.
-\newblock
-\begin{APACrefURL} \url{https://www.fdsn.org/networks/detail/XQ_2007/}
-  \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.7914/SN/XQ_2007} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Audet%
 \ \BBA {} Kim%
 }{%
@@ -73,7 +43,7 @@ BAR_2018}
 BAR_2018}%
 \begin{APACrefauthors}%
 Baratin, L\BPBI M.%
-, Chamberlain, C.%
+, Chamberlain, C\BPBI J.%
 , Townend, J.%
 \BCBL {}\ \BBA {} Savage, M\BPBI K.%
 \end{APACrefauthors}%
@@ -552,6 +522,36 @@ Katsumata, A.%
   southwest {Japan}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Geophysical Research Letters}{30}{1}{1020}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Levander, A.}%
+}{%
+{Levander, A.}%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+https://doi.org/10.7914/sn/xq_2007}
+\APACinsertmetastar {%
+https://doi.org/10.7914/sn/xq_2007}%
+\begin{APACrefauthors}%
+{Levander, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+\APACrefbtitle {Seismic and Geodetic Investigations of Mendocino Triple
+  Junction Dynamics.} {Seismic and geodetic investigations of mendocino triple
+  junction dynamics.}
+\newblock
+\APACaddressPublisher{}{International Federation of Digital Seismograph
+  Networks}.
+\newblock
+\begin{APACrefURL} \url{https://www.fdsn.org/networks/detail/XQ_2007/}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.7914/SN/XQ_2007} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

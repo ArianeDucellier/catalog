@@ -1,86 +1,86 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  26 JAN 2022 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  27 JAN 2022 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **agujournaltemplate_highlighted.tex
 (./agujournaltemplate_highlighted.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (./agujournal2019.cls
 Document Class: agujournal2019 01/14/2019
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 96.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count79
 ))
 \Gin@req@height=\dimen102
 \Gin@req@width=\dimen103
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (./trackchanges.sty
 Package: trackchanges 2009/04/22 v0.7.0 TrackChanges file 
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count80
 \calc@Bcount=\count81
 \calc@Adimen=\dimen104
 \calc@Bdimen=\dimen105
 \calc@Askip=\skip41
 \calc@Bskip=\skip42
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
 \calc@Ccount=\count82
 \calc@Cskip=\skip43
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/soul/soul.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks15
 \SOUL@lasttoken=\toks16
@@ -92,20 +92,21 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen107
 \SOUL@ulht=\dimen108
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/morefloats/morefloats.sty
-Package: morefloats 2015/07/22 v1.0h Raise limit of unprocessed floats (HMM)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/morefloats/morefloats.sty
+Package: morefloats 2012/01/28 v1.0f Raise limit of unprocessed floats (HMM; DH
+)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
 Package etexcmds Info: Could not find \expanded.
@@ -113,10 +114,28 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-Package morefloats Info: Maximum number of possible floats asked for: 36
-(morefloats)             (i.e. 18 more floats).
+Package morefloats Info: Maximum number of possible floats asked for: 36.
 (morefloats)             LaTeX might run out of memory before this
 (morefloats)             (in which case it will notify you).
+(morefloats)              on input line 171.
+\bx@S=\insert233
+\bx@T=\insert232
+\bx@U=\insert231
+\bx@V=\insert230
+\bx@W=\insert229
+\bx@X=\insert228
+\bx@Y=\insert227
+\bx@Z=\insert226
+\bx@AA=\insert225
+\bx@AB=\insert224
+\bx@AC=\insert223
+\bx@AD=\insert222
+\bx@AE=\insert221
+\bx@AF=\insert220
+\bx@AG=\insert219
+\bx@AH=\insert218
+\bx@AI=\insert217
+\bx@AJ=\insert216
 )
 \c@userid=\count83
 \c@changenumber=\count84
@@ -124,7 +143,7 @@ Package morefloats Info: Maximum number of possible floats asked for: 36
 \c@numeditors=\count86
 \c@maxeditors=\count87
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/lineno/lineno.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count88
 \output=\toks20
@@ -142,13 +161,13 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box26
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/indentfirst.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ms/ragged2e.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everysel.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 \CenteringLeftskip=\skip45
@@ -166,7 +185,7 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \RaggedRightParindent=\skip57
 \JustifyingParindent=\skip58
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/rotating/rotating.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \c@r@tfl@t=\count95
 \rotFPtop=\skip59
@@ -174,7 +193,7 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \rot@float@box=\box27
 \rot@mess@toks=\toks21
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/ulem/ulem.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box28
 \UL@hyphenbox=\box29
 \UL@skip=\skip61
@@ -199,7 +218,7 @@ Package: ulem 2012/05/18
 \c@appendnum=\count105
 \bibindent=\dimen117
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/apacite/apacite.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/apacite/apacite.sty
 Package: apacite 2013/07/21 v6.03 APA citation
 \c@BibCnt=\count106
 \bibleftmargin=\skip64
@@ -251,7 +270,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
- (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
 \scratchdimen=\dimen118
@@ -264,33 +283,34 @@ LaTeX Font Info:    ... okay on input line 68.
 \MPnumerator=\count111
 \makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks24
-) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
+(grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -303,7 +323,7 @@ ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 68.
 \c@maskedRefs=\count113
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/apacite/english.apc
+(/usr/local/texlive/2014/texmf-dist/tex/latex/apacite/english.apc
 File: english.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
@@ -328,7 +348,7 @@ Overfull \hbox (15.51569pt too wide) in paragraph at lines 141--142
 g the big tremor events, 
  []
 
-[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (11.01573pt too wide) in paragraph at lines 157--159
 \OT1/cmr/m/n/10 Low-frequency earth-quakes (LFEs) are small mag-ni-tude earth-q
 uakes, with typ-i-cal mag- 
@@ -1010,10 +1030,10 @@ m-i-lies are sur-rounded by
  []
 
 Package epstopdf Info: Source file: <figures/map_LFEs.eps>
-(epstopdf)                    date: 2022-01-26 08:54:49
+(epstopdf)                    date: 2022-01-25 21:11:08
 (epstopdf)                    size: 267728 bytes
 (epstopdf)             Output file: <figures/map_LFEs-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-26 08:54:49
+(epstopdf)                    date: 2022-01-25 21:12:06
 (epstopdf)                    size: 283126 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/map_LFEs-eps-conve
 rted-to.pdf figures/map_LFEs.eps>
@@ -1317,10 +1337,10 @@ the cat-a-log for fam-ily E (in-
  []
 
 Package epstopdf Info: Source file: <figures/hist.eps>
-(epstopdf)                    date: 2020-10-20 09:51:38
+(epstopdf)                    date: 2020-07-21 14:01:02
 (epstopdf)                    size: 55495 bytes
 (epstopdf)             Output file: <figures/hist-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2020-11-07 17:00:22
 (epstopdf)                    size: 20820 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/hist-eps-converted
 -to.pdf figures/hist.eps>
@@ -1424,23 +1444,35 @@ l-ter-ing the cat-a-log has re-moved about
  []
 
 
-Overfull \hbox (1.93248pt too wide) in paragraph at lines 230--230
-\OT1/cmr/bx/n/10 84 % of the LFEs. As a ref-er-ence, we plot-ted in the Sup-ple
--men-tary Ma-te- 
+Overfull \hbox (14.25182pt too wide) in paragraph at lines 230--230
+\OT1/cmr/bx/n/10 84 % of the LFEs, com-pared to the ini-tial cat-a-log where LF
+Es were de-tected 
  []
 
 
-Overfull \hbox (22.14066pt too wide) in paragraph at lines 230--230
-\OT1/cmr/bx/n/10 rial the cat-a-log with-out fil-ter-ing the LFEs and the num-b
-er of chan-nels record- 
+Overfull \hbox (0.10335pt too wide) in paragraph at lines 230--230
+\OT1/cmr/bx/n/10 us-ing the 8 * MAD thresh-old for the cross-correlation. As a 
+ref-er-ence, we 
+ []
+
+
+Overfull \hbox (2.91577pt too wide) in paragraph at lines 230--230
+\OT1/cmr/bx/n/10 plot-ted in the Sup-ple-men-tary Ma-te-rial (Fig-ure S1) the c
+at-a-log with-out fil- 
+ []
+
+
+Overfull \hbox (12.51709pt too wide) in paragraph at lines 230--230
+\OT1/cmr/bx/n/10 ter-ing the LFEs and the num-ber of chan-nels record-ing as a 
+func-tion of time.  
  []
 
 Package epstopdf Info: Source file: <figures/tremor_nb_FAME_3.eps>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-02 18:54:39
 (epstopdf)                    size: 341416 bytes
 (epstopdf)             Output file: <figures/tremor_nb_FAME_3-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-02 19:16:25
 (epstopdf)                    size: 221017 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/tremor_nb_FAME_3-e
 ps-converted-to.pdf figures/tremor_nb_FAME_3.eps>
@@ -1493,7 +1525,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--234
 we do not show the LFEs for the days
  []
 
-
+[6 <./figures/hist-eps-converted-to.pdf>]
 Overfull \hbox (9.93231pt too wide) in paragraph at lines 238--238
 []\OT1/cmr/m/n/10 We note that there is a good spa-tial and tem-po-ral agree-me
 nt be-tween tremor and 
@@ -1536,9 +1568,6 @@ Overfull \hbox (17.85545pt too wide) in paragraph at lines 238--238
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./figures/hist-eps-converted-to.pdf>]
 Overfull \hbox (1.62672pt too wide) in paragraph at lines 240--240
 []\OT1/cmr/m/n/10 We then used the LFE de-tec-tions from the 2007-2009 cat-a-lo
 g to make new tem- 
@@ -1660,10 +1689,10 @@ d this new, shorter tem-plates
 
 [7 <./figures/tremor_nb_FAME_3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/templates.eps>
-(epstopdf)                    date: 2020-10-20 09:51:38
+(epstopdf)                    date: 2020-08-13 16:27:46
 (epstopdf)                    size: 55533 bytes
 (epstopdf)             Output file: <figures/templates-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2020-11-07 17:00:25
 (epstopdf)                    size: 23187 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/templates-eps-conv
 erted-to.pdf figures/templates.eps>
@@ -1762,82 +1791,82 @@ true de-tec-tions. As the num-
  []
 
 
-Overfull \hbox (19.65459pt too wide) in paragraph at lines 252--252
+Overfull \hbox (15.0157pt too wide) in paragraph at lines 252--252
 \OT1/cmr/m/n/10 ber of sta-tions record-ing may vary over time (es-pe-cially fo
-r the net-work cat-a-log), we keep 
+r the per-ma-nent net-works cat- 
  []
 
 
-Overfull \hbox (20.68236pt too wide) in paragraph at lines 252--252
-\OT1/cmr/m/n/10 only the LFE de-tec-tions such that the as-so-ci-ated cross cor
--re-la-tion mul-ti-plied by the num- 
+Overfull \hbox (4.57117pt too wide) in paragraph at lines 252--252
+\OT1/cmr/m/n/10 a-log), we keep only the LFE de-tec-tions such that the as-so-c
+i-ated cross cor-re-la-tion mul- 
  []
 
 
-Overfull \hbox (1.65453pt too wide) in paragraph at lines 252--252
-\OT1/cmr/m/n/10 ber of chan-nels record-ing at that time is higher than the thr
-esh-old. Thus, if there are 
+Overfull \hbox (2.09903pt too wide) in paragraph at lines 252--252
+\OT1/cmr/m/n/10 ti-plied by the num-ber of chan-nels record-ing at that time is
+ higher than the thresh-old. 
  []
 
 
-Overfull \hbox (5.57118pt too wide) in paragraph at lines 252--252
-\OT1/cmr/m/n/10 few sta-tions record-ings at some time, the cross cor-re-la-tio
-n must be higher for the LFE 
+Overfull \hbox (29.68228pt too wide) in paragraph at lines 252--252
+\OT1/cmr/m/n/10 Thus, if there are few sta-tions record-ings at some time, the 
+cross cor-re-la-tion must be higher 
  []
 
 
-Overfull \hbox (15.57121pt too wide) in paragraph at lines 252--252
-\OT1/cmr/m/n/10 to be con-sid-ered as a true de-tec-tion. We then com-pared the
- nor-mal-ized num-ber of LFEs 
+Overfull \hbox (22.18233pt too wide) in paragraph at lines 252--252
+\OT1/cmr/m/n/10 for the LFE to be con-sid-ered as a true de-tec-tion. We then c
+om-pared the nor-mal-ized num- 
  []
 
 
-Overfull \hbox (3.23792pt too wide) in paragraph at lines 252--252
-\OT1/cmr/m/n/10 ob-tained with the two cat-a-logs. Ex-am-ples are given in Fig-
-ure 5 for fam-i-lies A (square 
+Overfull \hbox (2.21016pt too wide) in paragraph at lines 252--252
+\OT1/cmr/m/n/10 ber of LFEs ob-tained with the two cat-a-logs. Ex-am-ples are g
+iven in Fig-ure 5 for fam-i- 
  []
 
 
-Overfull \hbox (4.51575pt too wide) in paragraph at lines 252--252
-\OT1/cmr/m/n/10 in Fig-ure 1) and E (in-verted tri-an-gle in Fig-ure 1). Al-tho
-ugh the num-ber of LFEs dur- 
+Overfull \hbox (8.04349pt too wide) in paragraph at lines 252--252
+\OT1/cmr/m/n/10 lies A (square in Fig-ure 1) and E (in-verted tri-an-gle in Fig
+-ure 1). Al-though the num-ber 
  []
 
 
-Overfull \hbox (4.87675pt too wide) in paragraph at lines 252--252
-\OT1/cmr/m/n/10 ing each event may not be the same, we clearly see for fam-ily 
-E that the tim-ing of the 
+Overfull \hbox (2.67758pt too wide) in paragraph at lines 252--252
+\OT1/cmr/m/n/10 of LFEs dur-ing each \OT1/cmr/bx/n/10 clus-ter of LFEs \OT1/cmr
+/m/n/10 may not be the same, we clearly see for fam-ily 
  []
 
 
-Overfull \hbox (9.68228pt too wide) in paragraph at lines 252--252
-\OT1/cmr/m/n/10 events are the same for both cat-a-logs. Fam-ily A has much sho
-rter re-cur-rence times but 
+Overfull \hbox (25.51572pt too wide) in paragraph at lines 252--252
+\OT1/cmr/m/n/10 E that the tim-ing of the events are the same for both cat-a-lo
+gs. Fam-ily A has much shorter 
  []
 
 
-Overfull \hbox (0.51334pt too wide) in paragraph at lines 252--252
-\OT1/cmr/m/n/10 most events \OT1/cmr/bx/n/10 are present in both cat-a-logs as 
-well: forty events are present in 
+Overfull \hbox (10.94559pt too wide) in paragraph at lines 252--252
+\OT1/cmr/m/n/10 re-cur-rence times but most \OT1/cmr/bx/n/10 clus-ters of LFEs 
+are present in both cat-a-logs as well: 
  []
 
 
-Overfull \hbox (6.5796pt too wide) in paragraph at lines 252--252
-\OT1/cmr/bx/n/10 both cat-a-logs, three events are present in the FAME cat-a-lo
-g but not in the 
+Overfull \hbox (5.85605pt too wide) in paragraph at lines 252--252
+\OT1/cmr/bx/n/10 forty clus-ters are present in both cat-a-logs, three clus-ter
+s are present in the 
  []
 
 
-Overfull \hbox (13.28928pt too wide) in paragraph at lines 252--252
-\OT1/cmr/bx/n/10 net-works cat-a-log and one event is present in the net-works 
-cat-a-log but not in 
+Overfull \hbox (8.40039pt too wide) in paragraph at lines 252--252
+\OT1/cmr/bx/n/10 FAME cat-a-log but not in the net-works cat-a-log and one clus
+-ter is present in 
  []
 
 Package epstopdf Info: Source file: <figures/cumulative.eps>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-02 20:08:07
 (epstopdf)                    size: 37679 bytes
 (epstopdf)             Output file: <figures/cumulative-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-02 20:12:15
 (epstopdf)                    size: 22639 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/cumulative-eps-con
 verted-to.pdf figures/cumulative.eps>
@@ -1947,24 +1976,36 @@ esh-old com-puted above.
  []
 
 
-Overfull \hbox (4.01018pt too wide) in paragraph at lines 260--260
-\OT1/cmr/bx/n/10 Fil-ter-ing the cat-a-log has re-moved about 63 % of the LFEs.
- As a ref-er-ence, 
+Overfull \hbox (10.32124pt too wide) in paragraph at lines 260--260
+\OT1/cmr/bx/n/10 Fil-ter-ing the cat-a-log has re-moved about 63 % of the LFEs,
+ com-pared to the 
  []
 
 
-Overfull \hbox (4.62411pt too wide) in paragraph at lines 260--260
-\OT1/cmr/bx/n/10 we plot-ted in the Sup-ple-men-tary Ma-te-rial the cat-a-log w
-ith-out fil-ter-ing the 
+Overfull \hbox (2.77412pt too wide) in paragraph at lines 260--260
+\OT1/cmr/bx/n/10 ini-tial cat-a-log where LFEs were de-tected us-ing the 8 * MA
+D thresh-old for 
+ []
+
+
+Overfull \hbox (6.79497pt too wide) in paragraph at lines 260--260
+\OT1/cmr/bx/n/10 the cross-correlation. As a ref-er-ence, we plot-ted in the Su
+p-ple-men-tary Ma- 
+ []
+
+
+Overfull \hbox (7.16714pt too wide) in paragraph at lines 260--260
+\OT1/cmr/bx/n/10 te-rial (Fig-ure S2) the cat-a-log with-out fil-ter-ing the LF
+Es and the num-ber of 
  []
 
 [8 <./figures/templates-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/tremor_nb_perm_3.eps>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-02 18:59:24
 (epstopdf)                    size: 1859646 bytes
 (epstopdf)             Output file: <figures/tremor_nb_perm_3-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-02 19:16:27
 (epstopdf)                    size: 821814 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/tremor_nb_perm_3-e
 ps-converted-to.pdf figures/tremor_nb_perm_3.eps>
@@ -2003,11 +2044,11 @@ not show the LFEs for the days
  []
 
 Package epstopdf Info: Source file: <figures/zoom_ETS_events.eps>
-(epstopdf)                    date: 2022-01-26 08:54:49
+(epstopdf)                    date: 2022-01-25 21:25:45
 (epstopdf)                    size: 565647 bytes
 (epstopdf)             Output file: <figures/zoom_ETS_events-eps-converted-to.p
 df>
-(epstopdf)                    date: 2022-01-26 08:54:49
+(epstopdf)                    date: 2022-01-25 21:26:44
 (epstopdf)                    size: 339450 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/zoom_ETS_events-ep
 s-converted-to.pdf figures/zoom_ETS_events.eps>
@@ -2116,10 +2157,6 @@ Overfull \hbox (31.82143pt too wide) in paragraph at lines 281--293
  []
 
 
-Underfull \vbox (badness 8000) has occurred while \output is active []
-
- [9 <./figures/cumulative-eps-converted-to.pdf>] [10 <./figures/tremor_nb_perm_
-3-eps-converted-to.pdf> <./figures/zoom_ETS_events-eps-converted-to.pdf>]
 Overfull \hbox (1.18225pt too wide) in paragraph at lines 295--295
 []\OT1/cmr/m/n/10 It is known than tec-tonic tremor can be trig-gered by sur-fa
 ce waves from dis-tant 
@@ -2168,6 +2205,10 @@ in Ta-ble 2. We also looked at
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./figures/cumulative-eps-converted-to.pdf>] [10 <./figures/tremor_nb_perm_
+3-eps-converted-to.pdf> <./figures/zoom_ETS_events-eps-converted-to.pdf>]
 Overfull \hbox (11.65451pt too wide) in paragraph at lines 330--330
 []\OT1/cmr/m/n/10 Although we ob-serve an in-crease in LFE ac-tiv-ity for some 
 fam-i-lies sev-eral days af- 
@@ -2372,36 +2413,42 @@ LFE events as a func-tion of the dis-tance in the east-ern
  []
 
 
-Overfull \hbox (23.19186pt too wide) in paragraph at lines 332--332
+Overfull \hbox (3.87392pt too wide) in paragraph at lines 332--332
 \OT1/cmr/m/n/10 di-rec-tion from the \OT1/cmr/bx/n/10 west-ern \OT1/cmr/m/n/10 
-limit of the tremor. \OT1/cmr/bx/n/10 We de-fined an LFE event as at least 
+limit of the tremor. \OT1/cmr/bx/n/10 We as-sume that there is an LFE 
  []
 
 
-Overfull \hbox (0.33936pt too wide) in paragraph at lines 332--332
-\OT1/cmr/bx/n/10 five LFEs recorded dur-ing a given day. If two events are sep-
-a-rated by less 
+Overfull \hbox (7.49487pt too wide) in paragraph at lines 332--332
+\OT1/cmr/bx/n/10 event av-ery time that at least five LFEs are recorded dur-ing
+ a given day. If 
  []
 
 
-Overfull \hbox (14.78569pt too wide) in paragraph at lines 332--332
-\OT1/cmr/bx/n/10 than five days, we as-sume that this is a sin-gle event. \OT1/
-cmr/m/n/10 We clearly see that the \OT1/cmr/bx/n/10 av- 
+Overfull \hbox (12.45023pt too wide) in paragraph at lines 332--332
+\OT1/cmr/bx/n/10 two events are sep-a-rated by less than five days, we as-sume 
+that this is a sin- 
  []
 
 
-Overfull \hbox (0.25801pt too wide) in paragraph at lines 332--332
-\OT1/cmr/bx/n/10 er-age time be-tween \OT1/cmr/m/n/10 de-creases with the down 
-dip dis-tance. The south-ern-most fam- 
+Overfull \hbox (19.15434pt too wide) in paragraph at lines 332--332
+\OT1/cmr/bx/n/10 gle event. \OT1/cmr/m/n/10 We clearly see that the \OT1/cmr/bx
+/n/10 av-er-age time be-tween LFE events \OT1/cmr/m/n/10 de-creases with 
+ []
+
+
+Overfull \hbox (5.93237pt too wide) in paragraph at lines 332--332
+\OT1/cmr/m/n/10 the down dip dis-tance. The south-ern-most fam-ily A is also ad
+ded in Fig-ure 9, but does 
  []
 
 [11]
 Package epstopdf Info: Source file: <figures/set_daily_LFEs.eps>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-02 20:11:37
 (epstopdf)                    size: 3858879 bytes
 (epstopdf)             Output file: <figures/set_daily_LFEs-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-02 20:12:17
 (epstopdf)                    size: 238761 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/set_daily_LFEs-eps
 -converted-to.pdf figures/set_daily_LFEs.eps>
@@ -2440,11 +2487,11 @@ p-i-cally have far more LFE swarms
  []
 
 Package epstopdf Info: Source file: <figures/nb_LFE_events.eps>
-(epstopdf)                    date: 2022-01-16 09:43:33
+(epstopdf)                    date: 2022-01-15 21:58:17
 (epstopdf)                    size: 24240 bytes
 (epstopdf)             Output file: <figures/nb_LFE_events-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2022-01-16 09:43:33
+(epstopdf)                    date: 2022-01-15 23:39:23
 (epstopdf)                    size: 19056 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/nb_LFE_events-eps-
 converted-to.pdf figures/nb_LFE_events.eps>
@@ -2541,8 +2588,11 @@ Overfull \hbox (8.76564pt too wide) in paragraph at lines 346--347
 ive pro-motes shear fail-ure) 
  []
 
-[12 <./figures/set_daily_LFEs-eps-converted-to.pdf>] [13 <./figures/nb_LFE_even
-ts-eps-converted-to.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./figures/set_daily_LFEs-eps-converted-to.pdf>] [13 <./figures/nb_LFE_eve
+nts-eps-converted-to.pdf>]
 Overfull \hbox (9.75858pt too wide) in paragraph at lines 354--355
 []\OT1/cmr/m/n/10 where $^^A\OML/cmm/m/it/10 ^^\$ \OT1/cmr/m/n/10 is the change
  in shear stress on the fault plane in the slip di-rec-tion, $^^A\OML/cmm/m/it/
@@ -2677,16 +2727,16 @@ that LFE fam-ily A may not
  []
 
 Package epstopdf Info: Source file: <figures/coulomb.eps>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-02 20:27:46
 (epstopdf)                    size: 63798 bytes
 (epstopdf)             Output file: <figures/coulomb-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-07 16:50:54
+(epstopdf)                    date: 2021-08-03 07:54:04
 (epstopdf)                    size: 21732 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/coulomb-eps-conver
 ted-to.pdf figures/coulomb.eps>
 (epstopdf)             \includegraphics on input line 357.
 Package epstopdf Info: Output file is already uptodate.
-<figures/coulomb-eps-converted-to.pdf, id=391, 2023.56pt x 722.7pt>
+<figures/coulomb-eps-converted-to.pdf, id=392, 2023.56pt x 722.7pt>
 File: figures/coulomb-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/coulomb-eps-converted-to.pdf>
@@ -2765,10 +2815,7 @@ Overfull \hbox (22.68237pt too wide) in paragraph at lines 364--365
 am-i-lies. Tidal stress changes 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14 <./figures/coulomb-eps-converted-to.pdf>]
+[14 <./figures/coulomb-eps-converted-to.pdf>]
 Overfull \hbox (5.37685pt too wide) in paragraph at lines 541--543
 \OT1/cmr/m/n/10 cat-a-log, D. Bo-yarko for shar-ing his tremor cat-a-log, and H
 . Hous-ton for the tidal stress 
@@ -2811,9 +2858,9 @@ Overfull \hbox (12.57121pt too wide) in paragraph at lines 541--543
  []
 
 
-Overfull \hbox (17.37682pt too wide) in paragraph at lines 541--543
+Overfull \hbox (9.59901pt too wide) in paragraph at lines 541--543
 \OT1/cmr/m/n/10 for this anal-y-sis can be down-loaded from the IRIS web-site [
-]Alan Levan-der, 2007). Wave- 
+]Levander, A., 2007). Wave- 
  []
 
 
@@ -2847,147 +2894,156 @@ ures can be found on the
  []
 
 (./agujournaltemplate_highlighted.bbl
-Underfull \hbox (badness 6001) in paragraph at lines 14--32
-[]\OT1/cmr/m/n/10 Alan Levan-der.  (2007).  \OT1/cmr/m/it/10 Seis-mic and geode
--tic in-ves-ti-ga-tions of men-do-cino triple 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--60
+Underfull \hbox (badness 10000) in paragraph at lines 16--30
 \OT1/cmr/m/n/10 ment of deep episodic slow earth-quakes in sub-duc-tion zone fo
 re-arcs: A re-view. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--92
-[]\OT1/cmr/m/n/10 Baratin, L. M., Cham-ber-lain, C., Tow-nend, J., & Sav-age, M
-. K.  (2018).  Fo-cal 
+Underfull \hbox (badness 2547) in paragraph at lines 45--62
+[]\OT1/cmr/m/n/10 Baratin, L. M., Cham-ber-lain, C. J., Tow-nend, J., & Sav-age
+, M. K.  (2018).  Fo-cal 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--92
+Underfull \hbox (badness 10000) in paragraph at lines 45--62
 \OT1/cmr/m/n/10 mech-a-nisms and inter-event times of low-frequency earth-quake
 s re-veal quasi- 
  []
 
 
-Underfull \hbox (badness 5862) in paragraph at lines 133--148
+Underfull \hbox (badness 5862) in paragraph at lines 103--118
 []\OT1/cmr/m/n/10 Bostock, M. G., Royer, A. A., Hearn, E. H., & Pea-cock, S. M.
   (2012).  Low fre- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--148
+Underfull \hbox (badness 10000) in paragraph at lines 103--118
 \OT1/cmr/m/n/10 quency earth-quakes be-low south-ern Van-cou-ver Is-land.  \OT1
 /cmr/m/it/10 Geo-chem-istry Geo- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--182
+Underfull \hbox (badness 10000) in paragraph at lines 134--152
 []\OT1/cmr/m/n/10 Bostock, M. G., Thomas, A. M., Savard, G., Chuang, L., & Ru-b
 in, A. M.  (2015). 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--182
+Underfull \hbox (badness 10000) in paragraph at lines 134--152
 \OT1/cmr/m/n/10 Mag-ni-tudes and moment-duration scal-ing of low-frequency eart
 h-quakes be- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--182
+Underfull \hbox (badness 10000) in paragraph at lines 134--152
 \OT1/cmr/m/n/10 neath south-ern Van-cou-ver Is-land.  \OT1/cmr/m/it/10 Jour-nal
  of Geo-phys-i-cal Re-search: Solid 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--215
+Underfull \hbox (badness 10000) in paragraph at lines 168--185
 []\OT1/cmr/m/n/10 Boyarko, D. C., Brudzin-ski, M. R., Por-ritt, R. W., Allen, R
 . M., & Tr^^Sehu, A. M. 
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 198--215
+Underfull \hbox (badness 2401) in paragraph at lines 168--185
 \OT1/cmr/m/n/10 (2015).  Au-to-mated de-tec-tion and lo-ca-tion of tec-tonic tr
 emor along the en-tire 
  []
 
-[15]
-Underfull \hbox (badness 1400) in paragraph at lines 284--296
+
+Underfull \hbox (badness 1400) in paragraph at lines 254--266
 []\OT1/cmr/m/n/10 Chestler, S. R., & Crea-ger, K. C.  (2017b).  A model for low
 -frequency earth-quake 
  []
 
 
-Underfull \hbox (badness 2809) in paragraph at lines 308--324
+Underfull \hbox (badness 2809) in paragraph at lines 278--294
 []\OT1/cmr/m/n/10 Ducellier, A.  (2021, Au-gust).  \OT1/cmr/m/it/10 Ar-i-ane-du
 -cel-lier/catalog: Pa-per sub-mis-sion.  \OT1/cmr/m/n/10 Zen- 
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 308--324
+Underfull \hbox (badness 2310) in paragraph at lines 278--294
 \OT1/cmr/m/n/10 odo.  Re-trieved from $\OT1/cmtt/m/n/10 https :// doi [] .org /
  10 [] .5281 / zenodo [] .5168867$   \OT1/cmr/m/n/10 doi: $10 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--355
+Underfull \vbox (badness 1715) has occurred while \output is active []
+
+ [15]
+Underfull \hbox (badness 10000) in paragraph at lines 306--325
 []\OT1/cmr/m/n/10 Frank, W. B., Shapiro, N. M., Husker, A. L., Kos-toglodov, V.
 , Ro-ma-nenko, A., & 
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 369--383
+Underfull \hbox (badness 2065) in paragraph at lines 339--353
 []\OT1/cmr/m/n/10 Guilhem, A., Peng, Z., & Nadeau, R. M.  (2010).  High-frequen
 cy iden-ti-fi-ca-tion of 
  []
 
 
-Underfull \hbox (badness 4886) in paragraph at lines 369--383
+Underfull \hbox (badness 4886) in paragraph at lines 339--353
 \OT1/cmr/m/n/10 non-volcanic tremor trig-gered by re-gional earth-quakes.  \OT1
 /cmr/m/it/10 Geo-phys-i-cal Re-search 
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 399--416
+Underfull \hbox (badness 2401) in paragraph at lines 369--386
 []\OT1/cmr/m/n/10 Han, J., Vi-dale, J. E., Hous-ton, H., Chao, K., & Obara, K. 
  (2014).  Trig-ger-ing of 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--416
+Underfull \hbox (badness 10000) in paragraph at lines 369--386
 \OT1/cmr/m/n/10 tremor and in-ferred slow slip by small earth-quakes at the Nan
 kai sub-duc-tion 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--470
+Underfull \hbox (badness 10000) in paragraph at lines 425--440
 \OT1/cmr/m/n/10 re-ver-sals in Cas-ca-dia gen-er-ated by a weak-ened plate in-t
 er-face.  \OT1/cmr/m/it/10 Na-ture Geo- 
  []
 
 
-Underfull \hbox (badness 2828) in paragraph at lines 484--500
+Underfull \hbox (badness 2828) in paragraph at lines 454--470
 []\OT1/cmr/m/n/10 Ide, S., Shelly, D. R., & Beroza, G. C.  (2007).  Mech-a-nism
  of deep low fre-quency 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--500
+Underfull \hbox (badness 10000) in paragraph at lines 454--470
 \OT1/cmr/m/n/10 earth-quakes: Fur-ther ev-i-dence that deep non-volcanic tremor
  is gen-er-ated by 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--528
+Underfull \hbox (badness 10000) in paragraph at lines 484--498
 \OT1/cmr/m/n/10 the Nankai sub-duc-tion zone over 11 years us-ing a matched fil
 -ter tech-nique. 
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 542--556
+Underfull \hbox (badness 1430) in paragraph at lines 512--526
 \OT1/cmr/m/n/10 Moho dis-con-ti-nu-ity away from vol-ca-noes in the south-west 
 Japan.  \OT1/cmr/m/it/10 Geo-phys-i-cal 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--556
+\OT1/cmr/m/it/10 tion dy-nam-ics.  \OT1/cmr/m/n/10 In-ter-na-tional Fed-er-a-ti
+on of Dig-i-tal Seis-mo-graph Net-works. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--556
+\OT1/cmr/m/n/10 Re-trieved from $\OT1/cmtt/m/n/10 https :// www [] .fdsn [] .or
+g / networks / detail / XQ [] []2007 /$   \OT1/cmr/m/n/10 doi: 
  []
 
 
@@ -3020,7 +3076,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 739--755
 -tral Cal-i-for-nia. 
  []
 
-[16]
+
 Underfull \hbox (badness 5741) in paragraph at lines 770--784
 \OT1/cmr/m/n/10 earth-quakes at the south-ern Cas-ca-dia mar-gin.  \OT1/cmr/m/i
 t/10 Geo-phys-i-cal Re-search Let-ters\OT1/cmr/m/n/10 , 
@@ -3032,7 +3088,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 825--838
 th and Plan-e-tary Sci-ence Let-ters\OT1/cmr/m/n/10 , 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 879--899
 []\OT1/cmr/m/n/10 Rubinstein, J. L., Gomberg, J., Vi-dale, J. E., Wech, A. G., 
 Kao, H., Crea-ger, K. C., 
@@ -3102,32 +3158,32 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3586 strings out of 493014
- 50636 string characters out of 6133351
- 127664 words of memory out of 5000000
- 7054 multiletter control sequences out of 15000+600000
+ 3587 strings out of 493117
+ 50530 string characters out of 6135433
+ 127298 words of memory out of 5000000
+ 6976 multiletter control sequences out of 15000+600000
  9949 words of font info for 36 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
- 50i,8n,37p,2203b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016/texmf
+ 50i,9n,37p,2203b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on agujournaltemplate_highlighted.pdf (17 pages, 2240613 bytes).
+Output written on agujournaltemplate_highlighted.pdf (17 pages, 2241289 bytes).
 
 PDF statistics:
  509 PDF objects out of 1000 (max. 8388607)
