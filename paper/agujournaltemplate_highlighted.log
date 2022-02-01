@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  27 JAN 2022 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  1 FEB 2022 10:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -775,9 +775,9 @@ Overfull \hbox (6.3212pt too wide) in paragraph at lines 200--200
  []
 
 
-Overfull \hbox (15.1546pt too wide) in paragraph at lines 200--200
-\OT1/cmr/m/n/10 dreas Fault,  []Shelly (2017)) ob-served a large di-ver-sity of
- re-cur-rence be-hav-iors among the 
+Overfull \hbox (11.2657pt too wide) in paragraph at lines 200--200
+\OT1/cmr/m/n/10 dreas Fault,  []Shelly (2017) ob-served a large di-ver-sity of 
+re-cur-rence be-hav-iors among the 
  []
 
 
@@ -841,15 +841,15 @@ Overfull \hbox (28.71008pt too wide) in paragraph at lines 202--202
  []
 
 
-Overfull \hbox (20.87553pt too wide) in paragraph at lines 202--202
-\OT1/cmr/bx/n/10 ever, they sug-gested that this may be be-cause the model is b
-i-ased deep. \OT1/cmr/m/n/10 Three 
+Overfull \hbox (5.90181pt too wide) in paragraph at lines 202--202
+\OT1/cmr/bx/n/10 ever, they sug-gested that this may be be-cause the plate boun
+d-ary model is 
  []
 
 
-Overfull \hbox (0.40462pt too wide) in paragraph at lines 202--202
-\OT1/cmr/m/n/10 ad-di-tional LFE fam-i-lies were found on two strike-slip fault
-s, the Maa-cama and Buck- 
+Overfull \hbox (2.00966pt too wide) in paragraph at lines 202--202
+\OT1/cmr/bx/n/10 bi-ased deep. \OT1/cmr/m/n/10 Three ad-di-tional LFE fam-i-lie
+s were found on two strike-slip faults, the 
  []
 
 
@@ -1462,11 +1462,15 @@ at-a-log with-out fil-
  []
 
 
-Overfull \hbox (12.51709pt too wide) in paragraph at lines 230--230
+Overfull \hbox (9.32266pt too wide) in paragraph at lines 230--230
 \OT1/cmr/bx/n/10 ter-ing the LFEs and the num-ber of chan-nels record-ing as a 
-func-tion of time.  
+func-tion of time 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./figures/hist-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/tremor_nb_FAME_3.eps>
 (epstopdf)                    date: 2021-08-02 18:54:39
 (epstopdf)                    size: 341416 bytes
@@ -1478,7 +1482,8 @@ pdf>
 ps-converted-to.pdf figures/tremor_nb_FAME_3.eps>
 (epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
-<figures/tremor_nb_FAME_3-eps-converted-to.pdf, id=43, 1445.4pt x 722.7pt>
+
+<figures/tremor_nb_FAME_3-eps-converted-to.pdf, id=88, 1445.4pt x 722.7pt>
 File: figures/tremor_nb_FAME_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/tremor_nb_FAME_3-eps-converted-to.pdf>
@@ -1525,7 +1530,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--234
 we do not show the LFEs for the days
  []
 
-[6 <./figures/hist-eps-converted-to.pdf>]
+
 Overfull \hbox (9.93231pt too wide) in paragraph at lines 238--238
 []\OT1/cmr/m/n/10 We note that there is a good spa-tial and tem-po-ral agree-me
 nt be-tween tremor and 
@@ -2205,7 +2210,7 @@ in Ta-ble 2. We also looked at
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3701) has occurred while \output is active []
 
  [9 <./figures/cumulative-eps-converted-to.pdf>] [10 <./figures/tremor_nb_perm_
 3-eps-converted-to.pdf> <./figures/zoom_ETS_events-eps-converted-to.pdf>]
@@ -2419,8 +2424,8 @@ limit of the tremor. \OT1/cmr/bx/n/10 We as-sume that there is an LFE
  []
 
 
-Overfull \hbox (7.49487pt too wide) in paragraph at lines 332--332
-\OT1/cmr/bx/n/10 event av-ery time that at least five LFEs are recorded dur-ing
+Overfull \hbox (7.4949pt too wide) in paragraph at lines 332--332
+\OT1/cmr/bx/n/10 event ev-ery time that at least five LFEs are recorded dur-ing
  a given day. If 
  []
 
@@ -2721,9 +2726,87 @@ d tidal Coulomb stress is
  []
 
 
-Overfull \hbox (0.48802pt too wide) in paragraph at lines 354--355
-\OT1/cmr/m/n/10 dis-cour-ag-ing slip on the plate bound-ary. We hy-poth-e-size 
-that LFE fam-ily A may not 
+Overfull \hbox (10.19762pt too wide) in paragraph at lines 354--355
+\OT1/cmr/m/n/10 dis-cour-ag-ing slip on the plate bound-ary. \OT1/cmr/bx/n/10 W
+e tried to re-lo-cate this LFE fam-ily us- 
+ []
+
+
+Overfull \hbox (3.26016pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 ing the new tem-plates ob-tained from the best LFEs in the 200
+4-2011 cat-a- 
+ []
+
+
+Overfull \hbox (10.24615pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 logs and S mi-nus P times within a sin-gle sta-tions or P-P ti
+mes be-tween sta- 
+ []
+
+
+Overfull \hbox (2.87263pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 tions. The lo-ca-tion is still not very well con-strained and 
+the LFE fam-ily A 
+ []
+
+
+Overfull \hbox (10.55043pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 may be lo-cated 20 to 30 kilo-me-ters north or east of the ini
+-tial lo-ca-tion from 
+ []
+
+
+Overfull \hbox (2.23943pt too wide) in paragraph at lines 354--355
+[]\OT1/cmr/bx/n/10 Plourde et al.[] (2015). How-ever, this does not change the 
+pat-tern ob-served 
+ []
+
+
+Overfull \hbox (2.54073pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 for the cor-re-la-tion be-tween tidal stress changes and LFE a
+c-tiv-ity. There is 
+ []
+
+
+Overfull \hbox (8.02815pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 a great un-cer-tainty on the depth and this LFE fam-ily may be
+ lo-cated much 
+ []
+
+
+Overfull \hbox (8.8698pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 shal-lower than the plate bound-ary. We hy-poth-e-size that LF
+E fam-ily A may 
+ []
+
+
+Overfull \hbox (11.30035pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 not be lo-cated on the sub-duc-tion zone and may be on a nearb
+y crustal fault 
+ []
+
+
+Overfull \hbox (6.78085pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 that runs west to east. If this was the case, the fault plane 
+as-sumed for the 
+ []
+
+
+Overfull \hbox (0.76709pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 tidal stress cal-cu-la-tion would not be ap-pro-pri-ate, which
+ would ex-plain the 
+ []
+
+
+Overfull \hbox (1.41028pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 dif-fer-ent pa-tron for this LFE fam-ily. In our fu-ture work,
+ we plan to in-vert 
+ []
+
+
+Overfull \hbox (2.9713pt too wide) in paragraph at lines 354--355
+\OT1/cmr/bx/n/10 tem-plate wave-forms for mo-ment ten-sor mech-a-nisms, which s
+hould help in- 
  []
 
 Package epstopdf Info: Source file: <figures/coulomb.eps>
@@ -2815,7 +2898,7 @@ Overfull \hbox (22.68237pt too wide) in paragraph at lines 364--365
 am-i-lies. Tidal stress changes 
  []
 
-[14 <./figures/coulomb-eps-converted-to.pdf>]
+[14]
 Overfull \hbox (5.37685pt too wide) in paragraph at lines 541--543
 \OT1/cmr/m/n/10 cat-a-log, D. Bo-yarko for shar-ing his tremor cat-a-log, and H
 . Hous-ton for the tidal stress 
@@ -2953,7 +3036,7 @@ Underfull \hbox (badness 2401) in paragraph at lines 168--185
 emor along the en-tire 
  []
 
-
+[15 <./figures/coulomb-eps-converted-to.pdf>]
 Underfull \hbox (badness 1400) in paragraph at lines 254--266
 []\OT1/cmr/m/n/10 Chestler, S. R., & Crea-ger, K. C.  (2017b).  A model for low
 -frequency earth-quake 
@@ -2972,9 +3055,6 @@ Underfull \hbox (badness 2310) in paragraph at lines 278--294
  []
 
 
-Underfull \vbox (badness 1715) has occurred while \output is active []
-
- [15]
 Underfull \hbox (badness 10000) in paragraph at lines 306--325
 []\OT1/cmr/m/n/10 Frank, W. B., Shapiro, N. M., Husker, A. L., Kos-toglodov, V.
 , Ro-ma-nenko, A., & 
@@ -3070,7 +3150,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 679--695
 an sub-duc-tion 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 739--755
 \OT1/cmr/m/n/10 mote trig-ger-ing of tremor along the San An-dreas Fault in cen
 -tral Cal-i-for-nia. 
@@ -3088,7 +3168,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 825--838
 th and Plan-e-tary Sci-ence Let-ters\OT1/cmr/m/n/10 , 
  []
 
-[16]
+
 Underfull \hbox (badness 10000) in paragraph at lines 879--899
 []\OT1/cmr/m/n/10 Rubinstein, J. L., Gomberg, J., Vi-dale, J. E., Wech, A. G., 
 Kao, H., Crea-ger, K. C., 
@@ -3164,7 +3244,7 @@ Here is how much of TeX's memory you used:
  6976 multiletter control sequences out of 15000+600000
  9949 words of font info for 36 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
- 50i,9n,37p,2203b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,9n,37p,3155b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -3183,7 +3263,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on agujournaltemplate_highlighted.pdf (17 pages, 2241289 bytes).
+Output written on agujournaltemplate_highlighted.pdf (17 pages, 2242364 bytes).
 
 PDF statistics:
  509 PDF objects out of 1000 (max. 8388607)

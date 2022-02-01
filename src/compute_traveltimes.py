@@ -4,6 +4,8 @@ cross-correlate templates between components and between stations
 and returns the relative travel times
 """
 
+import matplotlib.pylab as pylab
+import matplotlib.pyplot as plt
 import numpy as np
 import obspy
 import os
@@ -121,6 +123,132 @@ def compute_traveltimes(family, stations, channels, latitudes, longitudes, \
 #    pickle.dump(df_SP, open(namedir + '/t_SP.pkl', 'wb'))
     return(cc_R, cc_T)
 
+def compute_plot_PP(family, stations, channels, ibegins, nt, dt, nkeep):
+    """
+    """
+    namedir = 'traveltimes/' + family
+    if not os.path.exists(namedir):
+        os.makedirs(namedir)
+
+    time = dt * np.arange(0, nt)
+
+    params = {'legend.fontsize': 24, \
+              'xtick.labelsize':24, \
+              'ytick.labelsize':24}
+    pylab.rcParams.update(params)
+
+    df_P = pd.DataFrame(columns=['station1', 'station2', 't_PP'])
+
+    for i in range(0, len(stations) - 1):
+        for j in range(i + 1, len(stations)):
+            filename1 = 'templates_both/' + family + '/' + stations[i] + '_' + channels[i] + '.pkl'
+            filename2 = 'templates_both/' + family + '/' + stations[j] + '_' + channels[j] + '.pkl'
+            trace1 = pickle.load(open(filename1, 'rb'))[0]
+            trace2 = pickle.load(open(filename2, 'rb'))[0]
+            data1 = trace1.data[ibegins[i] : ibegins[i] + nkeep + 1]
+            data2 = trace2.data[ibegins[j] : ibegins[j] + nkeep + 1]
+            cc = np.correlate(data1, data2, mode='full')
+            time_cc = dt * np.arange(- nkeep, nkeep + 1)
+            tlag = dt * (ibegins[j] - ibegins[i] + nkeep - np.argmax(cc))
+            df_P.loc[len(df_P.index)] = [stations[i], stations[j], tlag]
+
+            # Figure
+            plt.figure(1, figsize=(8, 15))
+            plt.subplot2grid((3, 1), (2, 0))
+            plt.plot(time, trace1.data)
+            plt.axvline(time[ibegins[i]], color='grey', linewidth=2)
+            plt.axvline(time[ibegins[i] + nkeep + 1], color='grey', linewidth=2)
+            plt.xlabel('Time (s)', fontsize=24)
+            plt.ylabel(stations[i] + ' - ' + channels[i], fontsize=24)
+            plt.subplot2grid((3, 1), (1, 0))
+            plt.plot(time, trace2.data)
+            plt.axvline(time[ibegins[j]], color='grey', linewidth=2)
+            plt.axvline(time[ibegins[j] + nkeep + 1], color='grey', linewidth=2)
+            plt.xlabel('Time (s)', fontsize=24)
+            plt.ylabel(stations[j] + ' - ' + channels[j], fontsize=24)
+            plt.subplot2grid((3, 1), (0, 0))
+            plt.plot(time_cc, cc)
+            plt.axvline(time_cc[np.argmax(cc)], color='grey', linewidth=2)
+            plt.xlabel('Time (s)', fontsize=24)
+            plt.ylabel('Cross correlation', fontsize=24)
+            plt.suptitle('{} - {} - Time lag = {:.2f} seconds'.format(stations[i], stations[j], tlag), fontsize=24)
+            plt.tight_layout()
+            plt.savefig(namedir + '/' + stations[i] + '_' + stations[j] + '_PP.eps', format='eps')
+            plt.close(1)
+
+    pickle.dump(df_P, open(namedir + '/t_PP.pkl', 'wb'))
+
+def compute_plot_SP(family, stations, channels, latitudes, longitudes, ibegins_P, ibegins_S, nt, dt, nkeep, lat0, lon0):
+    """
+    """
+    # To compute distances
+    a = 6378.136
+    e = 0.006694470
+
+    namedir = 'traveltimes/' + family
+    if not os.path.exists(namedir):
+        os.makedirs(namedir)
+
+    time = dt * np.arange(0, nt)
+
+    params = {'legend.fontsize': 24, \
+              'xtick.labelsize':24, \
+              'ytick.labelsize':24}
+    pylab.rcParams.update(params)
+
+    df_SP = pd.DataFrame(columns=['station', 't_SP'])
+
+    for i in range(0, len(stations)):
+        channel = channels[i].split(',')
+        filename_EW = 'templates_both/' + family + '/' + stations[i] + '_' + channel[0] + '.pkl'
+        filename_NS = 'templates_both/' + family + '/' + stations[i] + '_' + channel[1] + '.pkl'
+        filename_UD = 'templates_both/' + family + '/' + stations[i] + '_' + channel[2] + '.pkl'
+        trace_EW = pickle.load(open(filename_EW, 'rb'))[0]
+        trace_NS = pickle.load(open(filename_NS, 'rb'))[0]
+        trace_UD = pickle.load(open(filename_UD, 'rb'))[0]
+        # Distance
+        dx = (pi / 180.0) * a * cos(lat0 * pi / 180.0) / \
+            sqrt(1.0 - e * e * sin(lat0 * pi / 180.0) * sin(lat0 * pi / 180.0))
+        dy = (3.6 * pi / 648.0) * a * (1.0 - e * e) / \
+            ((1.0 - e * e * sin(lat0 * pi / 180.0) * sin(lat0 * pi / 180.0)) ** 1.5)
+        x = dx * (longitudes[i] - lon0)
+        y = dy * (latitudes[i] - lat0)
+        theta = atan2(y, x)
+        # Rotate horizontal component
+        radial = trace_EW.data * cos(theta) + trace_NS.data * sin(theta)
+        data_radial = radial[ibegins_S[i] : ibegins_S[i] + nkeep + 1]
+        data_UD = trace_UD.data[ibegins_P[i] : ibegins_P[i] + nkeep + 1]
+        cc = np.correlate(data_UD, data_radial, mode='full')
+        time_cc = dt * np.arange(- nkeep, nkeep + 1)
+        tlag = dt * (ibegins_S[i] - ibegins_P[i] + nkeep - np.argmax(cc))
+        df_SP.loc[len(df_SP.index)] = [stations[i], tlag]
+
+        # Figure
+        plt.figure(1, figsize=(8, 10))
+        plt.subplot2grid((3, 1), (2, 0))
+        plt.plot(time, trace_UD.data)
+        plt.axvline(time[ibegins_P[i]], color='grey', linewidth=2)
+        plt.axvline(time[ibegins_P[i] + nkeep + 1], color='grey', linewidth=2)
+        plt.xlabel('Time (s)', fontsize=24)
+        plt.ylabel(stations[i] + ' - ' + channel[2], fontsize=24)
+        plt.subplot2grid((3, 1), (1, 0))
+        plt.plot(time, radial)
+        plt.axvline(time[ibegins_S[i]], color='grey', linewidth=2)
+        plt.axvline(time[ibegins_S[i] + nkeep + 1], color='grey', linewidth=2)
+        plt.xlabel('Time (s)', fontsize=24)
+        plt.ylabel(stations[i] + ' - Radial', fontsize=24)
+        plt.subplot2grid((3, 1), (0, 0))
+        plt.plot(time_cc, cc)
+        plt.axvline(time_cc[np.argmax(cc)], color='grey', linewidth=2)
+        plt.xlabel('Time (s)', fontsize=24)
+        plt.ylabel('Cross correlation', fontsize=24)
+        plt.suptitle('{} - Time lag = {:.2f} seconds'.format(stations[i], tlag), fontsize=24)
+        plt.tight_layout()
+        plt.savefig(namedir + '/' + stations[i] + '_SP.eps', format='eps')
+        plt.close(1)
+
+    pickle.dump(df_SP, open(namedir + '/t_SP.pkl', 'wb'))
+
 if __name__ == '__main__':
 
     family = '080401.05.050'
@@ -139,5 +267,21 @@ if __name__ == '__main__':
     dt = 0.05
     lat0 = 40.09
     lon0 = -122.87
-    compute_traveltimes(family, stations, channels, latitudes, longitudes, \
-        nt, dt, lat0, lon0)
+#    compute_traveltimes(family, stations, channels, latitudes, longitudes, \
+#        nt, dt, lat0, lon0)
+
+    stations = ['KBN', 'KHBB', 'LRB', 'ME08', 'ME12', 'ME28', 'ME37', 'ME39', 'ME41', 'ME57', 'WDC']
+    channels = ['SHZ', 'HHZ', 'SHZ', 'BHZ', 'BHZ', 'BHZ', 'BHZ', 'BHZ', 'BHZ', 'BHZ', 'HHZ']
+    ibegins = [360, 420, 160, 360, 200, 200, 480, 440, 400, 200, 280]
+    nkeep = 150
+    compute_plot_PP(family, stations, channels, ibegins, nt, dt, nkeep)
+
+    stations = ['KHBB', 'ME08', 'ME12', 'ME28', 'ME37', 'ME39', 'ME41', 'ME57', 'WDC']
+    channels = ['HHE,HHN,HHZ', 'BHE,BHN,BHZ', 'BHE,BHN,BHZ', 'BHE,BHN,BHZ', 'BHE,BHN,BHZ', \
+        'BHE,BHN,BHZ', 'BHE,BHN,BHZ', 'BHE,BHN,BHZ', 'BHE,BHN,BHZ', 'HHE,HHN,HHZ']
+    latitudes = [40.65990, 40.222, 40.104, 40.327, 40.285, 40.188202, 39.884998, 39.9118, 40.57988]
+    longitudes =[-123.21966, -123.305, -122.498, -122.471, -123.653999, -123.594299, -123.361, -122.5676, -122.54113]
+    ibegins_P = [400, 360, 140, 180, 480, 430, 400, 160, 240]
+    ibegins_S = [700, 600, 340, 380, 800, 740, 640, 360, 440]
+    nkeep = 200
+    compute_plot_SP(family, stations, channels, latitudes, longitudes, ibegins_P, ibegins_S, nt, dt, nkeep, lat0, lon0)

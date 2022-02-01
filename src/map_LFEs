@@ -10,7 +10,16 @@ set y2 = 40.8
 set Rop = $x1/$x2/$y1/$y2
 set Jop = m-123/40/10
 
-gmt pscoast -R$Rop -J$Jop -Ba1f0.5::WESN -W0.1p -G255/255/224 -S224/255/255 -Df -Na -Y12 -P -K >! $output
+gmt pscoast -R$Rop -J$Jop -Ba0.5f0.25::WESN -W0.1p -G255/255/224 -S224/255/255 -Lf-123.4/39.65/40.8/50 -Df -Na -Y12 -P -K >! $output
+
+# Faults
+gmt psxy ../paper/figures/fault.xy -R$Rop -J$Jop -Wthin,grey -O -K >> $output
+
+cat << END >> mytext.dat
+-123.4 39.55 km
+END
+
+gmt pstext mytext.dat -R$Rop -J$Jop -F+f15p -O -K >> $output
 
 cat << END >> stations.dat
 -122.715950  39.654710
@@ -31,35 +40,45 @@ END
 gmt psxy stations.dat -R$Rop -J$Jop -St0.5 -Gblack -O -K >> $output
 
 cat << END >> names.dat
--122.715950  39.554710    GASB
--123.195030  39.792370     KBN
--123.219660  40.559900    KHBB
--122.557720  40.043230     LRB
--123.305000  40.122000    ME08
--122.498000  40.004000    ME12
--123.155000  40.353000    ME27
--122.471000  40.227000    ME28
--123.653999  40.185000    ME37
--123.594299  40.088202    ME39
--123.361000  39.784998    ME41
--122.567600  39.811800    ME57
--122.541130  40.479880     WDC
+-122.715950  39.604710    GASB
+-123.195030  39.842370     KBN
+-123.219660  40.609900    KHBB
+-122.557720  40.093230     LRB
+-123.305000  40.172000    ME08
+-122.498000  40.054000    ME12
+-123.155000  40.403000    ME27
+-122.471000  40.277000    ME28
+-123.653999  40.235000    ME37
+-123.594299  40.138202    ME39
+-123.361000  39.834998    ME41
+-122.567600  39.861800    ME57
+-122.541130  40.529880     WDC
 END
 
 gmt pstext names.dat -R$Rop -J$Jop -F+f12p,black -O -K >> $output
 
-# Depth = 34.9
+# Epicenter from Plourde
 cat << END >> epicenter.dat
 -122.87 40.09
 END
 
 gmt psxy epicenter.dat -R$Rop -J$Jop -Sa0.5 -Gred -O -K >> $output
 
-# Depth = 26
+# Epicenter from new templates
 cat << END >> corrected.dat
--122.89 40.22
+-122.90 40.25
+-122.50 40.21
 END
 
-gmt psxy corrected.dat -R$Rop -J$Jop -Sa0.5 -Ggreen -O >> $output
+gmt psxy corrected.dat -R$Rop -J$Jop -Sa0.5 -Ggreen -O -K >> $output
+
+# Depths
+cat << END >> depths.dat
+-122.87 40.09 Plourde (34.9)
+-122.90 40.25 S-P (26)
+-122.50 40.21 P-P (51)
+END
+
+gmt pstext depths.dat -R$Rop -J$Jop -F+f15p -O >> $output
 
 rm *.dat

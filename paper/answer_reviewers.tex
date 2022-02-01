@@ -78,7 +78,7 @@ We analyzed the seismic data one hour a time. For each hour of data, we assumed 
 
 \bigskip
 
-The choice of the threshold is explained in more detail later in the text, when we explain how we cleaned the longer catalog (2004-2011). The main idea is that if an LFE is present both in the 2007-2009 FAME catalog and in the 2004-2011 permanent networks catalog, then it is unlikely to be a false detection. We assumed that all LFEs present in both catalogs are true detections. The LFEs recorded during the period 2007-2009 that are present in only one catalog are then assumed to be false detections. Our goal is to maximize the number of true detections in the filtered catalogs. For the FAME catalog, we then chose a threshold such that at least 50 \% of the LFE detections kept in the FAME catalog after filtering with the threshold, are true detections, that is they are also in the networks catalog. For the networks catalog, we chose a threshold such that at least 50 \% of the LFE detections kept in the networks catalog after filtering with the threshold (and occurring between 2007 and 2009), are true detections, that i that are also in the FAME catalog. There are thus two thresholds per family. The filtering is done such that the product of the cross-correlation for a given LFE by the number of channels recording at the time when the LFE occurred is higher than the threshold. The thresholds chosen for the FAME and the networks catalog are then different because the stations and the quality of the templates are different for both catalogs. For the period 2004-2007 and 2009-2011, we used the same threshold as determined for the period 2007-2009 for the networks catalog. We added in a supplement a table with the values of the thresholds. \\
+The choice of the threshold is explained in more detail later in the text, when we explain how we cleaned the longer catalog (2004-2011). The main idea is that if an LFE is present both in the 2007-2009 FAME catalog and in the 2004-2011 permanent networks catalog, then it is unlikely to be a false detection. We assumed that all LFEs present in both catalogs are true detections. The LFEs recorded during the period 2007-2009 that are present in only one catalog are then assumed to be false detections. Our goal is to maximize the number of true detections in the filtered catalogs. For the FAME catalog, we then chose a threshold such that at least 50 \% of the LFE detections kept in the FAME catalog after filtering with the threshold, are true detections, that is they are also in the networks catalog. For the networks catalog, we chose a threshold such that at least 50 \% of the LFE detections kept in the networks catalog after filtering with the threshold (and occurring between 2007 and 2009), are true detections, that is they are also in the FAME catalog. There are thus two thresholds per family. The filtering is done such that the product of the cross-correlation for a given LFE by the number of channels recording at the time when the LFE occurred is higher than the threshold. The thresholds chosen for the FAME and the networks catalog are then different because the stations and the quality of the templates are different for both catalogs. For the period 2004-2007 and 2009-2011, we used the same threshold as determined for the period 2007-2009 for the networks catalog. We added in a supplement a table with the values of the thresholds. \\
 
 Our filtering method kept 37 \% of the LFEs for the networks catalog and 16 \% of the LFEs for the FAME catalog. We have added in the supplements figures of the catalogs without filtering the LFEs.
 
@@ -153,11 +153,25 @@ Journal of Geophysical Research: Solid Earth, 2012-09, Vol.117 (B9).
 
 \bigskip
 
+We tried to relocate family A using new templates obtained from the LFEs present in both the 2007-2009 FAME catalog and the 2004-2011 networks catalog and S minus P within a station times or P-P times between stations. The family may be located 20 to 30 kilometers north or east from the initial location given by Plourde et al. (2015). There is still a great uncertainty on the depth and this family could be much shallower that the plate boundary. It is then possible that the family is located on a nearby crustal fault running west to east. If that is the case, the fault geometry used for the tidal stress calculation is not appropriate and that would explain the negative sensitivity. We added this comment in the text.
+
+\bigskip
+
 \textbf{Reviewer 2}
 
 \bigskip
 
 \textit{The southern-most LFE family is very interesting! I agree with your assessments that the tidal stress modulation and rapid recurrence intervals suggest this family is on a different fault. With that in mind, I find the lack of further discussion about it unsatisfying. Did you try to re-stack and re-locate this family? It would be great if you could. Even if you conclude that you can't get a reliable depth estimate, I would suggest it's worth showing the template waveforms and discussing a few potential source regions, even if it's highly speculative.}
+
+\bigskip
+
+We have remade the templates for both the FAME and the networks stations using the LFEs present in both the 2007-2009 FAME catalog and the 2004-2011 networks catalog. We tried to relocate the family A using S minus P times for single stations or P-P times between stations. The family A would then be located 20-30 kilometers north or east from the initial location. This does not change the pattern of the tidal stress calculations and the negative sensitivity. However, there is a great uncertainty on the depth and this LFE family may be much shallower than the plate boundary. It is possible that it is located on a nearby crustal fault running west to east. In that case, the fault model for the tidal stress calculation is not appropriate.
+
+\begin{figure}[hbt!]
+\centering
+\noindent\includegraphics[width=10cm, trim={1cm 11cm 6cm 4cm},clip]{figures/map_LFEs_answers.eps}
+\caption{Stations used to relocate LFE family A (black triangles). Initial location from Plourde et al. (2015) (red star) and new locations using S-P times and P-P times (green stars). The numbers in parentheses are the corresponding depth. The family could be located on the crustal fault near station ME28.}
+\end{figure}
 
 \bigskip
 
