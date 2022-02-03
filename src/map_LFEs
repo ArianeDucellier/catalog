@@ -4,13 +4,13 @@ set output = map_LFEs.eps
 
 # Small map
 set x1 = -123.8
-set x2 = -122.3
+set x2 = -122.0
 set y1 = 39.5
 set y2 = 40.8
 set Rop = $x1/$x2/$y1/$y2
 set Jop = m-123/40/10
 
-gmt pscoast -R$Rop -J$Jop -Ba0.5f0.25::WESN -W0.1p -G255/255/224 -S224/255/255 -Lf-123.4/39.65/40.8/50 -Df -Na -Y12 -P -K >! $output
+gmt pscoast -R$Rop -J$Jop -Ba0.5f0.25::WESN -W0.1p -G255/255/224 -S224/255/255 -Lf-123.4/39.65/40/50 -Df -Na -Y12 -P -K >! $output
 
 # Faults
 gmt psxy ../paper/figures/fault.xy -R$Rop -J$Jop -Wthin,grey -O -K >> $output
@@ -43,11 +43,11 @@ cat << END >> names.dat
 -122.715950  39.604710    GASB
 -123.195030  39.842370     KBN
 -123.219660  40.609900    KHBB
--122.557720  40.093230     LRB
+-122.657720  40.143230     LRB
 -123.305000  40.172000    ME08
 -122.498000  40.054000    ME12
 -123.155000  40.403000    ME27
--122.471000  40.277000    ME28
+-122.571000  40.327000    ME28
 -123.653999  40.235000    ME37
 -123.594299  40.138202    ME39
 -123.361000  39.834998    ME41
@@ -66,17 +66,19 @@ gmt psxy epicenter.dat -R$Rop -J$Jop -Sa0.5 -Gred -O -K >> $output
 
 # Epicenter from new templates
 cat << END >> corrected.dat
--122.90 40.25
--122.50 40.21
+-122.11 40.09
+-122.38 40.19
+-122.24 40.18
 END
 
 gmt psxy corrected.dat -R$Rop -J$Jop -Sa0.5 -Ggreen -O -K >> $output
 
 # Depths
 cat << END >> depths.dat
--122.87 40.09 Plourde (34.9)
--122.90 40.25 S-P (26)
--122.50 40.21 P-P (51)
+-122.87 40.04 Plourde (34.9)
+-122.16 40.04 S-P (20)
+-122.58 40.19 P-P (25)
+-122.24 40.25 S-P + P-P (25)
 END
 
 gmt pstext depths.dat -R$Rop -J$Jop -F+f15p -O >> $output

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  27 JAN 2022 21:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  2 FEB 2022 23:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -358,7 +358,7 @@ nput line 26.
 
 Underfull \hbox (badness 10000) in paragraph at lines 27--27
 []\OT1/cmr/bx/n/9 Figure  S1. \OT1/cmr/m/n/9 Same as Fig-ure 3 from the main te
-xt, but with-out fil-ter-ing the LFEs. They are
+xt, but with-out fil-ter-ing the LFEs. There are
  []
 
 
@@ -527,7 +527,7 @@ cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on supplement.pdf (6 pages, 1999248 bytes).
+Output written on supplement.pdf (6 pages, 1999243 bytes).
 PDF statistics:
  222 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream

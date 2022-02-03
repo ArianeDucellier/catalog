@@ -62,7 +62,7 @@ We added the references in the text.
 
 \bigskip
 
-The templates from Plourde et al. (2015) have a low signal-to-noise ratio and generally do not show clear P- and S-wave arrivals, so the 60 seconds window helps be sure it contains the P and S waves. Moreover, the wave arrivals can be located close to the beginning or close to the end of the time window, depending on the LFE family considered. We have chosen to keep the whole one-minute time window to be sure to include both the P- and the S-wave arrivals. The templates obtained using LFE detections from the 2-year-long catalog show clearer P- and S-wave arrivals and we have reduced the length of the time window to 30 seconds on average, depending on the LFE family considered. We have remade the templates using only LFEs that were present in both catalogs (FAME and permanent networks). The wave arrivals are now clearer and, to extend farther in time our catalog, we could reduce the size of the time window by using a different starting time for each station, depending on whether it is close or farther away from the LFE source location. 
+The templates from Plourde et al. (2015) have a low signal-to-noise ratio and generally do not show clear P- and S-wave arrivals, so the 60 seconds window helps be sure it contains the P and S waves. Moreover, the wave arrivals can be located close to the beginning or close to the end of the time window, depending on the LFE family considered. To make the initial 2007-2009 FAME catalog, we have chosen to keep the whole one-minute time window to be sure to include both the P- and the S-wave arrivals. The templates obtained using LFE detections from the 2-year-long catalog show clearer P- and S-wave arrivals. To make the 2004-2011 permanent networks catalog, we have reduced the length of the time window to 30 seconds on average, depending on the LFE family considered. We have remade the templates using only LFEs that were present in both catalogs (FAME and permanent networks). The wave arrivals are now clearer and, to extend farther in time our catalog, we could reduce the size of the time window by using a different starting time for each station, depending on whether it is close or farther away from the LFE source location. 
 
 \bigskip
 
@@ -70,7 +70,7 @@ The templates from Plourde et al. (2015) have a low signal-to-noise ratio and ge
 
 \bigskip
 
-We analyzed the seismic data one hour a time. For each hour of data, we assumed that there was an LFE each time the average cross-correlation over all stations and channels is higher than 8 times the median absolute deviation. The threshold is thus different for each hour of data and it is difficult to show its values in the figure.
+We analyzed the seismic data one hour a time. For each hour of data, we assumed that there was an LFE each time the average cross-correlation over all stations and channels is higher than 8 times the median absolute deviation. The threshold is thus different for each hour of data and it is difficult to show its values in the figure. This is how Shelly et al. (2007, Nature) defined the thresholds.
 
 \bigskip
 
@@ -78,7 +78,7 @@ We analyzed the seismic data one hour a time. For each hour of data, we assumed 
 
 \bigskip
 
-The choice of the threshold is explained in more detail later in the text, when we explain how we cleaned the longer catalog (2004-2011). The main idea is that if an LFE is present both in the 2007-2009 FAME catalog and in the 2004-2011 permanent networks catalog, then it is unlikely to be a false detection. We assumed that all LFEs present in both catalogs are true detections. The LFEs recorded during the period 2007-2009 that are present in only one catalog are then assumed to be false detections. Our goal is to maximize the number of true detections in the filtered catalogs. For the FAME catalog, we then chose a threshold such that at least 50 \% of the LFE detections kept in the FAME catalog after filtering with the threshold, are true detections, that is they are also in the networks catalog. For the networks catalog, we chose a threshold such that at least 50 \% of the LFE detections kept in the networks catalog after filtering with the threshold (and occurring between 2007 and 2009), are true detections, that is they are also in the FAME catalog. There are thus two thresholds per family. The filtering is done such that the product of the cross-correlation for a given LFE by the number of channels recording at the time when the LFE occurred is higher than the threshold. The thresholds chosen for the FAME and the networks catalog are then different because the stations and the quality of the templates are different for both catalogs. For the period 2004-2007 and 2009-2011, we used the same threshold as determined for the period 2007-2009 for the networks catalog. We added in a supplement a table with the values of the thresholds. \\
+The choice of the threshold is explained in more detail later in the text, when we explain how we cleaned the longer catalog (2004-2011). The main idea is that if an LFE is present both in the 2007-2009 FAME catalog and in the 2007-2009 permanent networks catalog, then it is unlikely to be a false detection. We assumed that all LFEs present in both catalogs are true detections. The LFEs recorded during the period 2007-2009 that are present in only one catalog are then assumed to be false detections. Our goal is to maximize the number of true detections in the filtered catalogs. For the FAME catalog, we then chose a threshold such that 50 \% of the LFE detections kept in the FAME catalog after filtering with the threshold, are true detections, that is they are also in the networks catalog. For the networks catalog, we chose a threshold such that 50 \% of the LFE detections kept in the networks catalog after filtering with the threshold (and occurring between 2007 and 2009), are true detections, that is they are also in the FAME catalog. There are thus two thresholds per family. The filtering is done such that the product of the cross-correlation for a given LFE by the number of channels recording at the time when the LFE occurred is higher than the threshold. The thresholds chosen for the FAME and the networks catalog are then different because the stations and the quality of the templates are different for both catalogs. For the period 2004-2007 and 2009-2011, we used the same threshold as determined for the period 2007-2009 for the networks catalog. We added in a supplement a table with the values of the thresholds. \\
 
 Our filtering method kept 37 \% of the LFEs for the networks catalog and 16 \% of the LFEs for the FAME catalog. We have added in the supplements figures of the catalogs without filtering the LFEs.
 
@@ -96,7 +96,7 @@ We have computed the catalog with only the FAME stations and the catalog with on
 
 \bigskip
 
-One threshold to filter the 2007-2009 catalog computed with the FAME stations and one threshold to filter the 2004-2011 catalog computed with the permanent stations. We use two different thresholds because the quality of the templates is not the same for the two catalogs.
+One threshold to filter the 2007-2009 catalog computed with the FAME stations and one threshold to filter the 2007-2009 catalog computed with the permanent stations. We use two different thresholds because the quality of the templates is not the same for the two catalogs.
 
 \bigskip
 
@@ -128,7 +128,7 @@ We did not see any burst of LFEs coincident with the arrival of seismic waves fr
 
 \bigskip
 
-We changed the figure and plotted recurrence time instead of number of events.
+We changed the figure and plotted recurrence time instead of number of LFE clusters.
 
 \bigskip
 
@@ -153,7 +153,7 @@ Journal of Geophysical Research: Solid Earth, 2012-09, Vol.117 (B9).
 
 \bigskip
 
-We tried to relocate family A using new templates obtained from the LFEs present in both the 2007-2009 FAME catalog and the 2004-2011 networks catalog and S minus P within a station times or P-P times between stations. The family may be located 20 to 30 kilometers north or east from the initial location given by Plourde et al. (2015). There is still a great uncertainty on the depth and this family could be much shallower that the plate boundary. It is then possible that the family is located on a nearby crustal fault running west to east. If that is the case, the fault geometry used for the tidal stress calculation is not appropriate and that would explain the negative sensitivity. We added this comment in the text.
+We tried to relocate family A using new templates obtained from the LFEs present in both the 2007-2009 FAME catalog and the 2004-2011 networks catalog. We locate the family using S minus P times for each station, or using P-P times between stations, or using a combination of both. The family may be located 30 to 50 kilometers east from the initial location given by Plourde et al. (2015). The depth is 20-25 kilometers, that is shallower than the location given Plourde et al. (2015) and shallower than the plate boundary. It is then possible that the family is located on a nearby crustal fault. If that is the case, the fault geometry used for the tidal stress calculation is not appropriate and that would explain the negative sensitivity. We added this comment in the text.
 
 \bigskip
 
@@ -165,12 +165,12 @@ We tried to relocate family A using new templates obtained from the LFEs present
 
 \bigskip
 
-We have remade the templates for both the FAME and the networks stations using the LFEs present in both the 2007-2009 FAME catalog and the 2004-2011 networks catalog. We tried to relocate the family A using S minus P times for single stations or P-P times between stations. The family A would then be located 20-30 kilometers north or east from the initial location. This does not change the pattern of the tidal stress calculations and the negative sensitivity. However, there is a great uncertainty on the depth and this LFE family may be much shallower than the plate boundary. It is possible that it is located on a nearby crustal fault running west to east. In that case, the fault model for the tidal stress calculation is not appropriate.
+We have remade the templates for both the FAME and the networks stations using the LFEs present in both the 2007-2009 FAME catalog and the 2004-2011 networks catalog. We tried to relocate the family A using S minus P times for each station, or using P-P times between stations, or using a combination of both. The family may be located 30 to 50 kilometers east from the initial location. This does not change the pattern of the tidal stress calculations and the negative sensitivity. However, the depth of this LFE family is shallower than the initial location (20-25 kilometers depth) and shallower than the plate boundary. It is possible that it is located on a nearby crustal fault. In that case, the fault model for the tidal stress calculation is not appropriate.
 
 \begin{figure}[hbt!]
 \centering
-\noindent\includegraphics[width=10cm, trim={1cm 11cm 6cm 4cm},clip]{figures/map_LFEs_answers.eps}
-\caption{Stations used to relocate LFE family A (black triangles). Initial location from Plourde et al. (2015) (red star) and new locations using S-P times and P-P times (green stars). The numbers in parentheses are the corresponding depth. The family could be located on the crustal fault near station ME28.}
+\noindent\includegraphics[width=10cm, trim={1cm 11cm 3cm 4cm},clip]{figures/map_LFEs_answers.eps}
+\caption{Stations used to relocate LFE family A (black triangles). Initial location from Plourde et al. (2015) (red star) and new locations using S-P times, P-P times and a combination of both (green stars). The numbers in parentheses are the corresponding depth. The family could be located on one of the crustal faults in the eastern part of the map.}
 \end{figure}
 
 \bigskip
@@ -179,7 +179,7 @@ We have remade the templates for both the FAME and the networks stations using t
 
 \bigskip
 
-To define the number of events, we assume that there is an event each time that there are at least five LFEs during a single day. If two events are separated by less than five days, we assume that this is a single event. We remade the figure to plot average recurrence time instead of number of events.
+To define the number of LFE clusters, we assume that there is a cluster each time that there are at least five LFEs during a single day. If two clusters are separated by less than five days, we assume that this is a single cluster. We remade the figure to plot average recurrence time instead of number of clusters.
 
 \bigskip
 
@@ -235,7 +235,7 @@ We added plate contours and faults to the map.
 
 \bigskip
 
-We move this sentence to the acknowledgements.
+We moved this sentence to the acknowledgements.
 
 \bigskip
 
@@ -251,7 +251,7 @@ We added the reference.
 
 \bigskip
 
-It applies to the total number of LFEs for all the 66 families. We modified the text
+It applies to the total number of LFEs for all the 66 families. We modified the text.
 
 \bigskip
 
@@ -267,7 +267,7 @@ To keep an LFE in the filtered catalog, we require that the product of the cross
 
 \bigskip
 
-We use the same locations as Pourde et al. (2015). We have not tried to relocate the families using the new templates. We specified the latitude and depth of the family in the text.
+We use the same locations as Pourde et al. (2015). We have not tried to relocate the families using the new templates, except for family A as discussed in the revised text. We specified the latitude and depth of the family in the text.
 
 \bigskip
 
@@ -283,7 +283,7 @@ We added a sentence.
 
 \bigskip
 
-The Boyarko et al. tremor catalog starts in 2005. That is why we do not show the tremor for the two 2004 LFE events.
+The Boyarko et al. tremor catalog starts in 2005. That is why we do not show the tremor for the two 2004 ETS events.
 
 \bigskip
 

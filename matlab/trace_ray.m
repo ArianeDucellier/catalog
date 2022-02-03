@@ -50,7 +50,7 @@ if nargin<2 || length(model)==0;  % use default model (PNSN model P2 converted t
    7.88 35.0;
    9.16 40.0];
 
-  model = [vel_P2(:,1)/sqrt(3) ,  vel_P2(:,2)];
+  model = [vel_P2(:,1) ,  vel_P2(:,2)];
   
 end
 

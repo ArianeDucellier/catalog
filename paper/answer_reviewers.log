@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  1 FEB 2022 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  2 FEB 2022 23:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -371,12 +371,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
 [2] [3]
 Package epstopdf Info: Source file: <figures/map_LFEs_answers.eps>
-(epstopdf)                    date: 2022-02-01 09:48:21
-(epstopdf)                    size: 50893 bytes
+(epstopdf)                    date: 2022-02-02 22:26:55
+(epstopdf)                    size: 54559 bytes
 (epstopdf)             Output file: <figures/map_LFEs_answers-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2022-02-01 11:29:37
-(epstopdf)                    size: 20105 bytes
+(epstopdf)                    date: 2022-02-02 22:57:13
+(epstopdf)                    size: 21537 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/map_LFEs_answers-e
 ps-converted-to.pdf figures/map_LFEs_answers.eps>
 (epstopdf)             \includegraphics on input line 172.
@@ -388,7 +388,7 @@ File: figures/map_LFEs_answers-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/map_LFEs_answers-eps-converted-to.pdf>
 Package pdftex.def Info: figures/map_LFEs_answers-eps-converted-to.pdf used on 
 input line 172.
-(pdftex.def)             Requested size: 284.52756pt x 299.05934pt.
+(pdftex.def)             Requested size: 284.52756pt x 246.24022pt.
  [4]
 Overfull \hbox (0.67471pt too wide) in paragraph at lines 194--195
 \T1/ptm/m/it/12 cally", "re-cur-rence in-ter-vals", "tidal stress sen-si-tiv-it
@@ -420,13 +420,13 @@ Here is how much of TeX's memory you used:
  10644 multiletter control sequences out of 15000+600000
  15513 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,38p,1688b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,7n,38p,1670b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on answer_reviewers.pdf (7 pages, 86774 bytes).
+Output written on answer_reviewers.pdf (7 pages, 88604 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
