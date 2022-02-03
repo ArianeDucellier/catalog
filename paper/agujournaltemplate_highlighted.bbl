@@ -269,27 +269,27 @@ Ducellier%
 }{%
 Ducellier%
 }{%
-{\protect \APACyear {2021}}%
+{\protect \APACyear {2022}}%
 }]{%
-ariane_ducellier_2021_5168867}
+ariane_ducellier_2022_5962414}
 \APACinsertmetastar {%
-ariane_ducellier_2021_5168867}%
+ariane_ducellier_2022_5962414}%
 \begin{APACrefauthors}%
 Ducellier, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2021}{{\APACmonth{08}}}{}.
+\APACrefYearMonthDay{2022}{{\APACmonth{02}}}{}.
 \newblock
-\APACrefbtitle {ArianeDucellier/catalog: Paper submission.}
-  {Arianeducellier/catalog: Paper submission.}
+\APACrefbtitle {ArianeDucellier/catalog: Revised manuscript.}
+  {Arianeducellier/catalog: Revised manuscript.}
 \newblock
 \APACaddressPublisher{}{Zenodo}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.5168867}
+\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.5962414}
   \end{APACrefURL}
 \newblock
-\begin{APACrefDOI} \doi{10.5281/zenodo.5168867} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{10.5281/zenodo.5962414} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

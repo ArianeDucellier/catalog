@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  3 FEB 2022 01:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  3 FEB 2022 10:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3005,15 +3005,9 @@ Underfull \hbox (badness 1400) in paragraph at lines 254--266
  []
 
 
-Underfull \hbox (badness 2809) in paragraph at lines 278--294
-[]\OT1/cmr/m/n/10 Ducellier, A.  (2021, Au-gust).  \OT1/cmr/m/it/10 Ar-i-ane-du
--cel-lier/catalog: Pa-per sub-mis-sion.  \OT1/cmr/m/n/10 Zen- 
- []
-
-
 Underfull \hbox (badness 2310) in paragraph at lines 278--294
 \OT1/cmr/m/n/10 odo.  Re-trieved from $\OT1/cmtt/m/n/10 https :// doi [] .org /
- 10 [] .5281 / zenodo [] .5168867$   \OT1/cmr/m/n/10 doi: $10 [] 
+ 10 [] .5281 / zenodo [] .5962414$   \OT1/cmr/m/n/10 doi: $10 [] 
  []
 
 
@@ -3225,7 +3219,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on agujournaltemplate.pdf (17 pages, 2229422 bytes).
+Output written on agujournaltemplate.pdf (17 pages, 2229776 bytes).
 PDF statistics:
  509 PDF objects out of 1000 (max. 8388607)
  144 compressed objects within 2 object streams
