@@ -12,21 +12,21 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
-Warning--entry type for "ariane_ducellier_2022_5962414" isn't style-file defined
+Warning--entry type for "ariane_ducellier_2022_6374239" isn't style-file defined
 --line 354 of file bibliography.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in MCC_2006
 You've used 39 entries,
             6951 wiz_defined-function locations,
-            1532 strings with 17679 characters,
-and the built_in function-call counts, 87567 in all, are:
-= -- 10727
+            1532 strings with 17676 characters,
+and the built_in function-call counts, 87540 in all, are:
+= -- 10724
 > -- 730
-< -- 4745
-+ -- 5115
+< -- 4742
++ -- 5112
 - -- 81
-* -- 5938
-:= -- 16957
+* -- 5935
+:= -- 16948
 add.period$ -- 159
 call.type$ -- 39
 change.case$ -- 681
@@ -35,7 +35,7 @@ cite$ -- 79
 duplicate$ -- 2311
 empty$ -- 2993
 format.name$ -- 1254
-if$ -- 15916
+if$ -- 15913
 int.to.chr$ -- 0
 int.to.str$ -- 121
 missing$ -- 0
@@ -47,7 +47,7 @@ purify$ -- 158
 quote$ -- 0
 skip$ -- 5258
 stack$ -- 0
-substring$ -- 5523
+substring$ -- 5520
 swap$ -- 1277
 text.length$ -- 96
 text.prefix$ -- 0
