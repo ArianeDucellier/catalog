@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  7 MAR 2022 15:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.15)  21 MAR 2022 12:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -341,18 +341,12 @@ Package epstopdf Info: Source file: <figures/unfiltered_FAME.eps>
 (epstopdf)                    size: 1878571 bytes
 (epstopdf)             Output file: <figures/unfiltered_FAME-eps-converted-to.p
 df>
-(epstopdf)                    date: 2022-01-15 21:01:43
-(epstopdf)                    size: 520521 bytes
+(epstopdf)                    date: 2022-03-07 15:15:47
+(epstopdf)                    size: 514702 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/unfiltered_FAME-ep
 s-converted-to.pdf figures/unfiltered_FAME.eps>
 (epstopdf)             \includegraphics on input line 26.
-runsystem(repstopdf --outfile=figures/unfiltered_FAME-eps-converted-to.pdf figu
-res/unfiltered_FAME.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figures/unfiltered_FAME-eps-converted-to.p
-df>
-(epstopdf)                    date: 2022-03-07 15:15:47
-(epstopdf)                    size: 514702 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figures/unfiltered_FAME-eps-converted-to.pdf, id=1, 1445.4pt x 722.7pt>
 File: figures/unfiltered_FAME-eps-converted-to.pdf Graphic file (type pdf)
@@ -378,18 +372,12 @@ Package epstopdf Info: Source file: <figures/unfiltered_perm.eps>
 (epstopdf)                    size: 4568962 bytes
 (epstopdf)             Output file: <figures/unfiltered_perm-eps-converted-to.p
 df>
-(epstopdf)                    date: 2022-01-15 21:01:46
-(epstopdf)                    size: 1332673 bytes
+(epstopdf)                    date: 2022-03-07 15:15:50
+(epstopdf)                    size: 1336221 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/unfiltered_perm-ep
 s-converted-to.pdf figures/unfiltered_perm.eps>
 (epstopdf)             \includegraphics on input line 32.
-runsystem(repstopdf --outfile=figures/unfiltered_perm-eps-converted-to.pdf figu
-res/unfiltered_perm.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figures/unfiltered_perm-eps-converted-to.p
-df>
-(epstopdf)                    date: 2022-03-07 15:15:50
-(epstopdf)                    size: 1336221 bytes.
+Package epstopdf Info: Output file is already uptodate.
 <figures/unfiltered_perm-eps-converted-to.pdf, id=3, 1445.4pt x 722.7pt>
 File: figures/unfiltered_perm-eps-converted-to.pdf Graphic file (type pdf)
 

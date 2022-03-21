@@ -13,8 +13,13 @@ from math import floor
 from date import ymdhms2day
 
 # Time boundaries
-xmin = 2004.0
-xmax = 2012.0
+#xmin = 2004.0
+#xmax = 2012.0
+
+xmin = (2008, 4, 27, 6, 28, 1)
+xmax = (2008, 5, 27, 6, 28, 1)
+xmin = ymdhms2day(xmin[0], xmin[1], xmin[2], xmin[3], xmin[4], xmin[5])
+xmax = ymdhms2day(xmax[0], xmax[1], xmax[2], xmax[3], xmax[4], xmax[5])
 
 # Space boundaries
 latmin = 39.4
@@ -67,7 +72,7 @@ for i in range(0, np.shape(templates)[0]):
         all_LFEs = all_LFEs + len(df)
 
         # Filter LFEs
-#        df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
+        df = df.loc[df['cc'] * df['nchannel'] >= threshold['threshold_perm'].iloc[i]]
 
         kept_LFEs = kept_LFEs + len(df)
 
@@ -112,6 +117,7 @@ plt.annotate('F', (xmax + 0.06 * (xmax - xmin), 41.02000), fontsize=24, color='g
 plt.annotate('G', (xmax + 0.08 * (xmax - xmin), 41.10000), fontsize=24, color='grey')
 
 # End figure
+plt.axvline(0.5 * (xmin + xmax), linewidth=2, color='grey')
 plt.xlim([xmin, xmax + 0.2 * (xmax - xmin)])
 plt.ylim([39.1, latmax])
 plt.xlabel('Time (years)', fontsize=24)
@@ -126,7 +132,5 @@ for (size, label) in zip(msizes, mlabels):
 plt.legend(handles=markers, frameon=False, title='Number of LFEs', loc=4, title_fontsize=24)
 
 plt.tight_layout()
-plt.savefig('LFEdistribution_perm/unfiltered.eps', format='eps')
+plt.savefig('LFEdistribution_perm/zoom_teq5.eps', format='eps')
 plt.close(1)
-
-print(all_LFEs, kept_LFEs)

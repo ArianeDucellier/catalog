@@ -167,8 +167,8 @@ def compare_catalog(filename):
     # Difference between LFEs added in our catalog
     # and LFEs present in both catalogs
     plt.figure(1, figsize=(30, 10))
-    params = {'xtick.labelsize':16,
-              'ytick.labelsize':16}
+    params = {'xtick.labelsize':24,
+              'ytick.labelsize':24}
     pylab.rcParams.update(params) 
     ax1 = plt.subplot(131)
     plt.hist(df_added['cc'], \
@@ -176,6 +176,7 @@ def compare_catalog(filename):
         0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.20, \
         0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.28, 0.29, 0.30, 0.31, \
         0.32, 0.33])
+    plt.ylim([0, 40])
     plt.xlabel('Cross-correlation value', fontsize=24)
     plt.ylabel('Number of LFEs', fontsize=24)
     plt.title('LFEs added in our catalog', fontsize=30)
@@ -185,6 +186,7 @@ def compare_catalog(filename):
         0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.20, \
         0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.28, 0.29, 0.30, 0.31, \
         0.32, 0.33])
+    plt.ylim([0, 40])
     plt.xlabel('Cross-correlation value', fontsize=24)
     plt.ylabel('Number of LFEs', fontsize=24)
     plt.title('LFEs present in both catalogs', fontsize=30)
@@ -194,9 +196,11 @@ def compare_catalog(filename):
         0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.20, \
         0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.28, 0.29, 0.30, 0.31, \
         0.32, 0.33])
+    plt.ylim([0, 40])
     plt.xlabel('Cross-correlation value', fontsize=24)
     plt.ylabel('Number of LFEs', fontsize=24)
     plt.title('LFEs missing in our catalog', fontsize=30)
+    plt.tight_layout()
     plt.savefig('LFEs_known/' + filename + '/hist.eps', format='eps')
     ax1.clear()
     ax2.clear()
@@ -240,17 +244,17 @@ if __name__ == '__main__':
         skiprows=1)
     df = pd.DataFrame(columns=['our', 'plourde', 'added', 'missing', 'both', \
         'nsta', 'cc_added', 'cc_both', 'cc_missing'])
-    for ie in range(0, len(LFEloc)):
+    for ie in range(19, 20): #0, len(LFEloc)):
         filename = LFEloc[ie][0].decode('utf-8')
         (our, plourde, added, missing, both, nsta, cc_added, cc_both, \
             cc_missing, timediff) = compare_catalog(filename)
         i0 = len(df.index)
         df.loc[i0] = [our, plourde, added, missing, both, nsta, cc_added, \
             cc_both, cc_missing]
-        if ie == 0:
-            diff = timediff
-        else:
-            if missing / plourde <= 0.05:
-                print(timediff)
-                diff = np.concatenate((diff, timediff))
-    pickle.dump((df, diff), open('comparison.pkl', 'wb'))
+#        if ie == 0:
+#            diff = timediff
+#        else:
+#            if missing / plourde <= 0.05:
+#                print(timediff)
+#                diff = np.concatenate((diff, timediff))
+#    pickle.dump((df, diff), open('comparison.pkl', 'wb'))
